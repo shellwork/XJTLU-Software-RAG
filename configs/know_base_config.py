@@ -24,11 +24,18 @@ sqlalchemy_database_uri = f"sqlite:///{db_root_path}"
 # vectorstore config
 kb_config = {
     'milvus' : {
-        'host': '127.0.0.1',
-        'port': '19530',
-        'user': '',
+        'host' : '127.0.0.1',
+        'port' : '19530',
+        'user' : '',
         'password': '',
         'secure': False
+    },
+    'chroma' : {
+        'host' : '127.0.0.1',
+        'port' : '8000',
+        'user' : '',
+        'password' : '',
+        'secure' : False
     }
 }
 
