@@ -16,6 +16,7 @@ class RapidOCRLoader(UnstructuredFileLoader):
 
         # 提取图像中的文本
         text = pictext(self.file_path)
+        text = text.replace('\n', ' ')  # 去除换行符
 
         # 对提取的文本进行分割处理
         from unstructured.partition.text import partition_text
