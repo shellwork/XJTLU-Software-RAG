@@ -1,2 +1,2 @@
-with open('testdir/parts key words.txt', 'r') as f:  #replace ... with file name
+with open('...','r') as f:  #replace ... with file name
     text=f.read()
