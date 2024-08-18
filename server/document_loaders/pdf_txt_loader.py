@@ -36,7 +36,6 @@ def create_document_from_file(file_path: str) -> List[Document]:
 def uploading():
     path = input('Please upload you file: ')
     document = create_document_from_file(path)
-    print(document[0].page_content)
+    return document
 
-uploading()
 
