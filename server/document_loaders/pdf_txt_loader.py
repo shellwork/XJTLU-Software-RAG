@@ -21,21 +21,15 @@ def extract_text_from_txt(txt_path: str) -> str:
     return text
 
 
-def create_document_from_file(file_path: str) -> List[Document]:
+def create_document() -> List[Document]:
+    path = input('Please upload your pdf/txt file: ')
     """根据文件路径提取文本并创建Document对象"""
-    if file_path.lower().endswith('.pdf'):
-        text = extract_text_from_pdf(file_path)
-    elif file_path.lower().endswith('.txt'):
-        text = extract_text_from_txt(file_path)
+    if path.lower().endswith('.pdf'):
+        text = extract_text_from_pdf(path)
+    elif path.lower().endswith('.txt'):
+        text = extract_text_from_txt(path)
     else:
         raise ValueError("不支持的文件类型。只支持 PDF 和 TXT 文件。")
 
-    document = Document(page_content=text, metadata={"source": file_path})
+    document = Document(page_content=text, metadata={"source": path})
     return [document]
-
-def uploading():
-    path = input('Please upload you file: ')
-    document = create_document_from_file(path)
-    return document
-
-
