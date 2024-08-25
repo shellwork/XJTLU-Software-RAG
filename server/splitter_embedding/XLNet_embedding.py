@@ -1,19 +1,9 @@
-from  server.document_loaders.pdf_txt_loader import *
-from langchain.text_splitter import RecursiveCharacterTextSplitter
 from transformers import XLNetTokenizer, XLNetModel
 import torch
+from server.splitter_embedding.recursive_splitter import split_chunks
 
-text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size = 200,
-    chunk_overlap = 10,
-    length_function = len,
-    is_separator_regex = False,
-)
-# document是一个包含单一document对象的list，chunks是包含多个document对象的list
-document = create_document()
-chunks = text_splitter.split_documents(document)
-
-def vectorization(chunks):
+def vectorization():
+    chunks = split_chunks()
     vector_list = []
     # 加载 XLNet 模型和分词器
     tokenizer = XLNetTokenizer.from_pretrained("xlnet-base-cased", clean_up_tokenization_spaces=True)
@@ -37,6 +27,5 @@ def vectorization(chunks):
 
     return vector_list
 
-vector_list = vectorization(chunks)
-for i in vector_list:
-    print(i)
+# milvus教程里有这个参数，XLNet默认的维度就768，换其他embedding模型可能会变
+XLNet_dim = 768
