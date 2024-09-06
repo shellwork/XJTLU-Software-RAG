@@ -1,82 +1,141 @@
+import sys
 import streamlit as st
-import subprocess
-from frontend_streamlit.query import query_chroma  # 从 query.py 导入查询函数
+import streamlit_antd_components as sac
+from frontend_streamlit.dialogue import dialogue_page as custom_dialogue_page  # 导入多功能对话页面
+from frontend_streamlit.kb_chat import kb_chat as custom_kb_chat  # 导入RAG对话页面
+from frontend_streamlit.knowledge_base import knowledge_base_page as custom_knowledge_base_page  # 导入知识库管理页面
 
-# 设置页面标题和布局
-st.set_page_config(
-    page_title="Chroma 数据库系统",
-    page_icon=":books:",
-    layout="wide"
-)
+__version__ = "1.0.0"
 
-# 定义主函数
-def main():
+# 调用多功能对话的函数
+def dialogue_page(api=None, is_lite=False):
+    custom_dialogue_page()  # 调用之前实现的多功能对话页面
 
-    # 页面标题
-    st.title("Chroma 数据库系统")
+# 调用RAG对话的函数
+def kb_chat(api=None):
+    custom_kb_chat()  # 调用RAG对话页面
 
-    # 侧边栏选项，用于选择不同的功能
-    options = ["Chroma 数据库查询", "Chroma 数据库管理"]
-    choice = st.sidebar.selectbox("选择功能", options)
+# 调用知识库管理的函数
+def knowledge_base_page(api=None, is_lite=False):
+    custom_knowledge_base_page()  # 调用知识库管理页面
 
-    # 根据选择展示不同的页面
-    if choice == "Chroma 数据库查询":
-        show_query_page()  # 显示查询页面
-    elif choice == "Chroma 数据库管理":
-        show_database_management_page()  # 显示数据库管理页面
-
-# 显示查询页面
-def show_query_page():
-    st.subheader("Chroma 数据库查询")
-
-    # 输入查询
-    query_text = st.text_input("请输入查询内容")
-    model_name = st.selectbox("选择模型", options=["gpt-3.5-turbo", "gpt-4"])
-
-    # 执行查询按钮
-    if st.button("执行查询"):
-        if query_text:
-            # 调用 query.py 中的查询函数
-            response, sources = query_chroma(query_text, model_name)
-            if response:
-                st.write(f"回答：{response}")
-                st.write(f"来源：{', '.join(sources)}")
-            else:
-                st.write("未找到相关结果或相似度不足")
-        else:
-            st.error("请输入查询内容")
-
-# 显示数据库管理页面
-def show_database_management_page():
-    st.subheader("Chroma 数据库管理")
-
-    # 删除数据库按钮
-    if st.button("删除现有数据库"):
-        try:
-            # 调用后端删除数据库的脚本
-            subprocess.run(["python", "./server/create_database.py"], check=True)
-            st.success("数据库已删除")
-        except subprocess.CalledProcessError as e:
-            st.error(f"删除数据库失败: {e}")
-
-    # 加载新文档并更新数据库按钮
-    if st.button("加载新文档并更新数据库"):
-        try:
-            # 调用后端加载新文档的脚本
-            subprocess.run(["python", "./server/create_database.py"], check=True)
-            st.success("数据库已更新")
-        except subprocess.CalledProcessError as e:
-            st.error(f"加载新文档失败: {e}")
-
-    # 加载 JSON 文档并更新数据库按钮
-    if st.button("加载 JSON 文档并更新数据库"):
-        try:
-            # 调用后端加载 JSON 文档的脚本
-            subprocess.run(["python", "./server/create_database.py"], check=True)
-            st.success("JSON 文档数据库已更新")
-        except subprocess.CalledProcessError as e:
-            st.error(f"加载 JSON 文档失败: {e}")
-
-# 运行主函数
+# 页面启动逻辑
 if __name__ == "__main__":
-    main()
+    is_lite = "lite" in sys.argv  # 后续可移除 lite 模式
+
+    # 页面配置
+    st.set_page_config(
+        page_title="XJTLU-Software Chatparts",
+        page_icon="frontend_streamlit/img/icon.png",
+        initial_sidebar_state="expanded",
+        menu_items={
+            "Get Help": "https://github.com/chatchat-space/Langchain-Chatchat",
+            "Report a bug": "https://github.com/chatchat-space/Langchain-Chatchat/issues",
+            "About": f"欢迎使用 Langchain-Chatchat WebUI {__version__}！",
+        },
+        layout="centered",
+    )
+
+    # 用于页面宽度和样式的自定义设置
+    st.markdown(
+        """
+        <style>
+        /* 定义slide-in动画，适用于向上滑动进入的元素 */
+        @keyframes slide-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+    
+        /* 定义从顶部滑入的动画 */
+        @keyframes slide-in-from-top {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+    
+        /* 应用 slide-in 动画到主要内容区域 */
+        .block-container {
+            padding-top: 45px;
+            animation: slide-in 0.4s ease-out;
+        }
+    
+        /* 应用 slide-in-from-top 动画到侧边栏 */
+        [data-testid="stSidebarUserContent"] {
+            padding-top: 40px;
+            animation: slide-in-from-top 0.4s ease-out;
+        }
+    
+        /* 底部容器的进入动画 */
+        [data-testid="stBottomBlockContainer"] {
+            padding-bottom: 20px;
+            animation: slide-in 0.4s ease-out;
+        }
+    
+        /* 为菜单项添加动画效果 */
+        .sac-menu-item {
+            animation: slide-in-from-top 0.3s ease-in-out;
+        }
+    
+        /* 菜单项悬停时的缩放效果 */
+        .sac-menu-item:hover {
+            animation: pulse 0.2s;
+        }
+    
+        /* pulse动画定义 */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        [data-testid="stSidebarUserContent"] {
+            padding-top: 40px;
+        }
+        .block-container {
+            padding-top: 45px;
+        }
+        [data-testid="stBottomBlockContainer"] {
+            padding-bottom: 20px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    # 侧边栏配置
+    with st.sidebar:
+        st.image("frontend_streamlit/img/complete_icon.png", use_column_width=True)
+
+        # 版本信息
+        st.caption(f"""<p align="right">当前版本：{__version__}</p>""", unsafe_allow_html=True)
+
+        # 菜单
+        selected_page = sac.menu(
+            [
+                sac.MenuItem("多功能对话", icon="chat"),
+                sac.MenuItem("RAG 对话", icon="database"),
+                sac.MenuItem("知识库管理", icon="hdd-stack"),
+            ],
+            key="selected_page",
+            open_index=0,
+        )
+
+        sac.divider()
+
+    # 页面显示逻辑
+    if selected_page == "知识库管理":
+        knowledge_base_page(api=None, is_lite=is_lite)  # 后续将会接入实际 API
+    elif selected_page == "RAG 对话":
+        kb_chat(api=None)
+    else:
+        dialogue_page(api=None, is_lite=is_lite)

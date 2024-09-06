@@ -1,23 +1,22 @@
 import sys
-
 import streamlit as st
 import streamlit_antd_components as sac
 
-import __version__
-# from server.utils import api_address
-from frontend.dialogue.dialogue import  dialogue_page
-from frontend.kb_chat import kb_chat
-from frontend.knowledge_base.knowledge_base import knowledge_base_page
-from frontend.utils import *
+from chatchat import __version__
+from chatchat.server.utils import api_address
+from chatchat.webui_pages.dialogue.dialogue import  dialogue_page
+from chatchat.webui_pages.kb_chat import kb_chat
+from chatchat.webui_pages.knowledge_base.knowledge_base import knowledge_base_page
+from chatchat.webui_pages.utils import *
 
-# api = ApiRequest(base_url=api_address())
+api = ApiRequest(base_url=api_address())
 
 if __name__ == "__main__":
     is_lite = "lite" in sys.argv  # TODO: remove lite mode
 
     st.set_page_config(
         "Langchain-Chatchat WebUI",
-        get_img_base64("frontend_streamlit/img/icon_name.png"),
+        get_img_base64("chatchat_icon_blue_square_v2.png"),
         initial_sidebar_state="expanded",
         menu_items={
             "Get Help": "https://github.com/chatchat-space/Langchain-Chatchat",
@@ -46,7 +45,7 @@ if __name__ == "__main__":
 
     with st.sidebar:
         st.image(
-            get_img_base64("frontend_streamlit/img/complete_icon.png"), use_column_width=True
+            get_img_base64("logo-long-chatchat-trans-v2.png"), use_column_width=True
         )
         st.caption(
             f"""<p align="right">当前版本：{__version__}</p>""",
