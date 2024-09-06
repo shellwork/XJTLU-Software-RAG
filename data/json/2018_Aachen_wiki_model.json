@@ -1,0 +1,24 @@
+[
+    {
+        "document_id": "Aachen-2018",
+        "title": "Combined Model of Biological Project Part and Hardware",
+        "author": "Team Aachen",
+        "date": "2018",
+        "tags": ["Biological Model", "Hardware Model", "Sensitivity Analysis"],
+        "abstract": "This project involves modeling both the biological processes and the hardware of a Melatonin-sensor system. It aims to understand reaction dynamics, identify key parameters, and predict calibration lines. The model uses Michaelis-Menten and Hill kinetics and integrates these with hardware models for practical applications.",
+        "metadata": {
+            "Model Overview": "The model aims to understand the dynamics of reactions in the Melatonin-sensor system and predict its calibration lines. It includes both biological and hardware components.",
+            "Model Assumptions": "The models are simplified and do not fully represent the complex realities of enzyme kinetics and hardware interactions.",
+            "Mathematical Description": "The biological model uses Michaelis-Menten and Hill kinetics. The hardware model involves an approximation of the LSPR wavelength changes.",
+            "Model Implementation": "Implemented using Matlab SimBiology, allowing visual programming and parameter adjustments.",
+            "Parameter Estimation": "Parameters were estimated from experimental data and theoretical approximations. Sensitivity analysis was conducted to understand parameter impacts.",
+            "Model Validation and Verification": "Validation included comparing simulation results with expected outcomes and conducting sensitivity analyses.",
+            "Simulation Results": "Simulations show how melatonin concentrations affect sensor readings, with visualizations provided in Matlab plots.",
+            "Robustness and Sensitivity Analysis": "Sensitivity analysis highlighted the impact of melatonin concentration and reaction rates on the system's performance.",
+            "Model Limitations": "Simplified models may not capture all real-world complexities. Hardware model approximations may need refinement.",
+            "Conclusions": "The combined model helps in understanding the sensor's functionality and predicting performance. It also provides insights for future improvements.",
+            "References": "Analytical modeling of localized surface plasmon resonance in heterostructure copper sulfide nanocrystals."
+        },
+        "url": "https://2018.igem.org/Team:Aachen/Model"
+    }
+]
