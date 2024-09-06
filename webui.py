@@ -29,9 +29,9 @@ if __name__ == "__main__":
         page_icon="frontend_streamlit/img/icon.png",
         initial_sidebar_state="expanded",
         menu_items={
-            "Get Help": "https://github.com/chatchat-space/Langchain-Chatchat",
-            "Report a bug": "https://github.com/chatchat-space/Langchain-Chatchat/issues",
-            "About": f"欢迎使用 Langchain-Chatchat WebUI {__version__}！",
+            "Get Help": "https://github.com/shellwork/XJTLU-Software-RAG/",
+            "Report a bug": "https://github.com/shellwork/XJTLU-Software-RAG/issues",
+            "About": f"Welcome to XJTLU-Software Chatparts {__version__}！",
         },
         layout="centered",
     )
@@ -51,7 +51,7 @@ if __name__ == "__main__":
                 transform: translateY(0px);
             }
         }
-    
+
         /* 定义从顶部滑入的动画 */
         @keyframes slide-in-from-top {
             from {
@@ -63,47 +63,56 @@ if __name__ == "__main__":
                 transform: translateY(0px);
             }
         }
-    
+
         /* 应用 slide-in 动画到主要内容区域 */
         .block-container {
             padding-top: 45px;
             animation: slide-in 0.4s ease-out;
         }
-    
+
         /* 应用 slide-in-from-top 动画到侧边栏 */
         [data-testid="stSidebarUserContent"] {
             padding-top: 40px;
             animation: slide-in-from-top 0.4s ease-out;
         }
-    
+
         /* 底部容器的进入动画 */
         [data-testid="stBottomBlockContainer"] {
             padding-bottom: 20px;
             animation: slide-in 0.4s ease-out;
         }
-    
+
         /* 为菜单项添加动画效果 */
         .sac-menu-item {
             animation: slide-in-from-top 0.3s ease-in-out;
         }
-    
-        /* 菜单项悬停时的缩放效果 */
+
+        /* 菜单项悬停时的缩放效果，并修改颜色为蓝色 */
         .sac-menu-item:hover {
             animation: pulse 0.2s;
+            color: #3c5494;  /* 悬浮时的蓝色 */
         }
-    
+
+        /* 定义所有图标悬浮时的颜色变化为蓝色 */
+        .icon:hover {
+            color: #3c5494 !important; /* 强制将悬浮时颜色变为蓝色 */
+        }
+
         /* pulse动画定义 */
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
+
         [data-testid="stSidebarUserContent"] {
             padding-top: 40px;
         }
+
         .block-container {
             padding-top: 45px;
         }
+
         [data-testid="stBottomBlockContainer"] {
             padding-bottom: 20px;
         }
