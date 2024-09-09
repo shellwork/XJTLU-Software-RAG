@@ -4,7 +4,7 @@ from .PDF_Loader import RapidOCRPDFLoader
 from .Picture_Loader import RapidOCRLoader
 from langchain.schema import Document
 
-DATA_PATH = "data"
+from config import DATA_PATH
 
 def load_ocr_documents() -> list[Document]:
     base_path = Path(DATA_PATH)

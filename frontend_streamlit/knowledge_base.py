@@ -2,10 +2,9 @@ import streamlit as st
 import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder
 import requests
-from pathlib import Path
 
 # 设置文件保存的主目录
-UPLOAD_DIR = Path("knowledge_base")
+from config import UPLOAD_DIR
 
 # 确保上传目录存在
 UPLOAD_DIR.mkdir(exist_ok=True)

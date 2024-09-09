@@ -12,9 +12,7 @@ from data_loader.JSON_loader import load_json_documents
 from data_loader.OCR_document_loader import load_ocr_documents
 from model.model_selector import get_embedding_function  # 导入封装的模型选择模块
 from pydantic import BaseModel
-
-CHROMA_PATH = "chroma_database"
-DATA_PATH = "data/uploads"
+from config import CHROMA_PATH,DATA_PATH
 
 class CreateKnowledgeBaseModel(BaseModel):
     kb_name: str

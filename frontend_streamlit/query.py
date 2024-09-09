@@ -4,16 +4,8 @@ from server.model.model_selector import get_model, get_embedding_function
 
 from langchain.prompts import ChatPromptTemplate
 
-CHROMA_PATH = "chroma"
-PROMPT_TEMPLATE = """
-Answer the question based only on the following context:
+from config import CHROMA_PATH, PROMPT_TEMPLATE
 
-{context}
-
----
-
-Answer the question based on the above context: {question}
-"""
 
 def query_chroma(query_text, model_name):
     embedding_function = get_embedding_function()

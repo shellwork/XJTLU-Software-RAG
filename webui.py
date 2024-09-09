@@ -4,8 +4,8 @@ import streamlit_antd_components as sac
 from frontend_streamlit.dialogue import dialogue_page as custom_dialogue_page  # 导入多功能对话页面
 from frontend_streamlit.kb_chat import kb_chat as custom_kb_chat  # 导入RAG对话页面
 from frontend_streamlit.knowledge_base import knowledge_base_page as custom_knowledge_base_page  # 导入知识库管理页面
+from config import __version__
 
-__version__ = "1.0.0"
 
 # 调用多功能对话的函数
 def dialogue_page(api=None, is_lite=False):

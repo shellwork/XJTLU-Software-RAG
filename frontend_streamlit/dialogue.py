@@ -5,9 +5,10 @@ import requests
 import uuid
 from streamlit_extras.bottom_container import bottom
 import os
+from config import CHATICONS
 
 # 初始化ChatBox
-chat_box = ChatBox(assistant_avatar="frontend_streamlit/img/icon.png")  # 替换为你的头像路径
+chat_box = ChatBox(assistant_avatar=CHATICONS)  # 替换为你的头像路径
 
 # 获取本地模型
 def get_local_models():
