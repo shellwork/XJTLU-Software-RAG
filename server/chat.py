@@ -2,7 +2,7 @@ from langchain_community.vectorstores import Chroma
 from langchain.prompts import ChatPromptTemplate
 from model.model_selector import get_model, get_embedding_function
 
-CHROMA_PATH = "chroma"
+CHROMA_PATH = "chroma_database"
 
 PROMPT_TEMPLATE = """
 You are provided with two pieces of information: one from a knowledge base and another from a direct inquiry to a model.

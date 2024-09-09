@@ -5,7 +5,7 @@ from langchain.prompts import ChatPromptTemplate
 # 导入模型选择模块
 from model.model_selector import get_model, get_embedding_function
 
-CHROMA_PATH = "chroma"
+CHROMA_PATH = "chroma_database"
 
 PROMPT_TEMPLATE = """
 Answer the question based only on the following context:
