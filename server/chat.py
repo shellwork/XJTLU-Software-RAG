@@ -1,26 +1,7 @@
 from langchain_community.vectorstores import Chroma
 from langchain.prompts import ChatPromptTemplate
 from model.model_selector import get_model, get_embedding_function
-
-CHROMA_PATH = "chroma"
-
-PROMPT_TEMPLATE = """
-You are provided with two pieces of information: one from a knowledge base and another from a direct inquiry to a model.
-Your task is to analyze and synthesize both pieces of information to produce a comprehensive answer to the question.
-
-Context from the knowledge base:
-{context}
-
----
-
-Response from the model:
-{model_response}
-
----
-
-Based on the above information, provide a comprehensive answer to the following question: {question}
-"""
-
+from config import RAG_PROMPT_TEMPLATE, CHROMA_PATH
 
 # 定义一个生成对话响应的函数
 def generate_response(prompt, tools=None, model="default", use_self_model=False, use_local_model=False):
@@ -60,7 +41,7 @@ def generate_response(prompt, tools=None, model="default", use_self_model=False,
 
         # 如果启用了模型对话功能，则合并模型和RAG结果
         if use_self_model:
-            prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
+            prompt_template = ChatPromptTemplate.from_template(RAG_PROMPT_TEMPLATE)
             formatted_prompt = prompt_template.format(context=context_text, model_response=model_answer,
                                                       question=prompt)
             final_response = selected_model.invoke(formatted_prompt)

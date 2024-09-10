@@ -1,36 +1,81 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, UploadFile, File, Form
 from pydantic import BaseModel
-from chat import generate_response  # 导入对话生成的逻辑
+from typing import List
+from create_database import (
+    initialize_upload_path, save_file_to_category, create_kb,
+    get_kb_list, get_kb_documents, delete_kb, delete_kb_files,
+    delete_existing_chroma, generate_data_store
+)
 
 app = FastAPI()
 
+
+# 启动时初始化上传路径
+@app.on_event("startup")
+def startup_event():
+    initialize_upload_path()
+
+
 # 定义请求体模型
-class ChatRequest(BaseModel):
-    prompt: str
-    tools: list = []  # 默认是空的工具列表
-    model: str = "default"  # 默认模型名称
-    use_self_model: bool = False  # 增加 use_self_model 字段
-    use_local_model: bool = False  # 增加 use_local_model 字段
+class CreateKnowledgeBase(BaseModel):
+    kb_name: str
+    kb_info: str
+    vs_type: str
+    embed_model: str
 
-# 定义响应体模型
-class ChatResponse(BaseModel):
-    response: str
 
-# 定义聊天API接口
-@app.post("/api/chat", response_model=ChatResponse)
-async def chat(request: ChatRequest):
-    # 调用生成对话的函数，传入用户的输入和工具等信息
-    ai_response = generate_response(
-        request.prompt,
-        request.tools,
-        request.model,
-        use_self_model=request.use_self_model,
-        use_local_model=request.use_local_model
-    )
-    # 返回AI生成的响应
-    return ChatResponse(response=ai_response)
+# 上传文件 API
+@app.post("/upload_files")
+def upload_files(kb_name: str = Form(...), files: List[UploadFile] = File(...)):
+    for file in files:
+        save_file_to_category(file, kb_name)
+    return {"status": "success", "message": f"{len(files)} 文件上传成功至知识库 {kb_name}"}
 
+
+# 创建知识库 API
+@app.post("/create_kb")
+def api_create_kb(kb_info: CreateKnowledgeBase):
+    result = create_kb(kb_info)
+    return result
+
+
+# 获取知识库列表 API
+@app.get("/get_kb_list")
+def api_get_kb_list():
+    return get_kb_list()
+
+
+# 获取知识库中的文档 API
+@app.get("/get_kb_documents")
+def api_get_kb_documents(kb_name: str):
+    return get_kb_documents(kb_name)
+
+
+# 重建向量库 API
+@app.post("/rebuild_vector_store")
+def api_rebuild_vector_store(kb_name: str):
+    if kb_name not in get_kb_list():
+        return {"status": "error", "message": "知识库不存在"}
+
+    delete_existing_chroma()
+    generate_data_store()
+    return {"status": "success", "message": f"向量库已成功为知识库 {kb_name} 重建"}
+
+
+# 删除知识库 API
+@app.post("/delete_kb")
+def api_delete_kb(kb_name: str):
+    return delete_kb(kb_name)
+
+
+# 删除知识库中的文件 API
+@app.post("/delete_kb_files")
+def api_delete_kb_files(kb_name: str, files: List[str]):
+    return delete_kb_files(kb_name, files)
+
+
+# 启动 FastAPI 服务
 if __name__ == "__main__":
     import uvicorn
-    # 启动API服务
+
     uvicorn.run(app, host="0.0.0.0", port=8000)

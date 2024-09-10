@@ -2,7 +2,7 @@ from pathlib import Path
 from langchain_community.document_loaders import DirectoryLoader
 from langchain.schema import Document
 
-DATA_PATH = "data"
+from config import DATA_PATH
 
 def load_documents() -> list[Document]:
     base_path = Path(DATA_PATH)

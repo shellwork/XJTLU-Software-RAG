@@ -5,3 +5,4 @@ frontend
 .git
 chroma
 __pycache__
+tmp
