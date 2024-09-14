@@ -1,7 +1,9 @@
 from pathlib import Path
 from langchain_community.document_loaders import DirectoryLoader
 from langchain.schema import Document
-
+import sys
+folder = Path(__file__).resolve().parents[2]
+sys.path.append(str(folder))
 from config import DATA_PATH
 
 def load_documents() -> list[Document]:

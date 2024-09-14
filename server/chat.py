@@ -1,6 +1,10 @@
 from langchain_community.vectorstores import Chroma
 from langchain.prompts import ChatPromptTemplate
 from model.model_selector import get_model, get_embedding_function
+from pathlib import Path
+import sys
+folder = Path(__file__).resolve().parents[1]
+sys.path.append(str(folder))
 from config import RAG_PROMPT_TEMPLATE, CHROMA_PATH
 
 # 定义一个生成对话响应的函数

@@ -3,7 +3,9 @@ from langchain_community.document_loaders import DirectoryLoader
 from .PDF_Loader import RapidOCRPDFLoader
 from .Picture_Loader import RapidOCRLoader
 from langchain.schema import Document
-
+import sys
+folder = Path(__file__).resolve().parents[2]
+sys.path.append(str(folder))
 from config import DATA_PATH
 
 def load_ocr_documents() -> list[Document]:

@@ -2,14 +2,15 @@ import streamlit as st
 import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder
 import requests
-
+from pathlib import Path
 # 设置文件保存的主目录
 from config import UPLOAD_DIR
 
+UPLOAD_DIR = Path(UPLOAD_DIR)
 # 确保上传目录存在
 UPLOAD_DIR.mkdir(exist_ok=True)
 
-def knowledge_base_page(api=None, is_lite=False):
+def knowledge_base_page():
     # 获取现有的知识库列表，从后端获取
     response = requests.get("http://localhost:8000/get_kb_list")
     if response.status_code == 200:
@@ -19,8 +20,12 @@ def knowledge_base_page(api=None, is_lite=False):
 
     kb_names = list(kb_list.keys())
 
+    # 从 URL 查询参数中获取当前选中的知识库
+    query_params = st.query_params.to_dict()
+    selected_kb = query_params.get("selected_kb_name", kb_names[0] if kb_names else "无知识库")
+
     if "selected_kb_name" not in st.session_state:
-        st.session_state["selected_kb_name"] = kb_names[0] if kb_names else "无知识库"
+        st.session_state["selected_kb_name"] = selected_kb
 
     # 选择知识库的下拉框
     selected_kb = st.selectbox(
@@ -30,6 +35,9 @@ def knowledge_base_page(api=None, is_lite=False):
     )
 
     st.session_state["selected_kb_name"] = selected_kb
+
+    # 更新 URL 中的查询参数
+    st.query_params.from_dict({"selected_kb_name": selected_kb})
 
     # 如果选择了新建知识库，展示创建表单
     if selected_kb == "新建知识库":
@@ -45,7 +53,6 @@ def knowledge_base_page(api=None, is_lite=False):
                 if not kb_name:
                     st.error("知识库名称不能为空！")
                 else:
-                    st.success(f"成功创建知识库：{kb_name}")
                     # 调用后端接口创建知识库
                     create_kb_response = requests.post(
                         "http://localhost:8000/create_kb",
@@ -53,7 +60,8 @@ def knowledge_base_page(api=None, is_lite=False):
                     )
                     if create_kb_response.status_code == 200:
                         st.success(f"知识库 {kb_name} 创建成功！")
-                        update_query_params()
+                        st.session_state["selected_kb_name"] = kb_name
+                        st.rerun()
                     else:
                         st.error("创建知识库失败，请稍后再试。")
 
@@ -65,16 +73,16 @@ def knowledge_base_page(api=None, is_lite=False):
         # 获取知识库中的文档列表
         docs_response = requests.get(f"http://localhost:8000/get_kb_documents?kb_name={selected_kb}")
         if docs_response.status_code == 200:
-            doc_details = pd.DataFrame(docs_response.json(), columns=["file_name"])
+            doc_details = pd.DataFrame(docs_response.json())
         else:
-            doc_details = pd.DataFrame(columns=["file_name"])
+            doc_details = pd.DataFrame(columns=["category", "file_name"])
 
         # 文件上传区域
         files = st.file_uploader("上传知识文件：", accept_multiple_files=True)
         if st.button("添加文件到知识库"):
             if files:
                 upload_files(selected_kb, files)
-                update_query_params()
+                st.rerun()
             else:
                 st.error("请先上传文件！")
 
@@ -83,31 +91,49 @@ def knowledge_base_page(api=None, is_lite=False):
             chunk_size = st.number_input("单段文本最大长度：", min_value=1, max_value=1000, value=100)
             chunk_overlap = st.number_input("相邻文本重合长度：", min_value=0, max_value=100, value=20)
             zh_title_enhance = st.checkbox("开启中文标题加强", value=False)
+        # 这里和后端还暂时没有接上！！
 
         # 知识库中文档的展示表格
         st.write(f"知识库 `{selected_kb}` 中已有文件：")
-        gb = GridOptionsBuilder.from_dataframe(doc_details)
-        gb.configure_pagination(paginationPageSize=5)
-        gb.configure_selection(selection_mode="multiple", use_checkbox=True)
-        grid_options = gb.build()
-        grid_response = AgGrid(doc_details, gridOptions=grid_options, height=200)
+        if not doc_details.empty:
+            gb = GridOptionsBuilder.from_dataframe(doc_details)
+            gb.configure_pagination(paginationPageSize=5)
+            gb.configure_selection(selection_mode="multiple", use_checkbox=True)
+            grid_options = gb.build()
+            grid_response = AgGrid(doc_details, gridOptions=grid_options, height=200)
 
-        # 删除选中文件的功能
-        selected_files = grid_response["selected_rows"]
-        if st.button("删除选中文件"):
-            if selected_files:
-                file_names = [file["file_name"] for file in selected_files]
-                delete_response = requests.post(
-                    "http://localhost:8000/delete_kb_files",
-                    json={"kb_name": selected_kb, "files": file_names}
-                )
-                if delete_response.status_code == 200:
-                    st.success("文件删除成功！")
-                    update_query_params()
+            # 删除选中文件的功能
+            selected_files = grid_response["selected_rows"]
+
+            # 确保 selected_files 是一个列表
+            if isinstance(selected_files, pd.DataFrame):
+                selected_files = selected_files.to_dict(orient='records')
+
+            if st.button("删除选中文件"):
+                if isinstance(selected_files, list) and len(selected_files) > 0:
+                    files_to_delete = [
+                        {"category": file["category"], "file_name": file["file_name"]}
+                        for file in selected_files
+                    ]
+                    # 打印文件删除请求数据以供调试
+                    st.write(f"准备删除的文件：{files_to_delete}")
+                    st.write(f"知识库：{selected_kb}")
+
+                    delete_response = requests.post(
+                        "http://localhost:8000/delete_kb_files",
+                        json={"kb_name": selected_kb, "files": files_to_delete}
+                    )
+
+                    # 检查响应状态并打印响应内容
+                    if delete_response.status_code == 200:
+                        st.success("文件删除成功！")
+                        st.query_params.from_dict({"selected_kb_name": selected_kb})
+                    else:
+                        st.error(f"文件删除失败，错误信息: {delete_response.text}")
                 else:
-                    st.error("文件删除失败，请稍后再试。")
-            else:
-                st.warning("请先选择文件")
+                    st.warning("请先选择文件")
+        else:
+            st.write("该知识库中暂无文件。")
 
         st.divider()
 
@@ -119,28 +145,43 @@ def knowledge_base_page(api=None, is_lite=False):
             else:
                 st.error("向量库重建失败，请稍后再试。")
 
-        if st.button("删除知识库", type="primary"):
-            st.warning("删除知识库功能待实现")
+        if st.checkbox("确认删除整个知识库？"):
+            if st.button("删除整个知识库"):
+                st.write(selected_kb)  # 打印当前选择的知识库，便于调试
+                delete_kb_response = requests.post(
+                    "http://localhost:8000/delete_kb",
+                    data={"kb_name": selected_kb}
+                )
+                # 检查后端的响应状态
+                if delete_kb_response.status_code == 200 and delete_kb_response.json().get("status") == "success":
+                    st.success(delete_kb_response.json().get("message"))
+                    # 重置 session 和 query params
+                    st.session_state["selected_kb_name"] = ""
+                    st.query_params.clear()
+                    st.rerun()
+                else:
+                    st.error(f"删除知识库失败: {delete_kb_response.json().get('message')}")
 
 
 def upload_files(kb_name, files):
     """将文件拷贝并根据后缀分类保存到相应目录"""
-    for file in files:
-        files_payload = {'files': (file.name, file.getvalue())}
-        response = requests.post(
-            f"http://localhost:8000/upload_files",  # 修复后的 API 路径
-            files=files_payload,  # 传递文件内容
-            data={"kb_name": kb_name}  # 使用 form-data 传递知识库名称
-        )
+    if not files:
+        st.error("没有文件上传。")
+        return
 
-        if response.status_code == 200:
+    # 将所有文件一起发送，以符合后端的期望
+    files_payload = [('files', (file.name, file.read(), file.type)) for file in files]
+    response = requests.post(
+        f"http://localhost:8000/upload_files",
+        files=files_payload,
+        data={"kb_name": kb_name}
+    )
+
+    if response.status_code == 200:
+        for file in files:
             st.success(f"{file.name} 上传成功")
-        else:
-            st.error(f"文件 {file.name} 上传失败，错误信息: {response.text}")
-
-# 在操作之后更新查询参数以刷新页面
-def update_query_params():
-    st.query_params.from_dict({"dummy": str(st.session_state.get("dummy", 0) + 1)})
+    else:
+        st.error(f"文件上传失败，错误信息: {response.text}")
 
 
 if __name__ == "__main__":
