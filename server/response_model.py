@@ -21,14 +21,23 @@ class DeleteFilesRequest(BaseModel):
     kb_name: str
     files: List[Dict[str, str]]
 
-# 定义请求体模型
 class ChatRequest(BaseModel):
     prompt: str
-    tools: list = []  # 默认是空的工具列表
-    model: str = "default"  # 默认模型名称
-    use_self_model: bool = False  # 增加 use_self_model 字段
-    use_local_model: bool = False  # 增加 use_local_model 字段
+    tools: list = None
+    model: str = "default"
+    use_self_model: bool = False
+    use_local_model: bool = False
 
-# 定义响应体模型
 class ChatResponse(BaseModel):
-    response: str
+    # 根据模式不同，返回不同的字段
+    answer: str = None
+    chunks: list = None
+    references: list = None
+    error: str = None
+
+# 获取文档
+class DocumentRequest(BaseModel):
+    source: str
+
+class DocumentResponse(BaseModel):
+    content: str
