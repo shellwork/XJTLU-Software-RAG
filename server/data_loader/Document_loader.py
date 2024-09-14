@@ -6,8 +6,8 @@ folder = Path(__file__).resolve().parents[2]
 sys.path.append(str(folder))
 from config import DATA_PATH
 
-def load_documents() -> list[Document]:
-    base_path = Path(DATA_PATH)
+def load_documents(kb_name) -> list[Document]:
+    base_path = Path(kb_name)
 
     # Load .md documents
     md_documents = []

@@ -178,17 +178,18 @@ def delete_existing_chroma():
     except Exception as e:
         logging.error(f"删除Chroma数据库目录时出错: {e}", exc_info=True)
 
-def generate_data_store():
+def generate_data_store(kb_name):
     """生成新的Chroma数据库"""
     try:
-        ocr_documents = load_ocr_documents()
-        non_ocr_documents = load_documents()
+        kb_path = os.path.join(DATA_PATH,kb_name)
+        ocr_documents = load_ocr_documents(kb_path)
+        non_ocr_documents = load_documents(kb_path)
         documents = non_ocr_documents + ocr_documents
 
         chunks = split_text(documents)
         update_chroma(chunks)
 
-        json_documents = load_json_documents(DATA_PATH)
+        json_documents = load_json_documents(kb_path)
         update_chroma_with_json(json_documents)
     except Exception as e:
         logging.error(f"生成数据存储时出错: {e}", exc_info=True)

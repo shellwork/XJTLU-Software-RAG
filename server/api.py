@@ -162,9 +162,8 @@ def api_rebuild_vector_store(kb_name: str):
     if kb_name not in get_kb_list():
         logging.error(f"知识库 {kb_name} 不存在")
         return {"status": "error", "message": "知识库不存在"}
-
     delete_existing_chroma()
-    generate_data_store()
+    generate_data_store(kb_name=kb_name)
     logging.info(f"向量库已成功为知识库 {kb_name} 重建")
     return {"status": "success", "message": f"向量库已成功为知识库 {kb_name} 重建"}
 
