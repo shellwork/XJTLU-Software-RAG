@@ -10,6 +10,7 @@ UPLOAD_DIR = Path(UPLOAD_DIR)
 # 确保上传目录存在
 UPLOAD_DIR.mkdir(exist_ok=True)
 
+
 def knowledge_base_page():
     # 获取现有的知识库列表，从后端获取
     response = requests.get("http://localhost:8000/get_kb_list")
@@ -31,7 +32,8 @@ def knowledge_base_page():
     selected_kb = st.selectbox(
         "请选择或新建知识库：",
         kb_names + ["新建知识库"],
-        index=kb_names.index(st.session_state["selected_kb_name"]) if st.session_state["selected_kb_name"] in kb_names else 0
+        index=kb_names.index(st.session_state["selected_kb_name"]) if st.session_state[
+                                                                          "selected_kb_name"] in kb_names else 0
     )
 
     st.session_state["selected_kb_name"] = selected_kb
@@ -45,15 +47,15 @@ def knowledge_base_page():
             kb_name = st.text_input("新建知识库名称", placeholder="请输入新知识库名称")
             kb_info = st.text_input("知识库简介", placeholder="请输入知识库简介")
 
-            vs_type = st.selectbox("向量库类型", ["类型1", "类型2"], index=0)
-            embed_model = st.selectbox("Embeddings模型", ["模型1", "模型2"], index=0)
+            vs_type = st.selectbox("向量库类型", ["chroma", "类型2"], index=0)
+            embed_model = st.selectbox("Embeddings模型", ["openai", "本地"], index=0)
 
             submit_create_kb = st.form_submit_button("新建知识库")
             if submit_create_kb:
                 if not kb_name:
                     st.error("知识库名称不能为空！")
                 else:
-                    # 调用后端接口创建知识库
+                    # 调用后端接口创建知识库，并传递选择的 embed_model 和 vs_type
                     create_kb_response = requests.post(
                         "http://localhost:8000/create_kb",
                         json={"kb_name": kb_name, "kb_info": kb_info, "vs_type": vs_type, "embed_model": embed_model}
@@ -79,26 +81,58 @@ def knowledge_base_page():
 
         # 文件上传区域
         files = st.file_uploader("上传知识文件：", accept_multiple_files=True)
-        if st.button("添加文件到知识库"):
-            if files:
-                upload_files(selected_kb, files)
-                st.rerun()
-            else:
-                st.error("请先上传文件！")
 
         # 文件处理配置
         with st.expander("文件处理配置"):
             chunk_size = st.number_input("单段文本最大长度：", min_value=1, max_value=1000, value=100)
             chunk_overlap = st.number_input("相邻文本重合长度：", min_value=0, max_value=100, value=20)
             zh_title_enhance = st.checkbox("开启中文标题加强", value=False)
-        # 这里和后端还暂时没有接上！！
+
+        if st.button("添加文件到知识库"):
+            if files:
+                # 将所有文件与配置参数通过请求发送至 API
+                files_payload = [('files', (file.name, file.read(), file.type)) for file in files]
+
+                # 额外的配置参数
+                data_payload = {
+                    "kb_name": selected_kb,
+                    "chunk_size": chunk_size,
+                    "chunk_overlap": chunk_overlap,
+                    "zh_title_enhance": zh_title_enhance
+                }
+
+                response = requests.post(
+                    "http://localhost:8000/upload_files",
+                    files=files_payload,
+                    data=data_payload
+                )
+
+                if response.status_code == 200 and response.json().get("status") == "success":
+                    st.success(f"{len(files)} 文件上传成功至知识库 {selected_kb}")
+                    st.rerun()
+                else:
+                    st.error(f"文件上传失败，错误信息: {response.text}")
+            else:
+                st.error("请先上传文件！")
 
         # 知识库中文档的展示表格
         st.write(f"知识库 `{selected_kb}` 中已有文件：")
         if not doc_details.empty:
+            # 添加显示的列: category, file_name, file_size, chunk_size, chunk_overlap
+            doc_details["file_size_kb"] = (doc_details["file_size"] / 1024).round(2)  # 将文件大小转换为KB
             gb = GridOptionsBuilder.from_dataframe(doc_details)
+            # 设置表格中显示的列和列名
+            gb.configure_column("category", header_name="类别")
+            gb.configure_column("file_name", header_name="文件名")
+            gb.configure_column("file_size_kb", header_name="文件大小 (KB)",
+                                type=["numericColumn", "numberColumnFilter"])
+            gb.configure_column("chunk_size", header_name="分块大小")
+            gb.configure_column("chunk_overlap", header_name="分块重叠")
+
+            # 设置分页和选择功能
             gb.configure_pagination(paginationPageSize=5)
             gb.configure_selection(selection_mode="multiple", use_checkbox=True)
+
             grid_options = gb.build()
             grid_response = AgGrid(doc_details, gridOptions=grid_options, height=200)
 
@@ -109,13 +143,13 @@ def knowledge_base_page():
             if isinstance(selected_files, pd.DataFrame):
                 selected_files = selected_files.to_dict(orient='records')
 
+            # 确认 selected_files 是列表后，进行删除操作
             if st.button("删除选中文件"):
-                if isinstance(selected_files, list) and len(selected_files) > 0:
+                if selected_files:
                     files_to_delete = [
-                        {"category": file["category"], "file_name": file["file_name"]}
+                        {"category": file.get("category", ""), "file_name": file.get("file_name", "")}
                         for file in selected_files
                     ]
-                    # 打印文件删除请求数据以供调试
                     st.write(f"准备删除的文件：{files_to_delete}")
                     st.write(f"知识库：{selected_kb}")
 
@@ -127,7 +161,7 @@ def knowledge_base_page():
                     # 检查响应状态并打印响应内容
                     if delete_response.status_code == 200:
                         st.success("文件删除成功！")
-                        st.query_params.from_dict({"selected_kb_name": selected_kb})
+                        st.rerun()
                     else:
                         st.error(f"文件删除失败，错误信息: {delete_response.text}")
                 else:
@@ -162,26 +196,6 @@ def knowledge_base_page():
                 else:
                     st.error(f"删除知识库失败: {delete_kb_response.json().get('message')}")
 
-
-def upload_files(kb_name, files):
-    """将文件拷贝并根据后缀分类保存到相应目录"""
-    if not files:
-        st.error("没有文件上传。")
-        return
-
-    # 将所有文件一起发送，以符合后端的期望
-    files_payload = [('files', (file.name, file.read(), file.type)) for file in files]
-    response = requests.post(
-        f"http://localhost:8000/upload_files",
-        files=files_payload,
-        data={"kb_name": kb_name}
-    )
-
-    if response.status_code == 200:
-        for file in files:
-            st.success(f"{file.name} 上传成功")
-    else:
-        st.error(f"文件上传失败，错误信息: {response.text}")
 
 
 if __name__ == "__main__":

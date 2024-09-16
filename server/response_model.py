@@ -14,8 +14,8 @@ class ListResponse(BaseModel):
 class CreateKnowledgeBaseModel(BaseModel):
     kb_name: str
     kb_info: str
-    vs_type: str
-    embed_model: str
+    vs_type: str  # 向量库类型
+    embed_model: str  # Embeddings模型
 
 class DeleteFilesRequest(BaseModel):
     kb_name: str
@@ -41,3 +41,5 @@ class DocumentRequest(BaseModel):
 
 class DocumentResponse(BaseModel):
     content: str
+
+

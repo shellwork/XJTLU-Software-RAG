@@ -24,6 +24,15 @@ DATA_PATH = str(BASE_DIR / "data" / "uploads")
 CHROMA_PATH = str(BASE_DIR / "chroma")
 UPLOAD_DIR = str(BASE_DIR / "data" / "tmp")
 CHATICONS = str(BASE_DIR / "frontend_streamlit" / "img" / "icon.png")
+# 默认的元数据结构
+DEFAULT_METADATA = {
+    "chunk_size": 300,
+    "chunk_overlap": 100,
+    "zh_title_enhance": False,
+    "embed_model": "openai",  # 默认的 embedding 模型
+    "vs_type": "chroma",  # 默认的向量库类型
+    "batches": []  # 用于记录批次处理信息
+}
 PROMPT_TEMPLATE = """
 Answer the question based only on the following context:
 

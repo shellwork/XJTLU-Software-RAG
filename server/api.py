@@ -1,23 +1,25 @@
 import sys
+import uuid
 from pathlib import Path
 import logging
-from urllib.parse import quote_plus, unquote_plus
+from urllib.parse import unquote_plus
 
 from fastapi.staticfiles import StaticFiles
 from chat import generate_response
-# 获取当前文件所在目录的上两级目录（项目根目录）
+
+# 获取当前文件所在上两级目录（项目根目录）
 current_dir = Path(__file__).resolve().parent
 project_root = current_dir.parent.parent
 sys.path.append(str(project_root))  # 将根目录添加到系统路径中
 from fastapi import UploadFile, File, Form, Query, FastAPI, HTTPException
+from fastapi.responses import JSONResponse
 from typing import List
 from create_database import (
     initialize_upload_path, save_file_to_category, create_kb,
     get_kb_list, get_kb_documents, delete_kb, delete_kb_files,
-    delete_existing_chroma, generate_data_store
+    delete_existing_chroma, update_kb_metadata, process_batches
 )
 from response_model import CreateKnowledgeBaseModel, DeleteFilesRequest, ChatResponse, ChatRequest, DocumentResponse
-
 
 # 配置日志记录
 logging.basicConfig(
@@ -47,6 +49,7 @@ async def chat(request: ChatRequest):
         use_local_model=request.use_local_model
     )
     return ChatResponse(**ai_response)
+
 
 # 获取文档
 @app.get("/api/document", response_model=DocumentResponse)
@@ -108,33 +111,69 @@ def startup_event():
 
 # 上传文件 API
 @app.post("/upload_files")
-def upload_files(kb_name: str = Form(...), files: List[UploadFile] = File(...)):
-    logging.debug(f"上传文件请求: kb_name={kb_name}, 文件数量={len(files)}")
+async def upload_files(
+        kb_name: str = Form(...),
+        files: List[UploadFile] = File(...),
+        chunk_size: int = Form(100),  # 默认值为100
+        chunk_overlap: int = Form(20),  # 默认值为20
+        zh_title_enhance: bool = Form(False)  # 默认值为 False
+):
+    logging.debug(
+        f"上传文件请求: kb_name={kb_name}, 文件数量={len(files)}, chunk_size={chunk_size}, chunk_overlap={chunk_overlap}, zh_title_enhance={zh_title_enhance}")
     relative_paths = []
     try:
+        # 为该批次创建一个唯一的批次 ID
+        batch_id = str(uuid.uuid4())
+
+        # 保存文件
+        files_names = []  # 初始化为列表
         for file in files:
-            relative_path = save_file_to_category(file, kb_name)
-            relative_paths.append(relative_path)
-            logging.info(f"文件 {file.filename} 已保存至知识库 {kb_name}，相对路径: {relative_path}")
-        return {
+            file_name = save_file_to_category(file, kb_name)  # 单个文件名
+            if file_name:  # 确保文件保存成功并返回了文件名
+                files_names.append(file_name)  # 将文件名添加到列表中
+            logging.info(f"文件 {file.filename} 已保存至知识库 {kb_name}")
+
+        # 将该批次的配置信息保存到元数据文件中
+        batch_metadata = {
+            "batch_id": batch_id,
+            "files": files_names,
+            "chunk_size": chunk_size,
+            "chunk_overlap": chunk_overlap,
+            "zh_title_enhance": zh_title_enhance
+        }
+        # 记录到知识库的元数据中
+        update_kb_metadata(kb_name, batch_metadata, is_batch=True)
+
+        return JSONResponse(status_code=200, content={
             "status": "success",
             "message": f"{len(files)} 文件上传成功至知识库 {kb_name}",
+            "batch_id": batch_id,  # 返回批次 ID
             "paths": relative_paths
-        }
+        })
     except Exception as e:
         logging.error(f"上传文件时出错: {e}", exc_info=True)
-        return {"status": "error", "message": f"上传文件时发生错误: {str(e)}"}
+        return JSONResponse(status_code=500, content={"status": "error", "message": f"上传文件时发生错误: {str(e)}"})
+
 
 # 创建知识库 API
 @app.post("/create_kb")
 def api_create_kb(kb_info: CreateKnowledgeBaseModel):
     logging.debug(f"创建知识库请求: {kb_info}")
-    result = create_kb(kb_info)
+    # 调用 create_kb 函数，传递 embed_model 和其他参数
+    result = create_kb(
+        kb_name=kb_info.kb_name,
+        kb_info=kb_info.kb_info,
+        vs_type=kb_info.vs_type,
+        embed_model=kb_info.embed_model
+    )
+
     if result["status"] == "success":
         logging.info(f"知识库 {kb_info.kb_name} 创建成功")
     else:
         logging.warning(f"知识库创建失败: {result['message']}")
+
     return result
+
 
 # 获取知识库列表 API
 @app.get("/get_kb_list")
@@ -143,6 +182,7 @@ def api_get_kb_list():
     kb_list = get_kb_list()
     logging.info(f"获取到 {len(kb_list)} 个知识库")
     return kb_list
+
 
 # 获取知识库中的文档 API
 @app.get("/get_kb_documents")
@@ -155,6 +195,7 @@ def api_get_kb_documents(kb_name: str):
         logging.warning(f"获取知识库文档失败: {documents['message']}")
     return documents
 
+
 # 重建向量库 API
 @app.post("/rebuild_vector_store")
 def api_rebuild_vector_store(kb_name: str):
@@ -162,10 +203,17 @@ def api_rebuild_vector_store(kb_name: str):
     if kb_name not in get_kb_list():
         logging.error(f"知识库 {kb_name} 不存在")
         return {"status": "error", "message": "知识库不存在"}
+    # 删除现有的向量库
     delete_existing_chroma()
-    generate_data_store(kb_name=kb_name)
-    logging.info(f"向量库已成功为知识库 {kb_name} 重建")
-    return {"status": "success", "message": f"向量库已成功为知识库 {kb_name} 重建"}
+    # 调用 create_database 模块中的函数进行分块和向量化处理
+    result = process_batches(kb_name)
+    if result["status"] == "success":
+        logging.info(f"向量库已成功为知识库 {kb_name} 重建")
+    else:
+        logging.error(f"重建向量库时出错: {result['message']}")
+
+    return result
+
 
 # 删除知识库 API
 @app.post("/delete_kb")
@@ -177,6 +225,7 @@ def api_delete_kb(kb_name: str = Form(...)):  # 使用 Form 来接收表单数�
     else:
         logging.warning(f"删除知识库失败: {result['message']}")
     return result
+
 
 # 删除知识库中的文件 API
 @app.post("/delete_kb_files")
@@ -193,7 +242,9 @@ def api_delete_kb_files(request: DeleteFilesRequest):
         logging.error(f"删除文件时出现异常: {e}", exc_info=True)
         return {"status": "error", "message": f"删除文件时发生错误: {str(e)}"}
 
+
 # 启动 FastAPI 服务
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8000)
