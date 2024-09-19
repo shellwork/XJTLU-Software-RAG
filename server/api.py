@@ -30,7 +30,7 @@ logging.basicConfig(
     ]
 )
 
-app = FastAPI(debug=True)  # 启用调试模式
+app = FastAPI()
 
 # 挂载静态文件目录，方便直接访问文件
 DATA_PATH = Path("data/uploads").resolve()
@@ -198,19 +198,20 @@ def api_get_kb_documents(kb_name: str):
 
 # 重建向量库 API
 @app.post("/rebuild_vector_store")
-def api_rebuild_vector_store(kb_name: str):
-    logging.debug(f"重建向量库请求: kb_name={kb_name}")
+def api_rebuild_vector_store(kb_name: str, action: bool = False):
+    logging.debug(f"重建向量库请求: kb_name={kb_name}, action={action}")
     if kb_name not in get_kb_list():
         logging.error(f"知识库 {kb_name} 不存在")
         return {"status": "error", "message": "知识库不存在"}
-    # 删除现有的向量库
-    delete_existing_chroma()
+    if action:
+        print("delete chroma")
+        delete_existing_chroma()
     # 调用 create_database 模块中的函数进行分块和向量化处理
     result = process_batches(kb_name)
     if result["status"] == "success":
-        logging.info(f"向量库已成功为知识库 {kb_name} 重建")
+        logging.info(f"向量库已成功从知识库 {kb_name} 更新")
     else:
-        logging.error(f"重建向量库时出错: {result['message']}")
+        logging.error(f"更新向量库时出错: {result['message']}")
 
     return result
 

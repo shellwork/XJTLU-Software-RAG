@@ -6,7 +6,7 @@ folder = Path(__file__).resolve().parents[2]
 sys.path.append(str(folder))
 
 
-def load_documents(kb_name: str, files: list[str]) -> list[Document]:
+def load_ori_documents(kb_name: str, files: list[str]) -> list[Document]:
     """
     加载普通文档，基于传入的文件列表只处理指定的文件。
     """

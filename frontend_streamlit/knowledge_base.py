@@ -172,15 +172,17 @@ def knowledge_base_page():
         st.divider()
 
         # 重建向量库的操作
-        if st.button("依据源文件重建向量库"):
-            rebuild_response = requests.post(f"http://localhost:8000/rebuild_vector_store?kb_name={selected_kb}")
+        action = st.checkbox("是否重建向量库?", help="勾选则删除已有并重新构建数据库", key="action")
+        if st.button("依据源文件更新向量库"):
+            rebuild_response = requests.post(f"http://localhost:8000/rebuild_vector_store?kb_name={selected_kb}&action={action}")
             if rebuild_response.status_code == 200:
-                st.success(f"向量库已成功为知识库 {selected_kb} 重建")
+                st.success(f"向量库已成功为知识库 {selected_kb} 更新")
             else:
-                st.error("向量库重建失败，请稍后再试。")
+                st.error("向量库更新失败，请稍后再试。")
 
-        if st.checkbox("确认删除整个知识库？"):
-            if st.button("删除整个知识库"):
+
+        if st.button("删除整个知识库"):
+            if st.checkbox("确认删除整个知识库？"):
                 st.write(selected_kb)  # 打印当前选择的知识库，便于调试
                 delete_kb_response = requests.post(
                     "http://localhost:8000/delete_kb",
@@ -195,6 +197,8 @@ def knowledge_base_page():
                     st.rerun()
                 else:
                     st.error(f"删除知识库失败: {delete_kb_response.json().get('message')}")
+            else:
+                st.info(f"请勾选确认删除！")
 
 
 

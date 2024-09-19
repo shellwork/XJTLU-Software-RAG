@@ -9,9 +9,9 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.schema import Document
 
 # 导入自定义的加载器
-from data_loader.Document_loader import load_documents
+from data_loader.Document_loader import load_ori_documents
 from data_loader.JSON_loader import load_json_documents
-from data_loader.OCR_document_loader import load_ocr_documents
+from data_loader.Special_document_loader import load_ocr_documents, load_documents_combined
 from model.model_selector import get_embedding_function  # 导入封装的模型选择模块
 from config import CHROMA_PATH, DATA_PATH, DEFAULT_METADATA
 
@@ -363,9 +363,12 @@ def generate_data_store(kb_name: str, chunk_size: int, chunk_overlap: int, zh_ti
         kb_path = os.path.join(DATA_PATH, kb_name)
 
         # 根据传入的文件名列表加载 OCR 文档和普通文档
+
         ocr_documents = load_ocr_documents(kb_path, files)
-        non_ocr_documents = load_documents(kb_path, files)
-        all_documents = non_ocr_documents + ocr_documents
+        print(f"pdf_text")
+        pdf_text = load_documents_combined(kb_name, files)
+        non_ocr_documents = load_ori_documents(kb_path, files)
+        all_documents = non_ocr_documents + ocr_documents + pdf_text
 
         if all_documents:
             # 根据 chunk_size 和 chunk_overlap 进行分块
