@@ -26,7 +26,7 @@ export default defineConfig({
         text: 'Project Brief',
         items: [
           { text: 'Project Introduction', link: '/project-introduction' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: 'Getting start', link: '/api-examples' }
         ]
       }
     ],
