@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: Project Brief
-      link: /markdown-examples
+      link: /project-introduction
     - theme: alt
       text: Quick Start
       link: /api-examples

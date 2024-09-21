@@ -14,7 +14,6 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
     ],
 
     docFooter: { 
@@ -26,7 +25,7 @@ export default defineConfig({
       {
         text: 'Project Brief',
         items: [
-          { text: 'Software Introduction', link: '/Software Introduction' },
+          { text: 'Project Introduction', link: '/project-introduction' },
           { text: 'Runtime API Examples', link: '/api-examples' }
         ]
       }
