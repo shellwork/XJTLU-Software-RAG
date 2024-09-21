@@ -1,9 +1,13 @@
 from langchain_community.vectorstores import Chroma
 from langchain.prompts import ChatPromptTemplate
 from model.model_selector import get_model, get_embedding_function
+from pathlib import Path
+import sys
+
+folder = Path(__file__).resolve().parents[1]
+sys.path.append(str(folder))
 from config import RAG_PROMPT_TEMPLATE, CHROMA_PATH
 
-# 定义一个生成对话响应的函数
 def generate_response(prompt, tools=None, model="default", use_self_model=False, use_local_model=False):
     """
     根据用户的输入和配置，生成对话响应。
@@ -16,7 +20,7 @@ def generate_response(prompt, tools=None, model="default", use_self_model=False,
         use_local_model (bool): 是否使用本地模型推理。
 
     Returns:
-        str: 生成的对话响应或错误提示。
+        dict: 包含响应内容及相关信息。
     """
 
     # 1. 获取嵌入函数，并准备向量数据库
@@ -26,32 +30,41 @@ def generate_response(prompt, tools=None, model="default", use_self_model=False,
     # 2. 在向量数据库中搜索匹配的文档
     results = db.similarity_search_with_relevance_scores(prompt, k=3)
 
-    # 3. 如果启用了模型对话功能，先获取模型的直接回答
-    if use_self_model:
+    # 准备返回结构
+    response = {}
+
+    if not use_self_model:
+        # 检索模式，仅返回相关文档块和引用
+        if len(results) > 0 and results[0][1] >= 0.7:
+            chunks = [doc.page_content for doc, _score in results]
+            references = [doc.metadata.get('source', 'Unknown') for doc, _score in results]
+
+            response['chunks'] = chunks
+            response['references'] = references
+        else:
+            response['chunks'] = []
+            response['references'] = []
+    else:
+        # 对话模式，结合模型生成回答
         selected_model = get_model(model, use_local_model=use_local_model)
         model_response = selected_model.invoke(prompt)
         model_answer = model_response.content if hasattr(model_response, 'content') else model_response
-    else:
-        model_answer = None
 
-    # 4. 如果有RAG结果，生成上下文并进行结合
-    if len(results) > 0 and results[0][1] >= 0.7:
-        # 有足够相关的RAG结果
-        context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
+        if len(results) > 0 and results[0][1] >= 0.7:
+            # 有足够相关的RAG结果
+            context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
+            references = [doc.metadata.get('source', 'Unknown') for doc, _score in results]
 
-        # 如果启用了模型对话功能，则合并模型和RAG结果
-        if use_self_model:
             prompt_template = ChatPromptTemplate.from_template(RAG_PROMPT_TEMPLATE)
-            formatted_prompt = prompt_template.format(context=context_text, model_response=model_answer,
-                                                      question=prompt)
+            formatted_prompt = prompt_template.format(context=context_text, model_response=model_answer, question=prompt)
             final_response = selected_model.invoke(formatted_prompt)
-            return final_response.content if hasattr(final_response, 'content') else final_response
+            combined_answer = final_response.content if hasattr(final_response, 'content') else final_response
+
+            response['answer'] = combined_answer
+            response['references'] = references
         else:
-            # 如果没有启用模型对话功能，仅返回RAG结果
-            return context_text
-    else:
-        # 没有RAG结果时的处理
-        if use_self_model:
-            return model_answer
-        else:
-            return "无法找到足够相关的结果，请尝试其他问题。"
+            # 没有RAG结果，直接返回模型回答
+            response['answer'] = model_answer
+            response['references'] = []
+
+    return response

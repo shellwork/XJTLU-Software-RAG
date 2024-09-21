@@ -8,17 +8,10 @@ def load_api():
 
     # 加载 API 密钥
     openai.api_key = os.environ.get('OPENAI_API_KEY')
-    cohere_api_key = os.environ.get('COHERE_API_KEY')
-    anthropic_api_key = os.environ.get('ANTHROPIC_API_KEY')
 
     # 验证 API 密钥是否已加载
     if not openai.api_key:
         raise ValueError("OPENAI_API_KEY not found in environment variables.")
-    if not cohere_api_key:
-        print("Warning: COHERE_API_KEY not found in environment variables.")
-    if not anthropic_api_key:
-        print("Warning: ANTHROPIC_API_KEY not found in environment variables.")
-
 
 def get_model(model_name: str = "gpt-3.5-turbo", provider: str = "openai", **kwargs):
     """
@@ -49,7 +42,6 @@ def get_model(model_name: str = "gpt-3.5-turbo", provider: str = "openai", **kwa
     else:
         raise ValueError(f"Unsupported provider: {provider}")
 
-
 def get_local_model(model_name: str):
     import ollama
     """
@@ -69,25 +61,34 @@ def get_local_model(model_name: str):
     else:
         raise ValueError(f"Unsupported local model: {model_name}")
 
-
-def get_embedding_function(provider: str = "openai"):
+def get_embedding_function(embed_model: str = "openai"):
     """
-    返回用于嵌入的模型实例。
+    根据传入的嵌入模型名称选择对应的嵌入模型。
 
     Args:
-        provider (str): 嵌入模型提供商，可以是 "openai", "cohere" 或 "local"。
+        embed_model (str): 嵌入模型名称，可以是 "openai"等在线模型， 或 "local"。
 
     Returns:
         embedding_model: 嵌入模型实例。
     """
     load_api()
 
-    if provider == "openai":
+    if embed_model == "openai":
         return OpenAIEmbeddings()
 
-    else:
-        raise ValueError(f"Unsupported provider: {provider}")
+    # 你可以添加更多提供商支持
+    elif embed_model == "local":
+        return get_local_embedding_function()
 
+    else:
+        raise ValueError(f"Unsupported embedding model: {embed_model}")
+
+def get_local_embedding_function():
+    """
+    本地嵌入模型的实现，具体逻辑可根据需求定制。
+    """
+    # 这里可以引入任何本地的嵌入模型逻辑，例如自定义的模型加载。
+    raise NotImplementedError("Local embedding models are not yet implemented.")
 
 def generate_response(prompt, use_local_model=False, model_name="default", tools=None):
     """

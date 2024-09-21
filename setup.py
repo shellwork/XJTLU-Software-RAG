@@ -1,8 +1,13 @@
 from setuptools import setup
 import subprocess
+import config
 
 
 def run_services():
+    # 输出启动信息
+    print(config.project_name)
+    print(config.welcome)
+    print(f"Version: {config.__version__}")
     # 启动前端服务
     frontend_process = subprocess.Popen(["streamlit", "run", "webui.py"])
 
@@ -18,8 +23,7 @@ def run_services():
 run_services()
 
 setup(
-    name='project_name',
-    version='0.1',
-    description='A setup script to run frontend and backend services',
-    py_modules=[],
+    name=config.project_name,
+    version=config.__version__,
+    description=config.welcome,
 )
