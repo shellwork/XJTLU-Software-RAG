@@ -11,11 +11,11 @@ hero:
     alt: 
   actions:
     - theme: brand
+      text: Quick Start
+      link: /install
+    - theme: alt
       text: Project Brief
       link: /project-introduction
-    - theme: alt
-      text: Quick Start
-      link: /api-examples
 
 features:
   - title: Customizable AI for Synthetic Biology
