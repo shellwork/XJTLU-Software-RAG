@@ -61,8 +61,3 @@ def load_ori_documents(kb_name: str, files: list[str]) -> list[Document]:
     documents = md_documents + txt_documents + docx_documents + pptx_documents
     return documents
 ```
-
-
-# Picture Loader
-
-# Special Document Loader
