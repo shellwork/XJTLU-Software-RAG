@@ -1,19 +1,20 @@
 # Project Introduction
 
-This page demonstrates the opportunity and background of the project's inception.
 
 ### iGEM
 
 The full name of [iGEM](https://igem.org/) is “International Genetically Engineered Machine Competition”. It is a global synthetic biology competition aimed at encouraging students to design and build genetic engineering projects to solve real-world problems through teamwork and scientific innovation. 
-
-The competition attracts high school students, undergraduates, and graduate students from all around the world. Participants apply interdisciplinary knowledge and use synthetic biology tools to design biological systems and verify their feasibility in the lab. Teams typically propose innovative solutions in areas of global concern, such as healthcare, the environment, or energy.
 
 
 ## Project Overview
 
 The iGEM Parts Registry is a large open database of DNA elements contributed by iGEM teams over the years. However, the data quality is inconsistent, with many parts lacking proper descriptions, optimization, or contributions. Additionally, the current presentation of results lacks clear indexing and quick search functions, making it difficult to efficiently access and summarize information.
 
-ChatParts is an AI agent designed to improve productivity by organizing and retrieving parts as well as experiment and protocol information using a RAG (Retrieve-Augmented Generation) system. Fine-tuning enhances the model's performance in specific domains, while the iGEM ChatParts Community platform helps promote and expand the project's reach.
+ChatParts is an AI agent designed to improve productivity by organizing and retrieving parts as well as experiment and protocol information using a **RAG (Retrieval-Augmented Generation) system**. Fine-tuning enhances the model's performance in specific domains, while the iGEM ChatParts Community platform helps promote and expand the project's reach.
+
+## Model Construction
+
+Retrieval-augmented generation (RAG) combines information retrieval and generation models. When a user uploads a PDF, it's converted to text and split into chunks, which are then embedded into vector representations stored in a VectorStore. When a prompt is entered, it's vectorized and compared to the stored vectors to find relevant text chunks. These chunks are then used to create a prompt for a Large Language Model (LLM), generating a final answer. This process enhances the accuracy and relevance of the generated content.
 
 ![RAG Model](https://static.igem.wiki/teams/5256/model/model2.png)
 
@@ -21,6 +22,9 @@ ChatParts is an AI agent designed to improve productivity by organizing and retr
 2. Efficient Information Retrieval: Implement a system for rapid, targeted searches.
 3. Data Augmentation: Use AI-driven tools to process and classify biological parts for easier accessibility and utility.
 4. RAG-based System: Integrate a Retrieval-Augmented Generation (RAG) system to enhance the querying and information    management experience.
+::: tip
+**More information can be found on our *[team wiki](https://2024.igem.wiki/xjtlu-software/)*.**
+:::
 
 ## Problems Encountered in Research
 
@@ -46,22 +50,3 @@ This document focuses on the introduction and use of local software packages dev
 
 
 
-::: warning
-This is a warning.
-:::
-
-::: danger
-This is a dangerous warning.
-:::
-
-::: details
-This is a details block.
-:::
-
-
-
-
-
-## More
-
-Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
