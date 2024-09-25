@@ -37,8 +37,16 @@ export default defineConfig({
       {
         text: 'Functions in Source Code',
         items: [
+          {text: 'server',
+           items:[
+            {text: 'api', link: '/functions/api'},
+            {text: 'chat', link: '/functions/chat'},
+            {text: 'create database', link: '/functions/create-database'},
+           ]
+          },
+
           {text: 'data loader', 
-          items: [
+           items: [
             {text: 'document loader', link: '/functions/document-loader'},
             {text: 'JSON loader', link: '/functions/json-loader'},
             {text: 'PDF&Text loader', link: '/functions/pdf-text-loader'},
