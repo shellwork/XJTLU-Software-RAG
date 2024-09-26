@@ -1,6 +1,6 @@
 # API
 
-The code in the api file is built using the FastAPI framework to create a backend service primarily designed for managing and operating a document-based knowledge base system. It handles file uploads, OCR processing, and various other functionalities.
+We built the code in the api file using the FastAPI framework to create a backend service primarily designed for managing and operating a document-based knowledge base system. It handles file uploads, OCR processing, and various other functionalities.
 
 ## Libraries imported
 

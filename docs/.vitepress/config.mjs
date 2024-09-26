@@ -37,15 +37,15 @@ export default defineConfig({
       {
         text: 'Functions in Source Code',
         items: [
-          {text: 'server',
+          {text: 'Server',
            items:[
             {text: 'api', link: '/functions/api'},
             {text: 'chat', link: '/functions/chat'},
-            {text: 'create database', link: '/functions/create-database'},
+            {text: 'kb management', link: '/functions/create-database'},
            ]
           },
 
-          {text: 'data loader', 
+          {text: 'Data loader', 
            items: [
             {text: 'document loader', link: '/functions/document-loader'},
             {text: 'JSON loader', link: '/functions/json-loader'},
@@ -54,6 +54,14 @@ export default defineConfig({
             {text: 'Picture loader', link: '/functions/picture-loader'},
             {text: 'Special document loader', link: '/functions/special-loader'}
           ]
+          },
+          {text: 'Frontend/Streamlit',
+           items: [
+            {text: 'database', link: '/functions/front-database'},
+            {text: 'dialogue', link: '/functions/front-dialogue'},
+            {text: 'knowledge base chat', link: '/functions/front-kbchat'},
+            {text: 'knowledge base', link: '/functions/front-kb'}
+           ]
           }
         ]
       }
