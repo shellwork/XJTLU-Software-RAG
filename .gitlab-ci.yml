@@ -2,7 +2,7 @@ image: node:latest
 
 # 在所有阶段前执行的脚本
 before_script:
-  - cd ./docs
+  - cd docs
   - npm install # 安装依赖
   - npm rebuild # 重新构建 npm 依赖（如果必要）
 
@@ -11,16 +11,20 @@ build:
   stage: build
   script:
     - npm run docs:build # 使用 VitePress 进行构建
-    - touch .vitepress/dist/.nojekyll # 防止 GitLab Pages 使用 Jekyll
+    # - touch ./docs/.vitepress/dist/.nojekyll # 防止 GitLab Pages 使用 Jekyll
   artifacts:
     paths:
-      - .vitepress/dist # 保存构建产物
+      - docs/.vitepress/dist # 保存构建产物
 
 # GitLab Pages 需要将构建产物放置在 public 文件夹中
 pages: 
   stage: deploy
   script:
-    - cp -r .vitepress/dist public # 将构建产物复制到 public 文件夹，供 GitLab Pages 使用
+    - cd ..
+    - cp -r docs/.vitepress/dist public # 将构建产物复制到 public 文件夹，供 GitLab Pages 使用
+    - cd public
+    - ls
+    - pwd
   artifacts:
     paths:
       - public # 指定 public 文件夹作为部署路径
@@ -30,4 +34,5 @@ pages:
 # 缓存以加速构建过程
 cache:
   paths:
-    - node_modules # 缓存 npm 依赖以加速未来的构建
+    - node_modules
+    - docs/.vitepress/dist
