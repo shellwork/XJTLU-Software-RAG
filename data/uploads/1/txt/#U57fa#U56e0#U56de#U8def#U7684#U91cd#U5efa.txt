@@ -1,0 +1,721 @@
+Vol 438|24 November 2005|doi:10.1038/nature04335
+
+REVIEWS
+
+Reconstruction of genetic circuits
+
+David Sprinzak1 & Michael B. Elowitz1
+
+The complex genetic circuits found in cells are ordinarily studied by analysis of genetic and biochemical perturbations.
+The inherent modularity of biological components like genes and proteins enables a complementary approach: one can
+construct and analyse synthetic genetic circuits based on their natural counterparts. Such synthetic circuits can be used
+as simple in vivo models to explore the relation between the structure and function of a genetic circuit. Here we describe
+recent progress in this area of synthetic biology, highlighting newly developed genetic components and biological lessons
+learned from this approach.
+
+By taking apart an old clock, you could probably come up with
+
+a pretty good guess at how it works. But a more concrete
+understanding of the clock mechanism might be obtained by
+designing and building one’s own clock out of similar parts.
+Contemporary biology presents us with similar reverse-engineering
+problems. For example, Drosophila cells contain a circadian clock
+that oscillates with a 24-h rhythm and self-synchronizes to the day/
+night cycle. Using genetic and biochemical techniques, researchers
+have isolated genes and proteins involved in interlocked feedback
+loops of gene expression1,2 (Fig. 1b) that are necessary for clock
+function. However, many fundamental questions remain difﬁcult to
+answer: what sets the period of the oscillation, how does the clock
+operate reliably in diverse cellular conditions, and what features of its
+design are responsible for its reliable operation? To gain insight into
+such questions one could design and build new clock circuits, using
+similar genes and proteins, and study their dynamics in the organism.
+In fact, several synthetic genetic clocks have now been constructed in
+bacteria3–5 (Fig. 1c). These circuits are much simpler than the
+Drosophila clock. They fail to operate as reliably, but they provide a
+proof of principle for a synthetic approach to understanding genetic
+circuits.
+
+As with the clock, many compelling biological questions centre on
+how interactions among genes and proteins,
+forming genetic
+circuits, give rise to speciﬁc cellular functions. Genetic and
+biochemical techniques have successfully identiﬁed many circuit
+components and their interactions. However,
+in many cases
+knowledge about these components and their interactions is not
+sufﬁcient to explain the circuit mechanism. What is missing from
+the circuit diagram? There are several possible deﬁciencies: one is
+that the diagram may be incomplete—interactions may have been
+missed. The opposite problem also exists: the diagram may be too
+complete, in the sense that it contains interactions that are not
+actively involved in the process being investigated (for example, if
+one of the proteins is not expressed under the relevant con-
+ditions). Another problem is ignorance of the effective rules by
+which proteins and genes interact. For example, in vivo values of
+kinetic parameters such as afﬁnities, binding and degradation
+rates, and so on, are generally unknown. Finally, the intracellular
+environment is intrinsically ‘noisy’, and small copy numbers of
+molecular species limit the predictability of biochemical reactions6.
+Taken together, these problems reduce our conﬁdence in the
+combined understanding we get from perturbations, measurements
+and mathematical modelling.
+
+A reconstructive approach to genetic circuits may offer unique
+
+insight into their underlying mechanisms. In this approach, one
+constructs synthetic replicas of natural genetic circuits out of well-
+characterized elements, such as genes, proteins, regulatory sequences,
+and so on, and observes their dynamics in living cells (Fig. 1a). This
+scheme offers several advantages. First, one can test the sufﬁciency of
+an arbitrary circuit for generating a particular function. Second, one
+may study the circuit mechanism without impairing cellular func-
+tions or inducing downstream consequences. Third, different circuit
+designs with similar functions can be directly compared to determine
+their relative advantages and disadvantages7. Such synthetic circuit
+reconstruction is made possible by the technologies of molecular
+biology such as construction of recombinant DNA molecules. Its
+future progress will beneﬁt from further advances such as recent
+improvements in longer DNA synthesis8.
+
+In this way, synthetic genetic circuits can function as physical
+models of natural genetic circuits. The use of physical models to
+understand natural phenomena is common throughout the sciences
+in general and biology in particular. Linus Pauling discovered the
+a -helix structural motif by building physical ball-and-stick models
+of proteins9. In molecular biology, the synthesis of an artiﬁcial
+chromosome in yeast proved the necessity and sufﬁciency of
+particular combinations of sequence elements for chromosome
+function10. Most similarly, in the ﬁeld of protein design, proteins
+can be designed de novo based on principles and motifs discovered
+in natural proteins11,12. For example, understanding of protein–
+protein interactions is facilitated by design of synthetic interacting
+proteins12.
+
+We describe here how synthetic biology can address biological
+questions at the level of genetic circuits. We review some tools
+developed for synthetic biology and a few speciﬁc experiments that
+use these tools to answer fundamental biological questions. Finally,
+we discuss future directions of this approach. Owing to space limits,
+we conﬁne ourselves to a small subset of the much larger, and rapidly
+growing, ﬁeld of synthetic biology, reviewed elsewhere13–18 and in this
+issue19.
+
+Modular circuit components
+In order to build synthetic circuits, one needs genetic components
+that are well characterized, modular (that is, function similarly
+in different systems) and act independently of other cellular pro-
+cesses. Early synthetic biology experiments focused on transcrip-
+tional regulation components because they are relatively well
+understood and easy to reconﬁgure. For example, repressors were
+used to create feedback loops of various sizes in Escherichia coli in
+
+1California Institute of Technology, Division of Biology and Department of Applied Physics, California Institute of Technology, Pasadena, California 91125, USA.
+
+© 2005 Nature Publishing Group 
+
+443
+
+REVIEWS
+
+NATURE|Vol 438|24 November 2005
+
+order to understand noise suppression20, bistability21,22 and oscil-
+lations3 in circuits of one, two and three repressors, respectively.
+Similarly, synthetic cascades without feedback provided information
+on delays23, noise propagation6,24 and sensitivity25. More recently,
+some of these transcriptional circuit designs have been created and
+analysed in mammalian systems using newly developed transcrip-
+tional regulators26,27. In one case, a synthetic bistable switch was
+shown to operate in a mouse26.
+
+Nevertheless, it is clear that many natural circuits are fundamen-
+tally non-transcriptional. An amazing example is the cyanobacterial
+circadian clock, the operation of which depends on protein phos-
+phorylation but can be independent of transcription and translation
+(in contrast to its counterpart in Drosophila)28. Thus, it is critical
+to appropriate other interaction mechanisms, such as protein modi-
+ﬁcation, regulated degradation, and so on, for use in synthetic
+circuits.
+
+One class of such non-transcriptional regulatory control mecha-
+nism involves trans-acting RNA molecules, such as microRNAs.
+Regulation by RNA offers promising applications in synthetic
+biology because of the inherent versatility of its sequence-based
+targeting mechanism29. Recently, Bayer and Smolke30 reported the
+development of designed ‘anti-switches’ composed of a modular
+ligand-binding (aptamer) domain joined to a regulatory domain that
+inhibits translation of speciﬁc target mRNAs in a ligand-dependent
+fashion (Fig. 2a). Isaacs et al.31 described ‘cis-repressed’ riboregula-
+tory molecules containing a translation-repressing hairpin RNA
+structure. Complementary trans-acting RNA molecules relieve inhi-
+bition by the hairpin, allowing gene expression. Both types of
+
+components should ﬁnd applications in synthetic circuits that
+require combinatorial control of gene expression.
+
+Small molecules such as hormones and metabolites carry out
+many cellular functions—can they be used in synthetic genetic
+circuits? Recently, Fung et al.5 created the ‘metabolator’, a synthetic
+circuit in which transcriptional control of metabolic enzymes
+generate oscillations between two metabolite pools: acetyl CoA
+versus acetyl phosphate and acetate (Fig. 2b). The metabolic enzymes
+that interconvert these two metabolites are under the transcriptional
+control of acetyl phosphate-sensitive regulators. On a larger scale,
+metabolic enzymes from plant, yeast and E. coli were arranged in
+synthetic pathways to produce amorpha-4,11-diene32, a precursor
+of the highly effective anti-malarial drug artemisinin. Synthetic
+metabolic pathway construction has the potential to enable synthesis
+of medically important compounds and may also shed light on
+fundamental issues of pathway design.
+
+Small diffusible molecules naturally used for intercellular com-
+munication have also been appropriated for synthetic circuits. For
+example, acyl-homoserine lactone (AHL), a signalling molecule in
+diverse bacteria33, was recently34 used to implement a simple multi-
+cellular patterning system in E. coli, loosely analogous to a morpho-
+gen gradient35 (Fig. 2c). In this work, AHL was produced by a ‘sender’
+strain localized to the centre of a Petri dish. A second set of ‘receiver’
+strains contained synthetic transcriptional circuits that combine
+positive and negative responses to AHL and thereby serve as ‘band-
+pass’ detectors. As a result, the ﬂuorescent output gene was expressed
+only in cells within a speciﬁc range of distances from the source (that
+is, in a ring). Owing to an unanticipated design feature of the circuit,
+
+Figure 1 | Natural and synthetic genetic circuits. a, The synthetic biology
+paradigm. Genetic circuits are composed of interacting genes and proteins
+(blue shapes, top left). The pointed and blunt arrows represent positive and
+negative regulation, respectively. Synthetic circuits (top right) based on the
+natural circuit can be constructed from well-characterized components (red
+and orange shapes) with similar regulatory effects to form similar or
+simpliﬁed circuits. The dynamics of these synthetic replicas can be
+compared to the natural system as well as to mathematical models. Analysis
+of natural circuits, synthetic replicas and models together can help us
+understand mechanisms used by natural systems. b, The Drosophila
+circadian clock is an actively studied natural clock circuit (simpliﬁed scheme
+based on Cyran et al.2). It contains a negative feedback loop in which Per and
+
+Tim, after a delay, repress their own production (via Clk/Cyc, right loop).
+Interlocked with this negative feedback loop is another loop involving Vri
+and PDP11 (left loop). The diagram is highly simpliﬁed and many details of
+the process have been omitted, including post-translational modiﬁcations,
+nuclear transport and active degradation. c, The ‘repressilator’ is a simple
+synthetic clock circuit consisting of a three-component negative feedback
+loop that operates in E. coli3. The three-element loop provides a delayed
+negative feedback on all components and permits oscillations. In this sense,
+it models the generation of oscillations by delayed negative feedback.
+However, as can be seen from the ﬁgure this simple synthetic circuit differs
+markedly from the natural circadian clock in both complexity and design.
+
+444
+
+© 2005 Nature Publishing Group 
+
+NATURE|Vol 438|24 November 2005
+
+REVIEWS
+
+the position of this ring did not vary over time as the signal diffused
+outward from its source. This effect was attributed to a dynamic delay
+within the circuit: one transcription factor had to be diluted by cell
+growth to allow expression of the reporter. Thus, the authors
+uncovered a design strategy for creating stationary patterns from a
+diffusive gradient that grows with time. We are not aware of evidence
+for this mechanism in natural morphogen systems; however, similar
+problems may appear in development, and it will be exciting to see
+whether synthetic circuits can address them.
+
+One concern when building synthetic genetic circuits is the effects
+that they might have on endogenous cellular functions. Ideally, one
+would like circuits to operate independently of the rest of the cell, but
+the limits to such independence remain unclear. Recently, a step in
+this direction was taken by Rackham and Chin36, who generated a set
+of ‘orthogonal’ ribosome–mRNA pairs. They used a novel selection-
+counterselection scheme to select three speciﬁcally interacting pairs
+of ribosome binding sites and their complementary regions on the
+16S rRNA (Fig. 2d). These orthogonal ribosomes represent partially
+independent protein production lines. Their approach might be
+extended to other steps in gene expression, for example, by creating
+orthogonal sigma factors for prokaryotic transcription. Circuits
+based on such orthogonal systems may provide better understanding
+of the natural regulation of global processes like transcription and
+translation.
+
+Lessons learned from synthetic circuits
+The tools above, and others, will facilitate the development of novel
+synthetic circuits, but the ultimate value of this approach will depend
+on what general principles it reveals about circuit design. So far,
+several important lessons have emerged from the earliest results.
+
+The intracellular environment differs in many ways from the
+idealized test tubes in which we imagine biochemical reactions
+occurring and that form the basis for most mathematical models.
+For example, the cellular environment is highly variable. This
+variability arises in two ways. First, owing to the low copy number
+of many cellular molecules, stochastic effects in biochemical reac-
+tions can be signiﬁcant. This stochasticity, or ‘intrinsic noise’, causes
+biochemical reactions to be partly unpredictable, and therefore more
+difﬁcult to model. Second, individual cells differ from one another in
+many ways. This ‘extrinsic noise’ causes cell–cell differences in circuit
+dynamics37. There is an interplay between the two types of noise:
+intrinsic noise in one cellular component, such as a transcription
+factor, may contribute to extrinsic noise in other components, such
+as its target genes. Synthetic biology experiments have been instru-
+mental in probing both types of noise and revealing the strong effect
+they have on the function of genetic circuits.
+
+Rosenfeld et al.38 used time-lapse movies to analyse a synthetic
+cascade in which a ﬂuorescent repressor protein and its target gene
+were monitored simultaneously in individual cells (Fig. 3a). Their
+
+Figure 2 | Modular components in synthetic circuits. a, RNA ‘anti-
+switches.’ These molecules contain an aptamer domain that binds to a
+speciﬁc effector (small molecule ligand), as well as a sequence recognition
+domain complementary to a target mRNA. Binding of the effector changes
+the conformation of the switch and enables control of target gene
+expression30. b, The ‘metabolator.’ This synthetic oscillatory circuit relies on
+regulated metabolic ﬂuxes. Oscillations occur between two pools of
+metabolites, here labelled M1 and M2 (see text). M2 indirectly regulates the
+metabolic enzymes E1 and E2, corresponding to phosphate acetyltransferase
+and acetate kinase. Two extreme states of the oscillator are shown in the
+diagram. On the left, the system has lots of M1 and little M2. In this state, the
+enzyme activities are small, causing substantial net ﬂux from M1 to M2. On
+the right is the opposite state in which M2 levels are high and M1 levels are
+low. Now, E1 and E2 levels increase, reversing the net ﬂux5. c, Formation of
+
+spatial patterns by a synthetic multicellular circuit. Mixed populations of
+engineered E. coli strains are placed on a Petri dish. Sender cells, localized to
+the centre (top left), emit AHL, which diffuses away. Band detector strains
+throughout the plate (right) respond to speciﬁc ranges of AHL using a
+synthetic band detector circuit. The result is concentric ring patterns of gene
+expression (bottom left), in which two different detector strains (green and
+red) turn on at speciﬁc distances from the source34. d, Synthesis of orthogonal
+ribosome–mRNA pairs. The 16S ribosomal subunit and a target ribosome-
+binding site sequence were coevolved to recognize one another speciﬁcally and
+uniquely (left). A chloramphenicol resistance gene was subcloned together
+with each of the evolved ribosome-binding sites and co-transformed with
+each evolved, and one wild-type, 16S subunit, to produce a ‘matrix’ of
+strains. As shown on the right, only strains containing matched pairs are able
+to grow in media containing high levels of chloramphenicol36.
+
+© 2005 Nature Publishing Group 
+
+445
+
+REVIEWS
+
+NATURE|Vol 438|24 November 2005
+
+results showed how noise and gene regulation combine to determine
+the instantaneous rate of expression of a typical gene. The experi-
+ments assessed the timescale and amplitude of noise, in the regu-
+lation of a speciﬁc gene, and showed that the extrinsic component of
+the noise makes a dominant contribution to the total noise. They also
+revealed that most ﬂuctuations do not ‘average out’ over a cell cycle,
+and therefore the response curve of a repressor–promoter system is
+not well deﬁned at the single cell level. In related work, Pedraza and
+van Oudenaarden24 constructed a linear cascade of three repressors,
+together with three corresponding ﬂuorescent protein reporters.
+They showed how ﬂuctuations propagate in a transcriptional cas-
+cade. This work used a previously developed theoretical framework39
+to provide an integrated analysis of noise at the circuit level. It
+remains to be seen how cells and human genetic circuit designers
+might use such fundamentally noisy components to make reliable
+circuits.
+
+Synthetic biology relies on the rearrangement of modular elements
+to create novel circuits. Rather than designing a speciﬁc circuit, it is
+also possible to create combinatorial libraries of many possible
+circuits. What can such libraries teach us about the computational
+power and functional diversity of simple biological systems?
+
+Recently, Guet et al.40 addressed this question by creating a
+synthetic circuit ‘slot machine’ in which each of three transcriptional
+regulatory genes was controlled by one of ﬁve possible promoters
+(Fig. 3b). The resulting circuit library was screened for its response to
+two different chemical inputs that interacted with two of the
+repressors. A surprisingly large fraction of the diverse circuit designs
+generated computationally interesting functions, such as NAND and
+NOR. In this example, the map of known interactions among the
+components did not uniquely determine the circuit function. Rather,
+examples were found in which the same circuit architecture pro-
+duced different functions, as well as others in which the same
+function was encoded by circuits with different architectures. This
+synthetic biology experiment demonstrates what a rich functional
+diversity can be obtained with even a relatively small number of
+components.
+
+Similarly, Dueber et al.41 recently explored analogous structure–
+function relations at the level of protein domains. They built a library
+consisting of a kinase domain fused to various ligand-binding
+regulatory domains placed in different positions within the protein.
+They determined the activity of the kinase in the presence and
+absence of two ligands speciﬁc for domains contained in each
+protein. They found that a large diversity of different functions
+could be encoded in individual proteins by recombining modular
+protein domains. The implications at the protein level are similar to
+those at the circuit level: recombination of modular units can rapidly
+explore the space of possible functions. It remains to be seen what
+limits the functional spectrum in these cases.
+
+A ﬁnal lesson from synthetic circuits involves ﬁdelity in signal
+transduction. Park et al.42 used a synthetic approach to study how
+signal ﬁdelity is maintained within pathways that share components.
+In yeast, both the mating pheromone and osmolarity stress response
+pathways signal through the mitogen-activated protein (MAP)
+kinase Ste11, yet they exhibit no crosstalk. This insulation is accom-
+plished by the protein scaffolds Ste5 and Pbs2 that bind Ste11
+together with other pathway-speciﬁc components (Fig. 3c). Even
+though Ste11 participates in two pathways (interacts with two
+scaffolds), it transduces a signal while in a complex with speciﬁc
+upstream and downstream components. Park et al.42 replaced natural
+tethering interactions with synthetic alternatives that were sufﬁcient
+to tether together the different components of the MAP kinase
+cascade and allow signal propagation. To show the sufﬁciency of
+tethering, they created a synthetic hybrid scaffold consisting of a
+modiﬁed fusion protein of Ste5 and Pbs2. This construct effectively
+re-wired the signalling pathway so that pheromone induced osmo-
+regulatory responses. Here, the synthetic approach involves rewiring,
+rather than reconstruction per se, and demonstrates that the
+
+Figure 3 | Lessons from synthetic biology. a, Noise in gene regulation6. A
+synthetic transcriptional cascade was constructed to analyse the gene
+regulation function (GRF) in single cells (top panel). The GRF is the relation
+between the protein production rate ( y axis in graph) and the concentration
+of its repressor protein (x axis). The transcriptional cascade comprises
+reporter gene, cyan ﬂuorescent protein (CFP), under a l PR promoter, which
+can be repressed by CI repressor fused to yellow ﬂuorescent protein (YFP).
+The CI-YFP fusion protein is under the control of TetR repressor (repression
+of TetR can be removed through addition of aTc (anhydrotetracycline); TetR
+is under a constitutive promoter PC). Each orange point in the graph
+(bottom panel) represents a measurement made in a single cell at a given
+time. The average GRF is given by the orange line. Measurements from two
+selected lineages are indicated in cyan and magenta. The data show
+signiﬁcant ﬂuctuations in the GRF that vary slowly, with a timescale of
+approximately one cell cycle. These results show that the GRF is not well
+deﬁned at the single cell level. b, Exploring the functional potential of
+transcriptional circuits40. Three transcriptional regulators and ﬁve
+promoters were rearranged to produce a small library of random genetic
+circuits, four of which are shown here (columns). For each circuit, the
+expression of a green ﬂuorescent reporter gene (G) was measured with and
+without each of two extracellular inducers (IPTG and aTc). Circuits with
+four different output functions (yellow–green ﬂuorescence versus four
+indicated input conditions) are shown here patched onto agar plates;
+however, each pair shares a single circuit structure, shown below. In these
+diagrams, A, B and C refer to transcriptional regulatory proteins. Note that
+different functions are seen with the same diagram (columns 1–2 and 3–4),
+and similar (but not identical) functions are produced by different diagrams
+(columns 1 and 4)49. c, Rewiring signalling pathways. The pheromone and
+osmolarity response pathways in yeast (top) use protein scaffolds (Ste5 and
+Pbs2) to avoid crosstalk through the shared component Ste11. By
+constructing a modiﬁed fusion protein of Pbs2 and Ste5, the authors
+constructed a rewired pathway in which cells produce osmolarity stress
+responses after pheromone induction42.
+
+446
+
+© 2005 Nature Publishing Group 
+
+NATURE|Vol 438|24 November 2005
+
+REVIEWS
+
+principal requirement for signalling through a pathway is proximity
+of components. It also suggests a simple mechanism by which signal
+transduction pathways might evolve new capabilities.
+
+than their natural counterparts. However, perhaps at this stage one
+can learn more by putting together a simple, if inaccurate, pendulum
+clock than one can by disassembling the ﬁnest Swiss timepiece.
+
+Challenges for synthetic circuit design
+Constructing a functional synthetic circuit requires assembling
+diverse genetic elements and getting them to work together. In
+general, combining disparate components requires the tuning of
+biochemical parameters such as afﬁnities or rate constants, which is
+often difﬁcult to implement in biological circuits3,25. Characteriza-
+tion of a component may be valid in one context (locus, plasmid,
+strain, environment, and so on), but not in others. How can one
+design an operating circuit given these limitations? Several strategies
+have been applied. First, the use of tunable elements, such as
+transcription factors derived from tetR43,44, allows external control
+over some parameters. Second, one can screen libraries of mutated
+components, or apply directed evolution in the laboratory, to
+optimize parameters45. A third strategy is to use robust circuit designs
+that are inherently insensitive to unknown or variable parameters.
+Such designs are particularly interesting because they may have been
+selected by evolution for the very same property46.
+
+A related challenge is computational modelling of genetic circuits.
+Modelling is essential both for analysis of natural systems and also for
+design of synthetic ones. However, several problems complicate its
+application to cellular circuits. These include parameter sensitivity,
+the lack of effective rules to simplify complex circuits, and the
+difﬁculty of incorporating extrinsic noise. Because synthetic circuits
+are simpler and better characterized than their natural counterparts,
+they will probably offer ideal test systems to develop and reﬁne
+models. The results should apply both to natural and synthetic
+circuits.
+
+Future directions
+What are the goals of the synthetic circuit paradigm outlined here?
+One is to better understand natural circuits by building minimal
+replicas of those circuits, observing their dynamics in vivo, and
+comparing them to one another and to their natural counterparts.
+The synthetic circuits presented above are highly simpliﬁed. How-
+ever, as we gain conﬁdence and expertise in our ability to build,
+model and analyse these circuits, we will be able to construct replicas
+of greater verisimilitude. Possible natural circuits that could be
+investigated this way include decision making in response to stress
+and DNA damage, as in the natural p53/mdm2 circuit47, differen-
+tiation in response to extracellular signals, as in oocyte maturation48,
+and regulated temporal oscillations, as in the cell cycle and circadian
+clock1,10. Circuits that use the intrinsically noisy nature of the cell to
+create probabilistic behaviours are particularly compelling examples.
+A second goal is to discover what other, non-natural, circuit
+designs are possible given realistic biological components, and
+which of those operate reliably in vivo. This will be achieved by
+building and characterizing a variety of alternative circuit designs in
+living cells. In this way, one may ask what advantages naturally
+evolved circuits have over synthetic ones. For example, the synthetic
+clock designs described earlier have not been discovered to occur in
+nature, suggesting that natural designs may confer better perform-
+ance. At the same time, non-natural designs may prove useful for
+biotechnology applications32.
+
+Perhaps the most intriguing problem is how a circuit operates in
+the context of a complete organism. There are no dotted lines inside
+the cell isolating circuits from one another. The ultimate test for this
+synthetic approach is to delete natural circuits and replace them with
+synthetic counterparts within organisms. This will require synthetic
+circuits to interface with the rest of the cell. For example, by replacing
+the Drosophila circadian clock with synthetic versions we could learn
+more about the interaction of the circadian module with other
+functional subsystems in the organism. Even the most optimistic
+synthetic biologist would expect such circuits to be less functional
+
+1. Hardin, P. E. The circadian timekeeping system of Drosophila. Curr. Biol. 15,
+
+R714–-R722 (2005).
+
+2. Cyran, S. A. et al. vrille, Pdp1, and dClock form a second feedback loop in the
+
+3.
+
+Drosophila circadian clock. Cell 112, 329–-341 (2003).
+Elowitz, M. B. & Leibler, S. A synthetic oscillatory network of transcriptional
+regulators. Nature 403, 335–-338 (2000).
+
+4. Atkinson, M. R., Savageau, M. A., Myers, J. T. & Ninfa, A. J. Development of
+
+genetic circuitry exhibiting toggle switch or oscillatory behaviour in Escherichia
+coli. Cell 113, 597–-607 (2003).
+Fung, E. et al. A synthetic gene–-metabolic oscillator. Nature 435, 118–-122
+(2005).
+Rosenfeld, N., Young, J. W., Alon, U., Swain, P. S. & Elowitz, M. B. Gene
+regulation at the single-cell level. Science 307, 1962–-1965 (2005).
+
+5.
+
+6.
+
+7. Alves, R. & Savageau, M. A. Extending the method of mathematically
+
+controlled comparison to include numerical comparisons. Bioinformatics 16,
+786–-798 (2000).
+Tian, J. et al. Accurate multiplex gene synthesis from programmable DNA
+microchips. Nature 432, 1050–-1054 (2004).
+Judson, H. The Eighth Day of Creation (Simon and Schuster, New York, 1979).
+Ingolia, N. T. & Murray, A. W. The ups and downs of modeling the cell cycle.
+Curr. Biol. 14, R771–-R777 (2004).
+
+8.
+
+9.
+10.
+
+11. Bolon, D. N., Voigt, C. A. & Mayo, S. L. De novo design of biocatalysts. Curr.
+
+Opin. Chem. Biol. 6, 125–-129 (2002).
+
+12. Kortemme, T. & Baker, D. Computational design of protein-protein
+
+interactions. Curr. Opin. Chem. Biol. 8, 91–-97 (2004).
+
+13. Brent, R. A partnership between biology and engineering. Nature Biotechnol. 22,
+
+1211–-1214 (2004).
+
+14. McDaniel, R. & Weiss, R. Advances in synthetic biology: on the path from
+
+prototypes to applications. Curr. Opin. Biotechnol. 16, 476–-483 (2005).
+15. Benner, S. A. & Sismour, A. M. Synthetic biology. Nature Rev. Genet. 6,
+
+533–-543 (2005).
+
+16. Hasty, J., McMillen, D. & Collins, J. J. Engineered gene circuits. Nature 420,
+
+224–-230 (2002).
+
+17. Arkin, A. P. Synthetic cell biology. Curr. Opin. Biotechnol. 12, 638–-644
+
+(2001).
+
+18. Pawson, T. & Linding, R. Synthetic modular systems–-reverse engineering of
+
+signal transduction. FEBS Lett. 579, 1808–-1814 (2005).
+
+19. Endy, D. Foundations for engineering biology. Nature doi:10.1038/nature04342
+
+(this issue).
+
+20. Becskei, A. & Serrano, L. Engineering stability in gene networks by
+
+autoregulation. Nature 405, 590–-593 (2000).
+
+21. Gardner, T. S., Cantor, C. R. & Collins, J. J. Construction of a genetic toggle
+
+switch in Escherichia coli. Nature 403, 339–-342 (2000).
+
+22. Kobayashi, H. et al. Programmable cells: interfacing natural and engineered
+
+gene networks. Proc. Natl Acad. Sci. USA 101, 8414–-8419 (2004).
+
+23. Rosenfeld, N. & Alon, U. Response delays and the structure of transcription
+
+networks. J. Mol. Biol. 329, 645–-654 (2003).
+
+24. Pedraza, J. M. & van Oudenaarden, A. Noise propagation in gene networks.
+
+Science 307, 1965–-1969 (2005).
+
+25. Hooshangi, S., Thiberge, S. & Weiss, R. Ultrasensitivity and noise propagation
+
+in a synthetic transcriptional cascade. Proc. Natl Acad. Sci. USA 102, 3581–-3586
+(2005).
+
+26. Kramer, B. P. et al. An engineered epigenetic transgene switch in mammalian
+
+cells. Nature Biotechnol. 22, 867–-870 (2004).
+
+27. Kramer, B. P. & Fussenegger, M. Hysteresis in a synthetic mammalian gene
+
+network. Proc. Natl Acad. Sci. USA 102, 9517–-9522 (2005).
+
+28. Nakajima, M. et al. Reconstitution of circadian oscillation of cyanobacterial
+
+KaiC phosphorylation in vitro. Science 308, 414–-415 (2005).
+
+29. Carrington, J. C. & Ambros, V. Role of microRNAs in plant and animal
+
+development. Science 301, 336–-338 (2003).
+
+30. Bayer, T. S. & Smolke, C. D. Programmable ligand-controlled riboregulators of
+
+31.
+
+eukaryotic gene expression. Nature Biotechnol. 23, 337–-343 (2005).
+Isaacs, F. J. et al. Engineered riboregulators enable post-transcriptional control
+of gene expression. Nature Biotechnol. 22, 841–-847 (2004).
+
+32. Martin, V. J., Pitera, D. J., Withers, S. T., Newman, J. D. & Keasling, J. D.
+
+Engineering a mevalonate pathway in Escherichia coli for production of
+terpenoids. Nature Biotechnol. 21, 796–-802 (2003).
+
+33. Henke, J. M. & Bassler, B. L. Bacterial social engagements. Trends Cell Biol. 14,
+
+648–-656 (2004).
+
+34. Basu, S., Gerchman, Y., Collins, C. H., Arnold, F. H. & Weiss, R. A synthetic
+
+multicellular system for programmed pattern formation. Nature 434, 1130–-1134
+(2005).
+
+35. Ephrussi, A. & St Johnston, D. Seeing is believing: the bicoid morphogen
+
+gradient matures. Cell 116, 143–-152 (2004).
+
+36. Rackham, O. & Chin, J. W. A network of orthogonal ribosomezmRNA pairs.
+
+Nature Chem. Biol. 1, 159–-166 (2005).
+
+37. Elowitz, M. B., Levine, A. J., Siggia, E. D. & Swain, P. S. Stochastic gene
+
+expression in a single cell. Science 297, 1183–-1186 (2002).
+
+© 2005 Nature Publishing Group 
+
+447
+
+REVIEWS
+
+NATURE|Vol 438|24 November 2005
+
+38. Rosenfeld, N., Elowitz, M. B. & Alon, U. Negative autoregulation speeds
+the response times of transcription networks. J. Mol. Biol. 323, 785–-793
+(2002).
+
+39. Paulsson, J. Summing up the noise in gene networks. Nature 427, 415–-418
+
+(2004).
+
+40. Guet, C. C., Elowitz, M. B., Hsing, W. & Leibler, S. Combinatorial synthesis of
+
+genetic networks. Science 296, 1466–-1470 (2002).
+
+41. Dueber, J. E., Yeh, B. J., Chak, K. & Lim, W. A. Reprogramming control of an
+
+allosteric signalling switch through modular recombination. Science 301,
+1904–-1908 (2003).
+
+42. Park, S. H., Zarrinpar, A. & Lim, W. A. Rewiring MAP kinase pathways
+
+using alternative scaffold assembly mechanisms. Science 299, 1061–-1064
+(2003).
+
+43. Lutz, R. & Bujard, H. Independent and tight regulation of transcriptional units in
+
+Escherichia coli via the LacR/O, the TetR/O and AraC/I1–-I2 regulatory
+elements. Nucleic Acids Res. 25, 1203–-1210 (1997).
+
+44. Gossen, M. & Bujard, H. Tight control of gene expression in mammalian cells
+
+by tetracycline-responsive promoters. Proc. Natl Acad. Sci. USA 89, 5547–-5551
+(1992).
+
+45. Yokobayashi, Y., Weiss, R. & Arnold, F. H. Directed evolution of a genetic
+
+circuit. Proc. Natl Acad. Sci. USA 99, 16587–-16591 (2002).
+
+46. Barkai, N. & Leibler, S. Robustness in simple biochemical networks. Nature 387,
+
+913–-917 (1997).
+
+47. Vogelstein, B., Lane, D. & Levine, A. J. Surﬁng the p53 network. Nature 408,
+
+307–-310 (2000).
+
+48. Xiong, W. & Ferrell, J. E. Jr A positive-feedback-based bistable ‘memory
+module’ that governs a cell fate decision. Nature 426, 460–-465 (2003).
+49. Guet, C. C. Tinkering with Bio-molecular Networks Thesis, Princeton Univ.
+
+(2004).
+
+Acknowledgements Synthetic biology work in the laboratory is supported by a
+Burroughs-Wellcome CASI award, The HFSP program and the Searle Scholars
+program. D.S. would like to acknowledge the support of the Yad Hanadiv
+Foundation and the CBCD at Caltech. We would like to thank J. W. Chin,
+C. Guet, S. Leibler, J. Liao, W. Lim, C. Smolke and R. Weiss for contributing
+ﬁgures. We are grateful to R. Kishony, E. Sprinzak, C. Dalal, G. Suel and
+members of the laboratory for discussions and comments.
+
+Author Information Reprints and permissions information is available at
+npg.nature.com/reprintsandpermissions. The authors declare no competing
+ﬁnancial interests. Correspondence should be addressed to M.B.E.
+(melowitz@caltech.edu).
+
+448
+
+© 2005 Nature Publishing Group 
+

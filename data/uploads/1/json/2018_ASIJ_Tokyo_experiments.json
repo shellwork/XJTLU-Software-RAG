@@ -1,0 +1,52 @@
+[
+    {
+        "instruction": "What was the purpose of the behavior control lab?",
+        "input": "The behavior control lab was conducted to confirm the hypothesis regarding the secretion behavior of A1AT in cells as it differs between the M allele and ZZ allele.",
+        "output": "The behavior control lab aimed to confirm the hypothesis about how the secretion behavior of A1AT varies between cells containing the M allele and those with the ZZ allele. Specifically, it sought to demonstrate that the antitrypsin variant with the SERPINA1 E342K (ZZ allele) point mutation polymerizes within the cell, leading to increased cell mass due to the protein's inability to be excreted. Conversely, the SERPINA1 (MM) variant protein would exit the cell successfully, resulting in lesser cell mass."
+    },
+    {
+        "instruction": "How did the team differentiate between the locations of the fluorescently tagged proteins?",
+        "input": "Each construct was tagged with a distinctly different colored fluorescence reporter.",
+        "output": "To observe the behavior of the proteins, each construct was tagged with a distinctly different colored fluorescence reporter. This allowed the team to qualitatively differentiate where the fluorescence, and thus the protein, was located within or outside the cell."
+    },
+    {
+        "instruction": "What did the completion of the behavior control lab confirm?",
+        "input": "The completion of the behavior control lab confirmed the hypothesis regarding the secretion behavior of A1AT in cells as it differs between the M allele and ZZ allele.",
+        "output": "The completion of the behavior control lab confirmed the initial hypothesis about the secretion behavior of A1AT, provided a qualitative confirmation of the mutation’s successful correction, and helped in deciding the fluorescence marker to be used throughout the rest of the experiment."
+    },
+    {
+        "instruction": "Why was agarose gel electrophoresis conducted?",
+        "input": "Agarose gel electrophoresis was conducted as a way to collect more evidence to establish that the CRISPR edited SERPINA1 E342K with point mutation construct was edited successfully.",
+        "output": "Agarose gel electrophoresis was conducted to gather further evidence that the CRISPR-edited SERPINA1 E342K construct with the point mutation had been successfully edited. It was also used to determine if the proteins produced behaved like the unmutated A1AT, with the expectation that the mutated construct, prone to polymerization, would have a larger weight and travel less in the gel compared to the unmutated construct."
+    },
+    {
+        "instruction": "What was the goal of the GFP protein purification process?",
+        "input": "The goal was to isolate A1AT secreted by all constructs so the protein can be accurately analyzed without obstructions.",
+        "output": "The goal of the GFP protein purification process was to isolate A1AT secreted by all constructs to ensure accurate analysis of the protein without any obstructions. Two methods of purification were tested, including His-tag specific protein purification with nickel column tubes and standard column chromatography."
+    },
+    {
+        "instruction": "Why was the sialic acid assay chosen?",
+        "input": "The sialic acid content of a cell is a major characteristic differentiating mutated and unmutated variants.",
+        "output": "The sialic acid assay was chosen because the sialic acid content is a major characteristic that differentiates mutated and unmutated variants. This assay provided a quantitative method to determine with greater accuracy if the gene edit was successful by comparing the sialic acid levels secreted by each construct."
+    },
+    {
+        "instruction": "What changes were made to incorporate the use of His-tag?",
+        "input": "The construct was redesigned to include a His-tag, followed by Gibson assembly, transformation, and protein purification using His-tag protein chromatography.",
+        "output": "To incorporate the use of His-tag, the construct was first redesigned to include this tag. This was followed by Gibson assembly to assemble the constructs, transformation to introduce them into host cells, and protein purification using His-tag protein chromatography to purify the proteins."
+    },
+    {
+        "instruction": "How was the GFP concentration quantified?",
+        "input": "A standard curve showing GFP concentration and relative fluorescence intensity was created using concentrations of 0 uM, 8 uM, 16 uM, 32 uM, and 40 uM GFP in 1 mL PBS.",
+        "output": "The GFP concentration was quantified by creating a standard curve that showed GFP concentration and relative fluorescence intensity using concentrations of 0 uM, 8 uM, 16 uM, 32 uM, and 40 uM GFP in 1 mL PBS. Fluorescence readings from different constructs were then used along with the equation Relative Fluorescence Intensity = - 0.015 + 0.007625(GFP Concentration) to determine the concentration of GFP."
+    },
+    {
+        "instruction": "What was the reason for redoing the sialic acid assay using a new protocol?",
+        "input": "The previous sialic acid assay was unsuccessful due to an extremely complex procedure and lack of conclusive results.",
+        "output": "The previous sialic acid assay was redone using a new protocol because the original assay was unsuccessful due to its extremely complex procedure and the lack of conclusive results. The new protocol involved a commercial kit version that provided a direct method to target the sialic acid secreted through a GFP reporter system."
+    },
+    {
+        "instruction": "What was the purpose of the final polyacrylamide gel confirmation?",
+        "input": "The final polyacrylamide gel confirmation was done to compare the CRISPR constructs with the unmutated constructs to determine if the gene edit was successful.",
+        "output": "The final polyacrylamide gel confirmation was conducted using a 12% SDS PAGE electrophoresis to compare the CRISPR constructs with the unmutated constructs. The aim was to determine if the gene edit was successful by observing the mass of the mutated variant compared to the unmutated variant, expecting the genetically modified variant to be similar to the unmutated variant."
+    }
+]

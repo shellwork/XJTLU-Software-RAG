@@ -1,0 +1,2345 @@
+p e r s p e c t i v e
+
+Next-generation synthetic gene networks
+
+Timothy K Lu1–3, Ahmad S Khalil3 & James J Collins3,4
+
+Synthetic biology is focused on the rational construction of biological systems based on engineering principles. 
+During the field’s first decade of development, significant progress has been made in designing biological parts and 
+assembling them into genetic circuits to achieve basic functionalities. These circuits have been used to construct 
+proof-of-principle systems with promising results in industrial and medical applications. However, advances in 
+synthetic biology have been limited by a lack of interoperable parts, techniques for dynamically probing biological 
+systems and frameworks for the reliable construction and operation of complex, higher-order networks. As these 
+challenges are addressed, synthetic biologists will be able to construct useful next-generation synthetic gene 
+networks with real-world applications in medicine, biotechnology, bioremediation and bioenergy.
+
+Ten years since the introduction of the field’s inaugural devices—the 
+genetic toggle switch (J.J.C. and colleagues)1 and repressilator2—
+synthetic  biologists  have  successfully  engineered  a  wide  range  of 
+functionality into artificial gene circuits, creating switches1,3–9, oscil-
+lators2,10–12, digital logic evaluators13,14, filters15–17, sensors18–20 and 
+cell-cell communicators15,19. Some of these engineered gene networks 
+have been applied to perform useful tasks such as population con-
+trol21, decision making for whole-cell biosensors19, genetic timing for 
+fermentation processes (J.J.C. and colleagues)22 and image process-
+ing23–25. Synthetic biologists have even begun to address important 
+medical and industrial problems with engineered organisms, such 
+as bacteria that invade cancer cells26, bacteriophages with enhanced 
+abilities to treat infectious diseases (T.K.L. and J.J.C.)27,28, and yeast 
+with  synthetic  microbial  pathways  that  enable  the  production  of 
+antimalarial drug precursors29. However, in most application-driven 
+cases, engineered organisms contain only simple gene circuits that 
+do not fully exploit the potential of synthetic biology. There remains 
+a fundamental disconnect between low-level genetic circuitry and 
+the promise of assembling these circuits into more complex gene 
+networks that exhibit robust, predictable behaviors.
+
+Thus, despite all of its successes, many more challenges remain in 
+advancing synthetic biology to the realm of higher-order networks 
+with programmable functionality and real-world applicability. Here, 
+instead of reviewing the progress that has been made in synthetic 
+biology, we present challenges and goals for next-generation syn-
+thetic gene networks, and describe some of the more compelling 
+circuits to be developed and application areas to be considered.
+
+1Department of Electrical Engineering and Computer Science, Massachusetts 
+Institute of Technology, Cambridge, Massachusetts, USA. 2Harvard-MIT 
+Health Sciences and Technology, Cambridge, Massachusetts, USA. 3Howard 
+Hughes Medical Institute, Department of Biomedical Engineering, Center 
+for BioDynamics, and Center for Advanced Biotechnology, Boston University, 
+Boston, Massachusetts, USA. 4Wyss Institute for Biologically Inspired 
+Engineering, Harvard University, Boston, Massachusetts, USA. Correspondence 
+should be addressed to T.K.L. (timlu@mit.edu).
+
+Published online 9 December 2009; doi:10.1038/nbt1591
+
+Synthetic gene networks: what have we learned and what do 
+we need?
+The  engineering  of  mechanical,  electrical  and  chemical  systems  is 
+enabled by well-established frameworks for handling complexity, reli-
+able means of probing and manipulating system states and the use of 
+testing platforms—tools that are largely lacking in the engineering of 
+biology. Developing properly functioning biological circuits can involve 
+complicated  protocols  for  DNA  construction,  rudimentary  model-
+guided and rational design, and repeated rounds of trial and error fol-
+lowed by fine-tuning. Limitations in characterizing kinetic processes 
+and interactions between synthetic components and other unknown 
+constituents in vivo make troubleshooting and modeling frustrating 
+and prohibitively time consuming. As a result, the design cycle for engi-
+neering synthetic gene networks remains slow and error prone.
+
+Fortunately, advances are being made in streamlining the physical 
+construction of artificial biological systems, in the form of resources 
+and methods for building larger engineered DNA systems from smaller 
+defined  parts22,30–32. Additionally,  large-scale  DNA  sequencing  and 
+synthesis technologies are gradually enabling researchers to directly 
+program whole genes, genetic circuits and even genomes, as well as to 
+re-encode DNA sequences with optimal codons and minimal restric-
+tion sites (see review33).
+
+Despite these advances in molecular construction, the task of build-
+ing synthetic gene networks that function as desired remains extremely 
+challenging. Accelerated, large-scale diversification34 and the use of 
+characterized component libraries in conjunction with in silico mod-
+els for a priori design22 are proving useful in helping to fine-tune net-
+work performance toward desired outputs. Even so, in general, synthetic 
+biologists are often fundamentally limited by a dearth of interoper-
+able and modular biological parts, predictive computational modeling 
+capabilities, reliable means of characterizing information flow through 
+engineered gene networks and test platforms for rapidly designing and 
+constructing synthetic circuits.
+
+In the following subsections, we discuss four important research 
+efforts that will improve and accelerate the design cycle for next-gener-
+ation synthetic gene networks: first, advancing and expanding the tool-
+kit of available parts and modules; second, modeling and fine-tuning 
+
+nature biotechnology   volume 27   number 12   december 2009 
+
+1139
+
+P Er S P E C T I v E
+
+the behavior of synthetic circuits; third, developing probes for reliably 
+quantifying state values for synthetic (and natural) biomolecular sys-
+tems; and fourth, creating test platforms for characterizing component 
+interactions within engineered gene networks, designing gene circuits 
+with increasing complexity and developing complex circuits for use 
+in higher organisms. These advances will allow synthetic biologists to 
+realize higher-order networks with desired functionalities for satisfying 
+real-world applications.
+
+Interoperable  parts  and  modules  for  synthetic  gene  networks. 
+Although  there  has  been  no  shortage  of  novel  circuit  topologies 
+to construct, limitations in the number of interoperable and well-
+characterized parts have constrained the development of more com-
+plex  biological  systems22,31,35,36.  The  situation  is  complicated  by 
+the fact that many potential interactions between biological parts, 
+which are derived from a variety of sources within different cellular 
+backgrounds, are not well understood or characterized. As a result, 
+the majority of synthetic circuits are still constructed ad hoc from a 
+small number of commonly used components (e.g., LacI, TetR and 
+lambda repressor proteins and regulated promoters) with a signifi-
+cant amount of trial and error. There is a pressing need to expand 
+the synthetic biology toolkit of available parts and modules. Because 
+physical interconnections cannot be made in biological systems to 
+the same extent as electrical and mechanical systems, interoperability 
+must be derived from chemical specificity between parts and their 
+desired targets. This limits our ability to construct truly modular parts 
+and highlights the need for rigorous characterization of component 
+interactions so that detrimental interactions can be minimized and 
+factored into computational models.
+
+Engineered zinc fingers constitute a flexible system for targeting spe-
+cific DNA sequences, one which could significantly expand the available 
+synthetic biology toolkit for performing targeted recombination, con-
+trolling transcriptional activity and making circuit interconnections. 
+Zinc-finger technology has primarily been used to design zinc-finger 
+nucleases  that  generate  targeted  double-strand  breaks  for  genomic 
+modifications37. These engineered nucleases may be used to enhance 
+recombination in large-scale genome engineering techniques34. A sec-
+ond and potentially very promising use of engineered zinc fingers is 
+as a source of interoperable transcription factors, which would greatly 
+expand  the  current  and  limited  repertoire  of  useful  activators  and 
+repressors. In fact, zinc fingers have already been harnessed to create 
+artificial transcription factors by fusing zinc-finger proteins with acti-
+vation or repression domains38,39. Libraries of externally controllable 
+transcriptional activators or repressors could be created by engineer-
+ing protein or RNA ligand-responsive regulators, which control the 
+transcription or translation of zinc finger–based artificial transcription 
+factors themselves18. These libraries would enable the construction of 
+basic circuits, such as genetic switches1, as well as more complex gene 
+networks. In fact, several of the higher-order networks we describe 
+below rely on having multiple reliable and interoperable transcriptional 
+activators and repressors for proper functioning.
+
+Even so, these engineered transcription factors have not yet been 
+fully characterized, and if they are to be used as building blocks for 
+complex gene networks, then knowledge of their in vivo kinetics and 
+input-output transfer functions would be beneficial. In addition, much 
+of the rich dynamics associated with small, synthetic gene networks is 
+attributable to the cooperative binding or multimerization of transcrip-
+tion factors, and it is not yet clear what further engineering is required 
+to endow zinc-finger transcription factors with such features.
+
+Nucleic acid–based parts, such as RNAs, are also promising can-
+didates  for  libraries  of  interoperable  parts  because  they  can  be 
+
+rationally  programmed  based  on  sequence  specificity7,40,41.  Novel 
+circuit interconnections could be established using small interfering 
+RNAs (siRNAs) to control the expression of specific components. 
+Recombinases, which target specific DNA recombinase-recognition 
+sites, also represent a fruitful, underutilized source of interoperable 
+parts. Recombinases have been used in the context of synthetic biol-
+ogy to create memory elements and genetic counters9. However, more 
+than 100 natural recombinases are known, and these can be engi-
+neered by mutagenesis and directed evolution for greater diversity 
+and sequence specificity42–45.
+
+Libraries of well-characterized, interoperable parts, such as tran-
+scription factors and recombinases, would vastly enhance the ability 
+of  synthetic  biologists  to  build  more  complex  gene  networks  with 
+greater reliability and real-world applicability. In addition to libraries 
+of individual parts, it would be of great value to have well-characterized 
+and interoperable modules (e.g., switches, oscillators and interfaces) 
+that could be used in a plug-and-play fashion to create higher-order 
+networks and programmable cells. As the number of parts and mod-
+ules expands, high-throughput, combinatorial efforts for quantifying 
+the levels of interference and cross-talk between multiple components 
+within cells will be increasingly important as guides for choosing the 
+most appropriate components for network assembly.
+
+Modeling and fine-tuning synthetic gene networks. Integrated efforts 
+for  modeling  and  fine-tuning  synthetic  gene  circuits  are  useful  for 
+ensuring that assembled networks operate as intended. Such approaches 
+will be increasingly important as more complex circuits are constructed 
+along with the expanded development of interoperable parts. Although 
+studies have shown that in some cases, component properties alone 
+are sufficient for predicting network behavior22,31,46, others have dem-
+onstrated the need for modeling and fine-tuning networks after their 
+basic topologies have been established1,22. A multi-step design cycle that 
+involves creating diverse component libraries, constructing, character-
+izing and modeling representative network topologies, and assembling 
+and fine-tuning desired circuits, followed by subsequent refinement 
+cycles22, will be crucial for the successful design and construction of 
+next-generation synthetic gene networks.
+
+The  fine-tuning  of  biomolecular  parts  and  networks  can  be 
+achieved by developing diverse component libraries through muta-
+genesis followed by in-depth characterization and modeling22,47–51. 
+Significant progress has been made in tuning gene expression by 
+altering transcriptional, translational and degradation activities. For 
+example, promoter libraries with a range of transcriptional activities 
+can be created and characterized, plugged into in silico models and 
+then used to develop synthetic gene networks with defined outputs, 
+without significant post-hoc adjustments22,47–51. Alternatively, syn-
+thetic ribosome binding site (RBS) sequences can be used to optimize 
+protein expression levels. Recently, Salis  et al.52 have developed a 
+thermodynamic model for predicting the relative translational ini-
+tiation rates for a protein with different upstream RBS sequences, 
+a model that can also be used to rationally forward-engineer RBS 
+sequences to give desired protein expression. In addition, protein 
+degradation can be controlled by tagging proteins with degradation-
+targeting peptides that impart different degradation dynamics53.
+
+By automating the construction and characterization of biomo-
+lecular components, extensive libraries could be created for the rapid 
+design and construction of complex gene networks. These efforts, 
+coupled with in silico modeling, would serve to fast-track synthetic 
+biology (more detailed discussions of modeling techniques for syn-
+thetic  biology  are  found  in  refs.  22,31,54–57).  However,  to  build 
+reliable models of biomolecular parts and networks, new methods 
+
+1140 
+
+volume 27   number 12   december 2009   nature biotechnology
+
+P Er S P E C T I v E
+
+for probing and acquiring detailed in vitro and in vivo measurements 
+are needed, which we discuss below.
+
+Probes for characterizing synthetic gene networks. Significant advances 
+have been made in the development of new technologies for manipulat-
+ing biological systems and probing their internal states. At the single-mol-
+ecule level, for instance, optical tweezers and atomic force microscopes 
+provide new, direct ways to probe the biophysical states of single DNA, 
+RNA and protein molecules as they undergo conformational changes and 
+other dynamical processes58–62. However, we lack similar tools for track-
+ing the in vivo operation of synthetic gene circuits in a high-throughput 
+fashion. Ideally, making dynamical measurements of biological networks 
+would involve placing sensors at multiple internal nodes, akin to how cur-
+rent and voltage are measured in electrical systems. Furthermore, external 
+manipulation of synthetic biomolecular systems is typically accomplished 
+by the addition of chemical inducers, which can suffer from cross-talk63, 
+be difficult to remove and be consumed over time. As a result, inputs are 
+often troublesome to control dynamically.
+
+Microfluidic devices have been coupled to single-cell microscopy and 
+image processing techniques to enable increasingly precise manipula-
+tion and measurement of cells, especially since inputs can be modulated 
+over time64,65. These systems allow the rapid addition and removal of 
+chemical inducers, enabling more sophisticated, time-dependent inputs 
+than conventional step functions, while also enabling researchers to 
+track and quantify single cells for long periods of time. These devel-
+opments make possible the wider use of well-established engineering 
+approaches for analyzing circuits and other systems in synthetic biology. 
+For example, frequency-domain analysis, a technique used commonly 
+in electrical engineering66,67, can be employed with microfluidics to 
+characterize the transfer functions and noise behaviors of synthetic bio-
+logical circuits66–68. Additionally, small-signal linearization of nonlinear 
+gene circuits can be achieved by applying oscillatory perturbations with 
+microfluidics and measuring responses at the single-cell level67,68.
+
+Indeed, microfluidics provides a useful platform for perturbing syn-
+thetic gene circuits with well-controlled inputs and observing the outputs 
+in high-resolution fashion. Without the proper ‘sensors’ (that is, for quan-
+titatively and simultaneously probing all the internal nodes of a given 
+gene circuit), however, this technology alone is not sufficient to bring full, 
+engineering-like characterization to synthetic gene networks.
+
+Thus far, probes enabling quantitative measurements of synthetic 
+gene circuits have primarily focused on the use of fluorescent proteins 
+for in vivo quantification of promoter activity or protein expression. 
+With the advent of novel mass spectrometry–based methods that pro-
+vide global, absolute protein concentrations in cells69, quantitative 
+transcriptome data can now be merged with proteome data, improv-
+ing our ability to characterize and model the dynamics of synthetic 
+gene networks. Global proteomic data may also assist synthetic biolo-
+gists in understanding the metabolic burden that artificial circuits 
+place on host cells. Further efforts to devise fluorescent-based and 
+other types of reporters for the simultaneous monitoring of tran-
+scriptome and proteome dynamics in vivo are needed to close the 
+loop on full-circuit accounting. Some promising tools under devel-
+opment include tracking protein function by incorporating unnatu-
+ral amino acids that exhibit fluorescence70,71, quantum dots72 and 
+radiofrequency-controlled nanoparticles73.
+
+As the field awaits entire-circuit probes, there are, in the meantime, 
+several potentially accessible technologies for increasing the throughput 
+and pace of piecewise gene-circuit characterization. Recent advances 
+in  engineering  light-inducible  biological  parts  and  systems23,24,74 
+have unlocked the potential for optical-based circuit characterization, 
+expanding the number and type of tunable knobs available to synthetic 
+
+biologists. For instance, by coupling a synthetic gene network of inter-
+est to a biological light/dark sensor as well as to fluorescent protein 
+outputs, one could potentially measure the network’s input/output 
+transfer function in a high-throughput fashion using spectrophoto-
+metric microplate readers, without having to add varying concentra-
+tions of chemical inducers. In essence, both control and monitoring of 
+biomolecular systems would be accomplished using reliable and high-
+speed optics that are typically associated with fluorescence readouts 
+and microscopy. This is an exciting prospect, particularly in the context 
+of microfluidic devices, which would facilitate the focusing of optical 
+inputs and readouts to single cells.
+
+Using electrical signals, in lieu of chemical or optical signals, for 
+control and monitoring of biological systems would also present high-
+speed advantages. Recently, advances have been made in integrating 
+silicon electronics with lipid bilayers containing transmembrane pores 
+to perform electronic signal conduction75. This technology may eventu-
+ally allow direct communication and control between engineered cells 
+and electronic circuits by means of ionic flow. The incorporation of 
+these and other technologies to perturb and monitor the in vivo per-
+formance of synthetic gene networks will enable us to achieve desired 
+functionality faster and more reliably.
+
+Test  platforms  for  engineering  complex  gene  circuits.  Increasing 
+complexity—whether assembling larger synthetic gene networks from 
+smaller ones or engineering circuits into higher organisms—dramat-
+ically increases the number of potential failure modes. In the former 
+case, combining multiple individually functioning genetic circuits into 
+a single cellular background can lead to unintended interactions among 
+the synthetic components or with host factors, and these various failure 
+modes are often difficult to pinpoint and isolate from one another. In 
+the latter case, engineering synthetic networks for mammalian systems 
+poses additional challenges beyond engineering circuits for bacterial 
+and yeast strains, which have comparatively well-characterized genomes, 
+transcriptomes, proteomes and metabolomes. Mammalian systems are 
+much more complex and possess substantially less well-characterized 
+components for engineering76, but for these and other reasons, consti-
+tute fertile ground for new applications and genetic parts.
+
+The development of test platforms where engineered gene circuits 
+can be designed and validated before being deployed in other or more 
+complex cellular backgrounds would mitigate failure-prone jumps in 
+complexity. These platforms could be used to verify or debug circuit 
+topology and basic functionality in well-controlled environments. For 
+example, cells optimized for testing may be engineered to have mini-
+mal genomes to decrease the risk of pleiotropic or uncharacterized 
+interactions between the host and the synthetic networks77–81. The use 
+of orthogonal parts that are decoupled from host cells may enable the 
+dedication of defined cellular resources to engineered functions, which 
+can simplify the construction and troubleshooting of gene circuits. For 
+example, nucleic acid–based parts can be designed to function orthogo-
+nally to the wild-type cellular machinery82–84. Artificial codons and 
+unnatural amino acids, which have enabled new methods for studying 
+existing proteins and the realization of proteins with novel functions, 
+could also be used to produce synthetic circuits that function orthogo-
+nally to host cells85. Simplifying backgrounds would additionally enable 
+more accurate computational modeling of complex circuits before they 
+are deployed into their ultimate environments. Furthermore, minimal 
+cells could themselves contain synthetic circuits that provide useful 
+testing functionalities, such as multiplexed transcriptional and trans-
+lational controls and output probes.
+
+Lower  organisms  can  also  be  useful  for  the  construction  and 
+characterization of synthetic gene networks before such systems are 
+
+nature biotechnology   volume 27   number 12   december 2009 
+
+1141
+
+P Er S P E C T I v E
+
+P1
+
+P1
+
+Repressor 1
+
+Repressor 2
+
+Tunable
+
+RNA
+
+feedback
+
+Tunable
+protein
+feedback
+
+Figure 1  Tunable genetic filter. Filter characteristics can be adjusted by 
+tuning the degradation of rNA and protein effectors in negative-feedback 
+loops. Examples of rNA effectors include sirNAs, riboregulators and 
+ribozymes. Examples of protein effectors include transcriptional activators 
+and repressors. In this example, the P1 promoter is suppressed by 
+transcriptional repressor proteins expressed from the Repressor 1 gene.
+
+extended and deployed into higher organisms. In fact, several syn-
+thetic circuits, such as clocks and switches, were initially developed 
+in bacteria and later translated into mammalian counterparts using 
+analogous design principles3,7,12. Additionally, lower-organism test 
+platforms could be endowed with certain features of interest from 
+desired  higher-organism  hosts.  For  example,  RNA  interference–
+based circuits could be built first in Saccharomyces cerevisiae before 
+being used in mammalian cells86. In one case, mitochondrial DNA 
+was engineered into Escherichia coli before retransplantation into 
+mammalian hosts87. Other biomolecular systems and components 
+that are ripe for engineering in lower organisms include chromatin, 
+ubiquitins and proteosomes.
+
+The  introduction  of  synthetic  gene  networks  into  higher  organ-
+isms  also  runs  the  risk  of  compromising  natural  networks,  which 
+have evolved to maintain cellular robustness. Accordingly, methods 
+for simplifying organisms for designing and testing synthetic circuits 
+could be extended to engineer final deployment hosts, making them 
+more conducive to synthetic gene circuits. Ultimately, in vivo directed 
+evolutionary methods, based on repeated rounds of mutagenesis and 
+selection within final cellular backgrounds, could be used to identify the 
+optimal performance conditions of synthetic gene networks after their 
+basic functionalities have been validated in earlier test platforms34.
+
+Next-generation gene networks
+Advancing synthetic gene circuits into the realm of higher-order net-
+works with programmable functionality is one of the ultimate goals of 
+synthetic biology. Useful next-generation gene networks should attempt 
+to satisfy at least one of the following criteria: first, yield insights into 
+the principles that guide the operation of natural biological systems; 
+second, highlight design principles and/or provide modules that can 
+be applied to the construction of other useful synthetic circuits; third, 
+advance the tools available for novel scientific experiments; and fourth, 
+enable real-world applications in medicine, industry and/or agriculture. 
+Below, we describe several next-generation gene circuits and discuss 
+their potential utility in the context of the above criteria.
+
+cellular-based signal processing. Synthetic transcriptional cascades can 
+exhibit low-pass filter characteristics16, and artificial gene circuits with 
+negative autoregulation are capable of pushing the noise spectra of their 
+outputs to higher frequencies, where it can be filtered by the low-pass 
+characteristics of a downstream gene cascade88. Tunable genetic filters 
+with respect to time could be implemented by tuning RNA and/or 
+protein degradation in autoregulated negative-feedback circuits66,89–91 
+(Fig. 1). Such circuits would be useful in studying and shaping noise 
+spectra to optimize the performance of artificial gene networks.
+
+Recently, an externally tunable, bacterial bandpass-filter has been 
+described17 that uses low-pass and high-pass filters in series to derive 
+bandpass  activity  with  respect  to  enzymes  and  inducer  molecules. 
+These types of filters, when coupled to quorum-sensing modules, can 
+be used for spatial patterning applications15,17. They could also be 
+readily extended to complex multicellular pattern formation by engi-
+neering a suite of different cells, each carrying filters that respond to 
+different inputs. Synthetic gene circuits based on tunable filters may 
+also make useful platforms for studying cellular differentiation and 
+development, as artificial pattern generation is a model for how natural 
+systems form complex structures15,17.
+
+Along similar lines, recent developments in stem cell biology have 
+unlocked important potential roles for synthetic gene networks92. 
+For example, it has been shown that stochastic fluctuations in protein 
+expression in embryonic stem cells are important for determining 
+differentiation fates93. Indeed, stochasticity might be harnessed in 
+differentiation to force population-wide heterogeneity and provide 
+system  robustness,  though  it  may  also  be  detrimental  if  it  causes 
+uncontrollable differentiation.
+
+The effects of stochasticity in stem cell differentiation could be stud-
+ied with synthetic gene circuits that act as tunable noise generators. 
+Lu et al., for instance, considered two such designs for modulating the 
+noise profile of an output protein94. This showed that the mean value 
+and variance of the output can be effectively tuned with two external 
+signals, one for regulating transcription and the other for regulating 
+translation,  and  to  a  greater  extent  with  three  external  signals,  the 
+third for regulating DNA copy number94. By varying noise levels while 
+keeping mean expression levels constant, the thresholds at which gene 
+expression noise yields beneficial versus detrimental effects on stem cell 
+differentiation can be elucidated (J.J.C. and colleagues)95.
+
+Furthermore, the discovery of induced pluripotent stem cells (iPSCs), 
+based on the controlled expression of four transcription factors (OCT4, 
+SOX2, KLF2 and MYC) in adult fibroblasts, has created a source of 
+patient-specific progenitor cells for engineering92. Genetic noise gener-
+ators and basic control circuits could be used to dissect the mechanism 
+for inducing pluripotency in differentiated adult cells by controlling 
+the expression levels of the four iPSC-dependent transcription fac-
+tors. Ultimately, these efforts could lead to the development of timing 
+circuits22 for higher-efficiency stem cell reprogramming.
+
+Lineage commitment to trophectoderm, ectoderm, mesoderm and 
+endoderm pathways are controlled by distinct sets of genes93, and many 
+interacting factors, including growth factors, extracellular matrices and 
+mechanical forces, play important roles in cellular differentiation96. 
+As differentiation pathways become better understood, synthetic gene 
+cascades may be used to program cellular commitment with increased 
+fidelity for applications in biotechnology and regenerative medicine.
+
+Tunable filters and noise generators. Fine-tuning the performance of a 
+synthetic gene network typically means reengineering its components, 
+be it by replacing or mutating its parts. Networks whose responses can 
+be tuned without the reengineering of its parts, such as the biological 
+version of a tunable electronic filter, would enable more sophisticated 
+
+Analog-to-digital and digital-to-analog converters. Electrical engineers 
+have used digital processing to achieve reliability and flexibility, even 
+though the world in which digital circuits operate is inherently analog. 
+Although synthetic biological circuits are unlikely to match the com-
+puting power of digital electronics, simple circuits inspired by digital 
+
+1142 
+
+volume 27   number 12   december 2009   nature biotechnology
+
+P Er S P E C T I v E
+
+and analog electronics may significantly increase the reliability and 
+programmability of biological behaviors.
+
+For example, biological analog-to-digital converters could translate 
+external analog inputs, such as inducer concentrations or exposure 
+times, into internal digital representations for biological processing. 
+Consider,  for  instance,  a  bank  of  genetic  switches  with  adjustable 
+thresholds (Fig. 2a). These switches could be made out of libraries of 
+artificial transcription factors, as described above. This design would 
+perform discretization of analog inputs into levels of digital output. 
+Depending on the level of analog inputs, different genetic pathways 
+could be activated. Cells possessing analog-to-digital converters would 
+be useful as biosensors  in  medical and  environmental settings.  For 
+example, whole-cell biosensors19, resident in the gut, may be engineered 
+to generate different reporter molecules that could be measured in stool 
+depending on the detected level of gastrointestinal bleeding. Expressing 
+different reporter molecules rather than a continuous gradient of a 
+single reporter molecule would yield more reliable and easily inter-
+pretable outputs.
+
+Digital-to-analog  converters,  on  the  other  hand,  would  translate 
+digital representations back into analog outputs (Fig. 2b); such sys-
+tems could be used to reliably set internal system states. For example, 
+instead of fine-tuning transcriptional activity with varying amounts of 
+chemical inducers, a digital-to-analog converter, composed of a bank of 
+genetic switches, each of which is sensitive to a different inducer, might 
+provide better control. If each activated switch enabled transcription 
+from promoters of varying strengths (Poutput,3 > Poutput,2 > Poutput,1), 
+
+then digital combinations of inducers could be used to program defined 
+levels of transcriptional activities (Fig. 2b). Such a circuit might be use-
+ful in biotechnology applications, where reliable expression of different 
+pathways is needed for programming different modes of operation in 
+engineered cells. In addition, digital-to-analog converters may be useful 
+in providing a multiplexed method for probing synthetic circuits. For 
+example, because each analog level is associated with a distinct digital 
+state, a single analog output can allow one to infer the internal digital 
+state of a synthetic gene network (Fig. 2b).
+
+Adaptive learning networks. Synthetic gene networks that can learn or 
+adapt to exogenous conditions could provide insight into natural net-
+works and be useful for applications where adaptation to external stimuli 
+may be advantageous, such as autonomous whole-cell biosensors97,98. 
+Endogenous biomolecular networks in bacteria can exhibit anticipatory 
+behavior for related perturbations in environmental stimuli99,100. This 
+type of behavior and the associated underlying design principles could, 
+in principle, be harnessed to endow transcriptional networks with the 
+ability to learn97, much like synaptic interconnections between neurons. 
+A basic design that would enable this functionality involves two tran-
+scriptional activators (Activator A and Activator B), each of which is 
+expressed in the presence of a different stimulus (Fig. 3a). Suppose that 
+both transcriptional activators drive the expression of effector proteins 
+(Effector A and Effector B), which control distinct genetic pathways. 
+When both transcriptional factors are active, indicating the simultaneous 
+presence of the two stimuli, a toggle switch is flipped ON. This creates  
+
+Figure 2  Genetic signal converters.  
+(a) Analog-to-digital converter circuit that 
+enables the discretization of analog inputs. 
+The circuit is composed of a bank of toggle 
+switches that have increasing response 
+thresholds so that sequential toggling is 
+achieved as input levels increase. The 
+design could enable different natural 
+or synthetic pathways to be activated 
+depending on distinct input ranges, which 
+may be useful in cell-based biosensing 
+applications. Inputs into promoters and 
+logic operations are shown explicitly except 
+when the promoter (P) name is italicized, 
+which represents an inducible promoter. 
+(b) Digital-to-analog converter circuit 
+that enables the programming of defined 
+promoter activity based on combinatorial 
+inputs. The circuit is composed of a bank 
+of recombinase-based switches, known 
+as single-invertase memory modules 
+(SIMMs)9. Each SIMM is composed of an 
+inverted promoter and a recombinase gene 
+located between its cognate recognition 
+sites, indicated by the arrows. Upon 
+the combinatorial addition of inducers 
+that activate specific Pwrite promoters, 
+different SIMMs will be flipped, enabling 
+promoters of varying strength to drive 
+green fluorescent protein (GFP) expression. 
+This allows combinatorial programming of 
+different levels of promoter activity.
+
+a
+
+High threshold
+
+Low threshold
+
+P6
+
+P4
+
+P2
+
+Repressor 5
+
+Repressor 3
+
+Repressor 1
+
+Repressor 6
+
+Repressor 4
+
+Repressor 2
+
+Pinput
+
+P5
+
+Pinput
+
+P3
+
+Pinput
+
+s
+e
+t
+a
+t
+s
+ 
+h
+c
+t
+i
+
+w
+S
+
+111
+
+011
+
+001
+
+000
+
+P1
+
+Repressor 5
+
+Most significant bit
+
+Repressor 3
+
+Repressor 1
+
+Least significant bit
+
+Input concentration
+
+b
+
+Pwrite,3
+
+Pwrite,2
+
+Pwrite,1
+
+Pwrite,3
+
+Pwrite,2
+
+Pwrite,1
+
+Recombinase 3
+
+Poutput,3
+
+Recombinase 2
+
+Poutput,2
+
+Recombinase 1
+
+Poutput,1
+
+Poutput,3
+Recombinase 3
+
+Poutput,2
+Recombinase 2
+
+Recombinase 1
+
+Poutput,1
+
+GFP
+
+GFP
+
+GFP
+
+Preset
+
+Preset
+
+Preset
+
+GFP
+
+GFP
+
+GFP
+
+Preset
+
+Preset
+
+Preset
+
+0
+
+0
+
+0
+
+1
+
+1
+
+0
+
+Relative promoter strength (Poutput)
+
+) 7
+s
+t
+i
+
+n
+u
+ 
+y
+r
+a
+r
+t
+i
+
+b
+r
+a
+(
+ 
+t
+
+6
+
+5
+
+4
+
+3
+
+2
+
+1
+
+0
+
+000  001  010  011  100  101  110  111
+
+Digital input
+
+t
+
+u
+p
+u
+o
+P
+F
+G
+
+ 
+
+nature biotechnology   volume 27   number 12   december 2009 
+
+1143
+
+P Er S P E C T I v E
+
+a
+
+Activator B
+
+Activator A
+
+Pathway A
+
+Pathway B
+
+PAND
+
+Outputs
+
+PAND
+
+Effector A
+
+Effector B
+
+Switches
+
+P2
+
+PAND
+
+Repressor 1
+
+Repressor 2
+
+P1
+
+Repressor 1
+
+Associative
+
+inputs
+
+Activator A
+
+Activator B
+
+PA
+
+PB
+
+Effector A
+
+Effector B
+
+Pathway A
+
+Pathway B
+
+0
+1
+0
+0
+
+0
+0
+0
+0
+
+0
+1
+1
+0
+
+1
+0
+1
+0
+
+1
+0
+1
+1
+
+1
+1
+1
+1
+
+1
+0
+1
+1
+
+1
+0
+1
+1
+
+s
+e
+n
+e
+G
+
+s
+n
+e
+
+i
+
+t
+
+o
+r
+P
+
+Repressor 1
+Repressor 2
+Effector A
+Effector B
+
+Activator A
+Activator B
+Effector A
+Effector B
+
+Activator
+
+Outputs
+
+Switches
+
+Learning
+
+logic
+
+Inputs
+
+b
+
+P2
+
+P4
+
+P6
+
+Repressor G
+
+Repressor G
+
+Repressor G
+
+Inducer
+
+A
+
+PAND
+
+Inducer
+
+B
+
+PAND
+
+Inducer
+
+C
+
+PAND
+
+CFP
+
+YFP
+
+RFP
+
+P2
+
+P4
+
+P6
+
+Repressor 1
+
+Repressor 3
+
+Repressor 5
+
+Repressor 2
+
+Repressor 4
+
+Repressor 6
+
+PAND
+
+P1
+
+PAND
+
+P3
+
+PAND
+
+P5
+
+Repressor 1
+
+Repressor 3
+
+Repressor 5
+
+Inducer
+‘Learn’
+
+Inducer
+
+A
+
+Inducer
+‘Learn’
+
+Inducer
+
+B
+
+Inducer
+‘Learn’
+
+Inducer
+
+C
+
+Repressor 1
+Repressor 2
+Repressor 3
+Repressor 4
+Repressor 5
+Repressor 6
+Repressor G
+
+CFP
+YFP
+RFP
+
+0
+1
+0
+1
+0
+1
+0
+0
+0
+0
+
+0
+1
+1
+0
+0
+1
+1
+0
+0
+0
+
+0
+1
+1
+0
+0
+1
+1
+0
+1
+0
+
+A
+
+A
+
+B
+
+A
+
+Inducer
+
+‘Learn’ B
+
+B
+
+Figure 3  Adaptive learning networks. (a) Associative memory circuit enables association between two simultaneous inputs (‘Activator A’ and ‘Activator 
+B’) so that the subsequent presence of only a single input can drive its own pathway and the pathway of the other input. Associations between inputs 
+are recorded by a promoter ‘PAND’ that is activated in the presence of Activator A and Activator B to toggle the memory switch. Inputs into promoters and 
+logic operations are shown explicitly except when the promoter name is italicized, which represents an inducible promoter. (b) Winner-take-all circuit 
+allows only one input out of many to be recorded. This effect is achieved by a global repressor protein that gates all inputs and prevents them from being 
+recorded if there has already been an input recorded in memory.
+
+an  associative  memory.  Subsequently,  if  either  of  the  transcription 
+factors is activated, AND logic between the ON toggle switch and one 
+transcriptional activator produces the effector protein that controls the 
+pathways of the other activators. On the basis of this design, cells could 
+be programmed to associate simultaneous inputs and exhibit anticipa-
+tory behavior by activating the pathways of associated stimuli, even in 
+the presence of only one of the stimuli.
+
+In another example of a learning network, one could design bacte-
+ria that could be taught ‘winner-take-all’ behavior in detecting stimuli, 
+similar to cortical neural processing101. In this example, bacteria could 
+be exposed to different types of chemical stimuli (Inducers A–C; Fig. 
+3b). An exogenously added inducer (Inducer ‘Learn’) acts as a trigger 
+for learning and serves as one input into multiple, independent tran-
+scriptional AND gates, which possess secondary inputs for detecting the 
+presence of each of the different chemical stimuli. Each gate drives an 
+individual toggle switch that, when flipped, suppresses the flipping of the 
+other switches. This creates a winner-take-all system in which the pres-
+ence of the most abundant chemical stimuli is recorded. Furthermore, 
+the toggle switch outputs could be fed as inputs into transcriptional 
+
+AND gates, which once again possess secondary inputs for detecting the 
+presence of the different stimuli. If these gates drive different fluorescent 
+reporters when activated, then the overall system will associate only a 
+single type of stimuli with the learning trigger and respond with an 
+output only in the presence of the single type of stimuli in the future. 
+This system could potentially be adapted to create chemotactic bacteria 
+that ‘remember’ a particular location or landmark and only respond to 
+the gradient of one chemoattractant.
+
+In more complicated instances of learning networks, it is conceivable 
+that synthetic gene circuits could be designed to adapt on their own, 
+that is, without external mutagenesis or exogenous nucleic acids. For 
+example, transcription-based interconnections could be dynamically 
+reconfigured based on the expression of DNA recombinases9. Another 
+design  could  involve  error-prone  RNA  polymerases,  which  create 
+mutant RNAs that could be reverse-transcribed and joined back into 
+the genome based on double-stranded breaks created by zinc-finger 
+nucleases. Specificity for where the mutations would occur could be 
+achieved by using promoters that are uniquely read by the error-prone 
+RNA polymerases, such as T7 promoters with a T7 error-prone RNA 
+
+1144 
+
+volume 27   number 12   december 2009   nature biotechnology
+
+polymerase, and zinc-finger nucleases that define where homologous 
+recombination can occur102. In this design, enhanced mutagenesis fre-
+quencies could be targeted to specific regions of the genome.
+
+Protein-based computational circuits. Beyond DNA- and RNA-based 
+circuits, protein-based synthetic systems have the potential to enable 
+flexible  and  fast  computation  through  post-translational  mecha-
+nisms103–105. Protein-based circuits are advantageous in that they can 
+be designed to target synthetic activities to subcellular locations24. In 
+this way, different sites within the same cell could have different protein 
+circuit states rather than relying solely on shared cellular promoter 
+states, thereby enabling researchers to explore the functional dynamics 
+and consequences of cellular localization. Protein-based designs can 
+also operate on much shorter time scales than genetic circuits because 
+their operation is independent of the transcription and translation 
+machinery106. Accordingly, it would be exciting to develop protein-
+based circuits that can act as rapidly responding logic gates, smart sen-
+sors or memory elements.
+
+With regards to this last application, synthetic amyloids could serve 
+as novel components for epigenetic memory circuits. By fusing a yeast 
+prion determinant from Sup35 to the rat glucocorticoid receptor, a 
+transcription factor regulated by steroid hormone, Li and Lindquist107 
+demonstrated that the state of transcriptional activity from the fused 
+protein could be affected and inherited stably in an epigenetic fashion. 
+Given the increasing number of identified prionogenic proteins108, 
+there is an opportunity to create amyloid-based memory systems that 
+transmit functionality from one generation to the next (Fig. 4). In 
+these systems, aggregation could be induced by the transient expres-
+sion of the prionogenic domain (PD), whereas disaggregation could be 
+achieved by expressing protein remodeling factors, such as chaperones 
+(heat shock protein 104). Though this system relies on the transcrip-
+tion and translation of prionogenic and disaggregating factors, it may 
+enable the control of protein effectors that can operate on shorter 
+time scales. For example, enzymes fused to a prionogenic domain may 
+exhibit different activity levels depending on whether they are attached 
+to an amyloid core.
+
+Because genetic circuits and proteins function on different time scales, 
+it would also be worthwhile to develop synthetic networks that couple 
+both modalities. For example, the output of protein-based computation 
+could be stored in recombinase-based memory elements5,6,9. It would 
+also be conceivable to couple the two types of networks to harness their 
+varied filtering capabilities. For example, the mitogen-activated protein 
+kinase cascade contains both positive-feedback and negative-feedback 
+loops that enable rapid activation followed by deactivation109, thus 
+acting like a high-pass filter. On the other hand, transcription- and 
+translation-based gene networks operate on longer time scales render-
+ing them effective low-pass filters. Thus, synthetic kinase/phosphatase 
+circuits that in turn drive gene-based networks could be used to create 
+bandstop filters, which could be coupled with other bandpass filters 
+and used for complex patterning applications.
+
+Intercell  signaling  circuits  and  pulse-based  processing  for  genetic 
+oscillators. Robust genetic oscillators with tunable periods have been 
+developed through a combination of experimental and computational 
+efforts11,12,110. In addition to shedding light on the design principles 
+guiding the evolution of naturally occurring biological clocks and circa-
+dian rhythms, these synthetic oscillators may also have significant util-
+ity in biotechnology applications, such as in the synthesis and delivery 
+of biologic drugs. Glucocorticoid secretion, for instance, has a circadian 
+and ultradian pattern of release, resulting in transcriptional pulsing 
+in cells that contain glucocorticoid receptors111. Therefore, pulsatile 
+
+P Er S P E C T I v E
+
+administration of hormones may have therapeutic benefit compared 
+with synthetic hormones applied in a non-ultradian schedule.
+
+An alternative to device-based periodic drug delivery systems could 
+be engineered bacteria that reside in the human gut and synthesize an 
+active drug at fixed time intervals. To realize such an application, one 
+would need to develop and implement intercell signaling circuits for 
+synchronizing and entraining synthetic genetic oscillators112,113. Such 
+circuits could be based, for example, on modular components from 
+bacterial quorum sensing systems. Along similar lines, one could engi-
+neer light-sensitive23,24 entrainment circuits for synchronizing mam-
+malian synthetic genetic oscillators. This may help in the construction 
+of oscillators that can faithfully follow circadian rhythms.
+
+a
+POFF
+
+b
+POFF
+
+c
+POFF
+
+PCONST
+
+PON
+
+PD
+
+PD
+
+Effector
+
+HSP104
+
+PCONST
+
+PON
+
+PD
+
+PD
+
+Effector
+
+HSP104
+
+PCONST
+
+PON
+
+PD
+
+PD
+
+Effector
+
+HSP104
+
+Figure 4  Amyloid-based memory. (a) Amyloid-based memory can be 
+implemented by fusing a prionogenic domain (PD) to an effector gene, such 
+as a transcriptional activator. (b) Overexpressing the prion-determining region 
+via promoter ‘POFF’ causes aggregation of the fusion protein, rendering the 
+effector inactive. (c) Subsequent overexpression of chaperone proteins (e.g., 
+HSP104), which act to disaggregate amyloids, via promoter ‘PON’ releases 
+the effector from the amyloid state and enables it to fulfill its function. 
+Inputs into promoters and logic operations are shown explicitly except when 
+the promoter name is italicized, which represents an inducible promoter.
+
+nature biotechnology   volume 27   number 12   december 2009 
+
+1145
+
+P Er S P E C T I v E
+
+Pcell-cycle
+
+Recombinase 1
+
+ssrA
+
+Recombinase 2
+
+ssrA
+
+Recombinase N
+
+ssrA
+
+Toxins
+
+Pcell-cycle
+
+Pcell-cycle
+
+Pcell-cycle
+
+Cyclin B
+CDK1
+
+M
+
+G2
+
+Cell cycle
+
+S
+
+Cyclin A
+CDK2
+
+G1
+
+Cyclin D
+CDK2,4,5,6
+
+Pcell-cycle
+
+Pcell-cycle
+
+ssrA
+
+Recombinase 1
+
+Recombinase 2
+
+ssrA
+
+Recombinase N
+
+ssrA
+
+Toxins
+
+Pcell-cycle
+
+Pcell-cycle
+
+Cyclin E
+CDK2
+
+Pcell-cycle
+
+Pcell-cycle
+
+Pcell-cycle
+
+ssrA
+
+Recombinase 1
+
+ssrA
+
+Recombinase 2
+
+Recombinase N
+
+ssrA
+
+Toxins
+
+Pcell-cycle
+
+Pcell-cycle
+
+Pcell-cycle
+
+Pcell-cycle
+
+Pcell-cycle
+
+ssrA
+
+Recombinase 1
+
+ssrA
+
+Recombinase 2
+
+ssrA
+
+Recombinase N
+
+Toxins
+
+Figure 5  Cell-cycle counter for biological containment. Cell-cycle counting is accomplished with a cascade of single recombinase-based memory units (e.g., 
+SIMMs9), each of which is driven by a cell cycle–dependent promoter. After N cell-cycle events are counted, the gene circuit unlocks the expression of a toxic 
+protein triggering cell death. Protein degradation tags (ssrA) are fused to the recombinase genes to ensure stability of the circuit.
+
+Death
+
+Spike- or pulse-based processing is present in neurons and has been 
+adapted for use in hybrid computation in electrical systems, where inter-
+spike times are viewed as analog parameters and spike counts are viewed 
+as digital parameters114. In synthetic gene circuits, pulse-based processing 
+may open up exciting new methods for encoding information in engi-
+neered cells. For example, instead of transmitting information between 
+cells by means of absolute levels of quorum-sensing molecules, the fre-
+quency of a robust genetic oscillator could be modulated. This might 
+be useful in delivering information over longer distances, as frequency 
+information may be less susceptible to decay over distance than absolute 
+molecule levels. Representing signals in this fashion is analogous to fre-
+quency modulation encoding in electrical engineering.
+
+Engineered circuits for biological containment. Biological contain-
+ment, which refers to efforts for ensuring that genetically modified 
+organisms do not spread throughout the natural environment, can be 
+achieved by passive or active techniques. In passive containment, cells 
+are engineered to be dependent on exogenous supplementation to 
+compensate for gene defects, whereas in active containment, cells are 
+engineered to directly express toxic compounds when located outside 
+their target environments115. Synthetic genetic counters or timers 
+for programmed cell death could be used as an active containment 
+tool. Counting circuits could, for example, be designed to trigger cell 
+suicide after a defined number of cell cycles or a sequence of events. 
+Recently, we have developed two designs for synthetic counters—
+
+a recombinase-based cascade of memory units and a riboregulated 
+transcriptional cascade—that could be adapted for this purpose9. In 
+each case, one could incorporate into the counters promoters that are 
+cell cycle–dependent and replace the output reporter proteins with 
+toxic proteins (Fig. 5). Circuits of this sort would enable cells to be 
+programmed to have limited, prescribed lifetimes.
+
+Redundant  circuits  that  implement  digital  logic  allowing  for  the 
+conditional survival of engineered cells only within their desired envi-
+ronments would also potentially reduce the failure rate of biological 
+containment. If a broad set of interoperable parts were developed, mul-
+tiple layers of control circuits could be built for increased reliability. As 
+in electrical and mechanical engineering, quantitative analysis of failure 
+rates in biological systems would enable improved systems-level design 
+and robustness of synthetic gene networks. This could be accomplished, 
+for example, by subjecting synthetic containment circuits to a variety 
+of stressful conditions that would lead to increased mutation rates and 
+thus improper functioning. Rational and directed evolutionary meth-
+ods to engineer cells with decreased mutation rates or the application of 
+redundant circuits could then be employed to minimize failure rates.
+
+Whole-cell biosensors and response systems. Programmable cells that 
+act as whole-cell biosensors have been created by interfacing engineered 
+gene networks with the cell’s natural regulatory circuitry19 or with 
+other biological components, such as light-responsive elements23,24. 
+The development of novel or reengineered sensory modalities and 
+
+1146 
+
+volume 27   number 12   december 2009   nature biotechnology
+
+a
+
+Chemoattractant B
+
+C
+
+ 
+t
+
+n
+a
+
+t
+c
+a
+r
+t
+t
+
+a
+o
+m
+e
+h
+C
+
+C
+h
+e
+m
+o
+a
+
+t
+t
+r
+a
+c
+t
+a
+n
+t
+ 
+
+A
+
+c
+
+Repressor 1
+Repressor 2
+Repressor 3
+Repressor 4
+Repressor 5
+Repressor 6
+
+Sensor A
+Sensor B
+Sensor C
+
+b
+
+0
+1
+0
+1
+0
+0
+1
+0
+0
+
+P Er S P E C T I v E
+
+Chemotaxis
+
+network
+
+PA
+
+PAND
+
+PC
+
+Sensor A
+
+Sensor B
+
+Sensor C
+
+Repressor 5
+
+P2
+
+P2
+
+Repressor 6
+
+P4
+
+P4
+
+Repressor 1
+
+Repressor 3
+
+Sensor/
+receptor
+expression
+
+Logic
+
+Switches
+
+Repressor 2
+
+Repressor 4
+
+P1
+
+P3
+
+Pchemo,A
+
+Pchemo,B
+
+Inputs
+
+Repressor 1
+
+Repressor 3
+
+1
+0
+0
+1
+1
+0
+0
+1
+0
+
+1
+0
+1
+0
+1
+1
+0
+0
+1
+
+Chemotaxis towards A
+
+Chemotaxis towards B
+
+Increasing Pchemo,A
+
+Increasing Pchemo,B
+
+Increasing Repressor 1
+
+Increasing Repressor 3
+
+Chemotaxis towards C
+
+Figure 6  Autonomous chemotaxis. (a) Chemotactic environment made up of three chemoattractant gradients (A, B, C). (b) The synthetic gene network, 
+whereby toggle switches control the sequential expression of three chemotaxis sensor receptors, for autonomously navigating bacteria down three 
+chemoattractant gradients. Inputs into promoters and logic operations are shown explicitly, except when the promoter name is italicized, which represents an 
+inducible promoter. (c) Boolean ON/OFF values for the network genes illustrate the sequential order of operations.
+
+components would expand the range of applications that program-
+mable cells could address. This could involve engineering proteins 
+or  RNAs  to  detect  a  range  of  small  molecules116,117,  or  designing 
+protein-based synthetic signaling cascades by rationally rewiring the 
+protein-protein interactions and output responses of prokaryotic two-
+component signal transduction systems118.
+
+The detection of electrical signals or production of biological energy 
+(e.g., mimicking the operation of electrical electrocytes119) could also 
+be enabled by incorporating natural or synthetic ion channels into engi-
+neered cells. In addition, magneto-responsive bacteria could play useful 
+roles in environmental and medical applications120. Synthetic bacteria, 
+designed to form magnetosomes and seek out cancer cells, could be 
+used to enhance imaging, and magnetic bacteria could be engineered 
+to interact with nanoparticles to enhance the targeting of cancer cells. 
+Moreover, the introduction of mechanosensitive ion channels (e.g., 
+MscL from Mycobacterium tuberculosis and MscS from E. coli) could 
+endow designer cells with the ability to detect mechanical forces121. 
+Such cells may be useful in vivo sensors for studying cellular differentia-
+tion signals or the effects of external stresses on the body.
+
+Ultimately, programmable cells possessing novel sensory modules 
+could be integrated with mechanical, electrical and chemical systems 
+to detect, process and respond to external stimuli, and exploited for a 
+variety of environmental and biomedical applications. For example, 
+bacteria could be engineered to seek out hazardous chemicals or heavy 
+metals in the environment, perform cleanup and return to their origin 
+to report on the number of hazardous sites encountered via analysis 
+by microfluidic devices. To eventually achieve such complex tasks, an 
+intermediate goal might involve programming chemotactic bacteria to 
+swim from waypoint to waypoint. A dish containing gradients of several 
+chemoattractants would constitute the navigational course (Fig. 6a).
+
+At the core of this design could be a synthetic gene network made up 
+of a series of sequential toggle switches that control the expression of 
+receptors needed for bacterial chemotaxis toward chemoattractants122 
+(Fig. 6b). The programmable cells would initially express only a single 
+chemoattractant receptor, and therefore would migrate up only one of 
+the chemoattractant gradients122. To determine that a waypoint has 
+been achieved, a threshold-based toggle switch would be turned ON 
+upon reaching a sufficiently high concentration of the chemoattractant. 
+
+nature biotechnology   volume 27   number 12   december 2009 
+
+1147
+
+P Er S P E C T I v E
+
+When the first toggle switch is ON, production of the first chemoattrac-
+tant receptor would be suppressed and production of a second receptor 
+allowed, resulting in cells swimming up the second chemical gradient. 
+The ON switch would additionally prime the next toggle switch in the 
+series to be switched ON when the second waypoint is reached. When 
+that second toggle flips ON, the previous switch would be flipped OFF 
+to ensure that only one chemoattractant is being followed at a time. The 
+final chemoattractant would lead the bacteria back to its origin so that 
+the engineered cells would complete a multi-stop round trip.
+
+Designer  circuits  and  systems  for  microbiome  engineering.  The 
+human microbiome is fertile ground for the application of engineered 
+organisms as scientific tools and therapeutic agents. There are unique 
+bacterial populations residing in distinct locations in the human body 
+that are perturbed in disease states123,124. Each represents an exciting 
+opportunity for reengineering the human microbiome and designing 
+targeted therapeutics for a range of conditions, including dermato-
+logic,  genitourinary,  gastrointestinal,  metabolic  and  immunologic 
+diseases125–127.
+
+Recently, bacteria have been engineered to infiltrate cellular com-
+munities for the purposes of delivering probes, gene circuits or chemi-
+cals128,129.  In  a  similar  fashion,  bacteriophages  carrying  synthetic 
+gene circuits could transform existing microbiome bacteria with new 
+functionalities. For instance, given that anaerobic bacteria are known 
+to migrate to hypoxic and necrotic regions of solid tumors130, bacte-
+riophages could be designed to infect cancer-targeting bacteria. These 
+bacteriophages could encode conditional expression of chemothera-
+peutic agents using synthetic logic gates or switches that are coupled 
+to environmental sensors.
+
+Bhatia  and  colleagues131  recently  have  developed  nanoparticles 
+that perform Boolean logic based on proteolytic activity. Viruses that 
+infect tumor cells or bacteria could carry synthetic gene circuits that 
+regulate in a programmable fashion the expression of enzymes that 
+trigger nanoparticle activity. In these ways, one could develop targeted 
+therapies against cancer or infectious diseases that exploit the human 
+microbiome and synthetic gene networks.
+
+Switchboard for dynamically controlling the expression of multiple 
+genes. Engineered cells have long been used to produce recombinant 
+proteins and chemicals for the biotechnology industry, and one of the 
+major applications of synthetic biology to date has been in enhancing 
+microbial production of biofuels132 and biomaterials133–136. Improving 
+production from cells involves numerous engineering decisions related 
+to the entire organism, including codon optimization, choosing whether 
+or  not  to  export  recombinant  proteins137,  rational  or  evolutionary 
+methods for improving metabolic yields138,139, and optimization of 
+growth conditions. Often some or all of the genes required for produc-
+tion are non-optimal for bacterial expression and contain repetitive 
+sequences that are unstable in bacterial hosts. Whole-gene synthesis 
+techniques are increasingly being used to optimize coding sequences 
+for recombinant production136.
+
+These innovative approaches, as well as more traditional knockout 
+techniques, introduce hard-wired changes into the genomes of inter-
+est. However, for many industrial and bioprocess applications, there is 
+a need to dynamically modulate and control the expression of multi-
+ple genes, depending upon the state of the bioreactor. These situations 
+would benefit from the development of a synthetic switchboard, one 
+that could tune the expression of many different genes simultane-
+ously and independently. Such a switchboard could be made up of 
+a series of adjustable threshold genetic switches, riboregulators or 
+riboswitches, and designed to respond to different environmental and 
+
+intracellular variables, such as pH, light intensity and the metabolic 
+state of the cell. The switchboard design, which would integrate novel 
+sensory modalities with tunable, interoperable genetic circuits, would 
+have broad functionality. It could be programmed, for example, to 
+shift carbon flux between different pathways depending upon cellular 
+conditions, thereby optimizing the production of biofuels, specialty 
+chemicals and other materials.
+
+Conclusions
+The past decade has witnessed the power of intelligently applying engi-
+neering principles to biology in the development of many exciting, 
+artificial gene circuits and biomolecular systems. We are convinced that 
+next-generation synthetic gene networks will advance understanding of 
+natural systems, provide new biological modules and create new tools 
+that will enable the construction of even more complex systems. Most 
+importantly, if the current pace of progress in synthetic biology contin-
+ues, real-world applications in fields such as medicine, biotechnology, 
+bioremediation and bioenergy will be realized.
+
+ACKNOWLEDGMENTS
+We would like to thank the Howard Hughes Medical Institute and the National 
+Institutes of Health Director’s Pioneer Award Program for their financial support. 
+We also thank the reviewers for their insights and suggestions.
+
+COMPETING INTERESTS STATEMENT
+The  authors declare competing financial interests: details accompany 
+the full-text HTML version of the paper at http://www.nature.com/
+naturebiotechnology/. 
+
+published online at http://www.nature.com/naturebiotechnology/.
+reprints and permissions information is available online at http://npg.nature.com/
+reprintsandpermissions/.
+
+1. 
+
+2. 
+
+3. 
+
+4. 
+
+Gardner, T.S., Cantor, C.r. & Collins, J.J. Construction of a genetic toggle switch in 
+Escherichia coli. Nature 403, 339–342 (2000).
+Elowitz, M.B. & Leibler, S. A synthetic oscillatory network of transcriptional regula-
+tors. Nature 403, 335–338 (2000).
+Kramer, B.P. et al. An engineered epigenetic transgene switch in mammalian cells. 
+Nat. Biotechnol. 22, 867–870 (2004).
+Isaacs, F.J., Hasty, J., Cantor, C.r. & Collins, J.J. Prediction and measurement of 
+an autoregulatory genetic module.  Proc. Natl. Acad. Sci. USA 100, 7714–7719 
+(2003).
+
+5.  Ham, T.S., Lee, S.K., Keasling, J.D. & Arkin, A.P. A tightly regulated inducible expres-
+sion system utilizing the fim inversion recombination switch. Biotechnol. Bioeng. 
+94, 1–4 (2006).
+
+6.  Ham, T.S., Lee, S.K., Keasling, J.D. & Arkin, A.P. Design and construction of a double 
+inversion recombination switch for heritable sequential genetic memory. PLoS ONE 
+3, e2815 (2008).
+Deans, T.L., Cantor, C.r. & Collins, J.J. A tunable genetic switch based on rNAi 
+and repressor proteins for regulating gene expression in mammalian cells. Cell 130, 
+363–372 (2007).
+Ajo-Franklin, C.M. et al. rational design of memory in eukaryotic cells. Genes Dev. 
+21, 2271–2276 (2007).
+Friedland, A.E. et al. Synthetic gene networks that count. Science 324, 1199–1202 
+(2009).
+
+8. 
+
+7. 
+
+9. 
+
+10.  Fung,  E.  et  al.  A  synthetic  gene-metabolic  oscillator.  Nature  435,  118–122 
+
+(2005).
+
+11.  Stricker, J. et al. A fast, robust and tunable synthetic gene oscillator. Nature 456, 
+
+516–519 (2008).
+
+12.  Tigges, M., Marquez-Lago, T.T., Stelling, J. & Fussenegger, M. A tunable synthetic 
+
+mammalian oscillator. Nature 457, 309–312 (2009).
+
+13.  rinaudo, K. et al. A universal rNAi-based logic evaluator that operates in mammalian 
+
+cells. Nat. Biotechnol. 25, 795–801 (2007).
+
+14.  Win, M.N. & Smolke, C.D. Higher-order cellular information processing with synthetic 
+
+rNA devices. Science 322, 456–460 (2008).
+
+15.  Basu, S., Gerchman, Y., Collins, C.H., Arnold, F.H. & Weiss, r. A synthetic mul-
+ticellular system for programmed pattern formation. Nature 434, 1130–1134 
+(2005).
+
+16.  Hooshangi, S., Thiberge, S. & Weiss, r. Ultrasensitivity and noise propagation in 
+a synthetic transcriptional cascade. Proc. Natl. Acad. Sci. USA 102, 3581–3586 
+(2005).
+
+17.  Sohka, T. et al. An externally tunable bacterial band-pass filter. Proc. Natl. Acad. 
+
+Sci. USA 106, 10135–10140 (2009).
+
+18.  Bayer, T.S. & Smolke, C.D. Programmable ligand-controlled riboregulators of eukary-
+
+otic gene expression. Nat. Biotechnol. 23, 337–343 (2005).
+
+1148 
+
+volume 27   number 12   december 2009   nature biotechnology
+
+P Er S P E C T I v E
+
+19.  Kobayashi, H. et al. Programmable cells: interfacing natural and engineered gene 
+
+56.  Kaznessis, Y.N. Computational methods in synthetic biology. Biotechnol. J. 4, 1392–
+
+networks. Proc. Natl. Acad. Sci. USA 101, 8414–8419 (2004).
+
+20.  Win, M.N. & Smolke, C.D. A modular and extensible rNA-based gene-regulatory 
+platform for engineering cellular function. Proc. Natl. Acad. Sci. USA 104, 14283–
+14288 (2007).
+
+21.  You, L., Cox, r.S. III, Weiss, r. & Arnold, F.H. Programmed population control by 
+
+cell-cell communication and regulated killing. Nature 428, 868–871 (2004).
+
+22.  Ellis, T., Wang, X. & Collins, J.J. Diversity-based, model-guided construction of 
+synthetic gene networks with predicted functions. Nat. Biotechnol. 27, 465–471 
+(2009).
+
+23.  Levskaya, A. et al. Synthetic biology: engineering Escherichia coli to see light. Nature 
+
+438, 441–442 (2005).
+
+24.  Levskaya, A., Weiner, O.D., Lim, W.A. & voigt, C.A. Spatiotemporal control of cell 
+signalling  using  a  light-switchable  protein  interaction.  Nature  461,  997–1001 
+(2009).
+
+25.  Tabor, J.J. et al. A synthetic genetic edge detection program. Cell 137, 1272–1281 
+
+(2009).
+
+1405 (2009).
+
+57.  Hasty, J., McMillen, D., Isaacs, F. & Collins, J.J. Computational studies of gene 
+regulatory networks: in numero molecular biology. Nat. Rev. Genet. 2, 268–279 
+(2001).
+
+58.  Khalil, A.S. et al. Single M13 bacteriophage tethering and stretching. Proc. Natl. 
+
+Acad. Sci. USA 104, 4892–4897 (2007).
+
+59.  Svoboda, K. & Block, S.M. Biological applications of optical forces. Annu. Rev. 
+
+Biophys. Biomol. Struct. 23, 247–285 (1994).
+
+60.  Bustamante, C., Bryant, Z. & Smith, S.B. Ten years of tension: single-molecule DNA 
+
+mechanics. Nature 421, 423–427 (2003).
+
+61.  Khalil, A.S. et al. Kinesin’s cover-neck bundle folds forward to generate force. Proc. 
+
+Natl. Acad. Sci. USA 105, 19247–19252 (2008).
+
+62.  Neuman, K.C. & Nagy, A. Single-molecule force spectroscopy: optical tweezers, mag-
+
+netic tweezers and atomic force microscopy. Nat. Methods 5, 491–505 (2008).
+
+63.  Lee, S.K. et al. Directed evolution of AraC for improved compatibility of arabinose- and 
+
+lactose-inducible promoters. Appl. Environ. Microbiol. 73, 5711–5715 (2007).
+
+26.  Anderson, J.C., Clarke, E.J., Arkin, A.P. & voigt, C.A. Environmentally controlled inva-
+
+64.  Gulati, S. et al. Opportunities for microfluidic technologies in synthetic biology. J. 
+
+sion of cancer cells by engineered bacteria. J. Mol. Biol. 355, 619–627 (2006).
+
+R. Soc. Interface 6 Suppl 4, S493–S506 (2009).
+
+27.  Lu, T.K. & Collins, J.J. Dispersing biofilms with engineered enzymatic bacteriophage. 
+
+65.  Bennett, M.r. & Hasty, J. Microfluidic devices for measuring gene network dynamics 
+
+Proc. Natl. Acad. Sci. USA 104, 11197–11202 (2007).
+
+28.  Lu, T.K. & Collins, J.J. Engineered bacteriophage targeting gene networks as adju-
+vants for antibiotic therapy. Proc. Natl. Acad. Sci. USA 106, 4629–4634 (2009).
+
+29.  ro, D.K. et al. Production of the antimalarial drug precursor artemisinic acid in 
+
+engineered yeast. Nature 440, 940–943 (2006).
+
+30.  Czar, M.J., Cai, Y. & Peccoud, J. Writing DNA with GenoCAD. Nucleic Acids Res. 37, 
+
+W40–W47 (2009).
+
+in single cells. Nat. Rev. Genet. 10, 628–638 (2009).
+
+66.  Simpson, M.L., Cox, C.D. & Sayler, G.S. Frequency domain analysis of noise in 
+autoregulated gene circuits. Proc. Natl. Acad. Sci. USA 100, 4551–4556 (2003).
+67.  Mettetal, J.T., Muzzey, D., Gomez-Uribe, C. & van Oudenaarden, A. The frequency 
+dependence of osmo-adaptation in Saccharomyces cerevisiae. Science 319, 482–
+484 (2008).
+
+68.  Bennett, M.r. et al. Metabolic gene regulation in a dynamically changing environ-
+
+31.  Guido, N.J. et al. A bottom-up approach to gene regulation. Nature 439, 856–860 
+
+ment. Nature 454, 1119–1122 (2008).
+
+(2006).
+
+69.  Malmstrom, J. et al. Proteome-wide cellular protein concentrations of the human 
+
+32.  Shetty, r.P., Endy, D. & Knight, T.F. Jr. Engineering BioBrick vectors from BioBrick 
+
+pathogen Leptospira interrogans. Nature 460, 762–765 (2009).
+
+parts. J. Biol. Eng. 2, 5 (2008).
+
+70.  Summerer, D. et al. A genetically encoded fluorescent amino acid. Proc. Natl. Acad. 
+
+33.  Carr, P.A. & Church, G.M. Genome engineering. Nat. Biotechnol. 27, 1151–1162 
+
+Sci. USA 103, 9785–9789 (2006).
+
+(2009).
+
+71.  Wang, J., Xie, J. & Schultz, P.G. A genetically encoded fluorescent amino acid. J. 
+
+34.  Wang, H.H. et al. Programming cells by multiplex genome engineering and acceler-
+
+Am. Chem. Soc. 128, 8738–8739 (2006).
+
+ated evolution. Nature 460, 894–898 (2009).
+
+72.  Michalet, X. et al. Quantum dots for live cells, in vivo imaging, and diagnostics. 
+
+35.  Purnick, P.E. & Weiss, r. The second wave of synthetic biology: from modules to 
+
+Science 307, 538–544 (2005).
+
+systems. Nat. Rev. Mol. Cell Biol. 10, 410–422 (2009).
+
+36.  Lucks, J.B., Qi, L., Whitaker, W.r. & Arkin, A.P. Toward scalable parts families 
+for predictable design of biological circuits. Curr. Opin. Microbiol. 11, 567–573 
+(2008).
+
+37.  Maeder, M.L. et al. rapid “open-source” engineering of customized zinc-finger nucle-
+
+ases for highly efficient gene modification. Mol. Cell 31, 294–301 (2008).
+
+38.  Beerli, r.r., Dreier, B. & Barbas, C.F. III. Positive and negative regulation of endog-
+enous  genes  by  designed  transcription  factors.  Proc.  Natl.  Acad.  Sci.  USA  97, 
+1495–1500 (2000).
+
+39.  Park, K.S. et al. Phenotypic alteration of eukaryotic cells using randomized libraries 
+
+40. 
+
+of artificial transcription factors. Nat. Biotechnol. 21, 1208–1214 (2003).
+Isaacs, F.J. et al. Engineered riboregulators enable post-transcriptional control of 
+gene expression. Nat. Biotechnol. 22, 841–847 (2004).
+
+73.  Hamad-Schifferli,  K.,  Schwartz,  J.J.,  Santos,  A.T.,  Zhang,  S.  &  Jacobson,  J.M. 
+remote electronic control of DNA hybridization through inductive coupling to an 
+attached metal nanocrystal antenna. Nature 415, 152–155 (2002).
+
+74.  Boyden,  E.S.,  Zhang,  F.,  Bamberg,  E.,  Nagel,  G.  &  Deisseroth,  K.  Millisecond-
+timescale, genetically targeted optical control of neural activity. Nat. Neurosci. 8, 
+1263–1268 (2005).
+
+75.  Misra, N. et al. Bioelectronic silicon nanowire devices using functional membrane 
+
+proteins. Proc. Natl. Acad. Sci. USA 106, 13780–13784 (2009).
+
+76.  Weber, W. & Fussenegger, M. Engineering of synthetic mammalian gene networks. 
+
+Chem. Biol. 16, 287–297 (2009).
+
+77.  Gibson,  D.G.  et  al.  Complete  chemical  synthesis,  assembly,  and  cloning  of  a 
+
+Mycoplasma genitalium genome. Science 319, 1215–1220 (2008).
+
+78.  Glass, J.I. et al. Essential genes of a minimal bacterium. Proc. Natl. Acad. Sci. USA 
+
+41.  Win, M.N., Liang, J.C. & Smolke, C.D. Frameworks for programming biological func-
+
+103, 425–430 (2006).
+
+tion through rNA parts and devices. Chem. Biol. 16, 298–310 (2009).
+
+79.  Lartigue, C. et al. Genome transplantation in bacteria: changing one species to 
+
+42.  Buchholz, F., Angrand, P.O. & Stewart, A.F. Improved properties of FLP recombinase 
+
+another. Science 317, 632–638 (2007).
+
+evolved by cycling mutagenesis. Nat. Biotechnol. 16, 657–662 (1998).
+
+80.  Lartigue, C. et al. Creating bacterial strains from genomes that have been cloned and 
+
+43.  Kilby, N.J., Snaith, M.r. & Murray, J.A. Site-specific recombinases: tools for genome 
+
+engineered in yeast. Science 325, 1693–1696 (2009).
+
+engineering. Trends Genet. 9, 413–421 (1993).
+
+81.  Carrera, J., rodrigo, G. & Jaramillo, A. Towards the automated engineering of a 
+
+44.  Santoro, S.W. & Schultz, P.G. Directed evolution of the site specificity of Cre recom-
+
+synthetic genome. Mol. Biosyst. 5, 733–743 (2009).
+
+binase. Proc. Natl. Acad. Sci. USA 99, 4185–4190 (2002).
+
+82.  rackham, O. & Chin, J.W. A network of orthogonal ribosome x mrNA pairs. Nat. 
+
+45.  Groth, A.C. & Calos, M.P. Phage integrases: biology and applications. J. Mol. Biol. 
+
+Chem. Biol. 1, 159–166 (2005).
+
+335, 667–678 (2004).
+
+46.  Kaplan, S., Bren, A., Dekel, E. & Alon, U. The incoherent feed-forward loop can 
+generate non-monotonic input functions for genes. Mol. Syst. Biol. 4, 203 (2008).
+47.  Alper, H., Fischer, C., Nevoigt, E. & Stephanopoulos, G. Tuning genetic control 
+through promoter engineering. Proc. Natl. Acad. Sci. USA 102, 12678–12683 
+(2005).
+
+48.  Cox, r.S. III, Surette, M.G. & Elowitz, M.B. Programming gene expression with 
+
+combinatorial promoters. Mol. Syst. Biol. 3, 145 (2007).
+
+49.  Hammer, K., Mijakovic, I. & Jensen, P.r. Synthetic promoter libraries–tuning of gene 
+
+expression. Trends Biotechnol. 24, 53–55 (2006).
+
+50.  Jensen,  P.r.  &  Hammer,  K.  Artificial  promoters  for  metabolic  optimization. 
+
+Biotechnol. Bioeng. 58, 191–195 (1998).
+
+51.  Murphy, K.F., Balazsi, G. & Collins, J.J. Combinatorial promoter design for engi-
+neering noisy gene expression. Proc. Natl. Acad. Sci. USA 104, 12726–12731 
+(2007).
+
+52.  Salis, H.M., Mirsky, E.A. & voigt, C.A. Automated design of synthetic ribosome bind-
+
+ing sites to control protein expression. Nat. Biotechnol. 27, 946–950 (2009).
+
+53.  Andersen, J.B. et al. New unstable variants of green fluorescent protein for studies 
+of transient gene expression in bacteria. Appl. Environ. Microbiol. 64, 2240–2246 
+(1998).
+
+54.  Nevozhay, D., Adams, r.M., Murphy, K.F., Josic, K. & Balazsi, G. Negative auto-
+regulation linearizes the dose-response and suppresses the heterogeneity of gene 
+expression. Proc. Natl. Acad. Sci. USA 106, 5123–5128 (2009).
+
+55.  Chandran, D., Bergmann, F.T. & Sauro, H.M. TinkerCell: modular CAD tool for syn-
+
+thetic biology. J Biol Eng 3, 19 (2009).
+
+83.  Wang, K., Neumann, H., Peak-Chew, S.Y. & Chin, J.W. Evolved orthogonal ribosomes 
+enhance the efficiency of synthetic genetic code expansion. Nat. Biotechnol. 25, 
+770–777 (2007).
+
+84.  An, W. & Chin, J.W. Synthesis of orthogonal transcription-translation networks. Proc. 
+
+Natl. Acad. Sci. USA 106, 8477–8482 (2009).
+
+85.  Wang, Q., Parrish, A.r. & Wang, L. Expanding the genetic code for biological studies. 
+
+Chem. Biol. 16, 323–336 (2009).
+
+86.  Drinnenberg, I.A. et al. rNAi in Budding Yeast. Science 326, 544–550 (2009).
+87.  Yoon, Y.G. & Koob, M.D. Efficient cloning and engineering of entire mitochondrial 
+genomes in Escherichia coli and transfer into transcriptionally active mitochondria. 
+Nucleic Acids Res. 31, 1407–1415 (2003).
+
+88.  Austin, D.W. et al. Gene network shaping of inherent noise spectra. Nature 439, 
+
+608–611 (2006).
+
+89.  Mar, D.J., Chow, C.C., Gerstner, W., Adams, r.W. & Collins, J.J. Noise shaping in pop-
+ulations of coupled model neurons. Proc. Natl. Acad. Sci. USA 96, 10450–10455 
+(1999).
+
+90.  McGinness, K.E., Baker, T.A. & Sauer, r.T. Engineering controllable protein degrada-
+
+tion. Mol. Cell 22, 701–707 (2006).
+
+91.  Banaszynski, L.A., Chen, L.C., Maynard-Smith, L.A., Ooi, A.G. & Wandless, T.J. A 
+rapid, reversible, and tunable method to regulate protein function in living cells using 
+synthetic small molecules. Cell 126, 995–1004 (2006).
+
+92.  Takahashi, K. et al. Induction of pluripotent stem cells from adult human fibroblasts 
+
+by defined factors. Cell 131, 861–872 (2007).
+
+93.  Macarthur, B.D., Ma’ayan, A. & Lemischka, I.r. Systems biology of stem cell fate 
+
+and cellular reprogramming. Nat. Rev. Mol. Cell Biol. 10, 672–681 (2009).
+
+nature biotechnology   volume 27   number 12   december 2009 
+
+1149
+
+P Er S P E C T I v E
+
+94.  Lu, T., Ferry, M., Weiss, r. & Hasty, J. A molecular noise generator. Phys. Biol. 5, 
+
+036006 (2008).
+
+95.  Blake, W.J. et al. Phenotypic consequences of promoter-mediated transcriptional 
+
+noise. Mol. Cell 24, 853–865 (2006).
+
+117.  Win, M.N., Klein, J.S. & Smolke, C.D. Codeine-binding rNA aptamers and rapid 
+determination of their binding constants using a direct coupling surface plasmon 
+resonance assay. Nucleic Acids Res. 34, 5670–5682 (2006).
+
+118.  Skerker, J.M. et al. rewiring the specificity of two-component signal transduction 
+
+96.  Discher, D.E., Mooney, D.J. & Zandstra, P.W. Growth factors, matrices, and forces 
+
+systems. Cell 133, 1043–1054 (2008).
+
+combine and control stem cells. Science 324, 1673–1677 (2009).
+
+119.  Xu, J. & Lavan, D.A. Designing artificial cells to harness the biological ion concentra-
+
+97.  Fernando, C.T. et al. Molecular circuits for associative learning in single-celled organ-
+
+tion gradient. Nat. Nanotechnol. 3, 666–670 (2008).
+
+isms. J. R. Soc. Interface 6, 463–469 (2009).
+
+98.  Fritz, G., Buchler, N.E., Hwa, T. & Gerland, U. Designing sequential transcription 
+logic: a simple genetic circuit for conditional memory. Syst. Synth. Biol. 1, 89–98 
+(2007).
+
+99.  Tagkopoulos, I., Liu, Y.C. & Tavazoie, S. Predictive behavior within microbial genetic 
+
+networks. Science 320, 1313–1317 (2008).
+
+100.  Mitchell, A. et al. Adaptive prediction of environmental changes by microorganisms. 
+
+Nature 460, 220–224 (2009).
+
+101.  Lee, D.K., Itti, L., Koch, C. & Braun, J. Attention activates winner-take-all competition 
+
+among visual filters. Nat. Neurosci. 2, 375–381 (1999).
+
+120.  Jogler, C. & Schuler, D. Genomics, genetics, and cell biology of magnetosome forma-
+
+tion. Annu. Rev. Microbiol. 63, 501–521 (2009).
+
+121.  Booth, I.r., Edwards, M.D., Black, S., Schumann, U. & Miller, S. Mechanosensitive 
+
+channels in bacteria: signs of closure? Nat. Rev. Microbiol. 5, 431–440 (2007).
+
+122.  Falke, J.J., Bass,  r.B., Butler, S.L., Chervitz, S.A. & Danielson, M.A. The two-
+component signaling pathway of bacterial chemotaxis: a molecular view of signal 
+transduction by receptors, kinases, and adaptation enzymes. Annu. Rev. Cell Dev. 
+Biol. 13, 457–512 (1997).
+
+123.  Gao, Z., Tseng, C.H., Strober, B.E., Pei, Z. & Blaser, M.J. Substantial alterations of 
+
+the cutaneous bacterial biota in psoriatic lesions. PLoS ONE 3, e2719 (2008).
+
+102.  Brakmann, S. & Grzeszik, S. An error-prone T7 rNA polymerase mutant generated 
+
+124.  Grice, E.A. et al. Topographical and temporal diversity of the human skin microbiome. 
+
+by directed evolution. ChemBioChem 2, 212–219 (2001).
+
+Science 324, 1190–1192 (2009).
+
+103.  Yeh, B.J., rutigliano, r.J., Deb, A., Bar-Sagi, D. & Lim, W.A. rewiring cellular mor-
+phology pathways with synthetic guanine nucleotide exchange factors. Nature 447, 
+596–600 (2007).
+
+104.  Dueber, J.E., Mirsky, E.A. & Lim, W.A. Engineering synthetic signaling proteins with 
+
+125.  Ley, r.E., Lozupone, C.A., Hamady, M., Knight, r. & Gordon, J.I. Worlds within 
+worlds: evolution of the vertebrate gut microbiota. Nat. Rev. Microbiol. 6, 776–788 
+(2008).
+
+126.  Turnbaugh, P.J. et al. A core gut microbiome in obese and lean twins. Nature 457, 
+
+ultrasensitive input/output control. Nat. Biotechnol. 25, 660–662 (2007).
+
+105.  Bashor, C.J., Helman, N.C., Yan, S. & Lim, W.A. Using engineered scaffold interac-
+tions to reshape MAP kinase pathway signaling dynamics. Science 319, 1539–1543 
+(2008).
+
+106.  Goldberg, S.D., Derr, P., DeGrado, W.F. & Goulian, M. Engineered single- and multi-
+
+480–484 (2009).
+
+127.  Turnbaugh, P.J. et al. An obesity-associated gut microbiome with increased capacity 
+
+for energy harvest. Nature 444, 1027–1031 (2006).
+
+128.  Steidler, L. et al. Treatment of murine colitis by Lactococcus lactis secreting inter-
+
+leukin-10. Science 289, 1352–1355 (2000).
+
+cell chemotaxis pathways in E. coli. Mol. Syst. Biol. 5, 283 (2009).
+
+129.  Braat, H. et al. A phase I trial with transgenic bacteria expressing interleukin-10 in 
+
+107.  Li, L. & Lindquist, S. Creating a protein-based element of inheritance. Science 287, 
+
+Crohn’s disease. Clin. Gastroenterol. Hepatol. 4, 754–759 (2006).
+
+661–664 (2000).
+
+108.  Alberti, S., Halfmann, r., King, O., Kapila, A. & Lindquist, S. A systematic survey 
+identifies prions and illuminates sequence features of prionogenic proteins. Cell 137, 
+146–158 (2009).
+
+109.  Bhalla, U.S., ram, P.T. & Iyengar, r. MAP kinase phosphatase as a locus of flexibility 
+in a mitogen-activated protein kinase signaling network. Science 297, 1018–1023 
+(2002).
+
+110.  Tsai, T.Y. et al. robust, tunable biological oscillations from interlinked positive and 
+
+negative feedback loops. Science 321, 126–129 (2008).
+
+111.  Stavreva, D.A. et al. Ultradian hormone stimulation induces glucocorticoid receptor-
+
+mediated pulses of gene transcription. Nat. Cell Biol. 11, 1093–1102 (2009).
+
+112.  McMillen, D., Kopell, N., Hasty, J. & Collins, J.J. Synchronizing genetic relaxation 
+oscillators by intercell signaling. Proc. Natl. Acad. Sci. USA 99, 679–684 (2002).
+113.  Garcia-Ojalvo, J., Elowitz, M.B. & Strogatz, S.H. Modeling a synthetic multicellular 
+clock: repressilators coupled by quorum sensing. Proc. Natl. Acad. Sci. USA 101, 
+10955–10960 (2004).
+
+114.  Sarpeshkar, r. & O’Halloran, M. Scalable hybrid computation with spikes. Neural 
+
+Comput. 14, 2003–2038 (2002).
+
+115.  Molin, S. et al. Suicidal genetic elements and their use in biological containment of 
+
+bacteria. Annu. Rev. Microbiol. 47, 139–166 (1993).
+
+116.  Looger, L.L., Dwyer, M.A., Smith, J.J. & Hellinga, H.W. Computational design of 
+
+receptor and sensor proteins with novel functions. Nature 423, 185–190 (2003).
+
+130.  Wei, M.Q., Mengesha, A., Good, D. & Anne, J. Bacterial targeted tumour therapy-dawn 
+
+of a new era. Cancer Lett. 259, 16–27 (2008).
+
+131.  von Maltzahn, G. et al. Nanoparticle self-assembly gated by logical proteolytic trig-
+
+gers. J. Am. Chem. Soc. 129, 6064–6065 (2007).
+
+132.  Stephanopoulos, G. Challenges in engineering microbes for biofuels production. 
+
+Science 315, 801–804 (2007).
+
+133.  Teule, F. et al. A protocol for the production of recombinant spider silk-like proteins 
+
+for artificial fiber spinning. Nat. Protoc. 4, 341–355 (2009).
+
+134.  Slotta, U. et al. Spider silk and amyloid fibrils: a structural comparison. Macromol. 
+
+Biosci. 7, 183–188 (2007).
+
+135.  rammensee, S., Slotta, U., Scheibel, T. & Bausch, A.r. Assembly mechanism of 
+recombinant spider silk proteins. Proc. Natl. Acad. Sci. USA 105, 6590–6595 
+(2008).
+
+136.  Widmaier, D.M. et al. Engineering the Salmonella type III secretion system to export 
+
+spider silk monomers. Mol. Syst. Biol. 5, 309 (2009).
+
+137.  Choi, J.H. & Lee, S.Y. Secretory and extracellular production of recombinant proteins 
+
+using Escherichia coli. Appl. Microbiol. Biotechnol. 64, 625–635 (2004).
+
+138.  Klein-Marcuschamer, D. & Stephanopoulos, G. Assessing the potential of mutational 
+strategies to elicit new phenotypes in industrial strains. Proc. Natl. Acad. Sci. USA 
+105, 2319–2324 (2008).
+
+139.  Dueber, J.E. et al. Synthetic protein scaffolds provide modular control over metabolic 
+
+flux. Nat. Biotechnol. 27, 753–759 (2009).
+
+1150 
+
+volume 27   number 12   december 2009   nature biotechnology
+
