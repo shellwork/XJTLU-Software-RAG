@@ -1,46 +1,47 @@
 import sys
 import streamlit as st
 import streamlit_antd_components as sac
-from frontend_streamlit.dialogue import dialogue_page as custom_dialogue_page  # 导入多功能对话页面
-from frontend_streamlit.kb_chat import kb_chat as custom_kb_chat  # 导入RAG对话页面
-from frontend_streamlit.knowledge_base import knowledge_base_page as custom_knowledge_base_page  # 导入知识库管理页面
+from frontend_streamlit.dialogue import dialogue_page as custom_dialogue_page  # Import multi-functional dialogue page
+# from frontend_streamlit.kb_chat import kb_chat as custom_kb_chat  # Import RAG dialogue page
+from frontend_streamlit.knowledge_base import knowledge_base_page as custom_knowledge_base_page  # Import knowledge base management page
 from config import __version__
+import base64
 
-
-# 调用多功能对话的函数
+# Function to call multi-functional dialogue
 def dialogue_page(api=None, is_lite=False):
-    custom_dialogue_page()  # 调用之前实现的多功能对话页面
+    custom_dialogue_page()  # Call the previously implemented multi-functional dialogue page
 
-# 调用RAG对话的函数
-def kb_chat(api=None):
-    custom_kb_chat()  # 调用RAG对话页面
+# Function to call RAG dialogue
+# def kb_chat(api=None):
+#     custom_kb_chat()  # Call the RAG dialogue page
 
-# 调用知识库管理的函数
+# Function to call knowledge base management
 def knowledge_base_page(api=None, is_lite=False):
-    custom_knowledge_base_page()  # 调用知识库管理页面
+    custom_knowledge_base_page()  # Call the knowledge base management page
 
-# 页面启动逻辑
+# Page startup logic
 if __name__ == "__main__":
-    is_lite = "lite" in sys.argv  # 后续可移除 lite 模式
+    is_lite = "lite" in sys.argv  # Lite mode can be removed later
 
-    # 页面配置
+    # Page configuration
     st.set_page_config(
         page_title="XJTLU-Software Chatparts",
-        page_icon="frontend_streamlit/img/icon.png",
+        page_icon="frontend_streamlit/img/icon1.png",
         initial_sidebar_state="expanded",
         menu_items={
             "Get Help": "https://github.com/shellwork/XJTLU-Software-RAG/",
             "Report a bug": "https://github.com/shellwork/XJTLU-Software-RAG/issues",
-            "About": f"Welcome to XJTLU-Software Chatparts {__version__}！",
+            "About": f"Welcome to XJTLU-Software Chatparts {__version__}!",
         },
         layout="centered",
     )
 
-    # 用于页面宽度和样式的自定义设置
+    # Custom settings for page width and style
     st.markdown(
         """
         <style>
-        /* 定义slide-in动画，适用于向上滑动进入的元素 */
+
+        /* Define slide-in animation, suitable for elements sliding in upwards */
         @keyframes slide-in {
             from {
                 opacity: 0;
@@ -52,7 +53,7 @@ if __name__ == "__main__":
             }
         }
 
-        /* 定义从顶部滑入的动画 */
+        /* Define slide-in-from-top animation */
         @keyframes slide-in-from-top {
             from {
                 opacity: 0;
@@ -64,41 +65,41 @@ if __name__ == "__main__":
             }
         }
 
-        /* 应用 slide-in 动画到主要内容区域 */
+        /* Apply slide-in animation to main content area */
         .block-container {
             padding-top: 45px;
             animation: slide-in 0.4s ease-out;
         }
 
-        /* 应用 slide-in-from-top 动画到侧边栏 */
+        /* Apply slide-in-from-top animation to sidebar */
         [data-testid="stSidebarUserContent"] {
             padding-top: 40px;
             animation: slide-in-from-top 0.4s ease-out;
         }
 
-        /* 底部容器的进入动画 */
+        /* Entry animation for bottom container */
         [data-testid="stBottomBlockContainer"] {
             padding-bottom: 20px;
             animation: slide-in 0.4s ease-out;
         }
 
-        /* 为菜单项添加动画效果 */
+        /* Add animation effects to menu items */
         .sac-menu-item {
             animation: slide-in-from-top 0.3s ease-in-out;
         }
 
-        /* 菜单项悬停时的缩放效果，并修改颜色为蓝色 */
+        /* Scaling effect on hover for menu items, and change color to blue */
         .sac-menu-item:hover {
             animation: pulse 0.2s;
-            color: #3c5494;  /* 悬浮时的蓝色 */
+            color: #3c5494;  /* Blue on hover */
         }
 
-        /* 定义所有图标悬浮时的颜色变化为蓝色 */
+        /* Define color change to blue when hovering over all icons */
         .icon:hover {
-            color: #3c5494 !important; /* 强制将悬浮时颜色变为蓝色 */
+            color: #3c5494 !important; /* Force color to blue on hover */
         }
 
-        /* pulse动画定义 */
+        /* Define pulse animation */
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.05); }
@@ -121,19 +122,48 @@ if __name__ == "__main__":
         unsafe_allow_html=True,
     )
 
-    # 侧边栏配置
+
+    def set_bg(main_bg_path):
+        # 获取文件扩展名
+        main_bg_ext = main_bg_path.split('.')[-1]
+
+        # 读取并编码图片为 base64
+        with open(main_bg_path, "rb") as image_file:
+            encoded_image = base64.b64encode(image_file.read()).decode()
+
+        # 使用自定义的 CSS 设置背景
+        st.markdown(
+            f"""
+            <style>
+            .stApp {{
+                background: url(data:image/{main_bg_ext};base64,{encoded_image});
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }}
+            </style>
+            """,
+            unsafe_allow_html=True,
+        )
+
+
+    # 调用
+    set_bg('frontend_streamlit/img/background.png')
+
+
+    # Sidebar configuration
     with st.sidebar:
         st.image("frontend_streamlit/img/complete_icon.png", use_column_width=True)
 
-        # 版本信息
-        st.caption(f"""<p align="right">当前版本：{__version__}</p>""", unsafe_allow_html=True)
+        # Version information
+        st.caption(f"""<p align="right">Current version: {__version__}</p>""", unsafe_allow_html=True)
 
-        # 菜单
+        # Menu
         selected_page = sac.menu(
             [
-                sac.MenuItem("多功能对话", icon="chat"),
-                sac.MenuItem("RAG 对话", icon="database"),
-                sac.MenuItem("知识库管理", icon="hdd-stack"),
+                sac.MenuItem("Multi-functional Dialogue", icon="chat"),
+                # sac.MenuItem("RAG Dialogue (Under Development)", icon="database"),
+                sac.MenuItem("Knowledge Base Management", icon="hdd-stack"),
             ],
             key="selected_page",
             open_index=0,
@@ -141,10 +171,10 @@ if __name__ == "__main__":
 
         sac.divider()
 
-    # 页面显示逻辑
-    if selected_page == "知识库管理":
-        knowledge_base_page(api=None, is_lite=is_lite)  # 后续将会接入实际 API
-    elif selected_page == "RAG 对话":
-        kb_chat(api=None)
+    # Page display logic
+    if selected_page == "Knowledge Base Management":
+        knowledge_base_page(api=None, is_lite=is_lite)  # Will integrate actual API later
+    # elif selected_page == "RAG Dialogue":
+    #     kb_chat(api=None)
     else:
         dialogue_page(api=None, is_lite=is_lite)

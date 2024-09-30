@@ -114,8 +114,8 @@ def startup_event():
 async def upload_files(
         kb_name: str = Form(...),
         files: List[UploadFile] = File(...),
-        chunk_size: int = Form(100),  # 默认值为100
-        chunk_overlap: int = Form(20),  # 默认值为20
+        chunk_size: int = Form(500),  # 默认值为100
+        chunk_overlap: int = Form(100),  # 默认值为20
         zh_title_enhance: bool = Form(False)  # 默认值为 False
 ):
     logging.debug(

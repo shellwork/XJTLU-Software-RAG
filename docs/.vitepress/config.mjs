@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/vitepress-hub/',
+  base: '/software-tools/xjtlu-software/',
   title: "ChatParts",
   description: "Procedure of using Chat-Parts",
   head: [['link', { rel: 'icon', href: '/icon.png' }]],
