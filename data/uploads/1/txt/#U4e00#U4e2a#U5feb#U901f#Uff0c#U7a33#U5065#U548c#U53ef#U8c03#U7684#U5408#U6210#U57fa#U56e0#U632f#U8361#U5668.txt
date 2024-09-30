@@ -1,0 +1,1055 @@
+LETTERS
+
+Vol 456 | 27 November 2008 | doi:10.1038/nature07389
+
+A fast, robust and tunable synthetic gene oscillator
+Jesse Stricker1*, Scott Cookson1*, Matthew R. Bennett1,2*, William H. Mather1, Lev S. Tsimring2 & Jeff Hasty1,2
+
+One defining goal of synthetic biology is the development of
+engineering-based approaches that enable the construction of
+gene-regulatory networks according to ‘design specifications’
+generated from computational modelling1–6. This approach pro-
+vides a systematic framework for exploring how a given regulatory
+network generates a particular phenotypic behaviour. Several fun-
+damental gene circuits have been developed using this approach,
+including toggle switches7 and oscillators8–10, and these have been
+applied in new contexts such as triggered biofilm development11
+and cellular population control12. Here we describe an engineered
+genetic oscillator in Escherichia coli that is fast, robust and per-
+sistent, with tunable oscillatory periods as fast as 13 min. The
+oscillator was designed using a previously modelled network
+architecture comprising linked positive and negative feedback
+loops1,13. Using a microfluidic platform tailored for single-cell
+microscopy, we precisely control environmental conditions and
+monitor oscillations in individual cells through multiple cycles.
+Experiments reveal remarkable robustness and persistence of
+oscillations in the designed circuit; almost every cell exhibited
+large-amplitude fluorescence oscillations throughout observation
+runs. The oscillatory period can be tuned by altering inducer
+levels, temperature and the media source. Computational model-
+ling demonstrates that the key design principle for constructing a
+robust oscillator is a time delay in the negative feedback loop,
+which can mechanistically arise from the cascade of cellular pro-
+cesses involved in forming a functional transcription factor. The
+positive feedback loop increases the robustness of the oscillations
+and allows for greater tunability. Examination of our refined
+model suggested the existence of a simplified oscillator design
+without positive feedback, and we construct an oscillator strain
+confirming this computational prediction.
+
+The synthetic gene oscillator is based on a previously reported
+theoretical design1 and was constructed using E. coli components
+(Fig. 1a). The hybrid promoter (plac/ara-1; ref. 14) is composed of
+the activation operator site from the araBAD promoter placed in
+its normal location relative to the transcription start site, and repres-
+sion operator sites from the lacZYA promoter placed both upstream
+and immediately downstream of the transcription start site. It is
+activated by the AraC protein in the presence of arabinose and
+repressed by the LacI protein in the absence of isopropyl b-D-1-thio-
+galactopyranoside (IPTG). We placed the araC, lacI and yemGFP
+(monomeric yeast-enhanced green fluorescent protein) genes under
+the control of three identical copies of plac/ara-1 to form three co-
+regulated
+Infor-
+mation). Hence, activation of the promoters by the addition of ara-
+binose and IPTG to the medium results in transcription of each
+component of the circuit, and increased production of AraC in the
+presence of arabinose results in a positive feedback loop that
+increases promoter activity. However, the concurrent increase in
+production of LacI results in a linked negative feedback loop that
+
+transcription modules
+
+(Supplementary
+
+decreases promoter activity, and the differential activity of the two
+feedback loops can drive oscillatory behaviour1,13.
+
+The oscillator cells (denoted JS011) exhibited ubiquitous fluor-
+escence oscillations over the entire run time of each experiment (at
+least 4 h). For example, at 0.7% arabinose and 2 mM IPTG, more
+
+a
+
++ Arabinose
+
+araC
+
+yemGFP
+
+− IPTG
+
+lacI
+
+c
+
+0
+
+e
+
+0
+
+g
+
+60
+
+120
+
+180
+
+60
+
+120
+
+180
+
+12
+
+8
+
+4
+
+0
+
+0
+
+b
+
+)
+.
+
+u
+
+.
+a
+(
+ 
+e
+c
+n
+e
+c
+s
+e
+r
+o
+u
+F
+
+l
+
+d
+
+0
+
+f
+
+0
+
+h
+
+60
+
+120
+Time (min)
+
+180
+
+60
+
+120
+
+180
+
+60
+
+120
+
+180
+
+0
+
+60
+
+120
+
+180
+
+0
+
+Time (min)
+
+60
+
+120
+
+180
+
+Figure 1 | Oscillations in the dual-feedback circuit. a, Network diagram of
+the dual-feedback oscillator. A hybrid promoter plac/ara-1 drives transcription
+of araC and lacI, forming positive and negative feedback loops. b, Single-cell
+fluorescence trajectories induced with 0.7% arabinose and 2 mM IPTG.
+Points represent experimental fluorescence values, and solid curves are
+smoothed by a Savitsky–Golay filter (for unsmoothed trajectories, see
+Supplementary Fig. 3). The trajectory in red corresponds to the density map
+above the graph. Density maps for trajectories in grey are shown in g. a.u.,
+arbitrary units. c–h, Single-cell density map trajectories for various IPTG
+conditions (c, 0 mM IPTG; d, 0.25 mM; e, 0.5 mM; f, 1 mM; g, 2 mM;
+h, 5 mM).
+
+1Department of Bioengineering, University of California, San Diego, La Jolla, California 92093, USA. 2Institute for Nonlinear Science, University of California, San Diego, La Jolla,
+California 92093, USA.
+*These authors contributed equally to this work.
+
+516
+
+ ©2008 Macmillan Publishers Limited. All rights reserved
+
+NATURE| Vol 456 | 27 November 2008
+
+LETTERS
+
+than 99% of the cells showed oscillations with a period of approxi-
+mately 40 min (Fig. 1b, g, Supplementary Table 1 and Supplementary
+Movie 1). The highly dynamic nature of the oscillator components is
+shown by the rapid decay of green fluorescent protein (GFP) signal,
+which drops from peak to trough in less than 10 min (Fig. 1b). The
+oscillatory phase was heritable between daughter cells, which resulted
+in synchronized oscillations in areas of the microcolony derived from
+a common cell. This synchrony was limited to a few periods, pre-
+sumably owing to oscillatory phase diffusion. We used a microfluidic
+device with a laminar boundary switch upstream of the growth
+chamber to investigate the initiation of synchronized oscillations
+(Supplementary Fig. 2c, d). Cells grown in the absence of inducer
+initiated oscillations in a synchronous manner on the addition of
+inducer (Supplementary Movie 10), which suggested the possibility
+of using flow cytometry to characterize the oscillator further. Flow
+cytometry of samples continuously collected from a culture in loga-
+rithmic growth that had been induced with 0.7% arabinose and
+2 mM IPTG showed oscillations
+fluorescence
+(Supplementary Fig. 8). Induction of oscillation was very quick (less
+than 5 min) and initially well-synchronized. The amplitude of these
+bulk oscillations decayed as the experiment progressed, as expected
+from the desynchronization of
+individual cells in the colony
+(Supplementary Information). However, the period obtained from
+the flow cytometry method (green data points in all figures) com-
+pared favourably to that obtained from single cells using microscopy
+(red data points in all figures).
+
+in mean cell
+
+The oscillator was extremely robust over an extensive range of
+inducer conditions and temperatures. At 0.7% arabinose and 37 uC,
+almost every observed cell oscillated (Supplementary Table 1) at all
+IPTG concentrations examined (Fig. 1b–h and Supplementary
+Movies 1–8). Varying the IPTG concentration allowed for the tuning
+of the oscillator period (Fig. 2a), particularly at low IPTG concentra-
+tions. The period decreased at high IPTG concentrations, and sub-
+sequent characterization of the promoter revealed that this non-
+monotonic behaviour is probably caused by IPTG interference with
+AraC activation15 (Supplementary Information). The cell doubling
+time on the microfluidic device remained largely steady between
+experiments, ranging from 22.3 min to 27.6 min at 37 uC and showing
+little correlation to IPTG concentration (R2 5 0.132). Individual cell
+fluorescence trajectories showed a gradual increase in oscillatory
+
+60
+
+a
+
+37 °C (G = 22–24 min)
+
+0.7% arabinose 
+
+)
+
+i
+
+n
+m
+
+0
+0
+
+120
+
+c
+
+(
+ 
+
+d
+o
+i
+r
+e
+p
+ 
+y
+r
+o
+t
+a
+
+l
+l
+i
+
+c
+s
+O
+
+10
+IPTG (mM)
+
+20
+
+30
+
+0.7% arabinose
+
+2 mM IPTG
+
+0
+20
+
+30
+
+Temperature (°C)
+
+40
+
+60
+
+b
+
+)
+
+i
+
+n
+m
+
+(
+ 
+
+d
+o
+i
+r
+e
+p
+ 
+y
+r
+o
+t
+a
+
+l
+l
+i
+
+c
+s
+O
+
+0
+
+0
+
+120
+
+d
+
+37 °C (G = 22–24 min)
+
+2 mM IPTG
+
+1
+2
+Arabinose (%)
+
+3
+
+0.7% arabinose
+
+2 mM IPTG
+
+60
+
+Cell doubling period (min)
+
+120
+
+0
+0
+
+Figure 2 | Robust oscillations. a–c, Oscillatory periods on transects with
+0.7% arabinose and varying IPTG (a), 2 mM IPTG and varying arabinose
+(b), or 0.7% arabinose, 2 mM IPTG, and varying temperature (c). Mean
+periods from single-cell microscopy (red diamonds, mean 6 s.d.) or flow
+cytometry (green circles) are shown. Black curves are trend lines in a and
+b, or represent the theoretical prediction based on reference values at 30 uC
+in c (see Supplementary Information). Samples grown in minimal medium
+rather than LB are indicated by crosses. G represents the cell doubling
+period. d, Oscillatory period and cell division time increase monotonically as
+the growth temperature decreases. Symbols are as described above, and the
+black line is a linear regression of samples grown in LB.
+
+period as the cells were imaged on the microfluidic device (Supple-
+mentary Fig. 4). This increase was not seen in doubling times, imply-
+ing that the cells were not experiencing nutritional difficulties
+or environmental stress that might cause an alteration in oscillator
+behaviour.
+
+To explore further the robustness of the oscillator, we investigated
+the effect of varying arabinose, temperature and the media source. At a
+fixed value of 2 mM IPTG and at 37 uC, the oscillatory period can be
+tuned from 13 min to 58 min by varying the arabinose level from 0.1%
+to 3.0% (Fig. 2b). Cells grown in the absence of arabinose did not
+express measurable levels of GFP in single-cell microscopy or flow
+cytometry experiments, and high levels of arabinose seemed to saturate
+the system. We observed sustained oscillations at a range of tempera-
+tures from 25 uC to 37 uC, with a decreasing period as a function of
+temperature (Fig. 2c). The cell doubling time also decreased with
+temperature, as expected, and the oscillatory period increased mono-
+tonically with cell doubling time (Fig. 2d). The oscillator also func-
+tioned in minimal A medium with 2 g l21 glucose (Fig. 2c, d).
+Although the cell doubling time in minimal medium was significantly
+longer than in LB-Miller formulation lysogeny broth (LB) (80–90 min
+versus 22–24 min at 37 uC), the period in the minimal medium was
+very similar to that in LB (Fig. 2c, d). This result, together with the
+strong dependence of the period on IPTG and arabinose concentration
+(at constant cellular doubling times), demonstrates that the synthetic
+oscillator is not strongly coupled to the cell cycle. The similar depend-
+ence of the period and the doubling time on the temperature seems to
+be due to the thermodynamic change of the rate constants affecting all
+cellular processes.
+
+The oscillator was constructed according to design principles deter-
+mined from previous theoretical work1. However, we found that this
+original model failed to describe two important aspects of the experi-
+ments. First, the model could not describe the observed functional
+dependence of the period on inducer levels. Second, and perhaps most
+importantly, because careful parameter tuning was necessary for
+oscillations in the original model, it was not able to describe the robust
+behaviour demonstrated in the experiments. This suggests that only a
+small region of inducer space should support oscillations, in contrast
+to the robust behaviour demonstrated in the experiments. These
+shortcomings forced a re-evaluation of the derivation of the oscilla-
+tor equations, and led to a new computational model that more
+accurately described the experimental observations. The new model
+incorporates the same coupled positive and negative feedback archi-
+tecture, but includes details that were omitted from the previous
+model. In particular, we found that directly modelling processes such
+as protein–DNA binding, multimerization, translation, DNA loop-
+ing, enzymatic degradation and protein folding greatly increased the
+accuracy of the model. The result is a computational model that is very
+robust to parameter variations and correctly describes the dynamics
+of the oscillator for a large range of IPTG and arabinose concentra-
+tions (see Box 1 and Supplementary Information).
+
+In examining our refined model, we discovered another region in
+parameter space that would support oscillatory behaviour. Our
+model predicted that a constantly activated system with repression
+controlled by a negative feedback loop could produce oscillations in
+the absence of positive feedback (Supplementary Fig. 19). It has been
+proposed that negative feedback gene networks can oscillate as long
+as there is delay in the feedback16,17, and, although there is no explicit
+delay in our model, the intermediate steps of translation, protein
+folding and multimerization of LacI provide an effective form of
+delay18 that is sufficient to support oscillations. We constructed this
+system (denoted JS013) in E. coli using a hybrid promoter, pLlacO-1
+(ref. 14), that is activated in the absence of LacI (or presence of IPTG)
+to drive both lacI and yemGFP expression (Fig. 3a). We observed
+oscillations in these cells when examined by single-cell microscopy
+under inducing conditions (Fig. 3b, Supplementary Fig. 5 and
+Supplementary Movie 11). These oscillations were not as distinct
+or regular as in the dual-feedback oscillator, and they did not always
+
+517
+
+ ©2008 Macmillan Publishers Limited. All rights reserved
+
+LETTERS
+
+NATURE| Vol 456 | 27 November 2008
+
+Box 1 | Dynamic modelling of the dual-feedback oscillator circuit
+We used standard techniques to construct both stochastic and
+deterministic computational models3,25–28 based on the same
+underlying biochemical reactions illustrated in Fig. 4a (see
+Supplementary Information for full details of modelling). Although the
+interaction between transcription factors and the DNA is generally
+quite complicated to model in detail29, we used experimental induction
+curves to calibrate the induction levels in the reactions describing the
+network (Supplementary Fig. 10). Over many oscillatory cycles, the
+deterministic simulations were then shown to give accurately the
+temporal evolution of the mode of the distributions generated by the
+exact stochastic simulations24. Representative time series for the
+protein concentrations obtained from the stochastic and deterministic
+models are depicted in Fig. 4b, c. The models are very robust in that
+oscillatory behaviour exists for a large range of parameter values and
+network details (Supplementary Information). Importantly, we found
+excellent quantitative agreement with the experimentally obtained
+period as a function of inducer levels (Fig. 4d, e).
+
+The amplitude and period of the oscillations as a function of inducer
+levels can be conceptually explained using Fig. 4c. A burst begins with
+the basal transcription of messenger RNA from both promoters,
+encoding both the activator and the repressor. After a short delay
+(caused by, for example, translation, protein folding and
+multimerization), the amount of functional activator rises quicker than
+the amount of functional repressor, as shown in Fig. 4b. This occurs for
+two reasons. First, the activator gene is on a higher copy number
+plasmid than the repressor gene, meaning that more activator
+transcripts are produced than repressor transcripts. Second, assuming
+that transcription and translation of the monomeric forms of both
+proteins occur at similar rates, the activator will be more abundant
+because the functional tetrameric form of LacI requires twice as many
+monomers as does the functional dimeric form of AraC. As AraC levels
+rise, an activation burst in production of mRNA occurs due to the
+positive feedback loop. After LacI has been converted to a sufficient
+number of tetramers, the production of mRNA is turned off and the
+proteins decay enzymatically. Once all proteins have decayed, the
+promoters are freed of all bound regulators and the cycle begins anew.
+The length of the period is primarily determined by the time required
+for the proteins to decay. Therefore, the period is dependent on the rate
+of enzymatic decay and the magnitude of the activation burst.
+Furthermore, because the burst size depends on the induction
+characteristics of the promoter, it follows that the period is roughly
+proportional to the induction level of the promoter.
+
+return to a dim state, consistent with the predictions of the computa-
+tional model. Furthermore, the period was largely unaffected by
+IPTG concentration (varying less than 5% over three experimental
+runs from 0.6 mM to 20 mM IPTG), suggesting that the addition of
+the positive feedback loop serves the dual role of regularizing oscilla-
+tions and allowing tunability of the period (see Supplementary
+Information).
+
+In the context of synthetic biology, our findings indicate that cau-
+tion must be exercised when making simplifying assumptions in the
+
+a
+
+pLlacO-1
+
+pLlacO-1
+
+b
+
+lacI
+
+− IPTG
+
+yemGFP
+
+0
+
+60
+
+120
+Time (min)
+
+180
+
+Figure 3 | An oscillator with no positive feedback loop. a, Network diagram
+of the negative feedback oscillator. This oscillator is similar to the dual-
+feedback oscillator except that the hybrid promoter pLlacO-1 (ref. 14) gives
+expression of lacI and yemGFP in the absence of LacI or in the presence of
+IPTG without requiring an activator. b, Single-cell density map trajectories
+for cells containing this oscillator (see Supplementary Movie 11 and
+Supplementary Fig. 5).
+
+518
+
+a
+
+b
+
+Unfolded
+protein
+
+Folded LacI
+monomer
+
+LacI dimer
+
+LacI
+
+tetramer
+
+mRNA
+
+lacI
+
+araC
+
+mRNA
+
+Unfolded
+protein
+
+Folded
+AraC
+
+monomer
+
+AraC dimer
+
+12
+
+l
+
+s
+e
+u
+c
+e
+o
+M
+
+l
+
+)
+
+0
+0
+0
+1
+×
+
+,
+
+(
+
+6
+
+0
+
+0
+
+80
+
+Time (min)
+
+160
+
+c
+
+d
+e
+z
+
+i
+l
+
+a
+m
+r
+o
+N
+
+n
+o
+i
+t
+a
+r
+t
+n
+e
+c
+n
+o
+c
+
+1.0
+
+0.5
+
+0
+
+0
+
+30
+
+Time (min)
+
+60
+
+d
+
+50
+
+e
+
+60
+
+)
+
+i
+
+n
+m
+
+30
+
+(
+ 
+
+d
+o
+i
+r
+e
+P
+
+10
+
+0
+
+)
+
+i
+
+n
+m
+
+(
+ 
+
+d
+o
+i
+r
+e
+P
+
+10
+
+0
+
+10
+20
+IPTG (mM)
+
+30
+
+1
+Arabinose (%)
+
+2
+
+3
+
+Figure 4 | Modelling the genetic oscillator. a, Intermediate processes are
+explicitly modelled in the refined oscillator model. b, c, Simulation results
+from Gillespie simulations (b) or deterministic modelling (c) at 0.7%
+arabinose and 2 mM IPTG. AraC dimers (green), LacI tetramers (red) and
+lacI mRNA (black) are shown. d, e, Comparison of modelling and
+experiment for oscillation period at 0.7% arabinose (d) or 2 mM IPTG
+(e). Values from deterministic modelling (blue curve), stochastic
+simulations (grey symbols, Supplementary Fig. 18), and microscopy (red
+diamonds) or flow cytometry (green circles) are shown. Lower and upper
+error bars in d represent the 16th and 84th percentiles, respectively, of the
+stochastic data, corresponding to 61 s.d. for a normal distribution.
+
+design of engineered gene circuits. We found that a full model of the
+system that takes into account intermediate steps such as multimeri-
+zation, translation, protein folding and DNA looping is essential. The
+reason for this lies not only in the timescales of the system but also in
+the sequential timing of events. Because the intermediate steps in the
+production of functional protein take time, their introduction into the
+model creates an important form of delay18–20. We found that this
+effective delay greatly increases the robustness of our model. For
+instance, oscillatory activity in the model is only somewhat sensitive
+to the values chosen for
+(Supplementary
+Information),
+should oscillate
+(Supplementary Table 1) despite minor stochastic variations in their
+intrinsic parameters. This determination of gene circuit design criteria
+in the present context of a fast, robust and tunable oscillator sets the
+stage for the design of applications such as expression schemes that are
+capable of circumventing cellular adaptability, centralized clocks that
+coordinate intracellular behaviour, and reverse-engineering plat-
+forms21 that measure the global response of the genome to an oscil-
+latory perturbation.
+
+system parameters
+implying that nearly all cells
+
+METHODS SUMMARY
+The dual-feedback oscillator circuit was constructed by placing araC, lacI and
+yemGFP under the control of the hybrid plac/ara-1 promoter14 in three separate
+transcriptional cassettes. An ssrA degradation tag22 was added to each gene to
+decrease protein lifetime and to increase temporal resolution. These transcrip-
+tional cassettes were placed on two modular plasmids14 and co-transformed into
+an DaraC DlacI E. coli strain. The negative feedback oscillator circuit was con-
+structed by placing ssrA-tagged lacI and yemGFP under the control of the pLlacO-1
+promoter14 in two separate transcriptional cassettes, which were incorporated
+onto two modular plasmids and co-transformed into a DlacI strain. Cells were
+
+ ©2008 Macmillan Publishers Limited. All rights reserved
+
+NATURE| Vol 456 | 27 November 2008
+
+LETTERS
+
+grown either in LB medium or in minimal A medium with 2 g l21 glucose.
+Oscillations were induced using arabinose (0.1–3%) and IPTG (0–30 mM).
+Single-cell microscopic data were collected by loading induced cells into
+polydimethylsiloxane-based microfluidic platforms that constrained the cells
+to a monolayer while supplying them with nutrients23, and then providing a
+constant source of medium and inducers and imaging GFP fluorescence every
+2–3 min for at least 4–6 h. These data were further analysed using ImageJ and
+custom-written Matlab scripts to extract single-cell fluorescence trajectories.
+Flow cytometry was performed either by taking samples from a continuously
+grown and serially diluted culture or by growing multiple cultures in parallel for
+varying durations. In either case, samples were read directly from their growth
+medium and low-scatter noise was removed by thresholding. Flow cytometry
+oscillatory periods were defined as the time elapsed between the first and second
+fluorescence peaks. Details of
+the models discussed are presented in
+Supplementary Information. Stochastic simulations were performed using
+Gillespie’s algorithm24, and deterministic simulations were performed using
+custom Matlab scripts.
+
+Full Methods and any associated references are available in the online version of
+the paper at www.nature.com/nature.
+
+Received 9 July; accepted 5 September 2008.
+Published online 29 October 2008.
+
+15. Lee, S. K. et al. Directed evolution of AraC for improved compatibility of arabinose-
+and lactose-inducible promoters. Appl. Environ. Microbiol. 73, 5711–5715 (2007).
+16. Bliss, R. D., Painter, P. R. & Marr, A. G. Role of feedback inhibition in stabilizing the
+
+classical operon. J. Theor. Biol. 97, 177–193 (1982).
+
+17. Bratsun, D., Volfson, D., Tsimring, L. S. & Hasty, J. Delay-induced stochastic
+
+oscillations in gene regulation. Proc. Natl Acad. Sci. USA 102, 14593–14598
+(2005).
+
+18. Rateitschak, K. & Wolkenhauer, O. Intracellular delay limits cyclic changes in gene
+
+expression. Math. Biosci. 205, 163–179 (2007).
+
+19. Mackey, M. & Glass, L. Oscillation and chaos in physiological control systems.
+
+Science 197, 287–289 (1977).
+
+20. Jaeger, J. & Reinitz, J. On the dynamic nature of positional information. Bioessays
+
+28, 1102–1111 (2006).
+
+21. Faith, J. et al. Large-scale mapping and validation of Escherichia coli transcriptional
+
+regulation from a compendium of expression profiles. PLoS Biol. 5, e8 (2007).
+
+22. Andersen, J. B. et al. New unstable variants of green fluorescent protein for studies
+of transient gene expression in bacteria. Appl. Environ. Microbiol. 64, 2240–2246
+(1998).
+
+23. Cookson, S., Ostroff, N., Pang, W. L., Volfson, D. & Hasty, J. Monitoring dynamics
+
+of single-cell gene expression over multiple cell cycles. Mol. Syst. Biol. 1,
+2005.0024 (2005).
+
+24. Gillespie, D. T. Exact stochastic simulation of coupled chemical-reactions. J. Phys.
+
+Chem. 81, 2340–2361 (1977).
+
+25. Hasty, J. et al. Computational studies of gene regulatory networks: in numero
+
+molecular biology. Nature Rev. Genet. 2, 268–279 (2001).
+
+1. Hasty, J., Dolnik, M., Rottscha¨fer, V. & Collins, J. J. Synthetic gene network for
+
+26. Ozbudak, E., Thattai, M., Lim, H., Shraiman, B. & van Oudenaarden, A.
+
+entraining and amplifying cellular oscillations. Phys. Rev. Lett. 88, 148101 (2002).
+
+2. Hasty, J., McMillen, D. & Collins, J. J. Engineered gene circuits. Nature 420,
+
+Multistability in the lactose utilization network of Escherichia coli. Nature 427,
+737–740 (2004).
+
+3.
+
+4.
+
+224–230 (2002).
+Tyson, J., Chen, K. & Novak, B. Sniffers, buzzers, toggles and blinkers: dynamics of
+regulatory and signaling pathways in the cell. Curr. Opin. Cell Biol. 15, 221–231 (2003).
+Sprinzak, D. & Elowitz, M. B. Reconstruction of genetic circuits. Nature 438,
+443–448 (2005).
+Endy, D. Foundations for engineering biology. Nature 438, 449–453 (2005).
+
+5.
+6. Andrianantoandro, E., Basu, S., Karig, D. K. & Weiss, R. Synthetic biology: new
+
+engineering rules for an emerging discipline. Mol. Syst. Biol. 2, 2006.0028 (2006).
+7. Gardner, T. S., Cantor, C. R. & Collins, J. J. Construction of a genetic toggle switch
+
+8.
+
+in Escherichia coli. Nature 403, 339–342 (2000).
+Elowitz, M. B. & Leibler, S. A synthetic oscillatory network of transcriptional
+regulators. Nature 403, 335–338 (2000).
+
+9. Atkinson, M. R., Savageau, M. A., Myers, J. T. & Ninfa, A. J. Development of
+
+genetic circuitry exhibiting toggle switch or oscillatory behavior in Escherichia coli.
+Cell 113, 597–607 (2003).
+
+10. Fung, E. et al. A synthetic gene-metabolic oscillator. Nature 435, 118–122 (2005).
+11. Kobayashi, H. et al. Programmable cells: interfacing natural and engineered gene
+
+networks. Proc. Natl Acad. Sci. USA 101, 8414–8419 (2004).
+
+12. You, L., Cox, R. S., Weiss, R. & Arnold, F. H. Programmed population control by
+
+cell-cell communication and regulated killing. Nature 428, 868–871 (2004).
+
+13. Barkai, N. & Leiber, S. Circadian clocks limited by noise. Nature 403, 267–268
+
+(2000).
+
+27. Wang, X., Hao, N., Dohlman, H. & Elston, T. Bistability, stochasticity, and
+
+oscillations in the mitogen-activated protein kinase cascade. Biophys. J. 90,
+1961–1978 (2006).
+
+28. Bennett, M. et al. Metabolic gene regulation in a dynamically changing
+
+environment. Nature 454, 1119–1122 (2008).
+
+29. Gerland, U., Moroz, J. & Hwa, T. Physical constraints and functional
+
+characteristics of transcription factor-DNA interaction. Proc. Natl Acad. Sci. USA
+99, 12015–12020 (2002).
+
+Supplementary Information is linked to the online version of the paper at
+www.nature.com/nature.
+
+Acknowledgements We thank H. Bujard, C. Yang, and Z. Zhang for gifts of
+reagents, and D. Volfson and M. Simpson for discussions. This work was supported
+by grants from the National Institutes of Health (GM69811-01) and the US
+Department of Defense.
+
+Author Contributions J.S. and J.H. designed the oscillator circuits, and J.S.
+constructed the circuits. S.C. performed the microscopy experiments, and J.S. and
+S.C. performed the flow cytometry experiments. S.C., L.S.T. and J.H. performed the
+single-cell data analysis. M.R.B., W.H.M. and L.S.T. performed the computational
+modelling. All authors wrote the manuscript.
+
+14. Lutz, R. & Bujard, H. Independent and tight regulation of transcriptional units in
+Escherichia coli via the LacR/O, the TetR/O and AraC/I1-I2 regulatory elements.
+Nucleic Acids Res. 25, 1203–1210 (1997).
+
+Author Information Reprints and permissions information is available at
+www.nature.com/reprints. Correspondence and requests for materials should be
+addressed to J.H. (hasty@bioeng.ucsd.edu).
+
+ ©2008 Macmillan Publishers Limited. All rights reserved
+
+519
+
+doi:10.1038/nature07389
+
+METHODS
+Oscillator plasmid and strain construction. The oscillator components araC and
+lacI and a fluorescent reporter protein (yemGFP) were tagged with carboxy-
+terminal TSAANDENYALAA ssrA tags22. yemGFP contains F64L/S65T/A206K
+mutations. These tagged genes were then cloned into pZ modular plasmids under
+the transcriptional control of the plac/ara-1 hybrid promoter14 to form three co-
+regulated transcriptional modules with identical promoters, ribosome-binding
+sequences and downstream terminators. The plac/ara-1 promoter is activated by
+AraC in the presence of arabinose and repressed by LacI in the absence of IPTG.
+The activator araC module and the reporter yemGFP module were placed on a
+ColE1 plasmid, and the repressor module was placed on a p15A plasmid. All PCR-
+amplified sections and sequence junctions were confirmed by sequencing. (See
+Supplementary Fig. 1.) An DaraC DlacI strain was constructed by P1vir phage
+transduction between DaraC and DlacI strains. The two plasmids described above
+were co-transformed into this strain to construct the dual-feedback oscillator strain.
+To construct the negative feedback oscillator strain, the hybrid promoter
+pLlacO-1 (ref. 14) was used to regulate expression of lacI and yemGFP. This
+promoter is repressed by LacI in the absence of IPTG. Both genes were tagged
+with ssrA tags as described above. Two transcriptional modules containing
+pLlacO-1 and lacI or yemGFP were constructed as above. The repressor module
+was placed on a p15A plasmid and the reporter module was placed on a ColE1
+plasmid. These were then co-transformed into a DlacI strain.
+Microscopy. We examined cells with single-cell time-lapse fluorescence micro-
+scopy using microfluidic devices designed to support growth of a monolayer of
+E. coli cells under constant nutrient flow (Supplementary Fig. 2). The design of
+the microfluidic device used in all microscopy experiments was adapted from the
+Tesla microchemostat design23
+cerevisiae.
+Modifications made to support imaging monolayers of E. coli included lowering
+the cell chamber height to match the cylindrical diameter of K-12 MG 1655 cells,
+lowering the delivery channel height to maintain equivalent flow splitting
+between the cell chamber and the bypass channel, and dividing the cell trapping
+region into three channels for simultaneous observation of isolated colonies
+(Supplementary Fig. 2a, b). For on-chip induction experiments, we used a vari-
+ant of this device that incorporated a laminar boundary media switch into the
+design30 and supported cell growth for several generations in non-inducing
+media before induction and imaging (Supplementary Fig. 2c, d).
+
+for use with Saccharomyces
+
+In each experiment, a microfluidic device was mounted to the stage and wetted
+using a solution of 0.1% Tween 20 surfactant in the appropriate growth medium.
+For optimal E. coli growth, the chip temperature was typically maintained at 37 uC
+
+by flowing heated water through deep thermal channels fabricated into the device.
+Cells that had been passed from an overnight culture into inducing media
+approximately 3–4 h earlier were loaded into the device from the cell port by
+directing high flow both from the cell port and from the media port to the waste
+port. On trapping a single cell in each channel, flow past the cell chamber was
+reversed and slowed to 1–2 mm s21 such that fresh nutrients were delivered from
+the media port by means of a combination of diffusion and advection without
+physically disturbing the cells.
+
+Cells grew logarithmically to fill the channels over an experimental duration of
+,4–6 h, while images were acquired every 2–3 min at 3100 magnification in the
+transmitted and fluorescent channels. Focus was maintained during image
+acquisition either by manual adjustment or by contrast-based autofocus algo-
+rithms. After each imaging session, fluorescence trajectories of individual cells
+were extracted using the WCIF ImageJ cell analysis package. For each fluor-
+escence frame, mean values of integrated fluorescence were calculated within
+constant circular areas inscribed within the boundaries of all tracked cells. Long-
+term fluorescence trajectories were subsequently constructed by manually track-
+ing each cell throughout the experiment.
+Flow cytometry. Oscillator cells were initially characterized by flow cytometry of
+batch cultures to identify inducer conditions that supported oscillations.
+Subsequently, time-course flow cytometry was performed on growing cultures
+immediately after induction to follow oscillation dynamics. This time-course flow
+cytometry followed one of two similar protocols. In the continuous protocol, a
+single culture was serially diluted to maintain logarithmic growth. The culture was
+induced at the initial time point, and samples were removed for flow cytometry
+over the course of the experiment. In the aggregate protocol, an uninduced culture
+in logarithmic growth was aliquoted onto different inducer concentrations, and
+these subcultures were allowed to grow for varying lengths of time before flow
+cytometry. Flow cytometry was performed directly from growing cultures, and
+noncellular low-scatter noise was removed by thresholding. Oscillations were
+tracked by measuring the mean cellular fluorescence at each time point. The
+amplitude of the initial oscillation was usually higher than that of subsequent
+oscillations, presumably owing to desynchronization of
+the oscillations
+(Supplementary Fig. 8). The oscillation period was defined as the time elapsed
+between the first and second oscillation peaks. All flow cytometry analysis was
+carried out on a Becton-Dickinson FACScan.
+
+30. Groisman, A. et al. A microfluidic chemostat for experiments with bacterial and
+
+yeast cells. Nature Methods 2, 685–689 (2005).
+
+ ©2008 Macmillan Publishers Limited. All rights reserved
+

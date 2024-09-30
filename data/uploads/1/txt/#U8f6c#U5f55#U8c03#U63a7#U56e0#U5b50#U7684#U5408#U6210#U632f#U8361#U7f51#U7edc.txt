@@ -1,0 +1,1011 @@
+Western blotting
+Ribosomal complexes assembled and puriﬁed as described above were TCA-precipitated.
+Proteins were resolved on 12% polyacrylamide gel, transferred to nitrocellulose mem-
+brane and probed for eIF1 and eIF5B using T7-tag antibodies (Novagen) and for eIF2a
+and eIF3 (p170) using speciﬁc antibodies.
+
+Received 13 September; accepted 16 November 1999.
+
+1. Merrick, W. C. Mechanism and regulation of eukaryotic protein synthesis. Microbiol. Rev. 56, 291–
+
+315 (1992).
+
+2. Pestova, T. V., Borukhov, S. I. & Hellen, C. U. T. Eukaryotic ribosomes require initiation factors 1 and
+
+1A to locate initiation codons. Nature 394, 854–859 (1998).
+
+3. Chakrabarti, A. & Maitra, U. Functions of eukaryotic initiation factor 5 in the formation of an 80S
+
+ribosomal polypeptide chain initiation complex. J. Biol. Chem. 266, 14039–14045 (1991).
+
+4. Das, K., Chesevich, J. & Maitra, U. Molecular cloning and expression of cDNA for mammalian
+
+translation initiation factor 5. Proc. Natl Acad. Sci. USA 90, 3058–3062 (1993).
+
+5. Huang, H.-K., Yoon, H., Hannig, E. M. & Donahue, T. F. GTP hydrolysis controls stringent selection of
+the AUG start codon during translation initiation in Saccharomyces cerevisiae. Genes Dev. 11, 2396–
+2413 (1997).
+
+6. Choi, S. K., Lee, J. H., Zoll, W. L., Merrick, W. C. & Dever, T. E. Promotion of Met-tRNAMet binding to
+
+ribosomes by yIF2, a bacterial IF2 homolog in yeast. Science 280, 1757–1760 (1998).
+
+7. Lee, J. H., Choi, S. K., Roll-Mecak, A., Burley, S. K. & Dever, T. E. Universal conservation in translation
+
+initiation revealed by human and archaeal homologs of bacterial translation factor IF2. Proc. Natl
+Acad. Sci. USA 96, 4342–4347 (1999).
+
+8. Sacerdot, C., Dessen, P., Hershey, J. W. B., Plumbridge, J. A. & Grunberg-Manago, M. Sequence of the
+initiation factor IF2 gene; unusual protein features and homologies with elongation factors. Proc. Natl
+Acad. Sci. USA 81, 7787–7791 (1984).
+
+9. Kolakofsky, D., Dewey, K. F., Hershey, J. W. B. & Thach, R. E. Guanosine 59-triphosphatase activity of
+
+initiation factor f2. Proc. Natl Acad. Sci. USA 61, 1066–1070 (1968).
+
+10. Godefroy-Colburn, T. et al. Light-scattering studies showing the effect of initiation factors on the
+
+reversible dissociation of Escherichia coli ribosomes. J. Mol. Biol. 94, 461–478 (1975).
+
+11. Luchin, S. et al. In vitro study of two dominant inhibitory GTPase mutants of Escherichia coli
+
+translation initiation factor IF2. Direct evidence that GTP hydrolysis is necessary for factor recycling.
+J. Biol. Chem. 274, 6074–6079 (1999).
+
+12. Lockwood, A. H., Sarkar, P. & Maitra, U. Release of polypeptide chain initiation factor IF-2 during
+
+initiation complex formation. Proc. Natl Acad. Sci. USA 69, 3602–3605 (1972).
+
+13. Merrick, W. C., Kemper, W. M. & Anderson, W. F. Puriﬁcation and characterization of homogenous
+
+initiation factor M2A from rabbit reticulocytes. J. Biol. Chem. 250, 5556–5562 (1975).
+
+14. Trachsel, H., Emi, B., Schreier, M. H. & Staehelin, T. Initiation of mammalian protein synthesis. II. The
+assembly of the initiation complex with puriﬁed initiation factors. J. Mol. Biol. 116, 755–767 (1977).
+
+15. Benne, R., Brown-Luedi, M. L. & Hershey, J. W. B. Puriﬁcation and characterization of protein
+
+synthesis initiation factors eIF-1, eIF-4C, eIF-4D, and eIF-5 from rabbit reticulocytes. J. Biol. Chem.
+253, 3070–3077 (1978).
+
+16. Peterson, D. T., Safer, B. & Merrick, W. C. Role of eukaryotic initiation factor 5 in the formation of 80S
+
+initiation complexes. J. Biol. Chem. 254, 7730–7735 (1979).
+
+17. Pestova, T. V., Shatsky, I. N., Fletcher, S. P., Jackson, R. J. & Hellen, C. U. T. A prokaryotic-like mode of
+
+binding of cytoplasmic eukaryotic ribosomes to the initiation codon during internal initiation of
+translation of Hepatitis C and Classical Swine fever virus RNAs. Genes Dev. 12, 67–83 (1998).
+
+Acknowledgements
+We thank W. Merrick for discussions, D. Etchison and R. Schneider for antibodies, and
+L. Siconolﬁ-Baez for sequencing eIF5B. These studies were supported by grants from the
+NIH to C.U.T.H. and T.V.P.
+
+Correspondence and requests for materials should be addressed to T.V.P.
+(e-mail: tpestova@netmail.hscbklyn.edu).
+
+.................................................................
+A synthetic oscillatory network
+of transcriptional regulators
+
+Michael B. Elowitz & Stanislas Leibler
+
+Departments of Molecular Biology and Physics, Princeton University, Princeton,
+New Jersey 08544, USA
+
+..............................................................................................................................................
+Networks of interacting biomolecules carry out many essential
+functions in living cells1, but the ‘design principles’ underlying the
+functioning of such intracellular networks remain poorly under-
+stood, despite intensive efforts including quantitative analysis of
+relatively simple systems2. Here we present a complementary
+approach to this problem: the design and construction of a
+synthetic network to implement a particular function. We used
+three transcriptional repressor systems that are not part of any
+natural biological clock3–5 to build an oscillating network, termed
+
+letters to nature
+
+the repressilator, in Escherichia coli. The network periodically
+induces the synthesis of green ﬂuorescent protein as a readout of
+its state in individual cells. The resulting oscillations, with typical
+periods of hours, are slower than the cell-division cycle, so the
+state of the oscillator has to be transmitted from generation to
+generation. This artiﬁcial clock displays noisy behaviour, possibly
+because of stochastic ﬂuctuations of
+its components. Such
+‘rational network design’ may lead both to the engineering of
+new cellular behaviours and to an improved understanding of
+naturally occurring networks.
+
+In the network shown in Fig. 1a, the ﬁrst repressor protein, LacI
+from E. coli, inhibits the transcription of the second repressor gene,
+tetR from the tetracycline-resistance transposon Tn10, whose pro-
+tein product in turn inhibits the expression of a third gene, cI from l
+phage. Finally, CI inhibits lacI expression, completing the cycle.
+That such a negative feedback loop can lead to temporal oscillations
+in the concentrations of each of its components can be seen from a
+simple model of transcriptional regulation, which we used to design
+the repressilator and study its possible behaviours (Box 1). In this
+model, the action of the network depends on several factors,
+including the dependence of transcription rate on repressor con-
+centration, the translation rate, and the decay rates of the protein
+and messenger RNA. Depending on the values of these parameters,
+at least two types of solutions are possible: the system may converge
+toward a stable steady state, or the steady state may become
+unstable, leading to sustained limit-cycle oscillations (Fig. 1b, c).
+
+We found that oscillations are favoured by strong promoters
+coupled to efﬁcient ribosome-binding sites, tight transcriptional
+repression (low ‘leakiness’), cooperative repression characteristics,
+and comparable protein and mRNA decay rates (Box 1, Fig. 1b). A
+general obstacle to the design of biochemical networks is uncer-
+tainty about the values of parameters that characterize the interac-
+tions between different components. In our network, estimates of
+the order of magnitude of the relevant parameters seem to be
+compatible with the possibility of oscillations. Nevertheless, to
+increase the chances that the artiﬁcial network would function in
+the oscillatory regime, we made two alterations to natural compo-
+nents. First, to address transcriptional strength and tightness, we
+used strong, yet tightly repressible hybrid promoters, developed
+previously, which combine the l PL promoter with lac and tet
+operator sequences6. Second, to bring the effective repressor protein
+lifetimes closer to that of mRNA (about 2 min, on average, in E.
+coli7), we inserted a carboxy-terminal tag, based on the ssrA RNA
+sequence8, at the 39 end of each repressor gene. Proteases in E. coli
+recognize this tag and target the attached protein for destruction9,10.
+Such tags have been shown to reduce the half-life of the l repressor
+DNA-binding domain from more than 60 min to around 4 min
+(ref. 8) and diminish the half-life of green ﬂuorescent protein (GFP)
+to about 30–40 min (ref. 11).
+
+With these considerations in mind, we used standard molecular
+biology techniques to construct a low-copy plasmid encoding the
+repressilator and a compatible, higher-copy reporter plasmid con-
+taining the tet-repressible promoter PLtetO1 (ref. 6) fused to an
+intermediate stability variant of gfp11 (Fig. 1a). Because the inducer
+IPTG interferes with repression by LacI, we expected that a transient
+pulse of IPTG might be capable of synchronizing a population of
+repressilator-containing cells. A culture of E. coli MC4100 contain-
+ing the two plasmids and grown in media containing IPTG
+displayed what appeared to be a single damped oscillation of GFP
+ﬂuorescence per cell after transfer to media lacking IPTG (results
+not shown). Because individual cells have no apparent means of
+maintaining synchronization, we studied the repressilator by iso-
+lating single cells under the microscope and monitoring their
+ﬂuorescence intensity as they grew into small two-dimensional
+microcolonies consisting of hundreds of progeny cells. In these
+experiments, total observation time was limited by the colony
+entering a stationary phase after about 10 hours of growth at
+
+NATURE | VOL 403 | 20 JANUARY 2000 | www.nature.com
+
+© 2000 Macmillan Magazines Ltd
+
+335
+
+letters to nature
+
+a
+
+Repressilator
+
+Reporter
+
+PLlac01
+
+ampR
+
+tetR-lite
+
+PLtet01
+
+gfp-aav
+
+kanR
+
+ 
+l PR
+
+lacI-lite
+
+TetR
+
+GFP
+
+ColE1
+
+pSC101
+origin
+
+TetR
+
+l  cI
+
+LacI
+
+ l  cI-lite
+
+PLtet01
+
+b
+
+b
+ 
+,
+e
+m
+
+i
+t
+e
+f
+i
+l
+ 
+
+A
+N
+R
+m
+/
+e
+m
+
+i
+t
+e
+f
+i
+l
+ 
+n
+e
+t
+o
+r
+P
+
+i
+
+steady state
+
+stable
+
+A
+
+B
+
+C
+
+steady state
+
+unstable
+
+Maximum proteins per cell, a (·  KM)
+
+c
+
+l
+l
+
+e
+c
+ 
+r
+e
+p
+ 
+s
+n
+e
+t
+o
+r
+P
+
+i
+
+6,000
+
+4,000
+
+2,000
+
+0
+
+0
+
+1
+
+0
+
+-1
+
+0
+
+500
+
+1,000
+
+6,000
+
+4,000
+
+2,000
+
+1
+
+0
+
+-1
+
+0
+
+500
+
+1,000
+
+500
+
+Time (min)
+
+1,000
+
+0
+
+0
+
+500
+
+Time (min)
+
+1000
+
+Figure 1 Construction, design and simulation of the repressilator. a, The repressilator
+network. The repressilator is a cyclic negative-feedback loop composed of three repressor
+genes and their corresponding promoters, as shown schematically in the centre of the
+left-hand plasmid. It uses PLlacO1 and PLtetO1, which are strong, tightly repressible
+promoters containing lac and tet operators, respectively6, as well as PR, the right promoter
+from phage l (see Methods). The stability of the three repressors is reduced by the
+presence of destruction tags (denoted ‘lite’). The compatible reporter plasmid (right)
+expresses an intermediate-stability GFP variant11 (gfp-aav). In both plasmids, transcrip-
+tional units are isolated from neighbouring regions by T1 terminators from the E. coli rrnB
+operon (black boxes). b, Stability diagram for a continuous symmetric repressilator model
+(Box 1). The parameter space is divided into two regions in which the steady state is stable
+(top left) or unstable (bottom right). Curves A, B and C mark the boundaries between the
+two regions for different parameter values: A, n (cid:136) 2:1, a0 (cid:136) 0; B, n (cid:136) 2, a0 (cid:136) 0; C,
+n (cid:136) 2, a0=a (cid:136) 10 2 3. The unstable region (A), which includes unstable regions (B) and
+(C), is shaded. c, Oscillations in the levels of the three repressor proteins, as obtained by
+numerical integration. Left, a set of typical parameter values, marked by the ‘X’ in b, were
+used to solve the continuous model. Right, a similar set of parameters was used to solve a
+stochastic version of the model (Box 1). Colour coding is as in a. Insets show the
+normalized autocorrelation function of the ﬁrst repressor species.
+
+30 8C. At least 100 individual cell lineages in each of three micro-
+colonies were tracked manually, and their ﬂuorescence intensity was
+quantiﬁed.
+
+The timecourse of the ﬂuorescence of one such cell is shown in
+Fig. 2. Temporal oscillations (in this case superimposed on an
+overall increase in ﬂuorescence) occur with a period of around
+150 minutes, roughly threefold longer than the typical cell-division
+time. The amplitude of oscillations is large compared with baseline
+levels of GFP ﬂuorescence. At least 40% of cells were found to
+exhibit oscillatory behaviour in each of the three movies, as
+determined by a Fourier analysis criterion (see Methods). The
+range of periods, as estimated by the distribution of peak-to-peak
+intervals, is 160 6 40 min (mean 6 s:d:, n (cid:136) 63). After septation,
+GFP levels in the two sibling cells often remained correlated with
+one another for long periods of time (Fig. 3a–c). Based on the
+analysis of 179 septation events in the 3 movies, we measured an
+average half-time for sibling decorrelation of 95 6 10 min, which is
+longer than the typical cell-division times of 50–70 min under these
+conditions. This indicates that the state of the network is trans-
+mitted to the progeny cells, despite a strong noise component. We
+observed signiﬁcant variations in the period and amplitude of the
+oscillator output both from cell to cell (Fig. 3d), and over time in a
+single cell and its descendants (Fig. 3a–c). In some individuals,
+periods were omitted or phase delayed in one cell relative to its
+sibling (Fig. 3a, c).
+
+Recent theoretical work has shown that stochastic effects may
+be responsible for noisy operation in natural gene-expression
+networks12. Simulations of the repressilator that take into account
+the stochastic nature of reaction events and discreteness of network
+components also exhibit signiﬁcant variability, reducing the corre-
+lation time for oscillations from inﬁnity (in the continuous model)
+to about two periods (Box 1, Fig. 1c, insets). In general, we would
+like to distinguish such stochastic effects from possible intrinsically
+complex dynamics (such as intermittence or chaotic behaviour).
+Further studies are needed to identify and characterize the sources
+of ﬂuctuations in the repressilator and other designed networks. In
+particular, longer experiments performed under chemostatic con-
+ditions should enable more complete statistical characterization of
+
+60
+
+140
+
+250
+
+Time (min)
+300
+390
+
+450
+
+550
+
+600
+
+a
+
+b
+
+c
+
+e
+c
+n
+e
+c
+s
+e
+r
+o
+u
+F
+
+l
+
+ 
+)
+s
+t
+i
+n
+u
+
+ 
+y
+r
+a
+r
+t
+i
+b
+r
+a
+
+(
+
+120
+
+100
+
+80
+
+60
+
+40
+
+20
+
+0
+
+0
+
+100
+
+200
+
+300
+
+400
+
+500
+
+600
+
+Time (min)
+
+Figure 2 Repressilation in living bacteria. a, b, The growth and timecourse of GFP
+expression for a single cell of E. coli host strain MC4100 containing the repressilator
+plasmids (Fig. 1a). Snapshots of a growing microcolony were taken periodically both in
+ﬂuorescence (a) and bright-ﬁeld (b). c, The pictures in a and b correspond to peaks and
+troughs in the timecourse of GFP ﬂuorescence density of the selected cell. Scale bar,
+4 mm. Bars at the bottom of c indicate the timing of septation events, as estimated from
+bright-ﬁeld images.
+
+336
+
+© 2000 Macmillan Magazines Ltd
+
+NATURE | VOL 403 | 20 JANUARY 2000 | www.nature.com
+
+letters to nature
+
+a
+
+150
+
+100
+
+50
+
+0
+
+0
+
+d
+
+400
+
+200
+
+0
+
+0
+
+b
+
+150
+
+100
+
+ 
+
+50
+
+0
+
+0
+
+e
+
+150
+
+100
+
+ 
+
+50
+
+0
+
+0
+
+200
+
+400
+
+600
+
+200
+
+400
+
+600
+
+c
+
+150
+
+100
+
+ 
+
+200
+
+400
+
+600
+
+50
+
+0
+
+0
+
+f
+8,000
+
+6,000
+
+ 
+
+4,000
+
+2,000
+
+200
+
+400
+
+600
+
+200
+
+400
+
+600
+
+0
+
+0
+
+200
+
+400
+
+600
+
+Time (min)
+
+ 
+
+ 
+
+)
+s
+t
+i
+n
+u
+ 
+y
+r
+a
+r
+t
+i
+b
+r
+a
+(
+ 
+e
+c
+n
+e
+c
+s
+e
+r
+o
+u
+F
+
+l
+
+ 
+
+Figure 3 Examples of oscillatory behaviour and of negative controls. a–c, Comparison of
+the repressilator dynamics exhibited by sibling cells. In each case, the ﬂuorescence
+timecourse of the cell depicted in Fig. 2 is redrawn in red as a reference, and two of its
+siblings are shown in blue and green. a, Siblings exhibiting post-septation phase delays
+relative to the reference cell. b, Examples where phase is approximately maintained but
+amplitude varies signiﬁcantly after division. c, Examples of reduced period (green) and
+
+long delay (blue). d, Two other examples of oscillatory cells from data obtained in different
+experiments, under conditions similar to those of a–c. There is a large variability in period
+and amplitude of oscillations. e, f, Examples of negative control experiments. e, Cells
+containing the repressilator were disrupted by growth in media containing 50 mM IPTG.
+f, Cells containing only the reporter plasmid.
+
+Box 1
+Network design
+
+Design of the repressilator started with a simple mathematical model of
+transcriptional regulation. We did not set out to describe precisely the
+behaviour of the system, as not enough is known abut the molecular
+interactions inside the cell to make such a description realistic. Instead,
+we hoped to identify possible classes of dynamic behaviour and
+determine which experimental parameters should be adjusted to obtain
+sustained oscillations.
+Deterministic, continuous approximation
+Three repressor-protein concentrations, pi, and their corresponding
+mRNA concentrations, mi (where i is lacI, tetR or cI) were treated as
+continuous dynamical variables. Each of these six molecular species
+participates in transcription, translation and degradation reactions. Here
+we consider only the symmetrical case in which all three repressors are
+identical except for their DNA-binding speciﬁcities. The kinetics of the
+system are determined by six coupled ﬁrst-order differential equations:
+
+ 
+
+!
+
+dmi
+dt
+
+dpi
+dt
+
+(cid:136) 2 mi (cid:135)
+
+a
+
+(cid:133)1 (cid:135) pn
+j (cid:134)
+
+(cid:135) a0
+
+(cid:136) 2 b(cid:133)pi 2 mi(cid:134)
+
+i (cid:136) lacI; tetR; cI
+
+j (cid:136) cI; lacI; tetR
+
+where the number of protein copies per cell produced from a given
+promoter type during continuous growth is a0 in the presence of
+saturating amounts of repressor (owing to the ‘leakiness’ of the
+promoter), and a (cid:135) a0 in its absence; b denotes the ratio of the protein
+decay rate to the mRNA decay rate; and n is a Hill coefﬁcient. Time is
+rescaled in units of the mRNA lifetime; protein concentrations are written
+in units of KM, the number of repressors necessary to half-maximally
+repress a promoter; and mRNA concentrations are rescaled by their
+translation efﬁciency, the average number of proteins produced per
+mRNA molecule. The numerical solution of the model shown in Fig. 1c
+used the following parameter values: promoter strength, 5 3 10 2 4
+(repressed) to 0.5 (fully induced) transcripts per s; average translation
+efﬁciency, 20 proteins per transcript, Hill coefﬁcient, n (cid:136) 2; protein half-
+life, 10 min; mRNA half-life, 2 min; KM, 40 monomers per cell.
+
+This system of equations has a unique steady state, which becomes
+
+(cid:133)b (cid:135) 1(cid:134)2
+
+3X2
+
+unstable when
+
+b
+the solution to p (cid:136)
+
+,
+
+a
+
+1 (cid:135) pn
+
+, where X [ 2
+
+4 (cid:135) 2X
+(cid:135) a0. The boundary between the stable and
+
+anpn 2 1
+(cid:133)1 (cid:135) pn(cid:134)2 and p is
+
+unstable domains can therefore be plotted (Fig. 1b). The unstable domain
+becomes much larger when the Hill coefﬁcient increases, removing any
+limitation on b for sufﬁciently large a (compare curve B, for which n (cid:136) 2,
+to curve A, for which n (cid:136) 2:1). The effect of leakiness, a0, can be seen by
+plotting the stability boundary for a constant ratio of a0/a, as in curve C.
+When a0 becomes comparable to KM (1 in our units), the unstable domain
+shrinks (compare curve B, for which a0 (cid:136) 0, to curve C, for which
+a0=a (cid:136) 10 2 3). Similar analysis of the stability of the steady state can be
+performed for generalized models of cyclic transcriptional feedback
+loops. The simplest such networks supporting limit-cycle oscillations are
+those containing a single repressor and a single activator, or an odd
+number of repressors exceeding 3. In general, the period of oscillations in
+such networks is determined mainly by the protein stability16. More
+detailed calculations, with non-Hill-function repression curves, or using
+thermodynamic binding energies to predict equilibrium operator occu-
+pancies, and taking repressor dimerization into account, yield similar
+stability results19. It is possible that, in addition to simple oscillations, this
+and more realistic models may exhibit other complex types of dynamic
+behaviour.
+Stochastic, discrete approximation
+The preceding analysis neglects the discrete nature of the molecular
+components and the stochastic character of their interactions, however.
+Such effects are believed to be important in biochemical and genetic
+networks12. We therefore adapted the above equations to perform
+stochastic simulations, as described20. To obtain cooperativity in
+repression analogous to the continuous case, we assumed the presence
+of two operator sites on each promoter and the following reactions:
+binding of proteins to each operator site (1 nM-1 s-1); unbinding of protein
+from the ﬁrst-occupied (224 s-1) and the second-occupied (9 s-1)
+operator; transcription from occupied (5 3 10 2 4 s 2 1) and from unoccu-
+pied (0.5 s-1) promoters; translation (0.167 mRNA-1 s-1); protein decay
+(10 min half-life); and mRNA decay (2 min half-life). These parameters
+were chosen to correspond as closely as possible to the continuous
+model described above, assuming that 1 molecule per cell corresponds
+to a concentration of ,1 nM. Oscillations persist for these parameter
+values (Fig. 1c) but with a large variability, resulting in a ﬁnite autocorre-
+lation time (compare insets in Fig. 1c).
+
+NATURE | VOL 403 | 20 JANUARY 2000 | www.nature.com
+
+© 2000 Macmillan Magazines Ltd
+
+337
+
+letters to nature
+
+the noisy repressilator dynamics. In addition, varying the host
+species and genetic background would allow us to check for, and
+minimize, spurious interactions with endogenous cellular sub-
+systems, and to investigate how the network is embedded in the
+cell. For instance, in the repressilator network, the cell-division cycle
+does not seem to be coupled with the repressilator, as the timing of
+oscillations is uncorrelated with cell septation events (Fig. 2).
+However, entry into the stationary phase causes the repressilator
+to halt,
+indicating that the network is coupled to the global
+regulation of cell growth.
+
+The levels of many cellular components vary over time in growing
+cells, and even strains that constitutively express GFP exhibit
+signiﬁcant heterogeneity, so we performed several control experi-
+ments to check that the observed oscillations are indeed due to the
+repressilator (Fig. 3e, f). These included deliberate disruption of the
+network (by adding sufﬁcient IPTG to interfere with LacI) and
+observation of GFP expression in the absence of the repressilator
+(from plasmids with different promoters and origins of replication).
+Our results show that it is possible to design and construct an
+artiﬁcial genetic network with new functional properties from
+generic components that naturally occur in other contexts. Such
+work is analogous to the rational design of functional proteins from
+well-characterized motifs13. Further characterization of compo-
+nents and alteration of network connectivity may reveal general
+features of this and related networks, and provide a basis for
+improved design and possible use in biotechnological applications.
+Moreover, comparing designed networks with their evolved coun-
+terparts may also help us to understand the ‘design principles’
+underlying the latter. For instance, circadian clocks are found in
+many organisms, including cyanobacteria in which the cell-division
+time may be shorter than the period14–15. However, the reliable
+performance of such circadian oscillators can be contrasted with the
+noisy, variable behaviour of the repressilator. Instead of three
+repressors, it seems that circadian oscillators use both positive
+and negative control elements. Does this design lead to improved
+reliability? Recent theoretical analysis suggests that, in the presence
+of interactions between positive and negative control elements
+that lead to bistable, hysteretic behaviour, an oscillating circuit
+does indeed exhibit high noise-resistance16. It would be interesting
+to see whether one could build an artiﬁcial analogue of the circadian
+clock, and, if so, whether such an analogue would display the noise
+resistance and temperature compensation of its natural counter-
+part.
+M
+
+Methods
+Network construction
+The three repressors (lacI, tetR and cI), the l promoter PR and the unstable variants of gfp11
+were all cloned by the polymerase chain reaction (PCR) and veriﬁed by sequencing. In the
+case of lacI, the GTG start codon was changed to ATG with the 59 primer. 39 PCR primers
+were used to add the coding sequence for the 11-amino-acid ssrA tag to the three
+repressors8. Tagging of full-length l repressor, as well as lacI and tetR, resulted in
+functional proteins that required increased induction to achieve full repression, consistent
+with decreased stability. Promoter sequences PLlacO1 and PLtetO1 were obtained from
+pZE21-MCSI and pZE12-luc6. The repressilator plasmid was constructed in three
+successive cloning steps from intermediate plasmids containing the three transcriptional
+units. The reporter plasmid was constructed by cloning the GFPaav variant11, which has a
+half-life of around 90 min, into pZE21-MCS1 (ref. 6). The ﬁnite rate at which GFP is
+oxidized to its ﬂuorescent form17 and its relatively long half-life limit our ability to observe
+fast dynamic phenomena. The presence of additional tet operators on the reporter plasmid
+constitutes a perturbation to the single-plasmid repressilator network by titrating out
+repressors18.
+
+Data acquisition and analysis
+Cells of E. coli lac- strain MC4100 (unless otherwise speciﬁed) transformed with
+appropriate plasmids were grown in minimal media (7.6 mM [NH4]2SO4, 2 mM MgSO4,
+30 mM FeSO4, 1 mM EDTA, 60 mM potassium phosphate, pH 6.8) supplemented with
+0.5% glycerol, 0.1% casamino acids and appropriate antibiotics (20 mg ml-1 kanamycin or
+20 mg ml-1 ampicillin), when needed. Time-lapse microscopy was conducted on a Zeiss
+Axiovert 135TV microscope equipped with a 512 3 512-pixel cooled CCD camera
+(Princeton Instruments). Cultures were grown for at least 10 hours to optical density of 0.1
+at 600 nm, diluted into fresh media, spotted between a coverslip and 1 ml of liquid 2%
+
+SeaPlaque low-melt agarose (FMC) in media, and sealed. The temperature of the samples
+was maintained at 30–32 8C by using Peltier devices (Melcor). Bright-ﬁeld (0.1 s) and
+epiﬂuorescence (0.05–0.5 s) exposures were taken periodically (every 5 or 10 min). All
+light sources (standard 100 W Hg and halogen lamps) were shuttered between exposures.
+Images were ﬂat-ﬁeld corrected with custom software. For the synchronization experi-
+ment, overnight cultures were diluted back 1:100 in media containing 100 mM IPTG,
+grown to mid-log, washed several times, and diluted again and grown in 96-well plates at
+30 with shaking in a Wallac Victor 2 plate reader, while ﬂuorescence and absorbance
+measurements were taken every 5 min.
+
+For analysis, cells were selected from the ﬁnal frames of bright-ﬁeld movies, without
+
+regard to their ﬂuorescence signals, and tracked manually backward in time until the ﬁrst
+frame. At each time point, the cell position was identiﬁed on the bright-ﬁeld image, and
+ﬂuorescence intensity data were averaged over a 28-pixel region, similar in size to the cell
+diameter, in the corresponding location on the ﬂuorescence image. A fast Fourier
+transform was applied to the temporal ﬂuorescence signal from each analysed cell lineage
+and divided by the transform of a decaying exponential with a time constant of 90 min, the
+measured lifetime of GFPaav. Power spectra exhibiting peaks of more than four times the
+background at frequencies of 0.2–0.5 per hour were classiﬁed as oscillatory (the choice of
+threshold alters the fraction of oscillatory cells deﬁned by this criterion). The sibling
+‘decorrelation’ half-time was deﬁned as the time necessary for the quantity
+jI1(cid:133)t(cid:134) 2 I2(cid:133)t(cid:134)j=(cid:133)I1(cid:133)t(cid:134) (cid:135) I2(cid:133)t(cid:134)(cid:134), averaged over pairs of daughter cells, to reach half of its
+asymptotic value. Here, I1(t) and I2(t) denote the ﬂuorescence intensities of the two sibling
+cells at times, t, starting from the moment of septation (610 min). In this analysis, only
+cells judged to be oscillatory by the Fourier criterion were considered.
+
+Various negative control experiments were performed. First, 50 mM IPTG was added to
+the media to disrupt the functioning of the network (Fig. 3e). Second, we used a version of
+the repressilator plasmid lacking all but the tetR transcriptional unit (in lacIq strain
+JM109). We thus varied GFP expression of the reporter plasmid by controlling TetR levels
+with 0–20 mM IPTG. Third, we examined cells containing only the reporter plasmid
+(Fig. 3f). Fourth, we measured GFP expression from reporter plasmids modiﬁed in several
+ways either by replacing the PLtetO1 promoter with each of the two other promoters, and
+gfp-aav with gfp-lite11 (the sufﬁx ‘lite’ indicates the presence of a C-terminal ssrA tag), or by
+replacing the ColE1 origin of replication with the lower-copy pSC101 origin normally
+used on the repressilator plasmid. In none of these control experiments did we observe
+oscillations similar to those produced by the repressilator.
+
+Received 6 July; accepted 9 November 1999.
+
+1. Bray, D. Protein moelcules as computational elements in living cells. Nature 376, 307–312 (1995).
+2. Koshland, D. E. Jr The era of pathway quantiﬁcation. Science 280, 852–853 (1998).
+3. Winfree, A. T. The Geometry of Biological Time (Springer, Berlin, 1990).
+4. Goldbeter, A. Biochemical Oscillations and Cellular Rhythms (Cambridge Univ. Press, 1996).
+5. Thomas, R. & D’Ari, R. Biological Feedback (CRC Press, Boca Raton, 1990).
+6. Lutz, R. & Bujard, H. Independent and tight regulation of transcriptional units in Escherichia coli via
+the LacR/O, the TetR/O and AraC/I1-I2 regulatory elements. Nucleic Acids Res. 25, 1203–1210 (1997).
+7. Kushner, S. R. in Escherichia Coli and Salmonella: Cellular and Molecular Biology (ed. Neidhardt, F. C.)
+
+(ASM, Washington DC, 1996).
+
+8. Keiler, K. C., Waller, P. R. & Sauer, R. T. Role of a peptide tagging system in degradation of proteins
+
+synthesized from damaged messenger RNA. Science 271, 990–993 (1996).
+
+9. Gottesman, S., Roche, E., Zhou, Y. & Sauer, R. T. The ClpXP and ClpAP proteases degrade proteins
+
+with carboxy-terminal peptide tails added by the SsrA-tagging system. Genes Dev. 12, 1338–1347
+(1998).
+
+10. Herman, C., Thevenet, D., Bouloc, P., Walker, G. C. & D’Ari, R. Degradation of carboxy-terminal-
+tagged cytoplasmic proteins by the Escherichia coli protease HﬂB (FtsH). Genes Dev. 12, 1348–1355
+(1998).
+
+11. Andersen, J. B. et al. New unstable variants of green ﬂuorescent protein for studies of transient gene
+
+expression in bacteria. Appl. Environ. Microbiol. 64, 2240–2246 (1998).
+
+12. McAdams, H. H. & Arkin, A. It’s a noisy business! Genetic regulation at the nanomolar scale. Trends
+
+Genet. 15, 65–69 (1999).
+
+13. Bryson, J. W. et al. Protein design: a hierarchic approach. Science 270; 935–941 (1995).
+14. Dunlap, J. C. Molecular bases for circadian clocks. Cell 96, 271–290 (1999).
+15. Kondo, T. et al. Circadian rhythms in rapidly dividing cyanobacteria. Science 275; 224–227 (1997).
+16. Barkai, N. & Leibler, S. Circadian clocks limited by noise. Nature (submitted????). (Eds to update)
+17. Tsien, R. Y. The green ﬂuorescent protein. Annu. Rev. Biochem. 67, 509–544 (1998).
+18. Glascock, C. B. & Weickert, M. J. Using chromosomal lacIQ1 to control expression of genes on high-
+
+copy-number plasmids in Escherichia coli. Gene 223, 221–231 (1998).
+
+19. Elowitz, M. B. Transport, Assembly, and Dynamics in Systems of Interacting Proteins. Thesis, Princeton
+
+Univ., Princeton (1999).
+
+20. Gillespie, D. T. Exact stochastic simulation of coupled chemical reactions. J. Phys. Chem. 81, 2340–
+
+2361 (1977).
+
+Acknowledgements
+We thank H. Bujard, S. Freundlieb, A. Hochschild, R. Lutz and C. Sternberg for plasmids
+and advice; U. Alon, N. Barkai, P. Cluzel, L. Frisen, C. Guet, T. Hyman, R. Kishony,
+A. Jaedicke, P. Lopez, F. Ne´de´lec, S. Pichler, R. Kishony, T. Silhavy, T. Surrey, J. Vilar,
+C. Wiggins and E. Winfree for discussions; M. Surette for advice and encouragement;
+L. Hartwell and C. Weitz for comments on the manuscript; and F. Kafatos and E. Karsenti
+for hospitality and support at the European Molecular Biology Laboratory (EMBL), where
+part of this work was done. This work was partly supported by the US National Institutes
+of Health and the von Humboldt Foundation.
+
+Correspondence and requests for materials should be addressed to M.B.E.
+(e-mail: melowitz@princeton.edu).
+
+338
+
+© 2000 Macmillan Magazines Ltd
+
+NATURE | VOL 403 | 20 JANUARY 2000 | www.nature.com
+

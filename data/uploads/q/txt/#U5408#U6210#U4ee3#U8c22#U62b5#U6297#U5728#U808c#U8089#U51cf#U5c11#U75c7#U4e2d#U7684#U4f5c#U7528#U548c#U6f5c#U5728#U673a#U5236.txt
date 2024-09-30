@@ -1,0 +1,745 @@
+J Cachexia Sarcopenia Muscle (2012) 3:157–162
+DOI 10.1007/s13539-012-0068-4
+
+REVIEW
+
+Role and potential mechanisms of anabolic resistance
+in sarcopenia
+
+Prashanth H. Haran & Donato A. Rivas &
+Roger A. Fielding
+
+Received: 17 September 2011 / Accepted: 11 April 2012 / Published online: 16 May 2012
+# The Author(s) 2012. This article is published with open access at Springerlink.com
+
+Abstract There is pressing need to understand the aging
+process to better cope with its associated physical and societal
+costs. The age-related muscle wasting known as sarcopenia is
+a major contributor to the problems faced by the elderly. By
+hindering mobility and reducing strength, it greatly diminishes
+independence and quality of life. In studying the factors that
+contribute to the development of sarcopenia, the focus is
+shifting to the study of disordered muscle anabolism. The
+abnormal response of muscle to previously well-established
+anabolic stimuli is known as anabolic resistance, and may be a
+key factor in the development and progression of sarcopenia.
+Factors such as age, obesity, inflammation, and lipotoxicity
+contribute to anabolic resistance, and have been studied either
+directly or indirectly in cell systems and whole animals.
+Understanding the physiologic and mechanistic basis of ana-
+bolic resistance could be the key to formulating new and
+targeted interventions that would ease the burden currently
+borne by the world’s aged population.
+
+Keywords Sarcopenia . Anabolic resistance .
+Skeletal muscle
+
+1 Introduction
+
+The rapid growth of the world’s aging population has sparked
+many discussions of the public health implications of aging.
+The WHO has estimated that the expansion of the population
+
+P. H. Haran : D. A. Rivas : R. A. Fielding (*)
+Nutrition, Exercise Physiology, and Sarcopenia Laboratory,
+Jean Mayer USDA Human Nutrition Research Center on Aging,
+Tufts University,
+711 Washington Street,
+Boston, MA 02111, USA
+e-mail: roger.fielding@tufts.edu
+
+aged 60 and over will more than triple from 600 million to
+greater than two billion between 2000 and 2050 [1]. With a
+projected global population of approximately nine billion by
+the year 2050, between one fifth and one quarter of the world
+would fall into this category. Increasingly, older adults play an
+active role in caregiving, volunteerism, and many other inte-
+gral social facets. Consider, too, the susceptibility of the
+elderly to disease and the accompanying debilitation. Taken
+together, these circumstances highlight the importance of
+understanding the etiology of the aging process and the un-
+derlying metabolic alterations that occur.
+
+In the past decades, substantial research has revealed that
+large sections of the older population suffer from loss of
+muscle mass and function, which has been shown to contrib-
+ute to functional limitations and disability [2, 3]. This age-
+related muscle wasting has been termed sarcopenia [4]. Re-
+cently it has been observed that sarcopenia incurs a significant
+cost to the American Health System, so a better understanding
+of the disease etiology as well as development of interven-
+tional therapy cannot only have a profound impact on the
+individual level but on a much larger scale as well [5].
+
+Mechanistically, muscle loss as a result of sarcopenia is
+better understood now than it was some 15 years ago. Prefer-
+ential loss of type II muscle fibers is characteristic and seen in
+individuals as early as the age of 25, but the loss of muscle
+function to actual tissue loss seems disproportionate: strength
+diminishes more than muscle loss would predict [6, 7]. Re-
+cently, studies have implicated a derangement of equilibrium
+between muscle protein synthesis (MPS) and muscle protein
+breakdown (MPB) as a major contributor to this phenomenon.
+In particular, alterations in MPS during anabolic conditions in
+aged populations have been implicated as a significant con-
+tributor to this imbalance [6, 8, 9].
+
+Anabolic resistance, the impaired rate of cellular anabo-
+lism in response to various anabolic stimuli, is one potential
+
+158
+
+J Cachexia Sarcopenia Muscle (2012) 3:157–162
+
+mechanism of disordered MPS [8]. The inability of muscle
+to regulate maintenance of protein homeostasis in response
+to feeding and exercise is characteristic in older individuals.
+Investigation into both normal and disordered muscle anab-
+olism has provided unique insight to this problem [9, 10].
+
+2 Anabolic stimuli and signaling
+
+Anabolic stimulators such as insulin, branched chain amino
+acids (BCAA), and insulin-like growth factors (IGF-1) increase
+skeletal MPS in young healthy individuals. Anabolic stimula-
+tion in skeletal muscle causes MPS to exceed MPB, resulting in
+muscle hypertrophy. Insulin has been well described as a
+stimulator of MPS and has also been seen to participate in
+muscle amino acid uptake [11–14]. However, more recent
+findings have highlighted insulin as permissive rather than
+modulatory in MPS. Insulin acts to prime the muscle for
+protein synthesis, but MPS is stimulated in a dose-dependent
+fashion by BCAA in young men. So availability of BCAA
+rather than insulin appears to regulate rate of protein synthesis
+observed [15]. Additionally, IGF-1 has also been shown to
+induce hypertrophy in muscle [16]. While these stimuli consti-
+tute the most commonly studied and well-characterized dietary
+and homeostatic drivers of MPS, exercise has also been shown
+to affect the dynamics of muscle equilibrium.
+
+For years now exercise has been studied in the context of
+sarcopenic muscle loss [17, 18]. Aerobic exercise, while hav-
+ing no observable impact on muscle protein turnover, has been
+shown to increase MPS in older individuals [19]. Muscle
+contraction by resistance exercise increases the overall rate
+of muscle protein turnover, but does so disproportionately in
+favor of MPS [12]. Other studies have reported that an intense
+single bout of resistance training can increase MPS well above
+baseline in the post-exercise time period that extends from 1 to
+72 h [20–22]. Similar to BCAA availability, acute bouts of
+resistance training have been shown to affect MPS in a dose-
+dependent manner [23].
+
+Anabolic signals provoke MPS by activating a highly
+diverse signaling pathway in skeletal muscle cells. The mam-
+malian/mechanistic target of rapamycin (mTOR) is a member
+of a family of signaling proteins that serve a myriad of roles in
+stress and survival pathways. Two distinct mTOR complexes,
+mTORC1 and mTORC2, act as nutrient sensors that are
+activated under specific conditions. In response to anabolic
+stimuli, mTORC1 targets and activates downstream kinases
+such as S6 kinase 1 (S6K1), or binding proteins like eIF4E-
+binding protein 1 (4E-BP1), as seen in Fig. 1. The action of
+mTOR and its downstream mediators heightens the efficiency
+of ribosomal biogenesis and ultimately translation [24–26].
+Additionally, the energy sensor AMP-activated kinase (AMPK)
+holds a measure of control over mTORC1, and the two together
+exert antagonistic control over muscle cell size [27].
+
+Protein kinase B, also known as Akt, plays an important
+role in skeletal muscle homeostasis. A target of mTORC2,
+Akt is a member of the phosphoinositide 3 kinase (PI3K)
+family and involved in stress and survival signaling. It acts
+through control over the forkhead box protein O (FOXO) 1
+and FOXO3 transcription factors, which mediate cellular
+stress responses such as apoptosis [28]. Akt has also been
+observed to play a role in lipid metabolism, meaning it may
+have additional culpability in disordered anabolic signaling
+[29, 30]. Zoncu et al. and Rivas et al. have written detailed
+reviews on these signaling pathways and their function in
+skeletal muscle homeostasis; they should be referenced for
+additional details [28, 34].
+
+3 Anabolic resistance and aging
+
+As aging is seen to be the root cause of sarcopenia, it has
+been studied as a potential root of the underlying problem,
+anabolic resistance. The study of anabolic resistance in both
+human and rodent models has allowed for a translational
+approach in determining the mechanism of disordered skeletal
+muscle metabolism. Initially, a study by Guillet and col-
+leagues showed that the ability of insulin and BCAA to initiate
+protein translation was hampered in older individuals when
+compared with young subjects as well [31]. Rassmussen and
+colleagues corroborated these findings while also pointing out
+that a blunted vasodilatory response of older muscle to insulin
+may play a role in nutrient deficiency and unavailability [32].
+It was also revealed that the ability of BCAA to foster MPS
+was blunted in old rats compared with their younger adult
+counterparts [10]. This observed decrease in MPS in response
+to anabolic stimulus with aging is thought to be a result of
+diminished mTOR signaling [26].
+
+Precedent for diminished mTOR signaling in response to
+anabolic stimulus was established through experimentation
+with rapamycin, an immunosuppressant and inhibitor of mTOR
+phosphorylation [33–35]. Cuthbertson and colleagues have
+observed decreased mTOR phosphorylation in older individu-
+als as compared to young individuals in response to BCAA
+[15]. Others have seen attenuation of the mTOR signaling
+pathway despite muscle contraction or overload in aged ani-
+mals [36–39]. Overall, there seems to be consensus that age-
+induced anabolic resistance is grounded in the inability of
+hypertrophy controlling signaling pathways to successfully
+coordinate the proper response to their normal stimuli.
+
+4 Diet, obesity, and diminished anabolic signaling
+
+Approximately one decade ago, a study by Baumgartner
+revealed that older individuals categorized as both sarcopenic
+and obese were at the highest risk among those suffering from
+
+J Cachexia Sarcopenia Muscle (2012) 3:157–162
+
+159
+
+Amino
+acids
+
+Insulin or 
+IGF
+
+Plasma 
+membrane
+
+PtdIns(4,5)P2
+
+PtdIns(3,4,5)P
+3
+
+PI3K
+
+P P
+
+P
+
+P P
+
+P
+
+P
+
+P
+
+AMPK
+
+mTORC1
+
+mTORC2
+
+P
+
+4E-BP1
+
+P
+
+S6K1
+
+P
+
+Akt
+
+?
+
+Lipid
+
+Metabolism
+
+Glucose 
+Uptake
+
+P
+
+FOXO1/
+
+3
+
+Translation
+
+Apoptosis
+
+Fig. 1 Anabolic stimuli in the form of amino acids, growth factors
+(insulin, IGF-1), and exercise (not shown) act through the mTOR and
+Akt signaling pathways. mTORC1 is responsible for the phosphoryla-
+tion and activation of S6K1 and phosphorylation and inactivation of
+4E-BP1. It results in ribosome biogenesis, increase in translational
+efficiency, and heightened MPS. The energy sensor AMPK inhibits
+this pathway, and is active when the AMP/ATP ratio is high. Growth
+
+factor stimulates activation of the PI3K pathway as well as mTORC2;
+both eventually activate Akt, which can inhibit stress signaling and
+apoptosis through inactivation of FOXO1/O3 transcription factors. Akt
+also plays a role in carbohydrate metabolism. P phosphorylation,
+activation or inactivation; PI3K phosphoinositide 3 kinase; Akt protein
+kinase B; FOXO forkhead protein box O; AMPK AMP-activated
+kinase; 4E-BP1 eIF4E-binding protein 1; S6K1 S6 kinase 1
+
+disorders of body composition [40]. Further investigation of
+this “sarcopenic obesity” would indicate that the two are path-
+ophysiologically linked, perhaps even at a mechanistic level
+[41]. It comes as no surprise then that anabolic resistance has
+been observed to arise in response to obesity and high-fat
+feeding. Diet-induced obesity is often implicated in insulin
+resistance when studied as a contributor to metabolic syndrome
+[42]. A study in mice conducted by Anderson and colleagues
+showed that diet-induced obesity reduced skeletal MPS in
+response to nutrient intake [43]. Yet another study was able to
+find a link between impaired protein metabolism and reduced
+post-absorptive protein turnover in obese individuals [44].
+
+In spite of compelling evidence, it is yet unclear how
+obesity and insulin resistance are linked mechanistically. It
+has been shown that increased activation of the mTOR
+pathway can diminish the ability of Akt to function properly
+in fat-fed obese rats [45]. The downstream effectors of the
+mTOR pathway have also been implicated as contributors to
+insulin resistance stemming from obesity [46]. Some mech-
+anistic insight into anabolic signaling has been gleaned
+
+through the study of β-hydroxy-β-methylbutyrate (HMB),
+an active leucine metabolite. HMB has been shown to
+increase MPS through activation of the mTOR pathway
+and to attenuate MPB through various anticatabolic actions,
+such as inhibition of caspase-8 signaling [47–49]. Still, the
+lack of concrete mechanisms for the roles of obesity and
+anabolic signaling in anabolic resistance makes this a rich
+area for study moving forward.
+
+5 Inflammation and lipotoxicity
+
+Obesity aside, lipid accumulation may have another impor-
+tant role in anabolic signaling and resistance. Accumulation
+of lipids in nonfatty tissue sites has been linked with acti-
+vation of proinflammatory mediators such as toll-like recep-
+tor 4, tumor necrosis factor alpha (TNFα), and nuclear
+factor kappa-light-chain enhancer of activated B cells
+(NFκB) [50]. Several studies have shown that inflammation,
+mediated by these same intermediaries, may play a key role
+
+160
+
+J Cachexia Sarcopenia Muscle (2012) 3:157–162
+
+in the development of sarcopenia, especially through ana-
+bolic resistance [51, 52]. Cuthbertson and colleagues have
+suggested that increased basal expression of NFκB, as well
+as TNFα and interleukin-6, in older individuals is an inhib-
+itor of muscle anabolism by interference with mTOR sig-
+naling [15]. Inflammation like this is viewed as chronic in
+older individuals, characterized by heightened production of
+cytokines and acute-phase proteins; the phenomenon has
+come to be called “inflammaging” by some [53–56]. Fur-
+thermore, recent findings have linked lipid accumulation to
+proinflammatory macrophage infiltration in muscle tissue
+and intermuscular adipose tissue; this is certainly detrimen-
+tal, as fatty acids can trigger macrophage secretion of factors
+that would further impair anabolic stimulation [57–59].
+
+Lipotoxicity contributes to anabolic resistance through
+the action of ceramides, sphingolipids composed of a sphin-
+gosine backbone and fatty acid chain. Ceramides function as
+regulators of cellular stress and are mechanistic modulators
+of metabolic diseases, especially insulin/anabolic resistance
+[60–62]. Hyde and colleagues reported that ceramide dimin-
+ished intracellular amino acid availability and reduced phos-
+phorylation of translational regulators downstream of
+mTOR in vitro [63]. Others have gone on to show that
+ceramide activates protein phosphatase 2A, which targets
+and inhibits Akt and S6K1 by dephosphorylation [64–66]. It
+has been hypothesized that ceramides are mediators of
+TNFα inhibition of anabolic signaling; but as of yet, there
+has been no mechanistic link between the two [67, 68].
+
+Ceramide is not the only lipid species implicated in lip-
+otoxicity; triglycerides have also been seen as detrimental to
+anabolic signaling in skeletal muscle. Recently, we were
+able to show that age-induced intramuscular triglyceride
+infiltration is associated with an increase in several lipo-
+genic regulators including: sterol regulatory element-
+binding protein, fatty acid synthase, acetyl CoA carboxyl-
+ase, and stearoyl CoA desaturase. Additionally, we demon-
+strated that AMPK activation and concentration are
+heightened in aged skeletal muscle, even in animals that
+were subjected to anabolic stimulus in the form of chronic
+muscle overload [69]. This would suggest that intramuscular
+lipid accumulation, especially of triglycerides, is somehow
+involved in the blunting of anabolic signaling pathways.
+Further investigation in this vein is warranted, as elucidation
+of the mechanistic underpinnings of lipotoxicity could pres-
+ent new and better ways to intervene in anabolic resistance
+at the protein or genetic level, stemming sarcopenia at the
+source.
+
+6 Future directions
+
+Clearly, the story of anabolic resistance is compelling, but
+still being written. Further exploration of the mechanistic
+
+similarities between aging and obesity would clarify wheth-
+er or not there is a link between resistances observed in both
+cases. From an interventional standpoint, diet and exercise
+could be better tailored to sarcopenia of specific origin to
+optimize recovery of muscle mass and function. But where
+intervention in diet and with exercise may be less effective,
+as in the oldest of individuals, development of therapeutic or
+pharmaceutical agents is warranted. A better idea of the role
+metabolic or age-related inflammation plays in anabolic
+resistance would be necessary to develop targeted counter-
+measures. Similarly, understanding how lipid infiltration
+and lipotoxicity adversely impact anabolic signaling at the
+genetic, protein, and metabolic levels is an area ripe for
+study. Luckily, this field of study is relatively new, so
+developments in all these areas will come in time. And with
+an improved understanding of anabolic resistance, we can
+better apply ourselves to the treatment of sarcopenia, there-
+by reducing the subsequent burden of disability from this
+condition.
+
+Acknowledgments The authors of this manuscript certify that they
+comply with the ethical guidelines for authorship and publishing in the
+Journal of Cachexia, Sarcopenia and Muscle [70].
+
+Conflict of interest The authors declare that they have no conflict of
+interest.
+
+Open Access This article is distributed under the terms of the Crea-
+tive Commons Attribution Noncommercial License which permits any
+noncommercial use, distribution, and reproduction in any medium,
+provided the original author(s) and source are credited.
+
+References
+
+1. WHO. Ageing (online). 2008. http://www.who.int/topics/ageing/en.
+
+Accessed 9 Aug 2011.
+
+2. Melton LJ, Khosla S, Crowson CS, O’Connor MK, O’Fallon WM,
+Riggs BL. Epidemiology of sarcopenia. J Am Geriatr Soc.
+2000;48:625–30.
+
+3. Baumgartner RN, Koehler KM, Gallagher D, Romero L, Heymsfield
+SB, Ross RR, et al. Epidemiology of sarcopenia among the elderly in
+New Mexico. Am J Epidemiol. 1998;147:755–63.
+
+4. Rosenberg IH. Sarcopenia: origins and clinical relevance. J Nutr.
+
+1997;127:990S–1S.
+
+5. Morley JE. Sarcopenia: diagnosis and treatment. J Nutr Health
+
+Aging. 2008;12:452–6.
+
+6. Goodpaster BH, Park SW, Harris TB, Kritchevsky SB, Nevitt M,
+Schwartz AV, et al. The loss of skeletal muscle strength, mass, and
+quality in older adults: the health, aging and body composition
+study. J Gerontol A Biol Sci Med Sci. 2006;61:1059–64.
+
+7. Haus JM, Carrithers JA, Trappe SW, Trappe TA. Collagen, cross-
+linking, and advanced glycation end products in aging human
+skeletal muscle. J Appl Physiol. 2007;103:2068–76.
+
+8. Rennie MJ. Anabolic resistance: the effects of aging, sexual dimor-
+phism, and immobilization on human muscle protein turnover. Appl
+Physiol Nutr Metab. 2009;34:377–81.
+
+J Cachexia Sarcopenia Muscle (2012) 3:157–162
+
+161
+
+9. Volpi E, Sheffield-Moore M, Rasmussen BB, Wolfe RR. Basal
+muscle amino acid kinetics and protein synthesis in healthy young
+and older men. JAMA. 2001;286:1206–12.
+
+10. Prod’homme M, Balage M, Debras E, Farges MC, Kimball S,
+Jefferson L, et al. Differential effects of insulin and dietary amino
+acids on muscle protein synthesis in adult and old rats. J Physiol.
+2005;563:235–48.
+
+11. Bennet WM, Connacher AA, Scrimgeour CM, Jung RT, Rennie
+MJ. Euglycemic hyperinsulinemia augments amino acid uptake by
+human leg tissues during hyperaminoacidemia. Am J Physiol.
+1990;259:E185–94.
+
+12. Biolo G, Declan Fleming RY, Wolfe RR. Physiologic hyperinsuli-
+nemia stimulates protein synthesis and enhances transport of se-
+lected amino acids in human skeletal muscle. J Clin Invest.
+1995;95:811–9.
+
+13. Hillier TA, Fryburg DA, Jahn LA, Barrett EJ. Extreme hyperinsuli-
+nemia unmasks insulin’s effect to stimulate protein synthesis in the
+human forearm. Am J Physiol. 1998;274:E1067–74.
+
+14. Nygren J, Nair KS. Differential regulation of protein dynamics in
+splanchnic and skeletal muscle beds by insulin and amino acids in
+healthy human subjects. Diabetes. 2003;52:1377–85.
+
+15. Cuthbertson D, Smith K, Babraj J, Leese G, Waddell T, Atherton P, et
+al. Anabolic signaling deficits underlie amino acid resistance of
+wasting, aging muscle. FASEB J. 2005;19:422–4.
+
+16. Adams GR, Haddad F. The relationships among IGF-1, DNA con-
+tent, and protein accumulation during skeletal muscle hypertrophy. J
+Appl Physiol. 1996;81:2509–16.
+
+17. Fielding RA. Effects of exercise training in the elderly: impact of
+progressive- resistance training on skeletal muscle and whole-body
+protein metabolism. Proc Nutr Soc. 1995;54:665–75.
+
+18. Chin AV, Robinson DJ, O’Connell H, Hamilton F, Bruce I, Coen R,
+et al. Vascular biomarkers of cognitive performance in a community-
+based elderly population: the Dublin Healthy Ageing study. Age
+Ageing. 2008;37:559–64.
+
+19. Short KR, Vittone JL, Bigelow ML, Proctor DN, Nair KS. Age and
+aerobic exercise training effects on whole body and muscle protein
+metabolism. Am J Physiol Endocrinol Metab. 2004;286:E92–
+E101.
+
+20. MacDougall JD, Gibala MJ, Tarnopolsky MA, MacDonald JR,
+Interisano SA, Yarasheski KE. The time course for elevated muscle
+protein synthesis following heavy resistance exercise. Can J Appl
+Physiol. 1995;20:480–6.
+
+21. Phillips SM, Tipton KD, Aarsland A, Wolf SE, Wolfe RR. Mixed
+muscle protein synthesis and breakdown after resistance exercise
+in humans. Am J Physiol. 1997;273:E99–E107.
+
+22. Miller BF, Olesen JL, Hansen M, Dossing S, Crameri RM, Welling
+RJ, et al. Coordinated collagen and muscle protein synthesis in
+human patella tendon and quadriceps muscle after exercise. J Physiol.
+2005;567:1021–33.
+
+23. Kumar V, Selby A, Rankin D, Patel R, Atherton P, Hildebrandt W,
+et al. Age-related differences in the dose–response relationship of
+muscle protein synthesis to resistance exercise in young and
+old men. J Physiol. 2009;587:211–7.
+
+24. Bodine SC, Stitt TN, Gonzalez M, Kline WO, Stover GL, Bauerlein
+R, et al. Akt/mTOR pathway is a crucial regulator of skeletal muscle
+hypertrophy and can prevent muscle atrophy in vivo. Nat Cell Biol.
+2001;3:1014–9.
+
+25. Rommel C, Bodine SC, Clarke BA, Rossman R, Nunez L, Stitt TN,
+et al. Mediation of IGF-1-induced skeletal myotube hypertrophy by
+PI(3)K/Akt/mTOR and PI(3)K/Akt/GSK3 pathways. Nat Cell Biol.
+2001;3:1009–13.
+
+26. Wang X, Proud CG. The mTOR pathway in the control of protein
+
+synthesis. Physiology (Bethesda). 2006;21:362–9.
+
+27. Mounier R, Lantier L, Leclerc J, Sotiropoulos A, Foretz M, Viollet B.
+Antagonistic control of muscle cell size by AMPK and mTORC1.
+Cell Cycle. 2011;10:2640–6.
+
+28. Zoncu R, Efeyan A, Sabatini DM. mTOR: from growth signal
+integration to cancer, diabetes and ageing. Nat Rev Mol Cell Biol.
+2011;12:21–35.
+
+29. Bouzakri K, Zachrisson A, Al-Khalili L, Zhang BB, Koistinen
+HA, Krook A, et al. siRNA-based gene silencing reveals special-
+ized roles of IRS-1/Akt2 and IRS-2/Akt1 in glucose and lipid
+metabolism in human skeletal muscle. Cell Metab. 2006;4:89–96.
+30. Rivas DA, Yaspelkis 3rd BB, Hawley JA, Lessard SJ. Lipid-induced
+mTOR activation in rat skeletal muscle reversed by exercise and 5′-
+aminoimidazole-4-carboxamide-1-beta-D-ribofuranoside. J Endocri-
+nol. 2009;202:441–51.
+
+31. Guillet C, Prod’homme M, Balage M, Gachon P, Giraudet C,
+Morin L, et al. Impaired anabolic response of muscle protein
+synthesis is associated with S6K1 dysregulation in elderly humans.
+FASEB J. 2004;18:1586–7.
+
+32. Rasmussen BB, Fujita S, Wolfe RR, Mittendorfer B, Roy M, Rowe
+VL, et al. Insulin resistance of muscle protein metabolism in aging.
+FASEB J. 2006;20:768–9.
+
+33. Vary TC, Anthony JC, Jefferson LS, Kimball SR, Lynch CJ.
+Rapamycin blunts nutrient stimulation of eIF4G, but not PKCepsilon
+phosphorylation, in skeletal muscle. Am J Physiol Endocrinol Metab.
+2007;293:E188–96.
+
+34. Rivas DA, Lessard SJ, Coffey VG. mTOR function in skeletal
+muscle: a focal point for overnutrition and exercise. Appl Physiol
+Nutr Metab. 2009;34:807–16.
+
+35. Drummond MJ, Fry CS, Glynn EL, Dreyer HC, Dhanani S,
+Timmerman KL, et al. Rapamycin administration in humans
+blocks the contraction-induced increase in skeletal muscle
+protein synthesis. J Physiol. 2009;587:1535–46.
+
+36. Funai K, Parkington JD, Carambula S, Fielding RA. Age-
+associated decrease in contraction-induced activation of down-
+stream targets of Akt/mTor signaling in skeletal muscle. Am J
+Physiol Regul Integr Comp Physiol. 2006;290:R1080–6.
+
+37. Hwee DT, Bodine SC. Age-related deficit in load-induced skeletal
+
+muscle growth. J Gerontol A Biol Sci Med Sci. 2009;64:618–28.
+
+38. Parkington JD, LeBrasseur NK, Siebert AP, Fielding RA.
+Contraction-mediated mTOR, p70S6k, and ERK1/2 phosphoryla-
+tion in aged skeletal muscle. J Appl Physiol. 2004;97:243–8.
+
+39. Thomson DM, Gordon SE. Impaired overload-induced muscle
+growth is associated with diminished translational signalling in aged
+rat fast-twitch skeletal muscle. J Physiol. 2006;574:291–305.
+
+40. Baumgartner RN. Body composition in healthy aging. Ann N Y
+
+Acad Sci. 2000;904:437–48.
+
+41. Stenholm S, Harris TB, Rantanen T, Visser M, Kritchevsky SB,
+Ferrucci L. Sarcopenic obesity: definition, cause and consequences.
+Curr Opin Clin Nutr. 2008;11:693–700.
+
+42. Kahn CR. Banting lecture. Insulin action, diabetogenes, and the
+
+cause of type II diabetes. Diabetes. 1994;43:1066–84.
+
+43. Anderson SR, Gilge DA, Steiber AL, Previs SF. Diet-induced
+obesity alters protein synthesis: tissue-specific effects in fasted
+versus fed mice. Metabolism. 2008;57:347–54.
+
+44. Guillet C, Delcourt I, Rance M, Giraudet C, Walrand S, Bedu M, et
+al. Changes in basal and insulin and amino acid response of whole
+body and skeletal muscle proteins in obese men. J Clin Endocrinol
+Metab. 2009;94:3044–50.
+
+45. Khamzina L, Veilleux A, Bergeron S, Marette A. Increased acti-
+vation of the mammalian target of rapamycin pathway in liver and
+skeletal muscle of obese rats: possible involvement in obesity-
+linked insulin resistance. Endocrinology. 2005;146:1473–81.
+
+46. Le Bacquer O, Petroulakis E, Paglialunga S, Poulin F, Richard D,
+Cianflone K, et al. Elevated sensitivity to diet-induced obesity and
+insulin resistance in mice lacking 4E-BP1 and 4E-BP2. J Clin
+Invest. 2007;117:387–96.
+
+47. Hao Y, Jackson JR, Wang Y, Edens N, Pereira SL, Alway SE. beta-
+Hydroxy-beta-methylbutyrate reduces myonuclear apoptosis dur-
+ing recovery from hind limb suspension-induced muscle fiber
+
+162
+
+J Cachexia Sarcopenia Muscle (2012) 3:157–162
+
+atrophy in aged rats. Am J Physiol Regul Integr Comp Physiol.
+2011;301:R701–15.
+
+48. Russell ST, Tisdale MJ. Mechanism of attenuation by beta-
+hydroxy-beta-methylbutyrate of muscle protein degradation in-
+duced by lipopolysaccharide. Mol Cell Biochem. 2009;330:171–9.
+49. Eley HL, Russell ST, Baxter JH, Mukerji P, Tisdale MJ. Signaling
+pathways initiated by beta-hydroxy-beta-methylbutyrate to attenu-
+ate the depression of protein synthesis in skeletal muscle in re-
+sponse to cachectic stimuli. Am J Physiol Endocrinol Metab.
+2007;293:E923–31.
+
+50. Holland WL, Bikman BT, Wang LP, Yuguang G, Sargent KM,
+Bulchand S, et al. Lipid-induced insulin resistance mediated by the
+proinflammatory receptor TLR4 requires saturated fatty acid-induced
+ceramide biosynthesis in mice. J Clin Invest. 2011;121:1858–70.
+
+51. Giresi PG, Stevenson EJ, Theilhaber J, Koncarevic A, Parkington
+J, Fielding RA, et al. Identification of a molecular signature of
+sarcopenia. Physiol Genomics. 2005;21:253–63.
+
+52. Peake J, Della Gatta P, Cameron-Smith D. Aging and its effects on
+inflammation in skeletal muscle at rest and following exercise-
+induced muscle injury. Am J Physiol Regul Integr Comp Physiol.
+2010;298:R1485–95.
+
+53. Cesari M, Kritchevsky SB, Baumgartner RN, Atkinson HH, Penninx
+BW, Lenchik L, et al. Sarcopenia, obesity, and inflammation—results
+from the Trial of Angiotensin Converting Enzyme Inhibition and
+Novel Cardiovascular Risk Factors study. Am J Clin Nutr.
+2005;82:428–34.
+
+54. Paolisso G, Rizzo MR, Mazziotti G, Tagliamonte MR, Gambardella A,
+Rotondi M, et al. Advancing age and insulin resistance: role of plasma
+tumor necrosis factor-alpha. Am J Physiol. 1998;275:E294–9.
+
+55. Roubenoff R, Harris TB, Abad LW, Wilson PW, Dallal GE, Dinarello
+CA. Monocyte cytokine production in an elderly population: effect of
+age and inflammation. J Gerontol A Biol Sci Med Sci. 1998;53:
+M20–6.
+
+56. Franceschi C, Capri M, Monti D, Giunta S, Olivieri F, Sevini F, et al.
+Inflammaging and anti-inflammaging: a systemic perspective on
+aging and longevity emerged from studies in humans. Mech Ageing
+Dev. 2007;128:92–105.
+
+57. Varma V, Yao-Borengasser A, Rasouli N, Nolen GT, Phanavanh B,
+Starks T, et al. Muscle inflammatory response and insulin resis-
+tance: synergistic interaction between macrophages and fatty acids
+leads to impaired insulin action. Am J Physiol Endocrinol Metab.
+2009;296:E1300–10.
+
+58. Maury E, Brichard SM. Adipokine dysregulation, adipose tissue
+inflammation and metabolic syndrome. Mol Cell Endocrinol.
+2010;314:1–16.
+
+59. Kewalramani G, Bilan PJ, Klip A. Muscle insulin resistance:
+assault by lipids, cytokines and local macrophages. Curr Opin Clin
+Nutr. 2010;13:382–90.
+
+60. Hannun YA, Obeid LM. The Ceramide-centric universe of lipid-
+mediated cell regulation: stress encounters of the lipid kind. J Biol
+Chem. 2002;277:25847–50.
+
+61. Summers SA, Nelson DH. A role for sphingolipids in producing
+the common features of type 2 diabetes, metabolic syndrome X,
+and Cushing’s syndrome. Diabetes. 2005;54:591–602.
+
+62. Rivellese AA, De Natale C, Lilli S. Type of dietary fat and insulin
+
+resistance. Ann N Y Acad Sci. 2002;967:329–35.
+
+63. Hyde R, Hajduch E, Powell DJ, Taylor PM, Hundal HS. Ceramide
+down-regulates System A amino acid transport and protein
+synthesis in rat skeletal muscle cells. FASEB J. 2005;19:461–
+3.
+
+64. Cazzolli R, Carpenter L, Biden TJ, Schmitz-Peiffer C. A role for
+protein phosphatase 2A-like activity, but not atypical protein ki-
+nase Czeta, in the inhibition of protein kinase B/Akt and glycogen
+synthesis by palmitate. Diabetes. 2001;50:2210–8.
+
+65. Liu L, Chen L, Luo Y, Chen W, Zhou H, Xu B, et al. Rapamycin
+inhibits IGF-1 stimulated cell motility through PP2A pathway.
+PloS One. 2010;5:e10578.
+
+66. Peterson RT, Desai BN, Hardwick JS, Schreiber SL. Protein
+phosphatase 2A interacts with the 70-kDa S6 kinase and is
+activated by inhibition of FKBP12-rapamycin associated pro-
+tein. Proc Natl Acad Sci U S A. 1999;96:4438–42.
+
+67. Teruel T, Hernandez R, Lorenzo M. Ceramide mediates insulin
+resistance by tumor necrosis factor-alpha in brown adipocytes by
+maintaining Akt in an inactive dephosphorylated state. Diabetes.
+2001;50:2563–71.
+
+68. Summers SA. Ceramides in insulin resistance and lipotoxicity. Prog
+
+Lipid Res. 2006;45:42–72.
+
+69. Rivas DA, Morris EP, Fielding RA. Lipogenic regulators are
+elevated with age and chronic overload in rat skeletal muscle. Acta
+Physiol (Oxf). 2011;202:691–701.
+
+70. von Haehling S, Morley JE, Coats AJ, Anker SD. Ethical guide-
+lines for authorship and publishing in the Journal of Cachexia,
+Sarcopenia and Muscle. J Cachexia Sarcopenia Muscle. 2010;1:7–
+8.
+

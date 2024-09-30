@@ -1,0 +1,1205 @@
+.................................................................
+Construction of a genetic toggle
+switch in Escherichia coli
+
+Timothy S. Gardner*†, Charles R. Cantor* & James J. Collins*†
+
+* Department of Biomedical Engineering, † Center for BioDynamics and ‡ Center
+for Advanced Biotechnology, Boston University, 44 Cummington Street, Boston,
+Massachusetts 02215, USA
+..............................................................................................................................................
+It has been proposed1 that gene-regulatory circuits with virtually
+any desired property can be constructed from networks of simple
+regulatory elements. These properties, which include multistabil-
+ity and oscillations, have been found in specialized gene circuits
+such as the bacteriophage l switch2 and the Cyanobacteria
+circadian oscillator3. However, these behaviours have not been
+demonstrated in networks of non-specialized regulatory compo-
+nents. Here we present the construction of a genetic toggle
+switch—a synthetic, bistable gene-regulatory network—in
+Escherichia coli and provide a simple theory that predicts the
+conditions necessary for bistability. The toggle is constructed
+from any two repressible promoters arranged in a mutually
+inhibitory network. It is ﬂipped between stable states using
+transient chemical or thermal induction and exhibits a nearly
+ideal switching threshold. As a practical device, the toggle switch
+forms a synthetic, addressable cellular memory unit and has
+implications for biotechnology, biocomputing and gene therapy.
+The design and construction of synthetic gene-regulatory net-
+works would be greatly facilitated by a theory with predictive
+capability. Previous work using a reconstituted enzyme system4
+showed that nonlinear mathematics can predict qualitative beha-
+viours of biochemical reaction networks, including multistability
+and hysteresis. However, a practical theory of gene-regulatory
+networks has lagged behind that of enzyme regulatory networks.
+A variety of physical and mathematical approaches,
+including
+logical (discrete)5–10, piecewise linear11, nonlinear12–14, statistical–
+mechanical15,16 and stochastic17–19 formulations of the underlying
+biochemical dynamics, have been used in the past. Owing to the
+difﬁculty of testing their predictions, these theories have not, in
+general, been veriﬁed experimentally. Here we have integrated
+theory and experiment by constructing and testing a synthetic,
+bistable gene circuit based on the predictions of a simple mathe-
+matical model.
+
+The toggle switch is composed of two repressors and two
+constitutive promoters (Fig. 1). Each promoter is inhibited by the
+repressor that is transcribed by the opposing promoter. We selected
+this design for the toggle switch because it requires the fewest genes
+and cis-regulatory elements to achieve robust bistable behaviour. By
+robust, we mean that the toggle exhibits bistability over a wide range
+of parameter values and that the two states are tolerant of the
+ﬂuctuations inherent in gene expression (the toggle switch will not
+ﬂip randomly between states). Although bistability is theoretically
+possible with a single, autocatalytic promoter, it would be less
+
+Inducer 2
+
+Repressor 2
+
+Promoter 1
+
+Repressor 1
+
+Reporter
+
+Promoter 2
+
+Inducer 1
+
+Figure 1 Toggle switch design. Repressor 1 inhibits transcription from Promoter 1 and is
+induced by Inducer 1. Repressor 2 inhibits transcription from Promoter 2 and is induced
+by Inducer 2.
+
+letters to nature
+
+robust and more difﬁcult to tune experimentally. In addition, the
+chosen toggle design does not require any specialized promoters,
+such as the PR/PRM promoter of bacteriophage l. Bistability is
+possible with any set of promoters and repressors as long as they
+fulﬁl the minimum set of conditions described in Box 1 and Fig. 2.
+The bistability of the toggle arises from the mutually inhibitory
+arrangement of the repressor genes. In the absence of inducers, two
+stable states are possible: one in which promoter 1 transcribes
+repressor 2, and one in which promoter 2 transcribes repressor 1.
+Switching is accomplished by transiently introducing an inducer of
+the currently active repressor. The inducer permits the opposing
+repressor to be maximally transcribed until it stably represses the
+originally active promoter.
+
+All toggle switches are implemented on E. coli plasmids confer-
+ring ampicillin resistance and containing the pBR322 ColE1 repli-
+cation origin. The toggle switch genes are arranged as a type IV
+plasmid, as shown in Fig. 3. Although all genes and promoters are
+
+Box 1
+The toggle model
+
+The behaviour of the toggle switch and the conditions for bistability can
+be understood using the following dimensionless model for the network:
+
+du
+dt
+
+dv
+dt
+
+(cid:136)
+
+(cid:136)
+
+a1
+
+1 (cid:135) vb
+
+2 u
+
+a2
+
+1 (cid:135) ug
+
+2 v
+
+(cid:133)1a(cid:134)
+
+(cid:133)1b(cid:134)
+
+where u is the concentration of repressor 1, v is the concentration of
+repressor 2, a1 is the effective rate of synthesis of repressor 1, a2 is the
+effective rate of synthesis of repressor 2, b is the cooperativity of
+repression of promoter 2 and g is the cooperativity of repression of
+promoter 1. The above model is derived from a biochemical rate equation
+formulation of gene expression24–27. The ﬁnal form of the toggle equations
+preserves the two most fundamental aspects of the network: cooperative
+repression of constitutively transcribed promoters (the ﬁrst term in each
+equation), and degradation/dilution of the repressors (the second term in
+each equation).
+
+The parameters a1 and a2 are lumped parameters that describe the
+
+net effect of RNA polymerase binding, open-complex formation,
+transcript elongation, transcript termination, repressor binding, ribosome
+binding and polypeptide elongation. The cooperativity described by b
+and g can arise from the multimerization of the repressor proteins and the
+cooperative binding of repressor multimers to multiple operator sites in
+the promoter. An additional modiﬁcation to equation (1) is needed to
+describe induction of the repressors (Fig. 5).
+
+The geometric structure of equation (1), illustrated in Fig. 2a and b,
+
+reveals the origin of the bistability: the nullclines (du=dt (cid:136) 0 and dv=dt (cid:136) 0
+in Fig. 2) intersect at three points, producing one unstable and two stable
+steady states. From Fig. 2a and b, three key features of the system
+become apparent. First, the nullclines intersect three times because of
+their sigmoidal shape, which arises for b, g . 1. Thus, the bistability of the
+system depends on the cooperative repression of transcription. Second,
+the rates of synthesis of the two repressors must be balanced. If the rates
+are not balanced, the nullclines will intersect only once, producing a
+single stable steady state. This situation arises in plasmid pIKE105. Third,
+the structure of the toggle network creates two basins of attraction. Thus,
+a toggle with an initial condition anywhere above the separatrix will
+ultimately settle to state 1, whereas a toggle starting below the separatrix
+will settle to state 2.
+
+The conditions for a bistable toggle network are illustrated in Fig. 2c
+and d. As the rates of repressor synthesis are increased, the size of the
+bistable region increases. Furthermore, the slopes of the bifurcation lines,
+for large a1 and a2, are determined by b and g. Thus, to obtain bistability,
+at least one of the inhibitors must repress expression with cooperativity
+greater than one. Moreover, higher order cooperativity will increase the
+robustness of the system, allowing weaker promoters to achieve
+bistability and producing a broader bistable region.
+
+NATURE | VOL 403 | 20 JANUARY 2000 | www.nature.com
+
+© 2000 Macmillan Magazines Ltd
+
+339
+
+letters to nature
+
+contained on a single plasmid, they could, in principle, be divided
+into two separate plasmids without altering the functionality of the
+toggle. Two classes of toggle switch plasmids were constructed—the
+pTAK class and the pIKE class. Both classes use the Lac repressor
+(lacI) in conjunction with the Ptrc-2 promoter for one promoter–
+repressor pair. For the second promoter–repressor pair (P1, R1 in
+Fig. 3), pTAK plasmids use the PLs1con promoter in conjunction
+with a temperature-sensitive l repressor (cIts), whereas pIKE
+plasmids use the PLtetO-1 promoter in conjunction with the Tet
+repressor (tetR). pTAK plasmids are switched between states by a
+pulse of isopropyl-b-D-thiogalactopyranoside (IPTG) or a thermal
+pulse. pIKE plasmids are switched between states by a pulse of IPTG
+or a pulse of anhydrotetracycline (aTc).
+
+The promoters used in the toggle are PLtetO-1 (ref. 20) (TetR
+repressed), Ptrc-2 (LacI repressed) and PLs1con (CI repressed). The
+ranked order of the transcriptional efﬁciencies of the promoters is
+PLs1con . Ptrc-2 . PLtetO-1. In all variants of the toggle switch,
+the sequence of the three promoters is unchanged. The rates of
+synthesis of the repressors (a1 and a2 in the model) or the reporter
+genes are modiﬁed by exchanging the downstream ribosome bind-
+ing sites (RBS). The promoter and RBS sequences and their relative
+strengths are described in the Supplementary Information.
+
+In all toggle plasmids, the gfpmut3 gene21 is arranged as the
+second cistron downstream of the Ptrc-2 promoter. Thus, tran-
+scription from Ptrc-2, and hence, repression of P1, results in the
+expression of green ﬂuorescent protein (GFP)mut3. For clarity, this
+state is termed the ‘high’ state. The opposing state, in which P1 is
+transcribed and Ptrc-2 is repressed, is termed the ‘low’ state. Unless
+otherwise indicated, gfpmut3 is the reporter used in all plasmids.
+
+To investigate the conditions required for bistability, six variants
+of the toggle switch (four pTAK plasmids and two pIKE plasmids)
+were constructed by inserting RBS sequences of differing strengths
+into the RBS1 site. All four pTAK plasmids exhibited bistability,
+whereas only one pIKE plasmid (pIKE107) exhibited bistability. The
+demonstration of bistability is illustrated in Fig. 4. In this experi-
+ment, the toggle and control plasmids were grown in E. coli strain
+
+b
+
+d
+
+a
+
+State 1
+
+(high state)
+
+du/dt =0
+
+dv/dt =0
+
+v
+
+Separatrix
+
+State 2
+
+(low state)
+
+Unstable
+
+steady-state
+
+u
+
+c
+Mono-
+stable
+state 2
+
+b
+
+)
+
+1
+
+a
+(
+g
+o
+
+l
+
+Bistable
+
+1
+g
+
+Monostable
+state1
+
+du/dt =0
+
+dv/dt =0
+
+State 2
+
+(low state)
+
+u
+
+b=g=1.1
+
+b=g=2
+
+b=g=3
+
+log(a2)
+
+log(a2)
+
+Figure 2 Geometric structure of the toggle equations. a, A bistable toggle network with
+balanced promoter strengths. b, A monostable toggle network with imbalanced promoter
+strengths. c, The bistable region. The lines mark the transition (bifurcation) between
+bistability and monostability. The slopes of the bifurcation lines are determined by the
+exponents b and g for large a1 and a2. d, Reducing the cooperativity of repression (b and
+g) reduces the size of the bistable region. Bifurcation lines are illustrated for three different
+values of b and g. The bistable region lies inside of each pair of curves.
+
+JM2.300 for 23.5 h. At 6, 11 and 18 h, samples were washed and
+diluted into fresh medium with or without inducers, as appropriate.
+Cells were initially grown for 6 hours with 2 mM IPTG, inducing
+GFPmut3 expression in all
+toggles and the IPTG-inducible
+pTAK102 control plasmid. Cells were grown for an additional 5 h
+with no IPTG. The ﬁve bistable toggle plasmids, which had been
+switched to the high state, continued to express GFPmut3 in the
+absence of inducer, whereas the pTAK102 control plasmid and the
+monostable pIKE105 toggle plasmid returned to the low state. Cells
+were then grown at 42 8C (pTAK plasmids only) or grown in the
+presence of 500 ng ml-1 aTc (pIKE plasmids only). After 7 h of
+growth, GFPmut3 expression in all toggles was shut off, whereas
+GFPmut3 expression in the thermally-inducible pTAK106 control
+and the aTc-inducible pIKE108 control was activated. Cells were
+returned to standard temperature (see Methods) with no inducers.
+After an additional 5.5 h, the ﬁve bistable toggle plasmids remained
+in the low state, whereas the pTAK106 and pIKE108 controls
+returned, as expected, to their non-induced condition.
+
+Figure 4c shows the long-term stability of the two states of the
+pTAK117 toggle plasmid. In this experiment, a single culture of
+pTAK117 cells (initially in the low state) was divided into two
+cultures. The ﬁrst group was grown in medium with no inducers,
+while the second group was grown in medium with 2 mM IPTG.
+After 6 h, cells were washed and diluted into fresh medium with no
+inducer. Both groups of cells were grown for an additional 22 h,
+being sampled and diluted into fresh medium every 6–8.5 h. The
+two groups of pTAK117 cells remained in their initial high or low
+states for the entire 22 h.
+
+Although all of the toggle plasmids contain the same conﬁgura-
+tion of elements, one plasmid, pIKE105, does not exhibit bistability.
+This result is probably due to the reduced efﬁciency of the Tet
+repressor relative to the l repressor. To maintain bistability, the
+reduced efﬁciency requires a corresponding decrease in the strength
+of the PLtetO-1 promoter relative to the PLs1con promoter (see
+Box 1). The PLtetO-1 promoter in the pIKE105 plasmid is not
+sufﬁciently reduced in strength to achieve bistability. However, the
+strength reduction provided by the PLtetO-1 promoter in the
+pIKE107 plasmid is sufﬁcient.
+
+A qualitative prediction of the toggle model is that a genetic
+toggle will have nearly ideal switching thresholds. Induction by
+IPTG, aTc or heat alters the dynamic balance between the compet-
+ing promoters such that the toggle is pushed into a region of
+monostability. The transition from bistability to monostability
+occurs in a sharp, discontinuous fashion owing to the existence of
+a bifurcation. This bifurcation occurs when one of the stable steady
+states is annihilated by the unstable steady state.
+
+The ideal threshold, or bifurcation, in the pTAK117 toggle switch
+is illustrated both theoretically and experimentally in Fig. 5. In this
+experiment, pTAK117 (initially in the low state) and pTAK102 (as a
+control) were grown in 13 different concentrations of IPTG for 17 h
+
+RBS1
+
+lacI
+
+T1T2
+
+P1
+
+Ptrc-2
+
+rbs E
+
+R1
+
+Type IV
+
+rbs B
+
+GFPmut3
+
+T1T2
+
+Figure 3 The toggle switch plasmid. Promoters are marked by solid rectangles with
+arrowheads. Genes are denoted with solid rectangles. Ribosome binding sites and
+terminators (T1T2) are denoted by outlined boxes. Different P1 promoters, RBS1 ribosome
+binding sites, and/or R1 repressors, are used for the various toggle switches. Plasmid
+types I–III, used in the construction and testing of the toggle components, are described in
+the Supplementary Information.
+
+340
+
+© 2000 Macmillan Magazines Ltd
+
+NATURE | VOL 403 | 20 JANUARY 2000 | www.nature.com
+
+to steady state, being diluted twice (at 6 and 12.5 h) into fresh
+medium with the same IPTG concentration. Induction of the
+pTAK102 control has the familiar sigmoidal shape. In contrast,
+the pTAK117 toggle follows the induction curve of pTAK102 up to
+an IPTG concentration of 40 mM, at which point it crosses the
+bifurcation and exhibits a quasi-discontinuous jump to the high
+expression state. Owing to the natural ﬂuctuations in gene expres-
+sion, the bifurcation is not a perfect discontinuity as predicted by
+the deterministic toggle equations. The stochastic nature of gene
+expression causes variability in the location of the switching thresh-
+old and thus blurs the bifurcation point. Near the bifurcation, this
+blurriness is realized as a bimodal distribution of cells (Fig. 5c).
+
+The switching time of the pTAK117 plasmid from the low to the
+high state and from the high to the low state is shown in Fig. 6. In
+this experiment, pTAK117 cells in the low state were diluted in fresh
+medium and induced with 2 mM IPTG. Separate cultures were
+grown for 35 min to 6 h before being washed and diluted in fresh
+medium with no inducer. Growth was continued until 10.25 h after
+the start of the experiment and cells were assayed in the ﬂow
+cytometer. Conversely, pTAK117 cells in the high state were diluted
+in fresh medium with no inducer. Separate cultures were grown at
+41 6 1 8C for 35 min to 6 h before being diluted in fresh medium
+with no inducer. Growth was continued at standard temperature
+until 10.25 h after the start of the experiment and cells were assayed
+in the ﬂow cytometer.
+
+As shown by the appearance of a bimodal distribution at 4 h
+(Fig. 6), the pTAK117 plasmid begins switching to the high state
+after 3–4 h of IPTG induction. By 5 h the switching is nearly
+complete, and by 6 h it is complete. On the other hand, switching
+from the high state to the low state is completed in 35 min or less.
+The primary determinant of switching time is the rate of elimina-
+tion of the repressor proteins. Switching from low to high requires
+
+a
+
+i
+
+n
+o
+s
+s
+e
+r
+p
+x
+e
+ 
+P
+F
+G
+d
+e
+z
+
+ 
+
+i
+l
+
+a
+m
+r
+o
+N
+
+b
+
+i
+
+n
+o
+s
+s
+e
+r
+p
+x
+E
+P
+F
+G
+d
+e
+z
+
+ 
+
+ 
+
+i
+l
+
+a
+m
+r
+o
+N
+
+c
+
+i
+
+n
+o
+s
+s
+e
+r
+p
+x
+e
+ 
+P
+F
+G
+
+IPTG
+
+42°C
+
+pTAK117
+pTAK130
+pTAK131
+pTAK132
+
+pTAK102
+(control)
+
+pTAK106
+(control)
+
+0
+
+5
+
+10
+Hours
+
+15
+
+20
+
+IPTG
+
+aTc
+
+pIKE107
+pIKE105
+
+pTAK102
+(control)
+
+pIKE108
+(control)
+
+1
+
+0
+1
+
+0
+1
+
+0
+
+1
+
+0
+1
+
+0
+1
+
+0
+
+0
+
+5
+
+10
+Hours
+
+15
+
+20
+
+IPTG
+
+1,600
+
+800
+
+0
+
+0
+
+No IPTG
+
+10
+
+Hours
+
+20
+
+30
+
+Figure 4 Demonstration of bistability. The grey shading indicates periods of chemical or
+thermal induction. The lines in a and b, which are approximations of the switching
+dynamics, are included for clarity. a, pTAK toggle plasmids and controls. b, pIKE toggle
+plasmids and controls. c, Demonstration of the long-term stability of the separate
+expression states in pTAK117.
+
+letters to nature
+
+the gradual dilution, by cell growth, of the IPTG-bound Lac
+repressor. On the other hand, switching from high to low is effected
+by immediate thermal destabilization of the temperature-sensitive l
+repressor. Thus, switching to the low state is substantially faster than
+switching to the high state. Furthermore, the conﬁguration of the
+pTAK117 plasmid—the rate of Lac repressor synthesis is more than
+an order of magnitude higher than the rate of l repressor syn-
+thesis—suggests that the low state is more stable than the high state.
+Our approach to the construction of a genetic toggle switch
+represents a signiﬁcant departure from traditional genetic engineer-
+ing in that we rely primarily on the manipulation of network
+
+a
+
+1
+
+0.8
+
+1
+
+0.6
+
+0.4
+
+0.2
+
+0
+
+4
+
+3a
+
+3b
+
+2
+
+i
+
+n
+o
+s
+s
+e
+r
+p
+x
+e
+ 
+P
+F
+G
+d
+e
+z
+
+ 
+
+i
+l
+
+a
+m
+r
+o
+N
+
+0
+
+-6
+
+10
+
+-5
+
+10
+
+b
+
+7
+1
+1
+K
+A
+T
+p
+
+ 
+f
+o
+ 
+n
+o
+i
+t
+c
+a
+r
+F
+
+e
+t
+a
+t
+s
+ 
+h
+g
+h
+ 
+n
+i
+ 
+s
+
+i
+
+l
+l
+
+e
+c
+
+1
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+0
+
+-6
+
+0
+
+10
+
+-5
+
+10
+
+-4
+
+10
+
+[IPTG] (M)
+
+-4
+
+10
+
+[IPTG] (M)
+
+-3
+
+10
+
+-2
+
+10
+
+-3
+
+10
+
+-2
+
+10
+
+2
+
+3a/3b
+
+4
+
+c
+104
+
+103
+
+102
+
+101
+
+e
+c
+n
+e
+c
+s
+e
+r
+o
+u
+l
+f
+ 
+
+P
+F
+G
+
+101
+
+Side
+
+102
+
+scattering
+
+300 600
+Cell
+
+counts
+
+101
+
+102
+
+Side
+
+scattering
+
+400
+
+200
+Cell
+
+counts
+
+101
+
+Side
+
+102
+
+scattering
+
+800
+
+400
+Cell
+
+counts
+
+Figure 5 Toggle switch induction threshold. a, Steady-state gene expression after 17-h
+induction. The pTAK117 toggle plasmid (red circles) exhibits a quasi-discontinuous jump
+to the high state whereas the pTAK102 control plasmid (blue triangles) exhibits a
+sigmoidal induction curve. Point 1 is taken from separate experiments measuring the high
+state of pTAK117 with no inducer. Points 3a and 3b are the high and low modes of a
+bimodally distributed cell population. The bimodality occurs due to natural ﬂuctuations in
+gene expression and the close proximity of the toggle switch to its bifurcation point.
+Theoretical curves are calculated from equation (1) with the term u=(cid:133)1 (cid:135) (cid:137)IPTG(cid:138)=K (cid:134)h,
+where K is the dissociation constant of IPTG from LacR and h is the cooperativity of IPTG
+binding, replacing u in the denominator of equation (1b). The red curves show the stable
+steady states and the orange curve shows the unstable steady state of the toggle. The blue
+curve shows the steady state of the IPTG-inducible control plasmid. Model parameters for
+the theoretical curves are a1 (cid:136) 156:25, a2 (cid:136) 15:6, b (cid:136) 2:5, g (cid:136) 1, h (cid:136) 2:0015,
+K (cid:136) 2:9618 3 10 2 5. b, Fraction of toggle cells in the high state at various concen-
+trations of IPTG. The sudden switching to the high state is more clearly visible. High and
+low cell populations were divided as described for c below. c, Scatter plots (left plots) and
+histograms (right plots) illustrating the condition of the toggle cells at points 2, 3 and 4 (of
+a) near the bifurcation point. High-state and low-state cell populations are divided by the
+red line in the scatter plots. The two states of the toggle are clearly evident in the bimodally
+distributed cells (point 3).
+
+NATURE | VOL 403 | 20 JANUARY 2000 | www.nature.com
+
+© 2000 Macmillan Magazines Ltd
+
+341
+
+letters to nature
+
+a
+
+0
+0
+
+3 h
+
+b
+
+6
+
+6
+6
+
+0
+
+2
+
+1
+5
+42°C induction (h)
+
+4
+
+3
+
+2
+2
+
+1
+1
+IPTG induction (h)
+
+5
+5
+
+4
+4
+
+3
+3
+
+4 h
+
+5 h
+
+6 h
+
+s
+
+l
+l
+
+ 
+
+e
+c
+ 
+f
+o
+n
+o
+i
+t
+c
+a
+r
+F
+
+e
+t
+a
+t
+s
+ 
+h
+g
+h
+
+i
+
+ 
+
+n
+
+i
+
+1.0
+0.8
+0.6
+0.4
+0.2
+0.0
+
+c
+
+t
+n
+u
+o
+c
+ 
+l
+l
+
+e
+C
+
+102
+
+104
+
+102
+
+104
+
+102
+
+GFP fluorescence
+
+104
+
+102
+
+104
+
+Figure 6 pTAK117 switching time. a, b, The fraction of cells in the high state is plotted as
+a function of the induction time. Cells were divided between high and low states as in Fig.
+5c. c, Switching of pTAK117 cells from the low to the high state by IPTG induction. The cell
+population is illustrated at four time points. Cells begin switching between 3 and 4 h as
+shown by the appearance of a bimodal distribution. The switching is complete by 6 h.
+
+architecture, rather than the engineering of proteins and other
+regulatory elements, to obtain desired behaviours. In addition, the
+reasonable agreement between the toggle theory and experiment
+indicates that the theoretical design of complex and practical gene
+networks is a realistic and achievable goal. Moreover, the genetic
+toggle switch exempliﬁes a forward engineering approach to the
+study of gene regulation in which synthetic gene circuits serve as
+highly simpliﬁed, highly controlled models of natural gene net-
+works. As a practical device, the toggle switch, which requires only
+transient rather than sustained induction, may ﬁnd applications in
+gene therapy and biotechnology. Finally, as a cellular memory unit,
+the toggle forms the basis for ‘genetic applets’—self-contained,
+programmable, synthetic gene circuits for the control of cell
+function.
+M
+
+Methods
+Numerics
+All theoretical curves were calculated numerically from equation (1) (Box 1) using Matlab
+(Mathworks), XPP-AUTO, software for simulation and analysis of differential equations
+(G. B. Ermentrout, University of Pittsburgh, available at http://www.pitt.edu/,phase/), or
+AUTO, a bifurcation package included in the XPP-AUTO software (E. Doedel, McGill
+University).
+
+Plasmid construction
+Plasmids were constructed using basic molecular cloning techniques as described in
+standard cloning manuals22,23. Restriction enzymes were from New England Biolabs and
+Promega; PfuTurbo polymerase was from Stratagene; all other enzymes were from New
+England Biolabs; all synthetic oligonucleotides were from Operon Technologies. All genes,
+promoters and transcription terminators were obtained by PCR ampliﬁcation using
+PfuTurbo proofreading polymerase and synthetic primers with overhanging ends con-
+taining the appropriate restriction sites. Ribosome binding sites were included in the
+overhanging ends of the primers. Site mutations were performed using either Stratagene
+QuickChange or ExSite.
+
+Genes, promoters and transcription terminators were obtained as follows: Ptrc-2 from
+pTrc99a (AP Biotech); PL from pXC46 (ATCC); pLtetO-1 by total synthesis according to
+the published sequence20; lacI from pTrc99a; cIts from pGW7 (ATCC); tetR from pcDNA6/
+TR (Invitrogen); gfpuv from pGFPuv (Clontech); gfpmut3 from pJBA111 (gift of J. B.
+Andersen, Technical University of Denmark); and rrnT1T2 terminators from pTrc99a. All
+plasmids contained the ampicillin resistance region and ColE1 and origin of replication
+from the pTrc99a plasmid. All cloning was performed by TSS transformation22 into E. coli
+strain JM2.300 (CGSC), JC158 (CGSC) or TAP106 (ATCC).
+
+DNA sequencing was performed using a Perkin-Elmer ABI Prism 377 sequencer.
+
+indicated in the text. All Type I and pIKE series plasmids were grown at 37 6 1 8C, unless
+otherwise indicated. All pTAK series plasmids were grown at 32 6 1 8C except during
+thermal induction. Thermal induction was carried out at 42 6 1 8C, unless otherwise
+indicated. For all expression tests, cells were maintained in logarithmic growth phase by
+periodic 500–1,000-fold dilution into fresh medium.
+
+Ampicillin and IPTG were from Sigma. Anhydrotetracycline was from ACROS
+
+Organics. All other chemicals were from Fisher.
+
+Assay of gene expression
+All expression data were collected using a Becton–Dickinson FACSCalibur ﬂow cytometer
+with a 488-nm argon excitation laser and a 515–545-nm emission ﬁlter. Before assay, cells
+were pelleted and resuspended in 0.22 mm ﬁltered PBS (58 mM Na2HPO4, 17 mM
+NaH2PO4, 68 mM NaCl, pH (cid:136) 7:4). Cells were assayed at low ﬂow rate and ﬂuorescence
+was calibrated using InSpeck green ﬂuorescent beads (Molecular Probes). All measure-
+ments of gene expression were obtained from three independent cultures maintained
+simultaneously under identical conditions. For each culture, 40,000 events were collected.
+All ﬂow data were converted to ASCII format using MFI (E. Martz, University of
+Masachusetts, Amherst, available at http://marlin.bio.umass.edu/mcbfacs/ﬂowcat.
+html#mﬁ) and analysed with Matlab.
+
+Received 15 September; accepted 23 November 1999.
+
+1. Modod, J. & Jacob, F. General conclusions: teleonomic mechanisms in cellular metabolism, growth
+
+and differentiation. Cold Spring Harb. Symp. Quant. Biol. 26, 389–401 (1961).
+
+2. Ptashne, M. A Genetic Switch: Phage l and Higher Organisms (Cell, Cambridge, Massachusetts, 1992).
+Ishiura, M. et al. Expression of a gene cluster kaiABC as a circadian feedback process in cyanobacteria.
+3.
+Science 281, 1519–1523 (1998).
+
+4. Schellenberger, W., Eschrich, K. & Hofmann, E. Self-organization of a glycolytic reconstituted enzyme
+system: alternate stable stationary states, hysteretic transitions and stabilization of the energy charge.
+Adv. Enzyme Regul. 19, 257–284 (1980).
+
+5. Glass, L. & Kauffman, S. A. The logical analysis of continuous, non-linear biochemical control
+
+networks. J. Theor. Biol. 39, 103–129 (1973).
+
+6. Glass, L. Classiﬁcation of biological networks by their qualitative dynamics. J. Theor. Biol. 54, 85–107
+
+(1975).
+
+7. Glass, L. Combinatorial and topological methods in nonlinear chemical kinetics. J. Chem. Phys. 63,
+
+1325–1335 (1975).
+
+8. Kauffman, S. The large scale structure and dynamics of gene control circuits: an ensemble approach.
+
+J. Theor. Biol. 44, 167–190 (1974).
+
+9. Thomas, R. Logical analysis of systems comprising feedback loops. J. Theor. Biol. 73, 631–656 (1978).
+10. Thomas, R. Regulatory networks seen as asynchronous automata: a logical description. J. Theor. Biol.
+
+153, 1–23 (1991).
+
+11. Tchuraev, R. N. A new method for the analysis of the dynamics of the molecular genetic control
+systems. I. Description of the method of generalized threshold models. J. Theor. Biol. 151, 71–87
+(1991).
+
+12. Arkin, A. & Ross, J. Computational functions in biochemical reaction networks. Biophys. J. 67, 560–
+
+578 (1994).
+
+13. Bhalla, U. S. & Iyengar, R. Emergent properties of networks of biological signaling pathways. Science
+
+283, 381–387 (1999).
+
+14. Yagilo, G. & Yagil, E. On the relation between effector concentration and the rate of induced enzyme
+
+synthesis. Biophys. J. 11, 11–27 (1971).
+
+15. Shea, M. A. & Ackers, G. K. The OR control system of bacteriophage Lambda: a physical-chemical
+
+model for gene regulation. J. Mol. Biol. 181, 211–230 (1985).
+
+16. Smith, T. F., Sadler, J. R. & Goad, W. Statistical–mechanical modeling of a regulatory protein: the
+
+Lactose repressor. Math. Biosci. 36, 61–86 (1977).
+
+17. Arkin, A., Ross, J. & McAdams, H. H. Stochastic kinetic analysis of developmental pathway
+
+bifurcation in phage l-infected Escherichia coli cells. Genetics 149, 1633–1648 (1998).
+
+18. McAdams, H. H. & Arkin, A. Stochastic mechanisms in gene expression. Proc. Natl Acad. Sci. USA 94,
+
+814–819 (1997).
+
+19. McAdams, H. H. & Arkin, A. Stimulation of prokaryotic genetic circuits. Annu. Rev. Biophys. Biomol.
+
+Struct. 27, 199–224 (1998).
+
+20. Lutz, R. & Bujard, H. Independent and tight regulation of transcriptional units in Escherichia coli via
+the LacR/O, the TetR/O and AraC/I1-I2 regulatory elements. Nucleic Acids Res. 25, 1203–1210 (1997).
+21. Cormack, B. P., Valdivia, R. H. & Falkow, S. FACS-optimized mutants of the green ﬂuorescent protein
+
+(GFP). Gene 173, 33–38 (1996).
+
+22. Ausubel, F. M. et al. Current Protocols in Molecular Biology (Wiley, New York, 1987).
+23. Sambrook, J., Fritsch, E. F. & Maniatis, T. Molecular Cloning: A Laboratory Manual (Cold Spring
+
+Harbor Laboratory Press, Plainview, New York, 1989).
+
+24. Edelstein-Keshet, L. Mathematical Models in Biology (McGraw-Hill, New York, 1988).
+25. Kaplan, D. & Glass, L. Understanding Nonlinear Dynamics (Springer, New York, 1995).
+26. Yagil, E. & Yagil, G. On the relation between effector concentration and the rate of induced enzyme
+
+synthesis. Biophys. J. 11, 11–27 (1971).
+
+27. Rubinow, S. I. Introduction to Mathematical Biology (Wiley, New York, 1975).
+
+Supplementary information is available at Nature’s World-Wide Web site (http://www.
+nature.com) or as paper copy from the London editorial ofﬁce of Nature.
+
+Strains, growth conditions and chemicals
+The host cell for all promoter assays and toggle switch experiments was E. coli strain
+JM2.300 (l-, lacI22 rpsL135 (StrR), thi-1) (CGSC strain 5002). JM2.300, which contains
+few mutations, is a fast-growing strain that can tolerate enormous overexpression of
+plasmid-bound genes. Because JM2.300 contains no l repressor and carries a nonfunc-
+tional Lac repressor (lacI22), it is an ideal host for the toggle switch.
+
+All cells were grown in LB medium (Difco) with 100 mg ml-1 ampicillin plus inducers as
+
+Acknowledgements
+We thank M. Bitensky and T. Yoshida for providing access to their ﬂow cytometer; Y. Yu for
+his suggestions on plasmid construction; C. Sabanayagam for his technical advice; and C.
+Chow for his mathematical advice. This work was supported by the Ofﬁce of Naval
+Research and the College of Engineering at Boston University.
+
+Correspondence and requests for materials should be addressed to J.J.C. (e-mail:
+jcollins@bu.edu). Plasmid sequences are available at http://cbd.bu.edu/abl/toggle.
+
+342
+
+© 2000 Macmillan Magazines Ltd
+
+NATURE | VOL 403 | 20 JANUARY 2000 | www.nature.com
+

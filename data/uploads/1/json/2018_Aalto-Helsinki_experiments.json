@@ -1,0 +1,202 @@
+[
+    {
+        "instruction": "What sequences were ordered for the fusion proteins?",
+        "input": "The parts of our fusion proteins were ordered as separate sequences: mRPF, Prancer Purple, sgBP, silk repeats, cellulose binding module, and keratin-binding domain.",
+        "output": "The sequences ordered for the fusion proteins included mRPF, Prancer Purple, sgBP, silk repeats, a cellulose binding module, and a keratin-binding domain. These components were designed to be assembled together to create functional fusion proteins."
+    },
+    {
+        "instruction": "How were the fusion proteins constructed?",
+        "input": "Constructs containing a chromoprotein sequence, a binding domain, and silk repeats in different combinations were assembled with Golden Gate.",
+        "output": "The fusion proteins were constructed through a process called Golden Gate assembly, where constructs containing a chromoprotein sequence, a binding domain, and silk repeats in various combinations were assembled. This method allowed for the efficient combination of these components into a single functional protein."
+    },
+    {
+        "instruction": "Which E. coli strain was used for protein production?",
+        "input": "Purified and evaluated plasmids were transformed in E. coli production strain BL21, and the constructs were produced by inducing with IPTG.",
+        "output": "The E. coli production strain BL21 was used for the production of the fusion proteins. The plasmids containing the assembled constructs were first purified and evaluated before being transformed into this strain. Protein expression was then induced using IPTG."
+    },
+    {
+        "instruction": "How were the proteins purified?",
+        "input": "Proteins were purified with ÄKTA or a heat-based protocol based on our modeling results.",
+        "output": "The proteins were purified using two methods: ÄKTA, which is a chromatography system, and a heat-based protocol developed based on the team's modeling results. Both methods were used to ensure the purification of the proteins for further analysis and testing."
+    },
+    {
+        "instruction": "What tests were performed on the proteins?",
+        "input": "The tests performed included: The effect of protein production on cell growth. The binding of the cellulose binding module to nanocellulose and untreated cotton. The binding of the keratin binding domain to a keratin supplement and hair. The production of colorful silk fibers.",
+        "output": "Several tests were conducted to evaluate the properties and functionalities of the proteins. These included assessing the impact of protein production on cell growth, testing the binding of the cellulose binding module to nanocellulose and untreated cotton, evaluating the binding of the keratin binding domain to a keratin supplement and hair, and producing colorful silk fibers."
+    },
+    {
+        "instruction": "Where were the BsaI sites located in the sequences?",
+        "input": "All the sequences were designed with BsaI sites and overhangs that bind with the correct sequence that the part is linked to.",
+        "output": "BsaI sites were incorporated into all the sequences at both ends. These sites enabled the formation of 4-base-pair overhangs upon digestion, which were crucial for ligating the sequences to the desired part during the Golden Gate assembly process."
+    },
+    {
+        "instruction": "What was special about the pSVA1 plasmid?",
+        "input": "This vector was a convenient choice for Golden Gate assembly, as it is a modified version of pET28(+), having two BsaI restriction sites. Other features of the plasmid are a His6x-tag, enabling promoter protein purification, a T7lac promoter in the backbone, enabling promoter induction with IPTG, and kanamycin resistance.",
+        "output": "The pSVA1 plasmid was chosen for Golden Gate assembly because it is a modified version of pET28(+) with specific features. It contains two BsaI restriction sites, making it suitable for the assembly process. Additionally, the plasmid includes a His6x-tag for protein purification, a T7lac promoter for IPTG-induced expression, and kanamycin resistance, facilitating selection and expression of the fusion proteins."
+    },
+    {
+        "instruction": "Describe the cloning process.",
+        "input": "To assemble the sequences, we used Golden Gate assembly. The Golden Gate assembly enables the assembly of multiple sequences by using only one enzyme, BsaI. The sequences were designed so that they had the BsaI recognition site at both sides. In this way, after the digestion with the enzyme, each sequence is flanked by 4-base-pair overhangs that can be used for a subsequent ligation with the desired sequence.",
+        "output": "The cloning process involved the use of Golden Gate assembly, which allows for the assembly of multiple sequences using just one enzyme, BsaI. The sequences were specifically designed to include BsaI recognition sites at both ends. After digestion with BsaI, the sequences were flanked by 4-base-pair overhangs, which facilitated their ligation with the desired sequence, typically the pSVA1 plasmid, in a single reaction."
+    },
+    {
+        "instruction": "What were the linkers used for CBM and KBD?",
+        "input": "CBM and KBD were also ordered with a C-terminal linker at the beginning of the sequence so that they could be assembled with ADF3. Linkers used: C-terminal linker ASASAAASAASTVANS N-terminal linker SASASASAGASAAASAGA",
+        "output": "For the cellulose binding module (CBM) and the keratin-binding domain (KBD), specific linkers were used to facilitate their assembly with ADF3. The C-terminal linker was ASASAAASAASTVANS, while the N-terminal linker was SASASASAGASAAASAGA. These linkers were added to the beginning of the CBM and KBD sequences to enable their successful assembly."
+    },
+    {
+        "instruction": "What constructs were assembled using Golden Gate?",
+        "input": "By using Golden Gate, we assembled the following constructs: >mRFP - N linker - CBM >mRFP - N linker -",
+        "output": "Using Golden Gate assembly, the following constructs were assembled: mRFP linked to an N-terminal linker and the cellulose binding module (CBM). Another construct was assembled linking mRFP to an N-terminal linker, but the exact details of what follows the linker are not specified here."
+    },
+    {
+        "instruction": "What constructs were assembled but failed during the cloning process?",
+        "input": "The constructs containing the chromoprotein sgBP were assembled.",
+        "output": "The team assembled constructs containing the chromoprotein sgBP; however, these constructs were unsuccessful during the cloning process."
+    },
+    {
+        "instruction": "Which E. coli strain was used for cloning and why?",
+        "input": "DH10B Escherichia coli strain was utilized for cloning.",
+        "output": "The DH10B strain of Escherichia coli was chosen for cloning because it is considered optimal for this purpose."
+    },
+    {
+        "instruction": "How were the transformant colonies processed after transformation?",
+        "input": "The transformant colonies were cultivated, and plasmids were purified from them.",
+        "output": "After transforming the plasmids into the E. coli strain, the transformant colonies were grown and the plasmids were extracted using the Macherey-Nagel Nucleospin Plasmid kit for purification."
+    },
+    {
+        "instruction": "What method was used to confirm the correct inserts in the vectors?",
+        "input": "The vectors were digested with NcoI and XhoI enzymes.",
+        "output": "To ensure that the vectors contained the correct inserts, they were enzymatically digested using NcoI and XhoI, and the fragment sizes were analyzed on a 1% agarose gel."
+    },
+    {
+        "instruction": "Which E. coli strain was used for protein production and why?",
+        "input": "E. coli strain BL21 was used for protein production.",
+        "output": "The E. coli strain BL21 was selected for protein production because it enables the expression of fusion proteins regulated by the T7lac promoter upon addition of IPTG."
+    },
+    {
+        "instruction": "What concentration of IPTG was used to induce protein expression?",
+        "input": "A final concentration of 0.5 mM IPTG was used for induction.",
+        "output": "Protein expression was induced using a final concentration of 0.5 mM IPTG."
+    },
+    {
+        "instruction": "How were the proteins without silk purified?",
+        "input": "The proteins not containing silk were purified with ÄKTA.",
+        "output": "The proteins that did not contain silk were purified using ÄKTA, although this method was noted to be time-consuming and not suitable for large-scale protein purification."
+    },
+    {
+        "instruction": "Why was heat-based purification used for silk proteins?",
+        "input": "Silk proteins have an unfolded structure and were purified with heat.",
+        "output": "Silk proteins, due to their unfolded structure, were purified using a heat-based protocol, which involved using heat to lyse the cells, as the prancer Purple chromoprotein and the cellulose binding module were thermostable."
+    },
+    {
+        "instruction": "What tests were conducted to assess the impact of protein production on cell growth?",
+        "input": "E. coli strain BL21 with mRFP, mRFP-CBM, mRFP-KBD, or mRFP-silk producing plasmid were induced with varying IPTG concentrations.",
+        "output": "To assess the impact of protein production on cell growth, E. coli strain BL21 with plasmids producing mRFP, mRFP-CBM, mRFP-KBD, or mRFP-silk were induced with IPTG at concentrations of 0.1, 0.5, or 1 mM, and controls were set up without induction."
+    },
+    {
+        "instruction": "How was cellulose binding tested?",
+        "input": "Cellulose binding was tested with SDS-page using nanofibrils derived from birch.",
+        "output": "Cellulose binding was tested using SDS-page, with nanofibrils derived from birch used as the cellulose source, and different concentrations of proteins to nanofibrils were tested (1:1, 1:10, and 1:100)."
+    },
+    {
+        "instruction": "What is the percentage of the separating gel and what components are required to prepare it?",
+        "input": "A mixture for the separating gel (here 7.5%) is prepared.",
+        "output": "The separating gel is made at a 7.5% concentration. To prepare it, you need 4X separating buffer (1.5M Tris-HCl, 0.4% SDS, pH 8.8) in the volume of 3.5mL, 7.875 mL of 40% Acrylamide, 2.625 mL of 10% APS, 90 μL of TEMED, and 17.5 μL of additional components. It's important to add APS and TEMED last before mixing the solution and pipetting it between the glass plates."
+    },
+    {
+        "instruction": "Describe the process of preparing the stacking gel and its composition.",
+        "input": "After the separating gel has polymerized, remove isopropanol.",
+        "output": "The stacking gel is prepared at a 3% concentration. Its composition includes 2X stacking buffer (0.5M Tris, 0.2% SDS, pH 6.8) in the volume of 3.4mL, 3.2 mL of 40% Acrylamide, 0.6 mL of 10% APS, 60 μL of TEMED, and 12.5 μL of additional components. Once the separating gel has polymerized, isopropanol is removed, and the stacking gel mixture is pipetted on top of the separating gel with a comb placed between the glass plates to form the wells."
+    },
+    {
+        "instruction": "How do you solidify the separating gel and what is the next step?",
+        "input": "Let the separating gel solidify (~45min).",
+        "output": "To solidify the separating gel, allow it to rest for approximately 45 minutes. After the separating gel has solidified, the next step involves removing the isopropanol and pipetting the stacking gel mixture on top of the separating gel, placing a comb between the glass plates to create wells."
+    },
+    {
+        "instruction": "What are the conditions for running the electrophoresis?",
+        "input": "Run the electrophoresis at 110 V for ~1-1.5 hours until the samples have run almost to the bottom of the gel.",
+        "output": "The electrophoresis is run at 110 volts for approximately 1 to 1.5 hours. This duration allows the samples to travel nearly to the bottom of the gel."
+    },
+    {
+        "instruction": "What is the purpose of staining the gels with Coomassie blue?",
+        "input": "Rinse the gels with H2O and stain them with Coomassie blue for 30-45 minutes with shaking.",
+        "output": "Staining the gels with Coomassie blue for 30-45 minutes serves to visualize the proteins within the gel. Shaking during staining helps ensure uniform distribution of the dye across the gel, making the protein bands more clearly visible."
+    },
+    {
+        "instruction": "How long should the gels be kept in the destaining solution?",
+        "input": "Keep the gels in the destaining solution (30%methanol, 10%acetic acid, and water) for ~1 hour (or more) until the bands become visible and most of the blue background staining is lost.",
+        "output": "The gels should be kept in the destaining solution, which consists of 30% methanol, 10% acetic acid, and water, for approximately one hour or longer. This process continues until the protein bands become clearly visible and most of the blue background staining is removed."
+    },
+    {
+        "instruction": "What is the procedure for sample processing before electrophoresis?",
+        "input": "Sample processing for SDS-PAGE: After adding SDS Loading Dye into the samples, heat them at +95°C for 10 minutes.",
+        "output": "Before electrophoresis, samples are processed by adding SDS Loading Dye and then heating them at 95 degrees Celsius for 10 minutes. This step denatures the proteins and ensures they are uniformly coated with the detergent, facilitating their separation during electrophoresis."
+    },
+    {
+        "instruction": "Describe the initial steps for preparing competent E. coli cells.",
+        "input": "All steps from harvesting the cells should be carried out at 4°C and the cells should then be kept on ice whenever possible!",
+        "output": "To prepare competent E. coli cells, all steps starting from the harvesting of the cells must be performed at 4°C, and the cells should be kept on ice whenever possible. This includes ensuring that the CaCl2, CaCl2+25% glycerol, and Eppendorf tubes are pre-chilled."
+    },
+    {
+        "instruction": "What are the conditions for growing the E. coli cells before making them competent?",
+        "input": "Grow the cells at 37°C + shaking (~220 rpm) until the OD600 is between 0.3 – 0.4 (usually takes around 1,5 - 2 hours).",
+        "output": "The E. coli cells are grown at 37°C with shaking at approximately 220 rpm until the optical density at 600 nm (OD600) reaches between 0.3 and 0.4, which typically takes around 1.5 to 2 hours."
+    },
+    {
+        "instruction": "What is the purpose of transforming chemically competent E. coli cells using heat shock?",
+        "input": "Pipet 50 μL of competent cells and 1-8 μL of DNA (up to 100 ng) into an eppendorf tube, mix gently Incubate tubes on ice for 10-20 minutes Incubate tubes in 42°C for 45 sec - 1 minute = heat shock Incubate tubes on ice for 5 minutes",
+        "output": "The purpose of transforming chemically competent E. coli cells using heat shock is to introduce foreign DNA into the cells. This is achieved by gently mixing 50 μL of competent cells with 1-8 μL of DNA (up to 100 ng) in an Eppendorf tube, incubating the mixture on ice for 10-20 minutes, applying heat shock at 42°C for 45 seconds to 1 minute, and then incubating the tubes on ice for another 5 minutes. These steps help facilitate the uptake of DNA by the cells."
+    },
+    {
+        "instruction": "What is the initial step if the Sartorius Vivaspin 20 ultracentrifugation tubes have been stored in ethanol?",
+        "input": "The Sartorius Vivaspin 20 ultracentrifugation tubes need to be prepared if they have been stored in ethanol.",
+        "output": "If the Sartorius Vivaspin 20 ultracentrifugation tubes have been stored in ethanol, the initial step is to centrifuge them for approximately 45 minutes at 3000 g until the ethanol has passed through the filter."
+    },
+    {
+        "instruction": "How should the filter be washed after removing the ethanol?",
+        "input": "After removing the ethanol, the filter needs to be washed.",
+        "output": "To wash the filter after removing the ethanol, add 20 ml of MilliQ-water and centrifuge it for 30 to 45 minutes at 3000 g."
+    },
+    {
+        "instruction": "Describe the process for concentrating samples using the Sartorius Vivaspin 20 ultracentrifugation tubes.",
+        "input": "Samples need to be concentrated using the Sartorius Vivaspin 20 ultracentrifugation tubes.",
+        "output": "To concentrate samples, centrifuge them for about 30 minutes at a time at 3000 g. After centrifuging, mix the samples by pipetting and continue this process until you reach the desired volume."
+    },
+    {
+        "instruction": "What is the recommended storage temperature for the concentrated samples?",
+        "input": "Concentrated samples require proper storage.",
+        "output": "After reaching the desired volume, the concentrated samples should be frozen in liquid nitrogen and then stored at -80 °C."
+    },
+    {
+        "instruction": "How should the Sartorius Vivaspin 20 ultracentrifugation tubes be cleaned?",
+        "input": "The Sartorius Vivaspin 20 ultracentrifugation tubes need cleaning.",
+        "output": "To clean the Sartorius Vivaspin 20 ultracentrifugation tubes, wash them twice with 20 ml of MilliQ-water at 3000 g for 30 to 45 minutes."
+    },
+    {
+        "instruction": "Where should the cleaned Sartorius Vivaspin 20 ultracentrifugation tubes be stored?",
+        "input": "Cleaned Sartorius Vivaspin 20 ultracentrifugation tubes need to be stored.",
+        "output": "After cleaning, the Sartorius Vivaspin 20 ultracentrifugation tubes should be stored in 20% ethanol."
+    },
+    {
+        "instruction": "What is the first step in preparing a pre-culture for the microtitre plate growth experiment?",
+        "input": "A pre-culture needs to be made for the microtitre plate growth experiment.",
+        "output": "The first step in preparing a pre-culture is to make a 2-5 ml LB + antibiotic pre-culture from a single colony of each strain and grow it overnight at 37°C."
+    },
+    {
+        "instruction": "How should the cells be added to the medium in the microtitre plate?",
+        "input": "Cells need to be added to the medium in the microtitre plate.",
+        "output": "Add 10 μl of cells to 200 ml of medium in each well of the flat-bottom 96-well plate, starting with approximately 5 x 10^6 cells."
+    },
+    {
+        "instruction": "What concentrations of IPTG should be used in the microtitre plate growth experiment?",
+        "input": "IPTG concentrations need to be determined for the microtitre plate growth experiment.",
+        "output": "In the microtitre plate growth experiment, use three replicates with IPTG concentrations of 0, 0.1, 0.5, and 1 mM."
+    },
+    {
+        "instruction": "What controls can be used in the microtitre plate growth experiment?",
+        "input": "Controls are needed for the microtitre plate growth experiment.",
+        "output": "Suitable controls for the microtitre plate growth experiment include water, growth medium without cells, and growth medium with cells that do not produce fluorescent protein."
+    }
+]
