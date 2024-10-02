@@ -9,7 +9,7 @@ def run_services():
     print(config.welcome)
     print(f"Version: {config.__version__}")
     # 启动前端服务
-    frontend_process = subprocess.Popen(["streamlit", "run", "webui.py"])
+    frontend_process = subprocess.Popen(["streamlit", "run", "webui.py", "--server.port", str(config.PORT)])
 
     # 启动后端服务
     backend_process = subprocess.Popen(["uvicorn", "api:app", "--reload"], cwd='./server')

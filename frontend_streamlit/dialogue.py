@@ -5,12 +5,15 @@ import requests
 import uuid
 from streamlit_extras.bottom_container import bottom
 import os
-from config import CHATICONS
+import sys
 from urllib.parse import quote_plus  # Used for URL encoding
 from pathlib import Path
+sys.path.append("..")
+from config import CHATICONS, LOCAL_MODEL_DIR
 
 # Initialize ChatBox
-chat_box = ChatBox(assistant_avatar="frontend_streamlit/img/icon.png", user_avatar="frontend_streamlit/img/user.png")  # Replace with your avatar path
+chat_box = ChatBox(assistant_avatar="frontend_streamlit/img/icon.png",
+                   user_avatar="frontend_streamlit/img/user.png")  # Replace with your avatar path
 
 
 # Get local models
@@ -18,18 +21,50 @@ def get_local_models():
     """
     Get the list of local models, assuming all local model folders are stored in the 'local_models/' directory
     """
-    local_models_dir = 'server/model/chat/'  # Assuming the local model storage path
+    local_models_dir = os.path.join(LOCAL_MODEL_DIR, "chat")  # Assuming the local model storage path
     if os.path.exists(local_models_dir):
-        return [f.name for f in os.scandir(local_models_dir) if f.is_dir()]
-    return []
+        local_models = [f.name for f in os.scandir(local_models_dir) if f.is_dir()]
+    else:
+        local_models = []
+
+    local_eb_models_dir = os.path.join(LOCAL_MODEL_DIR, "/embedding")  # Assuming the local model storage path
+    if os.path.exists(local_eb_models_dir):
+        local_eb_models = [f.name for f in os.scandir(local_models_dir) if f.is_dir()]
+    else:
+        local_eb_models = []
+
+    return {
+        "local_models": local_models,
+        "local_eb_models": local_eb_models
+    }
 
 
 # Get API models -> The functionality to fetch API-configured models is not implemented yet, so the names are set directly, and the corresponding model capabilities can be invoked by passing the name
-def get_api_models():
+def get_api_models(provider):
     """
     Get the list of available API models
     """
-    return ["gpt-3.5-turbo", "gpt-4", "gpt-4o", "new"]  # Assuming API model list
+    if provider == "openai":
+        local_models = ["gpt-3.5-turbo", "gpt-4"]
+        local_eb_models = [
+            "default-embedding-model",
+        ]
+    elif provider == "qwen":
+        local_models = ["qwen-long","qwen-plus"]
+        local_eb_models = [
+            "text-embedding-v1",
+            # "text-embedding-async-v1",
+            "text-embedding-v2",
+            # "text-embedding-async-v2",
+            # "text-embedding-v3"
+        ]
+    else:
+        local_models = []
+        local_eb_models = []
+    return {
+        "local_models": local_models,
+        "local_eb_models": local_eb_models
+    }
 
 
 # Save and restore session state
@@ -51,7 +86,7 @@ def rerun():
 
 
 # Call the backend API
-def call_backend(prompt, tools=None, model="default", use_self_model=False):
+def call_backend(prompt, tools=None, model="default", eb_models="default", provider="default", use_self_model=False, use_local_model=False):
     try:
         response = requests.post(
             "http://localhost:8000/api/chat",  # Replace with the backend API path
@@ -59,7 +94,10 @@ def call_backend(prompt, tools=None, model="default", use_self_model=False):
                 "prompt": prompt,
                 "tools": tools,
                 "model": model,
-                "use_self_model": use_self_model
+                "eb_models": eb_models,
+                "provider": provider,
+                "use_self_model": use_self_model,
+                "use_local_model": use_local_model
             }
         )
         response.raise_for_status()  # Check if the request was successful
@@ -139,19 +177,34 @@ def dialogue_page():
 
         with tab1:
             # Enable local model checkbox
-            use_local_model = st.checkbox("Enable Local Model", help="Use local model for inference when enabled", key="use_local_model")
-            use_self_model = st.checkbox("Enable Model Dialogue", help="Use the model's own dialogue capabilities when enabled", key="use_self_model")
+            use_local_model = st.checkbox("Enable Local Model", help="Use local model for inference when enabled",
+                                          key="use_local_model")
+            use_self_model = st.checkbox("Enable Model Dialogue",
+                                         help="Use the model's own dialogue capabilities when enabled",
+                                         key="use_self_model")
 
             # Dynamically display available models based on whether the local model is enabled
             if use_local_model:
-                available_models = get_local_models()
+                available_models = get_local_models().get("local_models")
                 model_type = "Local Model"
             else:
-                available_models = get_api_models()
+                provider = ["openai", "qwen"]
+                provider = st.selectbox("Seclect model provider", provider, key="provider")
+                available_models = get_api_models(provider).get("local_models")
                 model_type = "API Model"
 
             # Model selection dropdown
-            selected_model = st.selectbox(f"Select {model_type}", available_models, key="selected_model")
+            st.selectbox(f"Select {model_type}", available_models, key="selected_model")
+
+            if use_local_model:
+                available_eb_models = get_local_models().get("local_eb_models")
+                eb_model_type = "Local Embedding Model"
+            else:
+                available_eb_models = get_api_models(provider).get("local_eb_models")
+                eb_model_type = "API Embedding Model"
+
+            # Embedding Model selection dropdown
+            st.selectbox(f"Select {eb_model_type}", available_eb_models, key="selected_eb_models")
 
             # Tool selection
             # tools = st.multiselect("Select Tools", ["Tool1", "Tool2", "Tool3"], key="selected_tools")
@@ -200,14 +253,18 @@ def dialogue_page():
     # Process user input
     if prompt and prompt.strip():  # Check if the input is not empty
         chat_box.user_say(prompt.strip())  # Remove leading/trailing whitespace
-        update_conversation_history(st.session_state.cur_conv_name, "user", prompt.strip())  # Update conversation history
+        update_conversation_history(st.session_state.cur_conv_name, "user",
+                                    prompt.strip())  # Update conversation history
 
         # Call the backend API to get AI response
         ai_response = call_backend(
             prompt.strip(),
             tools=st.session_state.get("selected_tools", []),
             model=st.session_state.get("selected_model"),
-            use_self_model=st.session_state.get("use_self_model")
+            eb_models=st.session_state.get("selected_eb_models"),
+            provider=st.session_state.get("provider"),
+            use_self_model=st.session_state.get("use_self_model"),
+            use_local_model=st.session_state.get("use_local_model")
         )
 
         # Display response based on mode
@@ -224,8 +281,9 @@ def dialogue_page():
                             # Ensure the path is URL encoded
                             encoded_ref = quote_plus(ref)
                             document_url = f"http://localhost:8000/api/document?source={encoded_ref}"
-                            st.markdown(f'<a href="{document_url}" target="_blank">View Referenced Document: {Path(ref).name}</a>',
-                                        unsafe_allow_html=True)
+                            st.markdown(
+                                f'<a href="{document_url}" target="_blank">View Referenced Document: {Path(ref).name}</a>',
+                                unsafe_allow_html=True)
                             update_conversation_history(st.session_state.cur_conv_name, "ai",
                                                         f"View Referenced Document: {Path(ref).name}")
             else:
@@ -248,7 +306,8 @@ def dialogue_page():
                     document_url = f"http://localhost:8000/api/document?source={encoded_ref}"
                     st.markdown(f'<a href="{document_url}" target="_blank">Referenced Document: {Path(ref).name}</a>',
                                 unsafe_allow_html=True)
-                    update_conversation_history(st.session_state.cur_conv_name, "ai", f"Referenced Document: {Path(ref).name}")
+                    update_conversation_history(st.session_state.cur_conv_name, "ai",
+                                                f"Referenced Document: {Path(ref).name}")
 
 
 def clear_conversation():
