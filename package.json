@@ -1,0 +1,14 @@
+{
+  "name": "xjtlu-software-rag",
+  "version": "1.0.0",
+  "description": "Welcome to the **XJTLU-Software iGEM Team's 2024 project** repository! This project is the open source version of [iGEM competition gitlab repository](https://gitlab.igem.org/2024/xjtlu-software/software) where we leverage cutting-edge AI and synthetic biology to create innovative tools for biological data management and analysis. [More information](http://2024.igem.wiki/xjtlu-software)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
