@@ -46,7 +46,7 @@ jobs:
       - name: Build with VitePress
         run: |
           npm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
-          touch .vitepress/dist/.nojekyll      
+          touch .docs/vitepress/dist/.nojekyll      
         # 上面这里我把官网默认的docs/给删掉了
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
