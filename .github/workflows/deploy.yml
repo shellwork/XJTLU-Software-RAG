@@ -51,7 +51,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ./vitepress/dist
+          path: ./docs/vitepress/dist
         # 上面这里我把官网默认的docs/给删掉了
 
   # 部署工作
