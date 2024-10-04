@@ -1,0 +1,142 @@
+[
+    {
+        "instruction": "What research did the team conduct on Beauveria bassiana and why?",
+        "input": "The team conducted research on Beauveria bassiana because it is an entomopathogenic fungus used in agriculture.",
+        "output": "The team conducted research on Beauveria bassiana due to its status as an entomopathogenic fungus that has been utilized in agriculture, particularly in Canada. They aimed to explore its potential use in fighting bed bugs that infest homes."
+    },
+    {
+        "instruction": "What were the different culture media used for growing Beauveria bassiana?",
+        "input": "The team used three different culture media to grow Beauveria bassiana.",
+        "output": "To grow Beauveria bassiana, the team used three different culture media: LB with an antibiotic Cm50, Sabouraud with Cm 50, and Sabouraud with collagen and Cm 50."
+    },
+    {
+        "instruction": "What were the optimal conditions for growing Beauveria bassiana?",
+        "input": "The team found the most suitable conditions for growing Beauveria bassiana.",
+        "output": "The most suitable conditions for growing Beauveria bassiana were found to be the Sabouraud culture medium at a temperature of 25°C."
+    },
+    {
+        "instruction": "How did the team test the effectiveness of Beauveria bassiana against insects?",
+        "input": "The team tested Beauveria bassiana on garden bugs to confirm its ability to kill insects.",
+        "output": "To test the effectiveness of Beauveria bassiana against insects, the team infected garden bugs by soaking them in a solution containing 4g of fungus sample diluted in 40ml of Tween 0,05%. They observed the bugs for two weeks, noting mortality and the presence of fungus sprouting on the dead insects."
+    },
+    {
+        "instruction": "What construct did the team use to produce Methionine gamma lyase?",
+        "input": "The team used a specific plasmid construct to produce Methionine gamma lyase.",
+        "output": "The team introduced a plasmid construct containing the LacI promoter inducible with IPTG, RBS + Methionine gamma lyase, and a his-tag, inserted in a PSB1C3 vector, to produce Methionine gamma lyase."
+    },
+    {
+        "instruction": "What methods were used to confirm the production of Methionine gamma lyase?",
+        "input": "The team used SDS PAGE and Western Blot to confirm the production of Methionine gamma lyase.",
+        "output": "To confirm the production of Methionine gamma lyase, the team performed SDS PAGE from several cellular supernatants and Western Blots using anti-his-tag antibodies."
+    },
+    {
+        "instruction": "What were the results of the Methionine gamma lyase production tests?",
+        "input": "The team observed differences in Methionine gamma lyase production under various conditions.",
+        "output": "The production of Methionine gamma lyase was confirmed through SDS PAGE and Western Blots. There was no production observed with the empty plasmid, serving as a negative control. Bands at approximately 47kDa, corresponding to the molecular weight of Methionine gamma lyase, were observed in both E. coli DH5α and BL21 strains. Production levels were lower in BL21 strains compared to DH5α strains, and the best yield/time ratio was achieved at 500 mM IPTG at 30°C."
+    },
+    {
+        "instruction": "How was Methionine gamma lyase purified?",
+        "input": "The team used a specific method to purify Methionine gamma lyase.",
+        "output": "Methionine gamma lyase was purified using an AKTA pure® system with a Ni Sepharose 6 column (HisTrap FF). The histidine tag attached to the enzyme allowed for specific separation from other proteins, and the purification process resulted in a pool of fractions 11 to 26, yielding 40mg of protein per liter of cell culture."
+    },
+    {
+        "instruction": "What was the method used to test the activity of Methionine gamma lyase?",
+        "input": "The team used a specific assay to test the activity of Methionine gamma lyase.",
+        "output": "To test the activity of Methionine gamma lyase, the team used an assay involving DTNB (5,5′-Dithiobis 2-nitrobenzoic acid), which reacts with thiol groups. This assay helped determine whether the enzyme was bioactive."
+    },
+    {
+        "instruction": "What substrates and products are involved in the methionine-γ-lyase activity test?",
+        "input": "The methionine-γ-lyase activity test involves L-methionine as the main substrate, which is transformed into methanethiol, 2-oxobutanoate, and DMDS/DMTS.",
+        "output": "In the methionine-γ-lyase activity test, L-methionine serves as the primary substrate. The enzyme catalyzes its conversion into methanethiol, which can be oxidized to form DMDS (dimethyl disulfide) or DMTS (dimethyl trisulfide), and 2-oxobutanoate. Methanethiol can be detected using DTNB, while 2-oxobutanoate can be quantified using MBTH."
+    },
+    {
+        "instruction": "How is the activity of methionine-γ-lyase determined using DTNB?",
+        "input": "The activity of methionine-γ-lyase can be determined by dosing methanethiol with DTNB.",
+        "output": "To determine the activity of methionine-γ-lyase, the method involves dosing methanethiol, one of the products of the enzymatic reaction, with DTNB (5,5′-dithiobis(2-nitrobenzoic acid)). The reaction between DTNB and methanethiol produces a measurable change, typically an increase in absorbance, which correlates with the amount of methanethiol produced and hence the activity of the enzyme."
+    },
+    {
+        "instruction": "What does the strong increase in absorbance in Figure 6 indicate?",
+        "input": "In Figure 6, there is a strong increase in absorbance by a factor of 12 when comparing condition 1 (L-methionine alone without protein) and condition 2 (L-methionine + methionine-γ-lyase).",
+        "output": "The strong increase in absorbance observed in Figure 6, approximately by a factor of 12, indicates a significant biological activity of methionine-γ-lyase. This increase suggests that the enzyme effectively converts L-methionine into methanethiol, which then reacts with DTNB, leading to a detectable signal. The substantial rise in absorbance provides evidence that methionine-γ-lyase is bioactive under these conditions."
+    },
+    {
+        "instruction": "What does Figure 7 demonstrate regarding the activity of methionine-γ-lyase?",
+        "input": "Figure 7 shows a strong increase in absorbance when comparing condition 1 (protein alone without the substrate: L-methionine) and condition 2 (L-methionine + methionine-γ-lyase).",
+        "output": "Figure 7 demonstrates a strong increase in absorbance, approximately by a factor of 12, when comparing the condition where only the protein is present without the substrate (L-methionine) to the condition where both the substrate and the enzyme are present. This significant increase in absorbance indicates that the presence of both L-methionine and methionine-γ-lyase leads to the formation of methanethiol, which reacts with DTNB. This result confirms the bioactivity of methionine-γ-lyase in transforming L-methionine into methanethiol."
+    },
+    {
+        "instruction": "Describe the production of Mandelate synthase (HmaS) and the strains used for this purpose.",
+        "input": "Mandelate synthase (HmaS) was produced using a plasmid construct containing the IPTG promoter, the RBS, and the hmaS gene, inserted in a PSB1C3 vector. Two strains of E. coli were used: DH5 alpha and BL21.",
+        "output": "Mandelate synthase (HmaS) production involved the introduction of a plasmid construct containing the IPTG promoter, the ribosome binding site (RBS), and the hmaS gene into a PSB1C3 vector. This construct was then introduced into two different strains of E. coli: DH5 alpha and BL21. SDS-PAGE analysis revealed the production of HmaS at approximately 37 kDa in both strains, indicating successful expression. However, the production levels appeared to be lower in the BL21 strain compared to the DH5 alpha strain, suggesting differences in expression efficiency between the two hosts."
+    },
+    {
+        "instruction": "What were the results of the SDS-PAGE analysis for Mandelate synthase (HmaS) production?",
+        "input": "SDS-PAGE analysis showed bands at approximately 37 kDa, corresponding to the molecular weight of HmaS, in both DH5 alpha and BL21 strains.",
+        "output": "The SDS-PAGE analysis for Mandelate synthase (HmaS) production revealed bands at approximately 37 kDa, which is consistent with the expected molecular weight of HmaS. These bands were observed in both the DH5 alpha and BL21 strains of E. coli, indicating successful expression of the protein. Additionally, the analysis showed that the production of HmaS was induced, as indicated by the presence of the bands in the induced samples, and absent or less pronounced in the non-induced controls. The comparison between the two strains also suggested that the DH5 alpha strain produced higher levels of HmaS compared to the BL21 strain."
+    },
+    {
+        "instruction": "Explain the process of Mandelate synthase (HmaS) purification and the results obtained.",
+        "input": "Purification of HmaS was attempted using an AKTA system with a Resource Q anion exchange column. The purification resulted in three peaks, and SDS-PAGE analysis of the elution fractions showed the presence of HmaS but also other proteins.",
+        "output": "The purification of Mandelate synthase (HmaS) was conducted using an AKTA system equipped with a Resource Q anion exchange column. The initial chromatography step yielded three peaks in the elution profile, with one peak believed to contain the target protein. Further analysis via SDS-PAGE of the elution fractions confirmed the presence of HmaS, marked by intense spots at approximately 37 kDa, corresponding to the protein's molecular weight. However, the purification was not completely successful, as other proteins were also present in the fractions alongside HmaS. The protein was found predominantly in fractions 8 to 17, which corresponded to the second peak observed in the chromatography results. While the purification was not perfect, it demonstrated partial success in isolating HmaS."
+    },
+    {
+        "instruction": "What were the results of the HPLC analysis testing the activity of Mandelate synthase (HmaS)?",
+        "input": "HPLC analysis showed a global decrease in phenylpyruvic acid concentration and an increase in (S)-mandelate concentration, indicating possible (S)-mandelate synthase activity.",
+        "output": "The HPLC analysis of the cell supernatants over 7 hours of culture revealed a significant decrease in the concentration of phenylpyruvic acid and a corresponding increase in (S)-mandelate concentration. These results suggest that there is likely (S)-mandelate synthase activity present, as the production of (S)-mandelate was higher in the transformed strain compared to the control strain with an empty plasmid. Although the results are promising, they have not yet been fully confirmed, and the HPLC peak separation could be improved by modifying the gradient parameters and elution time."
+    },
+    {
+        "instruction": "Describe the production and verification of chitinase using SDS-PAGE and Western blot.",
+        "input": "Chitinase was overproduced at 30°C after IPTG induction in E. coli DH5alpha strain. The protein was identified at approximately 30 kDa in SDS-PAGE, and its identity was confirmed by Western blot using anti-HIS antibodies.",
+        "output": "Chitinase production was achieved using an inducible overproduction system driven by the pLac promoter in E. coli DH5alpha strain. SDS-PAGE analysis revealed a protein band at approximately 30 kDa, which is consistent with the expected molecular weight of chitinase. This band indicated successful overproduction of the protein at 30°C after IPTG induction. The identity of the protein was further confirmed by Western blot analysis using anti-HIS antibodies, which specifically recognized the polyhistidine tag present on the chitinase. The results from both SDS-PAGE and Western blot analysis confirmed the production and identification of chitinase in the E. coli DH5alpha strain."
+    },
+    {
+        "instruction": "What method was used to purify Chit1?",
+        "input": "A His-trap column was utilized for the purification process.",
+        "output": "Chit1 was purified using a His-trap column on an Akta Pure automated chromatography system. The nickel-nitrilotriacetic acid column matrix allowed for specific interaction between histidine residues of the protein and the bound metal ions."
+    },
+    {
+        "instruction": "What does the elution peak in Figure 3 indicate?",
+        "input": "An elution peak in Figure 3 corresponds to the tagged chitinase.",
+        "output": "The elution peak in Figure 3 indicates the presence of the tagged chitinase. However, there is also a slight curve at the start of the elution peak that suggests the presence of a contaminant peak, indicating that the protein of interest and contaminant proteins were eluted together initially."
+    },
+    {
+        "instruction": "In which fractions was chitinase present according to the elution profile and SDS-PAGE?",
+        "input": "Chitinase was present in fractions 6 to 9.",
+        "output": "According to the elution profile and SDS-PAGE, chitinase was present in fractions 6 to 9. However, these samples were not completely pure, as many nonspecific proteins were also recovered."
+    },
+    {
+        "instruction": "What was observed in the SDS-PAGE of the polyhistidine-tagged chitinase purification?",
+        "input": "A protein at 30 kDa corresponding to chitinase was observed.",
+        "output": "As shown in figure 4, a protein at 30 kDa corresponding to the chitinase was obtained in the bacterial lysate, in the non-purified fraction, and in fractions numbered 6 to 10. These fractions were pooled and used for activity tests."
+    },
+    {
+        "instruction": "What controls were performed to ensure the presence of chitinase?",
+        "input": "Numerous controls were conducted.",
+        "output": "Numerous controls were performed, including the production of chitinase without its peptide signal of secretion, ensuring that it would be contained in the cytoplasm. The absence of the band at 30 kDa in the pellet verified that chitinase was not contained in the membrane. Bacterial lysate confirmed the presence of chitinase at 30 kDa, and the non-purified migration showed a low quantity of chitinase with all protein contaminants. Additionally, the breakthrough sample did not contain the protein target, demonstrating that all chitinase was fixed on the nickel-nitrilotriacetic acid matrix."
+    },
+    {
+        "instruction": "How was chitinase activity tested?",
+        "input": "Schales' procedure was used.",
+        "output": "Chitinase activity was tested using Schales' procedure, which is a colorimetric method commonly used for measuring reducing sugars. Chitinase degrades chitin, producing N-acetyl-D-glucosamine. To monitor chitinase activity, the reducing sugars released after chitin hydrolysis are detected by a color change of the yellow Schales' reagent, which translates into a decrease in absorbance."
+    },
+    {
+        "instruction": "What was the purpose of creating an etalon curve?",
+        "input": "The etalon curve was created to determine the concentration of final product.",
+        "output": "The etalon curve was created using the final product of the chitinase reaction (N-acetyl-D-glucosamine) to determine the concentration of the final product that must be obtained after the reaction to be detected by the Schales' method. This curve showed an absorbance decrease as a function of increasing N-acetyl-D-glucosamine concentration."
+    },
+    {
+        "instruction": "What challenges were faced during the chitinase activity test?",
+        "input": "Challenges included issues with the chitin sample.",
+        "output": "One of the main challenges encountered during the chitinase activity test was with the chitin sample. Colloidal chitin, suspended in water and made from partially hydrolyzed shrimp shells, was difficult to pipette and caused problems with reproducibility. A centrifugation step was added to the protocol, but precipitated chitin sometimes became resuspended, leading to high standard deviation in the 1-hour point."
+    },
+    {
+        "instruction": "What conclusion can be drawn from the results after 30 minutes of the chitinase activity test?",
+        "input": "Significant activity was measured.",
+        "output": "According to the results after 30 minutes of the chitinase activity test, a significant activity was measured. Considering these results, the initial rate of the reaction indicated that the chitinase could release 125 uM of N-acetyl-D-glucosamine, equating to an initial rate of chitin hydrolysis of 4 uM/min."
+    },
+    {
+        "instruction": "What were the results of the trap prototype tests?",
+        "input": "A bed bug was caught in one of the traps.",
+        "output": "During the trap prototype tests, a bed bug was caught in one of the traps containing the pheromone cocktail and Beauveria bassiana. This indicates that bed bugs do visit the traps, suggesting the effectiveness of both the fungus combined with adjuvants and the pheromones."
+    }
+]

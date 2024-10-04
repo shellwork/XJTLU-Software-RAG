@@ -8,11 +8,13 @@ folder = Path(__file__).resolve().parents[1]
 sys.path.append(str(folder))
 from config import RAG_PROMPT_TEMPLATE, CHROMA_PATH
 
-def generate_response(prompt, tools=None, model="default", use_self_model=False, use_local_model=False):
+
+def generate_response(prompt, eb_models, provider, tools=None, model="gpt-3.5-turbo", use_self_model=False, use_local_model=False):
     """
     根据用户的输入和配置，生成对话响应。
 
     Args:
+        eb_models: 要使用的embedding模型名称
         prompt (str): 用户的问题。
         tools (list): 选择的工具 (可选)。
         model (str): 要使用的模型名称。
@@ -24,7 +26,7 @@ def generate_response(prompt, tools=None, model="default", use_self_model=False,
     """
 
     # 1. 获取嵌入函数，并准备向量数据库
-    embedding_function = get_embedding_function()
+    embedding_function = get_embedding_function(eb_models, provider, use_local_model)
     db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding_function)
 
     # 2. 在向量数据库中搜索匹配的文档
@@ -46,7 +48,7 @@ def generate_response(prompt, tools=None, model="default", use_self_model=False,
             response['references'] = []
     else:
         # 对话模式，结合模型生成回答
-        selected_model = get_model(model, use_local_model=use_local_model)
+        selected_model = get_model(model, provider, local=use_local_model)  # 直接指定了默认模型提供商为provider
         model_response = selected_model.invoke(prompt)
         model_answer = model_response.content if hasattr(model_response, 'content') else model_response
 
@@ -56,7 +58,8 @@ def generate_response(prompt, tools=None, model="default", use_self_model=False,
             references = [doc.metadata.get('source', 'Unknown') for doc, _score in results]
 
             prompt_template = ChatPromptTemplate.from_template(RAG_PROMPT_TEMPLATE)
-            formatted_prompt = prompt_template.format(context=context_text, model_response=model_answer, question=prompt)
+            formatted_prompt = prompt_template.format(context=context_text, model_response=model_answer,
+                                                      question=prompt)
             final_response = selected_model.invoke(formatted_prompt)
             combined_answer = final_response.content if hasattr(final_response, 'content') else final_response
 

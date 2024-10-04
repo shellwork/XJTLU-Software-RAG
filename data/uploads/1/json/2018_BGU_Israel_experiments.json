@@ -1,0 +1,252 @@
+[
+    {
+        "instruction": "What was the purpose of the calcium phosphate transfection experiment?",
+        "input": "The aim of the calcium phosphate transfection experiment was to transfect microglia, astrocytes, and HEK cells as a control with the GFP gene.",
+        "output": "The purpose of the calcium phosphate transfection experiment was to successfully introduce the GFP gene into microglia, astrocytes, and HEK cells, which served as a control. The HEK cells were used because they are known to be relatively easy to transfect using various methods, including the calcium phosphate method. This experiment was conducted to find an effective method of inserting plasmids into astrocytes and microglia for the progression of the project."
+    },
+    {
+        "instruction": "Why were HEK cells used in the calcium phosphate transfection experiment?",
+        "input": "HEK cells were used as a control in the calcium phosphate transfection experiment.",
+        "output": "HEK cells were chosen as a control in the calcium phosphate transfection experiment due to their known ease of transfection with various techniques, including the calcium phosphate method. Their inclusion helped to validate the effectiveness of the transfection process and provided a baseline for comparison with the more challenging microglia and astrocytes."
+    },
+    {
+        "instruction": "What is the theoretical basis for calcium phosphate transfection?",
+        "input": "The theoretical background of calcium phosphate transfection involves the co-precipitation of DNA with calcium phosphate, leading to the uptake of DNA by cells through endocytosis.",
+        "output": "The theoretical basis for calcium phosphate transfection relies on the co-precipitation of DNA with calcium phosphate, forming an insoluble precipitate. This precipitate adheres to the cell surface and is taken up by the cells through endocytosis, allowing the delivery of DNA into the target cells. This method has been optimized and widely used with various cell lines, resulting in either transient expression of the delivered DNA or the establishment of stable cell lines."
+    },
+    {
+        "instruction": "Describe the procedure for the calcium phosphate transfection experiment.",
+        "input": "The procedure for the calcium phosphate transfection experiment involved preparing ingredients, mixing them, and then applying the mixture to the cells.",
+        "output": "The procedure for the calcium phosphate transfection experiment included preparing specific ingredients according to the protocol, such as 23 μl of PUC GFP DNA, 187 μl of 1M CaCl2, and DDW up to 750 μl + 750 μl of HEBSX2. These ingredients were mixed and filtered to ensure sterility. The mixture was then incubated for 30 minutes before being applied to the cells in a 6-well plate, either by removing the medium and adding the reagent followed by fresh medium after 30 minutes, or by adding the reagent directly to the existing medium."
+    },
+    {
+        "instruction": "What were the design options for the calcium phosphate transfection experiment?",
+        "input": "There were two options for the transformation in the calcium phosphate transfection experiment.",
+        "output": "In the calcium phosphate transfection experiment, there were two design options for the transformation process. Option A involved removing the medium, adding the reagent, waiting for 30 minutes, and then adding fresh medium. Option B consisted of adding the reagent directly to the existing medium. Both options were tested across HEK cells, astrocytes, and microglia."
+    },
+    {
+        "instruction": "What was the goal of the electroporation transfection experiment?",
+        "input": "The goal of the electroporation transfection experiment was to create a stable cell line of BV2 cells with a knockout mutation of the IKBKB gene.",
+        "output": "The objective of the electroporation transfection experiment was to generate a stable cell line of BV2 cells with a knockout mutation of the Inhibitor of Nuclear Factor kappa-B Kinase subunit beta (IKBKB) gene. The aim was to demonstrate how targeting the Nuclear Factor kappa B (NFκB) pathway could reduce the production of inflammation-promoting cytokines by these immune cells of the brain."
+    },
+    {
+        "instruction": "How was the CRISPR/Cas9 system utilized in the electroporation transfection experiment?",
+        "input": "The CRISPR/Cas9 system was used to deliver a sequence-wise accurate double strand break in the IKBKB gene in the electroporation transfection experiment.",
+        "output": "In the electroporation transfection experiment, the CRISPR/Cas9 system was employed to deliver a precise double-strand break in the IKBKB gene. This was achieved by using a px601 commercial vector designed to express a Staphylococcus aureus (SaCas9) conjugated with a Green Fluorescent Protein (GFP). A targeting sequence complementary to various exons of the IKBKB gene was cloned into the guide RNA sequence of the vector. The goal was to significantly increase the likelihood of a knockout mutation in the targeted gene, thereby inhibiting the NFκB pathway."
+    },
+    {
+        "instruction": "What were the steps involved in the electroporation transfection experiment?",
+        "input": "The electroporation transfection experiment involved cloning of the plasmid, electroporation, validation of transfection success, validation of the resulted mutation, and checking for a diminished expression of IKK-β.",
+        "output": "The electroporation transfection experiment consisted of several steps: first, the plasmid was cloned. Then, the cells were electroporated with the plasmid. The success of the transfection was validated based on the expression of GFP. Next, the presence of a mutation was confirmed using the T7E1 assay. Finally, the expression level of IKK-β was checked using Western Blot analysis to determine if the targeted gene was effectively knocked out."
+    },
+    {
+        "instruction": "What were the design elements of the electroporation transfection experiment?",
+        "input": "Each transfection mixture was pipetted evenly into 6 wells of a 24 well-plate in the electroporation transfection experiment.",
+        "output": "In the electroporation transfection experiment, each transfection mixture was evenly distributed into 6 wells of a 24 well-plate. Different quantities of DNA were used, specifically 2.5, 5, and 9 μg of DNA. As controls, BV-2 cells were transfected with 5 μg of pAc-GFP as a positive control and electroporated with no plasmid or seeded without electroporation as negative controls."
+    },
+    {
+        "instruction": "What was the aim of the transfection by transfection-reagent experiment?",
+        "input": "The aim of the transfection by transfection-reagent experiment was to transfect C8-D30 astrocytes and BV-2 microglia cell lines with the PUC-GFP vector.",
+        "output": "The aim of the transfection by transfection-reagent experiment was to successfully transfect the C8-D30 astrocytes and BV-2 microglia cell lines with the PUC-GFP vector. This experiment was part of the team's efforts to find an efficient method of inserting plasmids into astrocytes and microglia for the continuation of their project."
+    },
+    {
+        "instruction": "What was the aim of the astrocyte activation experiment?",
+        "input": "The aim of the astrocyte activation experiment was to confirm that the C8D30 astrocyte cell line could accurately model resting and reactive astrocytes for the experimental design.",
+        "output": "The aim of the astrocyte activation experiment conducted by Mor Sela between July 29th and August 2nd, 2018, was to ensure that the C8D30 astrocyte cell line could accurately represent both resting and reactive astrocytes. This was crucial because the project relied on the assumption that reactive astrocytes play a significant role in ALS, and the product being developed was designed to specifically target these reactive astrocytes."
+    },
+    {
+        "instruction": "Why are reactive astrocytes important in the context of the project?",
+        "input": "The project assumes that reactive astrocytes are a major factor in ALS, and the product is designed to specifically target them.",
+        "output": "Reactive astrocytes are considered a key factor in Amyotrophic Lateral Sclerosis (ALS) within the context of this project. The product under development is specifically designed to target and neutralize reactive astrocytes, which are believed to contribute significantly to the progression of the disease. Thus, understanding and modeling reactive astrocytes accurately is essential to evaluate the efficacy and specificity of the product."
+    },
+    {
+        "instruction": "What are the two main types of reactive astrocytes mentioned in the document?",
+        "input": "The document discusses two main types of reactive astrocytes, referred to as A1 and A2.",
+        "output": "The document mentions two main types of reactive astrocytes: A1 and A2. A1 reactive astrocytes express genes that are detrimental to synapses, such as those involved in the complement cascade. On the other hand, A2 reactive astrocytes over-express neurotrophic factors that promote synapse repair. A1 reactive astrocytes are considered harmful to the central nervous system and brain, whereas A2 reactive astrocytes are beneficial."
+    },
+    {
+        "instruction": "How are A1 reactive astrocytes produced in cell culture?",
+        "input": "A1 reactive astrocytes are produced in cell culture by extracting astrocytes from undamaged brain tissue and then exposing them to a cocktail of cytokines derived from activated microglia.",
+        "output": "To produce A1 reactive astrocytes in cell culture, researchers first extract astrocytes from brain tissue that has not yet been damaged. These astrocytes are then grown in tissue culture with the appropriate medium. Finally, a cocktail of cytokines, obtained from the medium of activated microglia, is added to the astrocyte culture. This process causes the astrocytes to exhibit the characteristics of A1 reactive astrocytes."
+    },
+    {
+        "instruction": "What cytokines are secreted by activated microglia that induce A1 reactive astrocytes?",
+        "input": "Activated microglia secrete interleukin 1 alpha (IL1a), tumor necrosis factor alpha (TNFa), and complement component 1q (C1q), which induce A1 reactive astrocytes.",
+        "output": "Activated microglia secrete three specific cytokines that induce A1 reactive astrocytes: interleukin 1 alpha (IL1a), tumor necrosis factor alpha (TNFa), and complement component 1q (C1q). These cytokines are critical for the transformation of astrocytes into the A1 reactive state, which is characterized by the expression of genes detrimental to synapses."
+    },
+    {
+        "instruction": "What functions do A1 reactive astrocytes lose?",
+        "input": "A1 reactive astrocytes lose the ability to create synapses, perform phagocytosis, and induce neuronal rehabilitation or growth.",
+        "output": "A1 reactive astrocytes lose almost all the functions typically displayed by resting astrocytes. Specifically, they have a very low ability to create synapses, cannot perform phagocytosis, and do not induce neuronal rehabilitation or growth. These losses contribute to the harmful effects of A1 reactive astrocytes on the central nervous system."
+    },
+    {
+        "instruction": "Which protein is a preferred marker for A1 reactive astrocytes?",
+        "input": "Complement component C3 is a preferred marker for A1 reactive astrocytes, being more specific than glial fibrillary acidic protein (GFAP).",
+        "output": "Complement component C3 is a preferred marker for A1 reactive astrocytes. It is more specific to A1 reactive astrocytes than glial fibrillary acidic protein (GFAP), making it a valuable tool for identifying and studying these astrocytes. C3 is particularly useful because it indicates the presence of A1 reactive astrocytes over A2 reactive astrocytes and resting astrocytes."
+    },
+    {
+        "instruction": "What are some of the toxic substances secreted by A1 reactive astrocytes?",
+        "input": "A1 reactive astrocytes secrete classical complement cascade components and other toxic substances that cause damage to neurons and oligodendrocytes.",
+        "output": "A1 reactive astrocytes secrete a variety of toxic substances, including classical complement cascade components, which accelerate synapse degeneration. They also secrete other toxic substances that cause damage to neurons and oligodendrocytes. These toxic substances contribute to the harmful effects of A1 reactive astrocytes on the central nervous system and brain."
+    },
+    {
+        "instruction": "What are the strengths of using LPS to activate microglia in the experiment?",
+        "input": "Using LPS to activate microglia in the experiment mimics in vivo conditions better than adding commercial cytokines directly to astrocyte medium, and the activation process is fast and simple.",
+        "output": "One of the strengths of using LPS to activate microglia is that it mimics in vivo conditions better than adding commercial cytokines directly to astrocyte medium. This approach provides a more realistic representation of the activation process that occurs in the body. Additionally, the activation process is fast and simple, making it an efficient method for conducting experiments."
+    },
+    {
+        "instruction": "What are some of the weaknesses associated with the astrocyte activation protocol?",
+        "input": "Some weaknesses include the fact that the activation strength may be lower in the experiment than in vivo, the concentration of cytokines produced is unknown, and the protocol may not fully mimic the in vivo process.",
+        "output": "Some weaknesses of the astrocyte activation protocol include the potential for lower activation strength in the experiment compared to in vivo conditions. Additionally, the exact concentration of cytokines produced after microglia are incubated with LPS overnight is unknown, along with other factors present in the medium. Furthermore, while the three cytokines used are known to induce reactive astrocytes, other factors might be involved in vivo, which could affect the phenotype. Lastly, the use of C8D30 cell lines instead of primary astrocytes means the protocol may not correspond exactly to the in vivo process."
+    },
+    {
+        "instruction": "What is the role of complement C3 in Alzheimer's disease according to the document?",
+        "input": "The document discusses the involvement of complement C3 in compromising neuronal morphology and function related to Alzheimer's disease.",
+        "output": "According to the document, complement C3 compromises neuronal morphology and function, which is associated with Alzheimer's disease. This suggests that complement C3 plays a significant role in the pathogenesis of the disease by affecting the structure and function of neurons."
+    },
+    {
+        "instruction": "What was the main focus of Shane A. Liddelow and Ben A. Barres' work mentioned in the document?",
+        "input": "Shane A. Liddelow and Ben A. Barres focused on reactive astrocytes, including their production, function, and therapeutic potential.",
+        "output": "The main focus of Shane A. Liddelow and Ben A. Barres' work, as mentioned in the document, is on reactive astrocytes. They explored the production, function, and therapeutic potential of reactive astrocytes, aiming to understand their role in the central nervous system and potential treatments related to them."
+    },
+    {
+        "instruction": "How do Stevens et al. (2007) describe the involvement of the classical complement cascade in the central nervous system?",
+        "input": "Stevens et al. (2007) found that the classical complement cascade mediates CNS synapse elimination.",
+        "output": "Stevens et al. (2007) describe the involvement of the classical complement cascade in the central nervous system by demonstrating that it mediates synapse elimination. This finding suggests that the complement system plays a crucial role in the pruning of synaptic connections within the CNS."
+    },
+    {
+        "instruction": "What did Hong et al. (2016) discover about complement and microglia in Alzheimer's mouse models?",
+        "input": "Hong et al. (2016) discovered that complement and microglia mediate early synapse loss in Alzheimer's mouse models.",
+        "output": "Hong et al. (2016) discovered that complement and microglia are involved in the mediation of early synapse loss in Alzheimer's disease mouse models. This finding highlights the importance of these components in the early stages of the disease's progression."
+    },
+    {
+        "instruction": "What is the significance of the research conducted by Sekar et al. (2016) on schizophrenia risk?",
+        "input": "Sekar et al. (2016) found that schizophrenia risk arises from complex variation of complement component 4.",
+        "output": "The significance of the research conducted by Sekar et al. (2016) lies in their discovery that schizophrenia risk is influenced by complex variations in complement component 4. This finding contributes to our understanding of the genetic basis of schizophrenia and the role of the immune system in the disease."
+    },
+    {
+        "instruction": "What does the document say about the activation of BV2 microglia by lipopolysaccharide?",
+        "input": "The document mentions that activation of BV2 microglia by lipopolysaccharide triggers an inflammatory reaction in PC12 cell apoptosis through a toll-like receptor 4-dependent pathway.",
+        "output": "According to the document, the activation of BV2 microglia by lipopolysaccharide triggers an inflammatory reaction that leads to PC12 cell apoptosis through a mechanism dependent on toll-like receptor 4. This indicates that lipopolysaccharide activates microglia, leading to an inflammatory response that can contribute to cell death."
+    },
+    {
+        "instruction": "What is the aim of the promoter assay described in the document?",
+        "input": "The aim of the promoter assay is to assess the strength and specificity of the Timp1 and Steap4 promoters by measuring the luminescence produced by the Luciferase enzyme.",
+        "output": "The aim of the promoter assay described in the document is to evaluate the strength and specificity of the Timp1 and Steap4 promoters. This is achieved by quantifying the amount of luminescence produced by the Luciferase enzyme that is cloned downstream of these promoters, providing insights into their activity under the given experimental conditions."
+    },
+    {
+        "instruction": "Why is it important to assess the specificity of the promoters Timp1 and Steap4?",
+        "input": "Assessing the specificity of the promoters Timp1 and Steap4 is important because non-specific expression can lead to off-target effects on healthy resting astrocytes, microglia, or other neighboring brain cells.",
+        "output": "It is important to assess the specificity of the promoters Timp1 and Steap4 because non-specific expression of these promoters can result in off-target effects, such as impacting healthy resting astrocytes, microglia, or other neighboring brain cells. Ensuring specificity is crucial for targeted therapy and minimizing unintended consequences."
+    },
+    {
+        "instruction": "What is the theoretical background of the promoter assay kit used in the document?",
+        "input": "The theoretical background includes the concept that reactive astrocytes have a distinct gene expression profile compared to quiescent astrocytes, and the use of genetic reporter systems like the Dual-Luciferase Reporter Assay System.",
+        "output": "The theoretical background of the promoter assay kit used in the document involves the understanding that reactive astrocytes exhibit a unique gene expression profile compared to quiescent astrocytes. The kit uses the Dual-Luciferase Reporter Assay System, which allows for the simultaneous expression and measurement of two individual reporter enzymes. This system helps in normalizing experimental variability caused by differences in cell viability or transfection efficiency, making the interpretation of the experimental data more reliable."
+    },
+    {
+        "instruction": "What is the purpose of the lentivirus infection experiment described in the document?",
+        "input": "The purpose of the lentivirus infection experiment is to create a stable line of C8D30 astrocytes with genomic insertions of the CMV-dCas9-VP64 and Timp1-dCas9-VP64 vectors.",
+        "output": "The purpose of the lentivirus infection experiment described in the document is to establish a stable line of C8D30 astrocytes with genomic insertions of the CMV-dCas9-VP64 and Timp1-dCas9-VP64 vectors. These vectors are the first component in a two-component system aimed at targeting and eliminating reactive astrocytes."
+    },
+    {
+        "instruction": "What is the purpose of the experiment conducted by Liat Tsoran, Mor Pasi, and Ori Tulchinsky?",
+        "input": "The experiment aimed to validate the synthetic engineered system inducing apoptotic death through the activation of the pMLPm promoter.",
+        "output": "The purpose of the experiment was to validate the synthetic engineered system designed to induce apoptotic death by activating the synthetic minimal adenovirus major late promoter (pMLPm) through the dCas9-VP64-gRNA complex. This system was tested to ensure its specificity, hypothesizing that it would not induce apoptosis in HEK293 cells, as they are human kidney cells and not the intended target of the system."
+    },
+    {
+        "instruction": "Why did the researchers use HEK293 cells in the experiment?",
+        "input": "HEK293 cells were used as a control to demonstrate the specificity of the synthetic engineered system.",
+        "output": "HEK293 cells were used in the experiment because the researchers hypothesized that their synthetic engineered system, designed to induce apoptosis in murine reactive astrocytes, would not work in these human kidney cells. By using HEK293 cells, the experiment served as a control to demonstrate the specificity of the system towards its intended target."
+    },
+    {
+        "instruction": "What theoretical background supports the use of dCas9-VP64-gRNA in the experiment?",
+        "input": "The theoretical background includes the fusion of VP64 with dCas9 to target specific genomic locations and promote downstream translation.",
+        "output": "The theoretical background supporting the use of dCas9-VP64-gRNA involves the fusion of VP64, an engineered tetramer of the herpes simplex VP16 transcriptional activator domain, with dCas9. This fusion allows the complex to be guided to specific locations in the genome, enabling the promotion of downstream translation. Specifically, the dCas9-VP64-gRNA complex targets the pMLPm synthetic promoter, leading to the expression of exogenous reverse caspase3, which triggers an apoptotic signal resulting in cell death."
+    },
+    {
+        "instruction": "How does the mCherry reporter protein function in the experimental system?",
+        "input": "The mCherry reporter protein is expressed by the pMLPm promoter and serves as a visual indicator of promoter activity.",
+        "output": "In the experimental system, the mCherry reporter protein is expressed by the pMLPm promoter and serves as a visual indicator of promoter activity. It is fused to the exogenous reverse caspase3 via a cleavable peptide, allowing for the detection of mCherry expression as a marker of successful activation of the pMLPm promoter and subsequent induction of apoptotic death."
+    },
+    {
+        "instruction": "What role do the two plasmids used in the experiment play?",
+        "input": "One plasmid expresses dCas9 enzyme fused to VP64 under the CMV promoter, while the other expresses gRNA under the same promoter.",
+        "output": "In the experiment, two plasmids are used: the first, CMV dCas9 VP64, expresses the dCas9 enzyme fused to the transcription factor VP64 under the CMV promoter. The second plasmid, pSynt CMV, expresses the gRNA under the CMV promoter. Together, these plasmids enable the targeting and activation of the pMLPm synthetic promoter, leading to the expression of exogenous reverse caspase3 and the mCherry fluorophore."
+    },
+    {
+        "instruction": "What was the procedure followed on Day 2 of the experiment?",
+        "input": "On Day 2, the cells were transfected with TurboFect™ Transfection Reagent.",
+        "output": "On Day 2 of the experiment, the HEK293 cells were transfected with TurboFect™ Transfection Reagent. This involved introducing the necessary plasmids into the cells to initiate the expression of the components required for the activation of the pMLPm promoter and the subsequent induction of apoptotic signals."
+    },
+    {
+        "instruction": "How was the activation of the pMLPm promoter validated on Day 4?",
+        "input": "Validation involved documenting mCherry expression using ARIA FACS and confocal microscopy.",
+        "output": "On Day 4, the activation of the pMLPm promoter was validated by documenting mCherry expression using ARIA FACS (Fluorescence-Activated Cell Sorting) and confocal microscopy. These techniques allowed for the quantification and visualization of mCherry expression, indicating successful activation of the pMLPm promoter by the dCas9-VP64-gRNA complex."
+    },
+    {
+        "instruction": "What was the design of Plate A in the experiment?",
+        "input": "Plate A was used for FACS analysis of mCherry expression, with different transfection plasmids in each well.",
+        "output": "Plate A was designed for FACS (Fluorescence-Activated Cell Sorting) analysis to document mCherry expression. It included samples transfected with the combination of the Lenti viral plasmid expressing CMV dCas9 VP64 and the pSynt CMV plasmid, as well as controls with only the pSynt CMV plasmid or an empty plasmid. Each well contained different transfection plasmids to assess the expression levels of mCherry and validate the activation of the pMLPm promoter."
+    },
+    {
+        "instruction": "What was the purpose of Plate B in the experiment?",
+        "input": "Plate B was used for confocal microscopy to document mCherry expression.",
+        "output": "Plate B was used for confocal microscopy to document mCherry expression, providing a high-resolution visualization of the mCherry protein expressed by cells transfected with the combination of the Lenti viral plasmid expressing CMV dCas9 VP64 and the pSynt CMV plasmid. This helped in confirming the activation of the pMLPm promoter and the subsequent expression of the mCherry reporter protein."
+    },
+    {
+        "instruction": "What was the aim of the apoptosis induction part of the experiment?",
+        "input": "The aim was to validate the induction of apoptotic signals in C8-D30 astrocyte cells using the dCas9-VP64-gRNA system.",
+        "output": "The aim of the apoptosis induction part of the experiment was to validate the ability of the dCas9-VP64-gRNA system to induce apoptotic signals in C8-D30 astrocyte cells. This involved verifying the activation of the pMLPm promoter and the subsequent expression of exogenous reverse caspase3, leading to the induction of apoptotic signals, specifically in these astrocyte cells."
+    },
+    {
+        "instruction": "What is the engineered system designed to do?",
+        "input": "The engineered system is designed to induce apoptotic death in A1 reactive astrocytes.",
+        "output": "The engineered system is specifically designed to induce apoptotic death in A1 reactive astrocytes by activating the synthetic minimal adenovirus major late promoter (pMLPm) through the dCas9-VP64-gRNA complex, which is expressed by A1 reactive astrocyte-specific promoters."
+    },
+    {
+        "instruction": "Why is the focus on eliminating A1 reactive astrocytes?",
+        "input": "The aim is to eliminate A1 reactive astrocytes while preserving resting cells in the CNS.",
+        "output": "The focus is on eliminating A1 reactive astrocytes because they are targeted to trigger apoptotic death, while the goal is to maintain the integrity of the resting cells within the central nervous system (CNS). This selective approach ensures that only harmful or reactive astrocytes are eliminated."
+    },
+    {
+        "instruction": "How does the dCas9-VP64-gRNA complex work in this system?",
+        "input": "dCas9-VP64-gRNA complex activates the pMLPm promoter to regulate the expression of exogenous reverse caspase3.",
+        "output": "The dCas9-VP64-gRNA complex, which is expressed by A1 reactive astrocyte-specific markers, targets and activates the pMLPm promoter. This activation leads to the regulation of the expression of exogenous reverse caspase3, which triggers an apoptotic signal in A1 reactive astrocytes."
+    },
+    {
+        "instruction": "What are pSTEAP4 and pTIMP1 and how are they used?",
+        "input": "pSTEAP4 and pTIMP1 are promoters that regulate gene expression highly expressed in A1 reactive astrocytes.",
+        "output": "pSTEAP4 and pTIMP1 are promoters that regulate the expression of genes that are highly expressed in A1 reactive astrocytes compared to other cells in the CNS. They are used as markers to express the dCas9-VP64-gRNA complex, which then activates a synthetic promoter to induce an apoptotic signal."
+    },
+    {
+        "instruction": "Explain the role of the synthetic minimal adenovirus major late promoter (pMLPm).",
+        "input": "The pMLPm contains sequences that enable the dCas9-VP64-gRNA complex to target it.",
+        "output": "The synthetic minimal adenovirus major late promoter (pMLPm) contains three repetitions of the 'a1' sequence, which are complementary to the gRNA sequence. This enables the dCas9-VP64-gRNA complex to specifically target the pMLPm promoter, leading to the activation of the downstream exogenous reverse caspase3 and subsequent apoptotic signaling."
+    },
+    {
+        "instruction": "Describe the function of the transcription factor VP64.",
+        "input": "VP64 is an engineered tetramer that promotes downstream translation when fused to dCas9.",
+        "output": "The transcription factor VP64 is an engineered tetramer of the herpes simplex VP16 transcriptional activator domain. When fused to the dCas9 enzyme, it can guide the complex to a specific genomic location and promote downstream translation, allowing for the activation of the pMLPm synthetic promoter and the expression of exogenous reverse caspase3."
+    },
+    {
+        "instruction": "What is the significance of the exogenous reverse caspase3?",
+        "input": "Exogenous reverse caspase3 is activated post-transcription due to its autocatalytic processing.",
+        "output": "The exogenous reverse caspase3, unlike the endogenous caspase3, is activated after transcription due to its autocatalytic processing. This means that once expressed, it triggers an apoptotic signal, leading to chromatin condensation and DNA fragmentation, ultimately resulting in apoptotic death."
+    },
+    {
+        "instruction": "How is mCherry reporter protein expressed in this system?",
+        "input": "mCherry reporter protein is expressed by the pMLPm promoter and fused to exogenous reverse caspase3 with T2A peptide.",
+        "output": "The mCherry reporter protein is expressed by the pMLPm promoter and is fused to the exogenous reverse caspase3 with the Thoseaasigna virus 2A (T2A) peptide. During translation, the T2A peptide is cleaved, allowing for the separate expression of mCherry and the exogenous reverse caspase3."
+    },
+    {
+        "instruction": "What was the purpose of using two plasmids in the experiment?",
+        "input": "Two plasmids were used to activate the pMLPm promoter and induce apoptotic death.",
+        "output": "The two plasmids, a Lenti viral plasmid expressing dCas9 enzyme fused to VP64 under the TIMP1 promoter and another plasmid where pSTEAP4 promoter expresses gRNA and pMLPm promoter regulates the downstream translation of reverse caspase3, were used together to activate the pMLPm promoter and induce apoptotic death in A1 reactive astrocytes."
+    },
+    {
+        "instruction": "Explain the procedure for verifying mCherry expression.",
+        "input": "mCherry expression was verified using a fluorescent microscope and documented with ARIA FACS and confocal microscope.",
+        "output": "To verify mCherry expression, a fluorescent microscope was used on day 3, 24 hours after transfection. Additionally, on day 4, 48 hours after transfection, mCherry expression was documented using both the ARIA FACS and confocal microscope to confirm the activation of the pMLPm promoter and the induction of apoptotic death."
+    }
+]

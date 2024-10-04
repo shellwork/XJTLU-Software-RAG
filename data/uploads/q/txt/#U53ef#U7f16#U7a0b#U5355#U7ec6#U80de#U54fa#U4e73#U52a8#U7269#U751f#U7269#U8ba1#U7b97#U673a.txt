@@ -1,0 +1,1416 @@
+LETTER
+Programmable single-cell mammalian biocomputers
+
+doi:10.1038/nature11149
+
+Simon Ausla¨nder1, David Ausla¨nder1, Marius Mu¨ller1, Markus Wieland1 & Martin Fussenegger1,2
+
+Synthetic biology has advanced the design of standardized control
+devices that program cellular functions and metabolic activities in
+living organisms1. Rational interconnection of these synthetic
+switches resulted in increasingly complex designer networks that
+execute input-triggered genetic instructions with precision,
+robustness and computational
+logic reminiscent of electronic
+circuits2,3. Using trigger-controlled transcription factors, which
+independently control gene expression4,5, and RNA-binding
+proteins that inhibit the translation of transcripts harbouring
+specific RNA target motifs6,7, we have designed a set of synthetic
+transcription–translation control devices that could be rewired in a
+plug-and-play manner. Here we show that these combinatorial
+circuits integrated a two-molecule input and performed digital
+computations with NOT, AND, NAND and N-IMPLY expression
+logic in single mammalian cells. Functional interconnection of two
+N-IMPLY variants resulted in bitwise intracellular XOR operations,
+and a combinatorial arrangement of three logic gates enabled
+independent cells to perform programmable half-subtractor and
+half-adder calculations. Individual mammalian cells capable of
+executing basic molecular arithmetic functions isolated or coordi-
+nated to metabolic activities in a predictable, precise and robust
+manner may provide new treatment strategies and bio-electronic
+interfaces in future gene-based and cell-based therapies.
+
+Today’s electronic devices are controlled by binary calculations
+executed by electrons flowing through metal wires that are inter-
+connected as multi-layered logic gates. Similarly, natural and synthetic
+gene circuits can be encoded and chemically rewired to integrate
+environmental and cellular signals and perform logic metabolic com-
+putations controlling physiological activities2,3,8–10. With its defining
+modular design and standardization principles1, synthetic biology
+has significantly advanced the construction of genetic circuit com-
+ponents that control transcription or translation in a trigger-inducible
+manner11–13. The standardized and modular design of these gene
+switches improved compatibility for the ‘plug-and-play’ construction
+of higher-order networks that
+function in bacterial, yeast and
+mammalian cells after minor refinements12. Examples of synthetic
+networks with similar circuit topology in different species include logic
+gates2,3,9,14,15, molecular counters8, molecular timing devices16, syn-
+thetic eco-sensing and quorum-sensing/hormone systems17,18, band-
+pass filters19,20 and different types of oscillator that program rhythmic
+transgene expression with tunable frequency and amplitude21,22.
+
+Many of the transcription-control devices used share a common
+two-component design: a synthetic transcription factor containing a
+trigger-controlled DNA-binding motif fused to a transactivation
+domain binds to a specific operator, thereby activating adjacent minimal
+promoters in an adjustable manner12. For example, the antibiotic
+erythromycin fine-tunes the induction of the synthetic promoter
+PETR2 by the erythromycin-dependent transactivator (ET1)5, and the
+apple metabolite phloretin modulates the activation of the chimeric
+promoter PTtgR1 by the phloretin-dependent transactivator (TtgA1)4
+(Fig. 1). RNA controllers are proteins or nucleic acids that vary trans-
+lation when binding to complementary natural or synthetic RNA
+motifs engineered into transcripts6,7,23. For example, the bacteriophage
+
+MS2 coat protein (MS2) binds to the MS2box RNA motif (MS2box)6,
+and the archaeal ribosomal protein L7Ae interacts with its cognate
+C/Dbox RNA structure (C/Dbox)7,24 (Fig. 1). These transcription- and
+translation-control components were wired into the following genetic
+switchboard: input molecules (erythromycin or phloretin) abolish the
+binding of the transcription factors (ET1 or TtgA1), which otherwise
+transactivate their cognate promoters (PETR2 or PTtgR1) and drive
+expression of the RNA-binding protein (MS2 or L7Ae) or a transcript
+encoding the protein-specific RNA box (MS2box or C/Dbox) and the
+destabilized fluorescent reporter gene (encoding d2EYFP or dsRed)
+(Fig. 1). Both transcription units are functionally connected by the
+RNA-binding proteins (MS2 or L7Ae) which inhibit the translation
+of transcripts containing the cognate RNA boxes (MS2box or C/Dbox)
+(Fig. 1). Combinatorial assembly and permutation of the controller
+components in this genetic switchboard enabled the design of distinct
+computational circuits containing up to six different expression units
+and performing specific digital logic operations. Each of the Boolean
+circuits integrates a two-molecule input into a digital ON/OFF expres-
+sion decision, following the processing logic of NOT, NAND and
+N-IMPLY gates (Fig. 2; see Supplementary Fig. 1 for control experi-
+ments showing component leakiness and threshold-defining settings
+for fluorescence-activated cell sorting (FACS)). The N-IMPLY circuits,
+which are exclusively induced in the presence of only one specific input
+molecule, were wired in two different formats. The first was an
+A ANDNOT B circuitry,
+in which the translation of a phloretin-
+controlled TtgA1-mediated PTtgR1-driven d2EYFP transcript contain-
+ing a C/Dbox in its 59 untranslated region (59 UTR) could be inhibited
+by erythromycin-controlled ET1-mediated PETR2-driven expression of
+the C/Dbox-binding protein L7Ae (Fig. 2a). The second format was a
+
+Input
+
+Input 1
+
+Processing unit
+
+Output
+
+Transcription
+
+control
+
+Translation
+
+control
+
++1
+
+PTF1
+
+Box ligand
+
+p(A)
+
+Fluorescent
+
+protein
+
+TF1
+
+TF2
+
+ET1
+or
+
+TtgA1
+
++1
+
+PTF2
+
+PETR2
+
+or
+
+PTtgR1
+
+Input 2
+
+Erythromycin
+
+or
+
+phloretin
+
+Box
+
+Reporter
+
+p(A)
+
+L7Ae
+
+or
+
+MS2
+
+C/Dbox
+
+or
+
+MS2box
+
+d2EYFP
+
+or
+
+dsRed
+
+Figure 1 | Genetic switchboard of the biocomputer circuitry. Two input
+molecules (inputs 1 and 2) inactivate transcription factors (TF1 and TF2), which
+otherwise induce promoters (PTF1 and PTF2) that drive the transcription of
+expression units either encoding an RNA-binding protein (box ligand) or
+containing an RNA target unit in the 59 UTR (box) and a reporter gene. Both
+expression units are interconnected through the box ligand, whose interaction
+with its target box inhibits reporter gene translation. Sequential wiring of the
+input module (blue) to the processing unit providing bitwise integrations of
+transcription and translation control activities (green) produces a digital output
+(red). See Supplementary Information for extended figure legends.
+
+1Department of Biosystems Science and Engineering, Eidgeno¨ssische Technische Hochschule Zu¨ rich, Mattenstrasse 26, CH-4058 Basel, Switzerland. 2Faculty of Science, University of Basel,
+Mattenstrasse 26, CH-4058 Basel, Switzerland.
+
+©2012
+
+Macmillan Publishers Limited. All rights reserved
+
+5 J U L Y 2 0 1 2 | V O L 4 8 7 | N A T U R E | 1 2 3
+
+RESEARCH LETTER
+
+a
+
+N-IMPLY: A ANDNOT B
+
+b
+
+N-IMPLY: B ANDNOT A
+
+p(A)
+
+PSV40
+
+TtgA1
+pMG11
+Phloretin
+
+pSA83
+
+PTtgR1 C/Dbox
+
+d2EYFP
+
+p(A)
+
+(A)n
+
+d2EYFP
+
+p(A)
+
+PSV40
+
+TtgA1
+pMG11
+Phloretin
+
+d2EYFP
+
+pSA95
+MS2
+
+PTtgR1
+
+p(A)
+(A)n
+
+MS2
+
+L7Ae
+
+(A)n
+
+p(A)
+
+PETR2
+
+L7Ae
+pSA91
+
+Erythromycin
+
+pWW35
+
+ET1
+
+p(A)
+
+PSV40
+
+Erythro m ycin (E)
+Phloretin (P)
+d2EYFP (C)
+
+E
+P
+
+C
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+1
+
+1
+
+1
+
+0
+
+0
+
+b.t.
+
+b.t.
+
+b.t.
+
+(A)n
+
+PETR2 MS2box
+
+d2EYFP
+
+p(A)
+
+pSA89
+
+Erythromycin
+
+pWW35
+
+PSV40
+
+ET1
+
+p(A)
+
+Erythro m ycin (E)
+Phloretin (P)
+d2EYFP (C)
+
+E
+P
+
+C
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+1
+
+1
+
+1
+
+0
+
+b.t.
+
+b.t.
+
+b.t.
+
+b.t.
+
+104
+
+106
+Weighted d2EYFP (fluorescence units)
+
+105
+
+Figure 2 | Design and processing performance of synthetic N-IMPLY gates
+in human cells. a, A ANDNOT B logic gate. By combining the two input signals
+erythromycin and phloretin in accordance with the truth table, transfected
+HEK-293 cells are programmed to produce d2EYFP exclusively in the presence
+of erythromycin and not phloretin as shown by fluorescence microscopy and
+FACS analysis. b, B ANDNOT A logic gate. By combining the two input signals
+a
+A ANDNOT B
+
+XOR
+
+b
+
+p(A)
+
+PSV40
+
+TtgA1
+pMG11
+Phloretin
+
+pSA83
+
+PTtgR1
+
+C/Dbox
+
+d2EYFP
+
+p(A)
+
+PTtgR1
+
+d2EYFP
+
+(A)n
+
+(A)n
+
+pSA95
+MS2
+
+p(A)
+
+(A)n
+
+MS2
+
+L7Ae
+
+(A)n
+
+p(A)
+
+PETR2 MS2box
+
+d2EYFP
+
+p(A)
+
+pSA89
+
+PETR2
+
+L7Ae
+
+pSA91
+
+Erythromycin
+
+pWW35
+
+PSV40
+
+ET1
+
+p(A)
+
+A B C
+
+0 0 0
+
+1 0 1
+
+0 1 0
+
+1 1 0
+
+B ANDNOT A
+
+A B C
+
+0 0 0
+
+1 0 0
+
+0 1 1
+
+1 1 0
+
+XOR
+
+A B C
+
+0 0 0
+
+1 0 1
+
+0 1 1
+
+1 1 0
+
+c
+
+Erythro m ycin (E)
+Phloretin (P)
+d2EYFP (C)
+
+E
+P
+
+C
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+1
+
+1
+
+1
+
+1
+
+0
+
+b.t.
+
+b.t.
+
+b.t.
+
+b.t.
+
+104
+
+106
+Weighted d2EYFP (fluorescence units)
+
+105
+
+erythromycin and phloretin in accordance with the truth table, transfected
+HEK-293 cells are programmed to produce d2EYFP exclusively in the presence
+of phloretin and not erythromycin as shown by fluorescence microscopy and
+FACS analysis. b.t., below the threshold of 104 fluorescence units. Error bars
+represent s.d.; n 5 3.
+
+induced when either
+
+B ANDNOT A circuitry, in which an erythromycin-controlled ET1-
+mediated PETR2-driven d2EYFP transcript containing a MS2box in its
+59 UTR could be inhibited by phloretin-controlled PTtgR1-driven
+expression of the MS2 protein (Fig. 2b). After simultaneous transfection
+of the system-encoding vectors into human embryonic kidney cells
+(HEK-293), fluorescent reporter gene expression was digitally con-
+trolled and exclusively
+erythromycin
+(A ANDNOT B) or phloretin (B ANDNOT A) was present (Fig. 2a, b).
+As indicated by the consistency of fluorescence microscopy and FACS-
+mediated single-cell analysis, the cellular N-IMPLY computations
+executed by the interconnected transcription/translation controllers
+were remarkably robust (Fig. 2a, b). Detailed control experiments
+confirmed that the inducer molecules did not influence cell viability4,5
+and showed that they had no effect on constitutive d2EYFP or dsRed
+expression levels at repressing concentrations (Supplementary Fig. 2a, b).
+Furthermore, there was no relevant interference between the RNA-
+controlling modules, which ensures high specificity of the engineered
+N-IMPLY gates (Supplementary Fig. 3a, b).
+
+To test whether the transcription/translation-control devices could
+also be interconnected in a predictable manner to higher-order designer
+
+Figure 3 | Design and computation characteristics of the synthetic
+mammalian XOR processor. a, Truth tables illustrating how the combination
+of two different N-IMPLY gates results in XOR processing, characterized by
+switching the output ON if exactly one of the input signals is present. b, Genetic
+switchboard of the XOR circuitry (see Supplementary Information for
+functional description). c, By combining the two input signals in accordance
+with the truth table, transfected HEK-293 cells are programmed to produce
+d2EYFP, following XOR computation logic: reporter gene expression is switched
+ON exclusively in the presence of either erythromycin or phloretin as shown by
+fluorescence microscopy and FACS analysis. Error bars represent s.d.; n 5 3.
+
+104
+
+105
+
+106
+
+Weighted d2EYFP (fluorescence units)
+
+1 2 4 | N A T U R E | V O L 4 8 7 | 5 J U L Y 2 0 1 2
+
+©2012
+
+Macmillan Publishers Limited. All rights reserved
+
+LETTER RESEARCH
+
+networks with complex computation logic we chose to engineer the
+XOR gate. XOR computations are particularly challenging to design
+because they integrate two different input signals and produce the
+output ON exclusively if one of the inputs is ON (Fig. 3a). Because
+of this complexity, XORs have so far only been constructed in non-
+cellular deoxyribozyme-based circuits25 and as intercellular crosstalk
+in bacteria3 and yeast2. Engineering HEK-293 cells with all components
+of both N-IMPLY gates (A ANDNOT B as well as B ANDNOT A)
+encoded on six different plasmids human cells produced d2EYFP with
+digital XOR expression logic after the addition of different combina-
+tions of the trigger-molecules erythromycin and phloretin (Fig. 3b, c).
+Although both d2EYFP expression units are completely transactivated
+by their respective transcription factors in the absence of input signals,
+the RNA controllers were able to inhibit translation efficiently and
+prevent d2EYFP expression (Fig. 3c). As required, the output of the
+XOR gate was also repressed in the presence of both input signals when
+both transcription factors were inactivated and also when neither of
+the two d2EYFP expression units was expressed. However, addition
+of either erythromycin or phloretin resulted in inactivation of the
+
+corresponding transcription factor, whereas its counterpart remained
+active and induced its respective d2EYFP expression unit (Fig. 3c). For
+rigorous analysis of network dynamics and the contribution of indi-
+vidual system components to the computation behaviour we decom-
+posed the XOR circuit by sequentially removing individual components;
+this resulted in distinct circuits that performed specific logic computa-
+tions (Supplementary Fig. 4). Taking away either of the reporter genes
+resulted in N-IMPLY gates (Supplementary Fig. 4a, b), elimination of
+either transcription factor generated two distinct NOT gates (Sup-
+plementary Fig. 4c, d), and removal of either translation inhibitor
+produced two different gates with NAND logic (Supplementary Fig. 4e, f).
+These results underline the rational and predictable plug-and-play
+characteristic of the transcription/translation-control components
+and show that these individual components can be readily rewired into
+combinatorial structures to perform biocomputing activities ranging
+from simple NOT gates to complex XOR gates.
+
+As a next step towards programmable single-cell biocomputers we
+added another layer of computation capacity to the XOR gate to design
+a half-subtractor, which is commonly used in digital electronics as a
+
+a
+
+A
+B
+
+A
+B
+
+Assembly of binary combinatorial components
+
+Arithmetic operation units
+
+Logic gates
+
++
+
+C
+
+C
+
+=
+
+A
+B
+
+A
+B
++
+
+C
+
+=
+XOR - N-IMPLY
+
+C
+
++
+
+XOR - AND
+A
+B
+
+C
+
+=
+
+A
+B
+
+A
+B
+
+D
+
+C
+
+S
+
+C
+
+–
+
++
+
+Erythromycin
+
+Cellular circuit
+implementation
+
+Phloretin
+
+Small-molecule
+programming
+
+Biocomputer
+
+input processing
+
+Fluorescent 
+
+readout
+
+b
+Half-subtractor
+
+p(A)
+
+PSV40
+
+TtgA1
+pMG11
+Phloretin
+
+pSA83
+
+PTtgR1
+
+C/Dbox
+
+d2EYFP
+
+p(A)
+
+PTtgR1
+
+(A)n
+
+(A)n
+
+d2EYFP
+
+p(A)
+
+PETR2
+
+pSA108
+
+PTtgR1
+
+C/Dbox
+
+dsRed
+
+p(A)
+
+(A)n
+
+dsRed
+
+pSA95
+MS2
+
+p(A)
+
+(A)n
+
+MS2
+
+L7Ae
+
+(A)n
+
+p(A)
+
+L7Ae
+
+pSA91
+
+d2EYFP
+
+PETR2 MS2box
+
+pSA89
+
+d
+Half-adder
+
+Erythromycin
+
+pWW35
+
+PSV40
+
+ET1
+
+p(A)
+
+p(A)
+
+PSV40
+
+TtgA1
+pMG11
+Phloretin
+
+pSA83
+
+pSA95
+
+pSA117
+
+c
+
+Erythro m ycin (E)
+Phloretin (P)
+d2EYFP (D)
+dsRed (C)
+
+0
+
+–
+
+0
+
+0
+
+0
+
+0
+
+–
+
+1
+
+1
+
+–
+
+0
+
+1
+
+–
+
+1
+
+1
+
+1
+
+0
+
+1
+
+0
+
+0
+
+e
+
+Erythro m ycin (E)
+Phloretin (P)
+d2EYFP (S)
+dsRed (C)
+
+0
+
++
+
+0
+
+0
+
+0
+
+E
+P
+
+E
+P
+
+PTtgR1
+
+C/Dbox
+
+d2EYFP
+
+p(A)
+
+PTtgR1
+
+MS2
+
+d2EYFP
+
+(A)n
+
+(A)n
+
+p(A)
+
+(A)n
+
+MS2
+L7Ae
+
+(A)n
+
+PETR2 MS2box
+
+d2EYFP
+
+p(A)
+
+PETR2
+
+L7Ae
+
+p(A)
+
+pSA89
+
+pSA91
+
+Erythromycin
+
+pWW35
+
+PSV40
+
+ET1
+
+p(A)
+
+PhCMV
+
+MS2box
+
+C/Dbox
+
+dsRed
+
+p(A)
+
+(A)n
+
+0
+
++
+
+1
+
+dsRed
+
+1
+
++
+
+0
+
+1
+
++
+
+1
+
+1
+
+1
+
+0
+
+0
+
+0
+
+1
+
+d2EYFP
+
+dsRed
+
+D
+
+C
+
+b.t.
+b.t.
+
+b.t.
+
+b.t.
+b.t.
+
+104
+
+105
+
+106
+
+Weighted d2EYFP/dsRed (fluorescence units)
+
+S
+
+C
+
+b.t.
+b.t.
+
+b.t.
+
+b.t.
+b.t.
+
+104
+
+105
+
+106
+
+Weighted d2EYFP/dsRed (fluorescence units)
+
+Figure 4 | Input-programmable half-subtractor and half-adder operations.
+a, Electronic circuit diagram illustrating the design of biocomputer circuits by
+combinatorial assembly of logic gates. b, Genetic switchboard of the
+programmable single-cell half-subtractor. c, Fluorescence micrographs and
+single-cell FACS analysis of the half-subtractor performing arithmetic
+subtraction of the erythromycin input from the phloretin input by calculating
+
+the difference D (d2EYFP) and borrow C (dsRed). d, Genetic switchboard of
+the programmable single-cell half-adder. e, Fluorescence micrographs and
+single-cell FACS analysis of the half-adder performing arithmetic addition of
+the erythromycin input and the phloretin input by calculating the sum S
+(d2EYFP) and carry C (dsRed). Error bars represent s.d.; n 5 3.
+
+©2012
+
+Macmillan Publishers Limited. All rights reserved
+
+5 J U L Y 2 0 1 2 | V O L 4 8 7 | N A T U R E | 1 2 5
+
+RESEARCH LETTER
+
+binary arithmetic circuit capable of performing a subtraction of two
+bits. The half-subtractor was designed by combination of the XOR
+gate, which calculates the difference D, and an N-IMPLY gate to
+calculate the borrow C (Fig. 4a). The additional N-IMPLY gate
+(A ANDNOT B) was constructed by replacing the yellow fluorescent
+reporter gene of the aforementioned A ANDNOT B gate with dsRed so
+that its modified phloretin-regulated and L7Ae-controlled reporter
+unit would produce a red fluorescent output (Supplementary Fig. 5a).
+When placing this seven-component multi-processing device into
+human cells it performed precise two-input–two-output integration,
+showing half-subtractor calculation characteristics as predicted
+(Fig. 4b, c). Despite its high complexity, the half-subtractor perform-
+ance was robust as indicated by the correlation of fluorescence micro-
+scopy and FACS analysis (Fig. 4c). In addition, in the presence of
+erythromycin, which programmed the half-subtractor to express both
+reporter genes, yellow and red fluorescence micrographs show almost
+perfect correlation, which suggests that the observed processing beha-
+viour did indeed result from single-cell computations (Fig. 4c).
+
+Besides the half-subtractor, the half-adder, which calculates the
+addition of two bits, is the second (bio)computer unit providing
+fundamental arithmetic operations. Together they manage any cal-
+culation in digital electronics. The design of a genetically encoded
+half-adder requires the combination of an XOR gate and an AND gate
+(Fig. 4a). The AND gate consists of a dsRed expression unit whose
+transcripts contain both MS2box and C/Dbox RNA motifs in their
+59 UTR. They block the translation of dsRed on binding to MS2 or
+L7Ae, respectively. When MS2 transcription is set for repression by
+phloretin and L7Ae production is controlled in an erythromycin-
+repressible manner, pSA117-encoded dsRed is only expressed in the
+presence of both phloretin and erythromycin (Supplementary Fig. 5c).
+The pSA117-derived control vector lacking any RNA motifs showed
+constitutive dsRed expression (Supplementary Fig. 5d). Combination
+of this AND gate, which determines the carry C, with the aforemen-
+tioned XOR gate (Fig. 3) calculating the sum S resulted in robust
+half-adder-specific computations in individual cells that can be pro-
+grammed by a distinct set of input signals (Fig. 4d, e). Quantitative
+fluorescence profiling of entire circuit-transfected populations using
+a plate reader showed mean induction factors (OFF/ON) of 12
+(d2EYFP) and 13 (dsRed) for the half-subtractor (Supplementary
+Figs 6a and 7a) and 14 (d2EYFP) and 4 (dsRed) for the half-adder
+(Supplementary Figs 6b and 7b). Furthermore, time-lapse fluorescence
+microscopy of entire circuit-transfected populations confirmed half-
+subtractor and half-adder processing dynamics in real time (Sup-
+plementary Movies 1 and 2).
+
+In digital electronics the presence or absence of electrons represents
+the unique input signals, which allows multi-bit processing in a
+switchboard of multi-layered logic gates performing distinct calcula-
+tions. The flow of electrons through the switchboard can be programmed
+to process desired algorithms. Although the design of electronic com-
+puters has achieved enormous processing power, living mammalian
+cells are in principle no less powerful, because they constantly process
+logic operations and perform countless physiological computations in
+parallel to coordinate endogenous metabolites and interface with
+environmental signals26. Single-cell biocomputers are therefore com-
+patible with any physiological trigger input that increases parallel
+processing power; they may be genetically programmed to execute
+encoded activities; they are scalable to tissue structures; and they
+are straightforward to interface with host metabolism to achieve
+therapeutic impact. Examples of synthetic biocomputing devices that
+sense signal input and process a coordinated therapeutic output such as
+sophisticated cancer kill switches integrating multi-input transforma-
+tion signals10,11,27 were first tested in cell cultures, but pioneering
+one-input widgets such as T-cell population controllers28, artificial
+insemination devices29, blue-light-triggered glucose homeostasis for
+diabetes therapy13 and prosthetic gouty arthritis networks for the
+treatment of hyperuricemic disorders30 have been used successfully
+
+1 2 6 | N A T U R E | V O L 4 8 7 | 5 J U L Y 2 0 1 2
+
+to perform therapeutic calculations when implanted and plugged into
+the metabolism of animals.
+
+Programming single mammalian cells to perform multi-bit proces-
+sing has been extremely challenging because the computations must
+operate in functional isolation from the cellular metabolism. Complex
+multi-bit processing devices have therefore been engineered in which
+individual processing components are encoded in single bacterial3
+or yeast2 cells, which communicate through chemical wires to perform
+computations in multicellular assemblies. We have successfully
+merged transcription and translation controllers in a combinatorial
+plug-and-play manner
+ranging
+from simple logic gates to complex XOR controllers as well as half-
+subtractors and half-adders executing fundamental arithmetic opera-
+tions. Mammalian cells engineered with programmable genetic
+devices performing arithmetic calculations with similar precision,
+robustness and predictability to those of their digital electronics
+counterparts may enable the assembly of tissue-like biocomputers that
+could allow the design of complex human–machine interfaces and
+provide diagnostic information and therapeutic interventions in future
+gene-based and cell-based treatment strategies.
+
+to achieve synthetic networks
+
+METHODS SUMMARY
+Biocomputer design. Construction details for expression vectors are provided in
+Supplementary Information and Supplementary Table 1. HEK-293T cells
+(American Type Culture Collection, CRL-11268) were cultivated at 37 uC in
+DMEM medium (Invitrogen) supplemented with 10% FCS (lot no. PE01026P;
+Bioconcept) and 1% penicillin/streptomycin solution (Sigma-Aldrich) in a
+humidified atmosphere containing 5% CO2. HEK-293 cells were (co)-transfected
+with biocomputer-encoding plasmids (Supplementary Table 2) by using a
+polyethyleneimine-based protocol. At 6 h after transfection, the cells were
+re-seeded into 96-well plates containing erythromycin (2.7 mM; stock solution:
+5 mg ml21 in 100% ethanol; Sigma Aldrich) and phloretin (50 mM; stock solution:
+14.5 mM in 100% ethanol; Sigma Aldrich) as indicated and cultivated for a further
+62 h before analysis (Supplementary Fig. 8).
+Flow cytometry. Cell populations were analysed with a LSRII Fortessa flow
+cytometer (Becton Dickinson) equipped for d2EYFP (488-nm laser, 505-nm
+longpass filter and 530/30 emission filter (passband centred on 530 nm; passband
+width 30 nm)) and dsRed (561 nm laser, 505-nm longpass filter and 586/15
+emission filter) detection and set to exclude dead cells and cell doublets. Each
+sample was spiked with AlignFlow alignment beads (A-7302; Life Technologies) as
+internal control, ensuring consistency of flow cytometry settings among different
+circuits and independent experiments (Supplementary Fig. 9). At least 10,000 cells
+were recorded per data set and analysed with FACSDiva (version no. 6.1.3; BD
+Biosciences). To score digital expression profiles of the biocomputer devices,
+transfected HEK-293 populations were gated for cells with high d2EYFP/yellow
+or dsRed/red expression/fluorescence levels beyond a threshold of 104 arbitrary
+fluorescence units (see Supplementary Fig. 1 for control and FACS threshold-
+defining experiments and Supplementary Fig. 10 for raw data on circuit perform-
+ance). The percentage of gated cells was multiplied by their median fluorescence,
+resulting in a weighted d2EYFP/dsRed expression value that correlated fluor-
+escence intensity with cell number.
+
+Full Methods and any associated references are available in the online version of
+the paper at www.nature.com/nature.
+
+Received 4 November 2011; accepted 17 April 2012.
+Published online 3 June 2012.
+
+1. Khalil, A. S. & Collins, J. J. Synthetic biology: applications come of age. Nature Rev.
+
+Genet. 11, 367–379 (2010).
+
+2. Regot, S. et al. Distributed biological computation with multicellular engineered
+
+3.
+
+networks. Nature 469, 207–211 (2011).
+Tamsir, A.,Tabor, J.J. & Voigt, C. A. Robustmulticellular computing using genetically
+encoded NOR gates and chemical ‘wires’. Nature 469, 212–215 (2011).
+
+4. Gitzinger, M., Kemmer, C., El-Baba, M. D., Weber, W. & Fussenegger, M. Controlling
+transgene expression in subcutaneous implants using a skin lotion containing the
+apple metabolite phloretin. Proc. Natl Acad. Sci. USA 106, 10638–10643 (2009).
+5. Weber, W. et al. Macrolide-based transgene control in mammalian cells and mice.
+
+Nature Biotechnol. 20, 901–907 (2002).
+
+6. Paraskeva, E., Atzberger, A. & Hentze, M. W. A translational repression assay
+
+procedure (TRAP) for RNA–protein interactions in vivo. Proc. Natl Acad. Sci. USA 95,
+951–956 (1998).
+Saito, H., Fujita, Y., Kashida, S., Hayashi, K. & Inoue, T. Synthetic human cell fate
+regulation by protein-driven RNA switches. Nature Commun. 2, 160 (2011).
+
+7.
+
+©2012
+
+Macmillan Publishers Limited. All rights reserved
+
+LETTER RESEARCH
+
+23. Ellington, A. D. & Szostak, J. W. In vitro selection of RNA molecules that bind specific
+
+24. Saito, H. et al. Synthetic translational regulation by an L7Ae-kink-turn RNP switch.
+
+ligands. Nature 346, 818–822 (1990).
+
+Nature Chem. Biol. 6, 71–78 (2010).
+
+25. Stojanovic, M. N. & Stefanovic, D. Deoxyribozyme-based half-adder. J. Am. Chem.
+
+10. Xie, Z., Wroblewska, L., Prochazka, L., Weiss, R. & Benenson, Y. Multi-input RNAi-
+
+Soc. 125, 6673–6676 (2003).
+
+8.
+
+9.
+
+Friedland, A. E. et al. Synthetic gene networks that count. Science 324, 1199–1202
+(2009).
+Leisner, M., Bleris, L., Lohmueller, J., Xie, Z. & Benenson, Y. Rationally designed logic
+integration of regulatory signals in mammalian cells. Nature Nanotechnol. 5,
+666–670 (2010).
+
+based logic circuit for identification of specific cancer cells. Science 333,
+1307–1311 (2011).
+
+11. Culler, S. J., Hoff, K. G. & Smolke, C. D. Reprogramming cellular behavior with RNA
+controllers responsive to endogenous proteins. Science 330, 1251–1255 (2010).
+12. Weber, W. & Fussenegger, M. Molecular diversity–the toolbox for synthetic gene
+
+switches and networks. Curr. Opin. Chem. Biol. 15, 414–420 (2011).
+
+13. Ye, H., Daoud-El Baba, M., Peng, R. W. & Fussenegger, M. A synthetic optogenetic
+transcription device enhances blood-glucose homeostasis in mice. Science 332,
+1565–1568 (2011).
+
+14. Kramer, B. P., Fischer, C. & Fussenegger, M. BioLogic gates enable logical
+
+transcription control in mammalian cells. Biotechnol. Bioeng. 87, 478–484 (2004).
+
+15. Win, M. N. & Smolke, C. D. Higher-order cellular information processing with
+
+synthetic RNA devices. Science 322, 456–460 (2008).
+
+16. Weber, W. et al. A synthetic time-delay circuit in mammalian cells and mice. Proc.
+
+Natl Acad. Sci. USA 104, 2643–2648 (2007).
+
+17. Weber, W., Daoud-El Baba, M. & Fussenegger, M. Synthetic ecosystems based on
+airborne inter- and intrakingdom communication. Proc. Natl Acad. Sci. USA 104,
+10435–10440 (2007).
+
+18. You, L., Cox, R. S. III, Weiss, R. & Arnold, F. H. Programmed population control by
+
+cell–cell communication and regulated killing. Nature 428, 868–871 (2004).
+
+19. Basu, S., Gerchman, Y., Collins, C. H., Arnold, F. H. & Weiss, R. A synthetic
+
+multicellular system for programmed pattern formation. Nature 434, 1130–1134
+(2005).
+
+20. Greber, D. & Fussenegger, M. An engineered mammalian band-pass network.
+
+Nucleic Acids Res. 38, e174 (2010).
+
+21. Danino, T., Mondragon-Palomino, O., Tsimring, L. & Hasty, J. A synchronized
+
+quorum of genetic clocks. Nature 463, 326–330 (2010).
+
+22. Tigges, M., Marquez-Lago, T. T., Stelling, J. & Fussenegger, M. A tunable synthetic
+
+mammalian oscillator. Nature 457, 309–312 (2009).
+
+26. Bandyopadhyay, S. et al. Rewiring of genetic networks in response to DNA damage.
+
+Science 330, 1385–1389 (2010).
+
+27. Nissim, L. & Bar-Ziv, R. H. A tunable dual-promoter integrator for targeting of
+
+cancer cells. Mol. Syst. Biol. 6, 444 (2010).
+
+28. Chen, Y. Y., Jensen, M. C. & Smolke, C. D. Genetic control of mammalian T-cell
+
+proliferation with synthetic RNA regulatory systems. Proc. Natl Acad. Sci. USA 107,
+8531–8536 (2010).
+
+29. Kemmer, C. et al. A designer network coordinating bovine artificial insemination by
+ovulation-triggered release of implanted sperms. J. Control. Release 150, 23–29
+(2011).
+
+30. Kemmer, C. et al. Self-sufficient control of urate homeostasis in mice by a synthetic
+
+circuit. Nature Biotechnol. 28, 355–360 (2010).
+
+Supplementary Information is linked to the online version of the paper at
+www.nature.com/nature.
+
+Acknowledgements We thank R. Singer for providing pMS2dIFG, M. Tigges for
+generous advice, E. Gutzwiller for experimental support, and M. Dessing and V. Ja¨ggin
+for assistance with flow cytometry. This work was supported by the Swiss National
+Science Foundation (grant no. 31003A-126022) and in part by EC Framework 7
+(Persist).
+
+Author Contributions S.A., D.A., M.M., M.W. and M.F. designed the project, analysed
+results and wrote the manuscript. S.A., D.A. and M.M. performed the experimental work.
+
+Author Information Reprints and permissions information is available at
+www.nature.com/reprints. The authors declare no competing financial interests.
+Readers are welcome to comment on the online version of this article at
+www.nature.com/nature. Correspondence and requests for materials should be
+addressed to M.F. (fussenegger@bsse.ethz.ch).
+
+©2012
+
+Macmillan Publishers Limited. All rights reserved
+
+5 J U L Y 2 0 1 2 | V O L 4 8 7 | N A T U R E | 1 2 7
+
+RESEARCH LETTER
+
+transactivator
+
+METHODS
+Biocomputer components. Comprehensive design and construction details for
+all expression vectors are provided in Supplementary Table 1. Key plasmids
+include the following. pWW35 (ref. 5) encodes constitutive expression of the
+(ET1; PSV40-ET1-pA). pMG11 (ref. 4)
+macrolide-dependent
+harbours a constitutive expression unit encoding the phloretin-dependent trans-
+activator (TtgA1; PSV40-TtgA1-pA). pSA83 encodes a phloretin-responsive TtgA1-
+triggered PTtgR1-driven d2EYFP expression unit harbouring a C/Dbox in the
+59 UTR that is targeted by the translation suppressor protein L7Ae24 (PTtgR1-C/
+Dbox-d2EYFP-pA; GenBank ID JQ624673). pSA89 encodes an erythromycin-
+responsive ET1-triggered PETR2-driven d2EYFP expression unit harbouring a
+MS2box in the 59 UTR that is targeted by the translation suppressor protein
+MS2 (ref. 6) (PETR2-MS2box-d2EYFP-pA; GenBank ID JQ624674). pSA91 encodes
+an erythromycin-responsive ET1-triggered PETR2-driven L7Ae expression unit
+(PETR2-L7Ae-pA; GenBank ID JQ624675). pSA95 encodes a phloretin-responsive
+TtgA1-triggered MS2 expression unit (PTtgR1-MS2-pA; GenBank ID JQ624676).
+pSA108 encodes a phloretin-responsive TtgA1-triggered PTtgR1-driven dsRed
+expression unit harbouring a C/Dbox in the 59 UTR that is targeted by the trans-
+lation suppressor protein L7Ae24 (PTtgR1-C/Dbox-dsRed-pA). pSA117 encodes a
+constitutive PhCMV-driven dsRed expression unit harbouring both MS2box and
+C/Dbox RNA motifs in its 59 UTR that are targeted by the translation suppressor
+proteins MS2 (ref. 6) and L7Ae24, respectively (PhCMV-MS2box-C/Dbox-dsRed-
+pA). The plasmid composition of each circuit is provided in Supplementary
+Table 2.
+Cell culture, transfection and gene regulation. HEK-293T cells (American Type
+Culture Collection, CRL-11268) were cultivated at 37 uC in DMEM medium
+(Invitrogen) supplemented with 10% FCS (lot no. PE01026P; Bioconcept) and
+1% penicillin/streptomycin solution (Sigma-Aldrich) in a humidified atmosphere
+containing 5% CO2. HEK-293 cells were (co)-transfected using an optimized
+polyethyleneimine-based protocol. In brief, a transfection solution containing
+4 mg of plasmid DNA mixtures, 800 ml of FCS-free DMEM and 12 ml of polyethy-
+leneimine (1 mg ml21 in water; Polysciences) was incubated for 30 min at 22 uC
+before it was added dropwise to 4 3 105 HEK-293 cells seeded in each well of a six-
+well plate 14 h before transfection (see Supplementary Table 2 for a detailed
+composition of plasmid DNA mixtures). At 6 h after transfection, the cells were
+detached for 1 min using 200 ml of trypsin/EDTA (Biowest), washed once in 1 ml
+
+of FCS-containing DMEM, resuspended in 0.75 ml of FCS-containing DMEM,
+re-seeded into 12 wells of a 96-well plate containing the trigger molecules
+erythromycin (2.7 mM; stock solution: 5 mg ml21 in 100% ethanol; Sigma
+Aldrich) and phloretin (50 mM; stock solution: 14.5 mM in 100% ethanol;
+Sigma Aldrich) as indicated and cultivated for a further 62 h before analysis
+(Supplementary Fig. 8).
+Fluorescence imaging. Fluorescence and time-lapse microscopy was performed
+with an inverted fluorescence microscope (DMI 6000B; Leica Microsystems)
+equipped with an incubation chamber, a DFC350FX R2 digital camera (Leica),
+a 103 objective (objective HC PL FL 103/0.30 PH1 –/D 11.0; Leica), a 495/535-
+nm (d2EYFP) and 580/630-nm (dsRed) excitation/emission filter set and LAS AF
+imaging software (FW4000-TZ; Leica). Identical settings including exposure times
+of 1 s for d2EYFP and dsRed were used for all fluorescence micrographs.
+Flow cytometry. All engineered cell populations were analysed with a Becton
+Dickinson LSRII Fortessa flow cytometer equipped for d2EYFP (488 nm laser,
+505 nm longpass filter, 530/30 emission filter (passband centred on 530 nm;
+passband width 30 nm)) and dsRed (561 nm laser, 505 longpass filter and
+586/15 emission filter) detection and set to exclude dead cells and cell doublets.
+Before analysis, each sample was spiked with AlignFlow alignment beads (A-7302;
+Life Technologies), serving as an internal control and ensuring consistency of flow
+cytometry settings between different circuits and independent experiments
+(Supplementary Fig. 9). At least 10,000 cells were recorded in each data set and
+analysed with BD FACSDiva (version no. 6.1.3; BD Biosciences). To score digital
+expression profiles of the biocomputer devices, transfected HEK-293 cell popula-
+tions were gated for cells with high d2EYFP/yellow or dsRed/red expression/
+fluorescence levels beyond a threshold of 104 arbitrary fluorescence units
+(see Supplementary Fig. 1 for control and FACS threshold-defining experiments
+and Supplementary Fig. 10 for raw data on circuit performance). The percentage of
+gated cells was multiplied by their median fluorescence, resulting in a weighted
+d2EYFP/dsRed expression value that correlated fluorescence intensity with cell
+number.
+Plate-reader-based fluorescence analysis. Fluorescence of entire circuit-
+transfected cell populations was profiled with a monochromatic Tecan Infinite
+200pro plate reader with excitation and emission set to 488/9 nm and 535/20 nm
+for d2EYFP, and 560/9 nm and 595/20 nm for dsRed, respectively. Autofluorescence
+of mock-transfected cells was deducted from circuit-derived fluorescence.
+
+©2012
+
+Macmillan Publishers Limited. All rights reserved
+

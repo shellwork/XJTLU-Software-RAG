@@ -1,0 +1,152 @@
+[
+    {
+        "instruction": "What is the initial step in creating competent cells?",
+        "input": "The initial step involves selecting a colony from a streaked plate.",
+        "output": "To create competent cells, the initial step is to select one colony from a streaked plate of the desired strain. This colony is then used to grow a miniculture in a 37°C incubator with shaking."
+    },
+    {
+        "instruction": "How is the culture prepared after reaching an absorbance between 0.3-0.4?",
+        "input": "After reaching the desired absorbance, the culture is chilled on ice.",
+        "output": "Once the culture has reached an absorbance between 0.3-0.4, it is chilled on ice for 30 minutes. This chilling process is crucial for the subsequent steps in making the cells competent."
+    },
+    {
+        "instruction": "What is the purpose of using DpnI in the digestion process?",
+        "input": "DpnI is used to digest methylated DNA from PCR reactions.",
+        "output": "DpnI is utilized in the digestion process to specifically target and digest methylated DNA that originates from PCR reactions. This enzyme helps to eliminate unwanted methylated DNA, ensuring that only the desired fragments are present for further manipulation."
+    },
+    {
+        "instruction": "Describe the procedure for ligation.",
+        "input": "Ligation involves combining digested products with T4 DNA ligase.",
+        "output": "For ligation, a mixture containing 2 µL of digested product, an equimolar amount of EcoRI-HF and PstI digested fragment (typically around 2 µL), 1 µL of T4 DNA ligase buffer, 0.5 µL of T4 DNA ligase, and water to reach a final volume of 10 µL is prepared. This mixture is then incubated at 16°C for 30 minutes followed by heat killing at 80°C for 20 minutes."
+    },
+    {
+        "instruction": "What is the role of Taq polymerase in the PCR process?",
+        "input": "Taq polymerase is used in PCR to amplify DNA.",
+        "output": "Taq polymerase plays a critical role in the PCR process by facilitating the amplification of DNA. It is either added as premade beads or as a liquid form, depending on the protocol, and works during the thermal cycling process to synthesize new strands of DNA complementary to the template."
+    },
+    {
+        "instruction": "How is the PCR product visualized using agarose gel electrophoresis?",
+        "input": "Agarose gel electrophoresis is used to separate and visualize DNA fragments.",
+        "output": "To visualize the PCR product, 0.5g of agarose is mixed with 50mL of TBE or TAE buffer, heated until dissolved, and then ethidium bromide is added. The solution is poured into a gel electrophoresis chamber, allowed to solidify, and then the DNA samples are loaded into wells. After electrophoresis, the DNA bands can be visualized under UV light."
+    },
+    {
+        "instruction": "What is the composition of the master mix for the Q5 High-Fidelity 2X Master Mix PCR?",
+        "input": "The master mix includes Q5 High-Fidelity 2X Master Mix, primers, and template DNA.",
+        "output": "The master mix for the Q5 High-Fidelity 2X Master Mix PCR consists of 12.5 µl (for a 25 µl reaction) or 25 µl (for a 50 µl reaction) of Q5 High-Fidelity 2X Master Mix, 1.25 µl (or 2.5 µl for a 50 µl reaction) of each 10 µM primer to achieve a final concentration of 0.5 µM, variable amounts of template DNA (less than 1,000 ng), and nuclease-free water to make up the final volume."
+    },
+    {
+        "instruction": "What is the process for transforming competent cells with DNA?",
+        "input": "Competent cells are thawed on ice and mixed with DNA.",
+        "output": "To transform competent cells with DNA, the cells are first thawed on ice. Then, 5 µL of DNA is added to the cells, and the mixture is incubated on ice for 30 minutes. Following this, the cells are heat shocked at 42°C for 30 seconds. After heat shocking, 200 µL of SOC growth media is added, and the cells are rotated in an incubator at 37°C for an hour. Finally, 200 µL of the cells are spread onto an appropriate antibiotic plate and incubated overnight at 37°C."
+    },
+    {
+        "instruction": "Describe the initial steps in the plasmid preparation protocol.",
+        "input": "The initial steps involve pelleting the bacterial culture and resuspending the pellet.",
+        "output": "The initial steps in the plasmid preparation protocol involve pelleting 1 mL of bacterial culture by centrifugation for 30 seconds. After pelleting, the supernatant is discarded, and the pellet is resuspended in 200 µL of Plasmid Resuspension Buffer (B1). It's important to ensure the cells are thoroughly suspended, either by vortexing or pipetting."
+    },
+    {
+        "instruction": "What are the components of the PCR cleanup protocol?",
+        "input": "The PCR cleanup protocol involves binding buffer, wash buffers, and elution buffer.",
+        "output": "The PCR cleanup protocol includes diluting the sample with DNA cleanup binding buffer, loading the diluted sample onto a column, washing the column with DNA wash buffer, and eluting the DNA using DNA elution buffer. Specifically, if the sample is 50 µL in total, 100 µL of binding buffer is added, followed by centrifugation, washes with DNA wash buffer, and elution with 15 µL of DNA elution buffer."
+    },
+    {
+        "instruction": "What volume of frozen competent cells does (E-comp) cells have?",
+        "input": "(E-comp) cells contain 25 – 30 ul of frozen competent cells.",
+        "output": "The (E-comp) cells have a volume of 25 to 30 microliters of frozen competent cells."
+    },
+    {
+        "instruction": "How many colonies should electroporation with 2 ul of the 5 ng/ul control transformation plasmid, pJAG-ARS, generate?",
+        "input": "Using the provided protocol, electroporation with 2 ul of the 5 ng/ul control transformation control plasmid, pJAG-ARS, should generate approximately 1000 colonies.",
+        "output": "Electroporation with 2 microliters of the 5 ng/ul control transformation plasmid, pJAG-ARS, should result in around 1000 colonies."
+    },
+    {
+        "instruction": "What is the expected number of transformants when using an expression vector linearized in the AOX1 promoter with PmeI?",
+        "input": "The number of transformants one can obtain with an expression vector linearized in the AOX1 promoter with PmeI is similar to the number generated by electroporation with 2 ul of the 5 ng/ul control transformation control plasmid, pJAG-ARS, which is about 1000 colonies.",
+        "output": "When using an expression vector linearized in the AOX1 promoter with PmeI, the expected number of transformants is around 1000 colonies, similar to the control transformation using pJAG-ARS."
+    },
+    {
+        "instruction": "How long can E-comp cells be stored at -80°C without losing significant competency?",
+        "input": "E-comp cells can be stored at -80°C for up to 6 months without experiencing a significant loss of competency.",
+        "output": "E-comp cells can be stored at -80°C for up to 6 months without a significant decrease in their competency."
+    },
+    {
+        "instruction": "What is the recommended gap width for the cuvettes used in electroporation according to the provided protocol?",
+        "input": "The protocol uses cuvettes with a 1 mm gap width for electroporation.",
+        "output": "According to the provided protocol, the recommended gap width for the cuvettes used in electroporation is 1 mm."
+    },
+    {
+        "instruction": "What happens if higher voltages are used with 1 mm cuvettes?",
+        "input": "Higher voltages required for the 2 mm cuvettes will cause arcing with the 1 mm cuvettes.",
+        "output": "If higher voltages are used with 1 mm cuvettes, arcing will occur, which is not suitable for electroporation."
+    },
+    {
+        "instruction": "What form do DNA expression vectors typically take when electroporated into Pichia cells?",
+        "input": "DNA expression vectors are most often electroporated into Pichia cells as linear DNA molecules.",
+        "output": "When electroporated into Pichia cells, DNA expression vectors are usually in the form of linear DNA molecules."
+    },
+    {
+        "instruction": "Why is it important to clean and concentrate the DNA after restriction enzyme digestion?",
+        "input": "DNA should be cleaned and concentrated after restriction enzyme digestion, prior to transformation.",
+        "output": "Cleaning and concentrating the DNA after restriction enzyme digestion is crucial to remove enzymes and other contaminants that could interfere with the transformation process."
+    },
+    {
+        "instruction": "What is the best way to re-suspend DNA for electroporation?",
+        "input": "Re-suspension of the DNA in a solution with low conductivity, i.e., in water, or in low concentrations of Tris/EDTA, is best for electroporation.",
+        "output": "For electroporation, DNA should ideally be re-suspended in a solution with low conductivity, such as water or a solution containing low concentrations of Tris/EDTA."
+    },
+    {
+        "instruction": "What are the electroporation settings for the BioRad Gene Pluser Xcell®, MXcell®, II, and E. coli Pulser®?",
+        "input": "Electroporation settings for these devices include 10 uF capacitance, 600 ohms resistance, and 1150 volts.",
+        "output": "The electroporation settings for the BioRad Gene Pluser Xcell®, MXcell®, II, and E. coli Pulser® are 10 uF capacitance, 600 ohms resistance, and 1150 volts."
+    },
+    {
+        "instruction": "What is the concentration of CaCl2 used for incubation?",
+        "input": "The document mentions an incubation step using CaCl2.",
+        "output": "The concentration of CaCl2 used for incubation is 100 mM."
+    },
+    {
+        "instruction": "How long should the incubation last when using CaCl2?",
+        "input": "There is a specified duration for incubation with CaCl2 mentioned in the text.",
+        "output": "The incubation should last for at least 20 minutes on ice."
+    },
+    {
+        "instruction": "What is the temperature at which the samples are stored after aliquoting?",
+        "input": "The document provides instructions for storing aliquoted samples.",
+        "output": "After aliquoting, the samples are stored at -80°C."
+    },
+    {
+        "instruction": "What components are added to G-Block 1 Tube 1?",
+        "input": "The document lists the components added to G-Block 1 Tube 1.",
+        "output": "To G-Block 1 Tube 1, 9 µL of G-block 1, 1 µL of CutSmart, and 0.5 µL of EcoR1 are added."
+    },
+    {
+        "instruction": "Which buffer is used in G-Block 2 Tube 2?",
+        "input": "The document specifies the buffer used in G-Block 2 Tube 2.",
+        "output": "G-Block 2 Tube 2 uses 1 µL of 2.1 Buffer."
+    },
+    {
+        "instruction": "What is the composition of the 5x primer stock for VF2 and VR primers?",
+        "input": "The document details the composition of the primer stock for VF2 and VR primers.",
+        "output": "The 5x primer stock for VF2 and VR primers contains 180 µL of MGBW, 31.4 nmol (0.19 mg) of VR, and 34.8 nmol (0.21 mg) of VF2, mixed with 10 µL of VR and 10 µL of VF2."
+    },
+    {
+        "instruction": "What is the purpose of the provided documentation?",
+        "input": "The document mentions the purpose of the provided documentation.",
+        "output": "The provided documentation serves to detail the development and inspiration behind the project, including references to work done by teams from 2014 such as Colombia, Imperial, and Caltech."
+    },
+    {
+        "instruction": "Which teams' work from 2014 is referenced in the document?",
+        "input": "The document references specific teams from 2014.",
+        "output": "The document references the work done by teams from Colombia, Imperial, and Caltech in 2014."
+    },
+    {
+        "instruction": "What is the final concentration of CaCl2 in the solution used for resuspending the pellet?",
+        "input": "The document specifies the final concentration of CaCl2 in the resuspension solution.",
+        "output": "The final concentration of CaCl2 in the solution used for resuspending the pellet is 85 mM, along with 15% glycerol."
+    },
+    {
+        "instruction": "What volume of G-blocks is added to each tube?",
+        "input": "The document specifies the volume of G-blocks added to each tube.",
+        "output": "9 µL of G-block is added to each tube."
+    }
+]

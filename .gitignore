@@ -1,8 +1,8 @@
 .env
-frontend_back
-frontend
 .idea
 .git
 chroma
 __pycache__
 tmp
+.pytest_cache
+backup

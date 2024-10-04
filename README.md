@@ -117,12 +117,18 @@ This repository contains the essential components of the **XJTLU-Software iGEM T
     ```bash
     pip install -r requirements.txt
     ```
-
-3. Set up environment variables in the `config.py` file:
-    ```python
-    DATA_PATH = "data/uploads"
-    CHROMA_PATH = "chroma"
+   
+3. create `.env` files in the root folder and update your api keys
+    ```bash
+    OPENAI_API_KEY="your api key"
     ```
+
+4. Run setup.py to open ChatParts
+    ```bash
+    python setup.py
+    ```
+   
+or try to run following process below
 
 4. Run the backend API:
     ```bash

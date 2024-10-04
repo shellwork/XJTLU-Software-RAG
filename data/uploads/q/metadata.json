@@ -1,0 +1,46 @@
+{
+    "batches": [
+        {
+            "batch_id": "14e1412d-0ff2-411c-88a0-45e641c05470",
+            "files": [
+                "r2s_notes.md"
+            ],
+            "chunk_size": 500,
+            "chunk_overlap": 20,
+            "zh_title_enhance": false
+        },
+        {
+            "batch_id": "b3c39153-2a1b-4bf7-88e7-62907cc84027",
+            "files": [
+                "#U4e00#U4e2a#U5feb#U901f#Uff0c#U7a33#U5065#U548c#U53ef#U8c03#U7684#U5408#U6210#U57fa#U56e0#U632f#U8361#U5668.txt",
+                "#U4e00#U4e2a#U5408#U6210#U7684#U5927#U80a0#U6746#U83cc#U6355#U98df-#U730e#U7269#U751f#U6001#U7cfb#U7edf.txt",
+                "#U4e0b#U4e00#U4ee3#U5408#U6210#U57fa#U56e0#U7f51#U7edc.txt",
+                "#U8f6c#U5f55#U8c03#U63a7#U56e0#U5b50#U7684#U5408#U6210#U632f#U8361#U7f51#U7edc.txt",
+                "#U53ef#U7f16#U7a0b#U7ec6#U80de-#U8fde#U63a5#U81ea#U7136#U548c#U5de5#U7a0b#U57fa#U56e0#U7f51#U7edc.txt",
+                "#U53ef#U7f16#U7a0b#U5355#U7ec6#U80de#U54fa#U4e73#U52a8#U7269#U751f#U7269#U8ba1#U7b97#U673a.txt",
+                "#U54fa#U4e73#U52a8#U7269#U7ec6#U80de#U591a#U8f93#U5165#U8f93#U51fa#U9c81#U68d2#U9057#U4f20#U7535#U8def#U7684#U5927#U89c4#U6a21#U8bbe#U8ba1.txt",
+                "#U57fa#U56e0#U7a81#U53d8#U7684#U6784#U5efa #U5207#U6362#U5927#U80a0#U6746#U83cc.txt",
+                "#U57fa#U56e0#U56de#U8def#U7684#U91cd#U5efa.txt",
+                "#U901a#U8fc7#U591a#U91cd#U57fa#U56e0#U7ec4#U5de5#U7a0b#U7f16#U7a0b#U7ec6#U80de #U52a0#U901f#U8fdb#U5316.txt",
+                "#U5408#U6210#U4ee3#U8c22#U7c7b#U56fa#U9187#U836f#U7406#U5b66.txt",
+                "#U5408#U6210#U4ee3#U8c22#U62b5#U6297#U5728#U808c#U8089#U51cf#U5c11#U75c7#U4e2d#U7684#U4f5c#U7528#U548c#U6f5c#U5728#U673a#U5236.txt",
+                "#U5408#U6210#U751f#U7269#U5b66#U8fdb#U5c55.txt",
+                "#U5408#U6210#U751f#U7269#U5b66#U65b0#U5174#U9886#U57df#U7684#U65e9#U671f#U793e#U4f1a#U53cd#U601d.txt",
+                "#U5408#U6210#U751f#U7269#U5b66#Uff1a#U5c06#U5de5#U7a0b#U5b66#U5f15#U5165#U751f#U7269.txt",
+                "#U5408#U6210#U751f#U7269#U5b66.txt",
+                "#U7528#U4e8e#U7ec6#U80de#U8ba1#U7b97#U3001#U901a#U4fe1#U548c#U4fe1#U53f7#U5904#U7406#U7684#U9057#U4f20#U7535#U8def#U6784#U5efa#U5757.txt",
+                "#U7528#U9057#U4f20#U7f16#U7a0b#U7684#U65b9#U6cd5#U81ea#U52a8#U5408#U6210#U6a21#U62df#U7535#U8def.txt"
+            ],
+            "chunk_size": 100,
+            "chunk_overlap": 20,
+            "zh_title_enhance": false
+        }
+    ],
+    "kb_name": "q",
+    "kb_info": "q",
+    "vs_type": "chroma",
+    "embed_model": "openai",
+    "chunk_size": 300,
+    "chunk_overlap": 100,
+    "zh_title_enhance": false
+}

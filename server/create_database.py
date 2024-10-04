@@ -84,7 +84,7 @@ def get_kb_list():
     return kb_list
 
 
-def create_kb(kb_name: str, kb_info: str, vs_type: str, embed_model: str):
+def create_kb(kb_name: str, kb_info: str, vs_type: str, embed_model: str, provider, local):
     """创建新的知识库，并根据提供的 embed_model 进行配置"""
     try:
         kb_path = os.path.join(DATA_PATH, kb_name)
@@ -97,12 +97,14 @@ def create_kb(kb_name: str, kb_info: str, vs_type: str, embed_model: str):
         logging.info(f"知识库创建成功: {kb_name}")
         # 检查并初始化 metadata.json
         initialize_metadata(kb_name)
-        # 将知识库信息存储到 metadata.json 中，包括 embed_model 和 vs_type
+        # 将知识库信息存储到 metadata.json 中，此处得到全局配置的参数
         metadata = {
             "kb_name": kb_name,
             "kb_info": kb_info,
             "vs_type": vs_type,
             "embed_model": embed_model,  # 将 embed_model 记录下来
+            "provider": provider,
+            "local": local,
             "chunk_size": 300,
             "chunk_overlap": 100,
             "zh_title_enhance": False
@@ -312,6 +314,9 @@ def process_batches(kb_name: str):
                     "chunk_size": metadata.get("chunk_size", 300),
                     "chunk_overlap": metadata.get("chunk_overlap", 100),
                     "zh_title_enhance": metadata.get("zh_title_enhance", False),
+                    "embed_model": metadata.get("embed_model", metadata["embed_model"]),# 全局设置
+                    "provider": metadata.get("provider", metadata["provider"]),
+                    "local": metadata.get(metadata["local"]),
                     "files": list(unbatched_files)
                 }
 
@@ -328,8 +333,10 @@ def process_batches(kb_name: str):
             chunk_size = batch.get("chunk_size", metadata["chunk_size"])  # 批次优先，默认全局
             chunk_overlap = batch.get("chunk_overlap", metadata["chunk_overlap"])  # 批次优先，默认全局
             zh_title_enhance = batch.get("zh_title_enhance", metadata["zh_title_enhance"])  # 批次优先，默认全局
-            embed_model = metadata.get("embed_model", "openai")  # 全局设置
-            vs_type = metadata.get("vs_type", "chroma")  # 全局设置
+            embed_model = metadata.get(metadata["embed_model"])  # 下面全部载入全局设置
+            provider = metadata.get(metadata["provider"])
+            local = metadata.get(metadata["local"])
+            vs_type = metadata.get("vs_type", "chroma")  # 全局设置,
             files = batch.get("files", [])  # 获取该批次的文件列表
             if not files:
                 logging.warning(f"批次 {batch['batch_id']} 中没有文件")
@@ -342,6 +349,8 @@ def process_batches(kb_name: str):
                 chunk_overlap=chunk_overlap,
                 zh_title_enhance=zh_title_enhance,
                 embed_model=embed_model,
+                provider=provider,
+                local=local,
                 vs_type=vs_type,
                 files=files  # 传递批次中的文件列表
             )
@@ -354,7 +363,7 @@ def process_batches(kb_name: str):
         return {"status": "error", "message": f"处理批次时出错: {str(e)}"}
 
 
-def generate_data_store(kb_name: str, chunk_size: int, chunk_overlap: int, zh_title_enhance: bool, embed_model: str, vs_type: str, files: list):
+def generate_data_store(kb_name: str, chunk_size: int, chunk_overlap: int, zh_title_enhance: bool, embed_model: str, provider, local, vs_type: str, files: list):
     """
     处理指定文件的批次，包括分块、向量化以及其他必要的步骤。
     支持 OCR 文档、普通文档的分块和向量化，JSON 文档直接更新。
@@ -382,7 +391,7 @@ def generate_data_store(kb_name: str, chunk_size: int, chunk_overlap: int, zh_ti
 
             # 向量化处理并更新数据库
             if vs_type == "chroma":
-                update_chroma(document_chunks, embed_model=embed_model)
+                update_chroma(document_chunks, embed_model=embed_model, provider=provider, local=local)
             # 可以加入其他数据库
 
         # 根据传入的文件名列表加载并处理 JSON 文档（不进行分块）
@@ -439,10 +448,10 @@ def split_text(documents: list[Document], chunk_size: int, chunk_overlap: int):
         return []
 
 
-def update_chroma(chunks: list[Document], embed_model: str):
+def update_chroma(chunks: list[Document], embed_model: str, provider: str, local: bool):
     """将文档块更新到Chroma数据库"""
     try:
-        embedding_function = get_embedding_function(embed_model)
+        embedding_function = get_embedding_function(embed_model, provider, local)
         db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding_function)
         db.add_documents(chunks)
         logging.info(f"已添加 {len(chunks)} 个文档块到 Chroma 数据库")
@@ -450,10 +459,10 @@ def update_chroma(chunks: list[Document], embed_model: str):
         logging.error(f"更新Chroma数据库时出错: {e}", exc_info=True)
 
 
-def update_chroma_with_json(documents: list[Document], embed_model: str):
+def update_chroma_with_json(documents: list[Document], embed_model: str, provider: str, local: bool):
     """将JSON文档更新到Chroma数据库"""
     try:
-        embedding_function = get_embedding_function(embed_model)
+        embedding_function = get_embedding_function(embed_model, provider, local)
         db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding_function)
 
         new_chunks = []
@@ -505,3 +514,4 @@ def update_kb_metadata(kb_name: str, metadata: dict, is_batch: bool = False):
 
     except Exception as e:
         logging.error(f"更新知识库 {kb_name} 的元数据时出错: {e}", exc_info=True)
+

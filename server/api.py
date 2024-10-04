@@ -1,9 +1,11 @@
+import json
+import os
 import sys
 import uuid
 from pathlib import Path
 import logging
 from urllib.parse import unquote_plus
-
+from fastapi import Body
 from fastapi.staticfiles import StaticFiles
 from chat import generate_response
 
@@ -19,7 +21,7 @@ from create_database import (
     get_kb_list, get_kb_documents, delete_kb, delete_kb_files,
     delete_existing_chroma, update_kb_metadata, process_batches
 )
-from response_model import CreateKnowledgeBaseModel, DeleteFilesRequest, ChatResponse, ChatRequest, DocumentResponse
+from response_model import CreateKnowledgeBaseModel, DeleteFilesRequest, ChatResponse, ChatRequest, DocumentResponse, VectorModelSettings
 
 # 配置日志记录
 logging.basicConfig(
@@ -43,8 +45,10 @@ app.mount("/uploads", StaticFiles(directory=DATA_PATH), name="uploads")
 async def chat(request: ChatRequest):
     ai_response = generate_response(
         prompt=request.prompt,
+        eb_models=request.eb_models,
         tools=request.tools,
         model=request.model,
+        provider=request.provider,
         use_self_model=request.use_self_model,
         use_local_model=request.use_local_model
     )
@@ -114,8 +118,8 @@ def startup_event():
 async def upload_files(
         kb_name: str = Form(...),
         files: List[UploadFile] = File(...),
-        chunk_size: int = Form(100),  # 默认值为100
-        chunk_overlap: int = Form(20),  # 默认值为20
+        chunk_size: int = Form(500),  # 默认值为100
+        chunk_overlap: int = Form(100),  # 默认值为20
         zh_title_enhance: bool = Form(False)  # 默认值为 False
 ):
     logging.debug(
@@ -159,12 +163,15 @@ async def upload_files(
 @app.post("/create_kb")
 def api_create_kb(kb_info: CreateKnowledgeBaseModel):
     logging.debug(f"创建知识库请求: {kb_info}")
+    logging.debug(f"Received request to create KB with data: {kb_info.dict()}")
     # 调用 create_kb 函数，传递 embed_model 和其他参数
     result = create_kb(
         kb_name=kb_info.kb_name,
         kb_info=kb_info.kb_info,
         vs_type=kb_info.vs_type,
-        embed_model=kb_info.embed_model
+        embed_model=kb_info.embed_model,
+        provider=kb_info.provider,
+        local=kb_info.local
     )
 
     if result["status"] == "success":
@@ -242,6 +249,53 @@ def api_delete_kb_files(request: DeleteFilesRequest):
     except Exception as e:
         logging.error(f"删除文件时出现异常: {e}", exc_info=True)
         return {"status": "error", "message": f"删除文件时发生错误: {str(e)}"}
+
+# 更新知识库全局参数
+@app.post("/api/update_vector_model", response_model=dict)
+def api_update_vector_model(settings: VectorModelSettings = Body(...)):
+    logging.debug(f"更新全局向量模型设置请求: {settings}")
+    try:
+
+        kb_name = settings.kb_name
+        metadata = {
+            "use_local": settings.use_local,
+            "provider": settings.provider,
+            "embed_model": settings.embed_model
+        }
+        # 调用 update_kb_metadata 更新全局元数据
+        update_kb_metadata(kb_name=kb_name, metadata=metadata, is_batch=False)
+        logging.info("全局向量模型设置已更新")
+        return {"status": "success", "message": "向量模型设置已更新"}
+    except Exception as e:
+        logging.error(f"更新向量模型设置时出错: {e}", exc_info=True)
+        return {"status": "error", "message": f"更新失败: {str(e)}"}
+
+@app.get("/api/get_vector_model", response_model=VectorModelSettings)
+def api_get_vector_model(kb_name):
+    logging.debug("获取全局向量模型设置请求")
+    try:
+        metadata_path = os.path.join(DATA_PATH, kb_name, "metadata.json")
+        if os.path.exists(metadata_path):
+            with open(metadata_path, "r", encoding="utf-8") as f:
+                existing_metadata = json.load(f)
+                logging.debug(existing_metadata.get("use_local"))
+            return VectorModelSettings(
+                kb_name=kb_name,
+                use_local=existing_metadata.get("use_local"),
+                provider=existing_metadata.get("provider"),
+                embed_model=existing_metadata.get("embed_model")
+            )
+        else:
+            # 返回默认设置
+            return VectorModelSettings(
+                kb_name=kb_name,
+                use_local=False,
+                provider="openai",
+                embed_model="Default"
+            )
+    except Exception as e:
+        logging.error(f"获取全局向量模型设置时出错: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail=f"获取设置时出错: {str(e)}")
 
 
 # 启动 FastAPI 服务

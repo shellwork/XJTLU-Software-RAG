@@ -1,0 +1,4596 @@
+A r t i c l e s
+
+large-scale design of robust genetic circuits with 
+multiple inputs and outputs for mammalian cells
+Benjamin H Weinberg1, N T Hang Pham1, Leidy D Caraballo1, Thomas Lozanoski1, Adrien Engel1,2,  
+Swapnil Bhatia3 & Wilson W Wong1
+
+Engineered genetic circuits for mammalian cells often require extensive fine-tuning to perform as intended. We present a robust, 
+general, scalable system, called ‘Boolean logic and arithmetic through DNA excision’ (BLADE), to engineer genetic circuits with 
+multiple inputs and outputs in mammalian cells with minimal optimization. The reliability of BLADE arises from its reliance on 
+recombinases under the control of a single promoter, which integrates circuit signals on a single transcriptional layer. We used 
+BLADE to build 113 circuits in human embryonic kidney and Jurkat T cells and devised a quantitative, vector-proximity metric 
+to evaluate their performance. Of 113 circuits analyzed, 109 functioned (96.5%) as intended without optimization. The circuits, 
+which are available through Addgene, include a 3-input, two-output full adder; a 6-input, one-output Boolean logic look-up table; 
+circuits with small-molecule-inducible control; and circuits that incorporate CRISPR–Cas9 to regulate endogenous genes. BLADE 
+enables execution of sophisticated cellular computation in mammalian cells, with applications in cell and tissue engineering.
+
+A  fundamental  goal  of  synthetic  biology  is  to  predictably  and 
+efficiently  reprogram  cells  to  perform  computations  and  carry 
+out  specific  biological  tasks1.  Cells  genetically  engineered  with 
+biocomputation  circuits  hold  great  promise  for  improving  ther-
+apeutics2–5, diagnostics6,7, animal models8,9, and industrial biotech-
+nological processes10,11. Despite rapid advances and promising results 
+in biocomputation design12–16, implementing simple 2-input, single-
+output Boolean functions in prokaryotic and eukaryotic cells neces-
+sitates the layering of multiple genetic circuits, requiring extensive  
+construction and tuning of genetic components. Circuits with mul-
+tiple  inputs  and  multiple  outputs  remain  scarce  in  the  scientific  
+literature owing to the need of a large library of interoperable genetic 
+parts and the compounding effects of connecting increasingly more 
+transcriptional  components  together  into  single  cells17.  Curation 
+of genetic circuit components and the development of automated 
+design software are starting to address these problems in bacteria18–22,  
+but are not currently available for mammalian cells. It is not clear 
+whether either parts or design software can be transferred from bac-
+teria to higher organisms.
+
+To  facilitate  the  construction  of  genetic  circuits  in  eukaryotic 
+cells, we present BLADE, a general framework for engineering com-
+plex logic circuits in mammalian cells using site-specific recombi-
+nases. In contrast to previous approaches for circuit design, BLADE 
+requires minimal optimization by the user and readily yields circuits 
+with multiple inputs or outputs without increasing the number of  
+transcription units.
+
+We use our system to design, build, and test >100 functionally 
+distinct circuits, including some of the most complex logical opera-
+tions engineered in any living cell to date. BLADE accommodates 
+
+multiple outputs without adding to design complexity and can be 
+adapted to regulate the expression of mRNAs from Pol II promoters,  
+or  non-coding  regulatory  RNAs  from  Pol  III  promoters,  such  as 
+CRISPR–Cas9 guide RNAs. Being able to build complex logic circuits 
+that control multiple different guide RNAs could enable exquisite 
+control of endogenous mammalian gene expression.
+
+RESULTS
+Characterization of recombinases
+Site-specific DNA recombinases, which are a class of DNA-modifying 
+enzymes that recognize a specific DNA sequence and perform cleav-
+age and reunion of DNA23, show promise for use in building synthetic 
+circuits in eukaryotic cells. This is due in part to their versatility to 
+simultaneously function as transcriptional activators and repressors 
+within the same cell on the same transcription unit; a feat that is  
+difficult to achieve with transcription factors. Recombinase-mediated 
+gene expression can be achieved by tyrosine-recombinase-mediated 
+excision of a transcription terminator located upstream of a gene 
+of interest (GOI) or serine-integrase-mediated inversion of a GOI 
+(analogous to a buffer ‘BUF’ gate) (Fig. 1a). Conversely, termination 
+of gene expression can be achieved by the placement of recombina-
+tion sites around a GOI and elimination of gene expression using 
+tyrosine-recombinase-mediated excision or serine integrase inversion 
+(analogous to a NOT gate).
+
+Multi-input recombinase-based biological computational circuits 
+require robust and orthogonal genetic components. Here, 12 recom-
+binases, including both tyrosine recombinase and serine integrase 
+families were tested for activity and orthogonality in a human embry-
+onic kidney cell line (HEK293FT). Through transient transfection 
+
+1Department of Biomedical Engineering and Biological Design Center, Boston University, Boston, Massachusetts, USA. 2Department of Biosystems Science and 
+Engineering, ETH Zurich, Basel, Switzerland. 3Department of Electrical and Computer Engineering, Boston University, Boston, Massachusetts, USA. Correspondence 
+should be addressed to W.W.W. (wilwong@bu.edu).
+
+Received 20 June 2016; accepted 27 January 2017; published online 27 March 2017; doi:10.1038/nbt.3805
+
+nature biotechnology  VOLUME 35  NUMBER 5  MAY 2017 
+
+453
+
+A r t i c l e s
+
+Constitutive
+
+CAG promoter
+
+Transcription
+
+terminator
+
+GFP
+
+GFP
+
+Tyrosine
+
+recombinase
+DNA excision
+
+Serine
+
+integrase
+
+DNA inversion
+
+GFP
+
+GFP
+
+b
+
+i
+
+e
+s
+a
+n
+b
+m
+o
+c
+e
+R
+
+Cre
+
+Flp
+
+Dre
+
+SCre
+
+VCre
+
+Vika
+
+B3
+
+KD
+
+B2
+
+R
+
+PhiC31
+
+Bxb1
+
+None
+
+a
+
+c
+
+GFP MFI (×103)
+
+0
+
+25
+
+Buffer gate
+
+lox
+
+FRT
+
+rox
+
+SloxM1 VloxP
+
+vox
+
+B3RT KDRT B2RT RSRT
+
+PhiC31
+attB/P
+
+Bxb1
+attB/P None
+
+Intended recombination
+
+Name
+
+Symbol
+
+Architecture
+
+Logic gate
+
+A
+B
+C
+D
+E
+F
+
+GFP
+
+= loxP
+
+= FRT
+
+= KDRT
+
+= bxb1
+  attB/P
+
+= B3RT
+
+= ΦC31
+  attB/P
+
+>40-fold
+increase
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+0
+
+0
+
+1
+
+1
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+1
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+1
+
+0
+
+0
+
+0
+
+0
+
+1
+
+1
+
+1
+
+0
+
+0
+
+0
+
+1
+
+1
+
+1
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+1
+
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+1
+
+0
+
+1
+
+0
+
+1
+
+0  0  0
+
+0
+
+0
+
+1
+
+1
+
+0
+
+1
+
+0
+
+0
+
+1
+
+1
+
+1
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+1
+
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+1
+
+0
+
+0
+
+1
+
+1
+
+0
+
+1
+
+1
+
+0
+
+0
+
+0
+
+0
+
+1
+
+1
+
+1
+
+0
+
+0
+
+1
+
+0
+
+1
+
+1
+
+1
+
+0
+
+0
+
+0
+
+1
+
+1
+
+1
+
+1
+
+0
+
+0
+
+1
+
+1
+
+1
+
+1
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+1
+
+0
+
+0
+
+0
+
+1
+
+0  0  0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+1
+
+1
+
+0
+
+1
+
+0
+
+0
+
+1
+
+0
+
+1
+
+1
+
+0
+
+0
+
+1
+
+0
+
+1
+
+1
+
+1
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+1
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+1
+
+0
+
+1
+
+1
+
+0
+
+1
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+1
+
+0
+
+1
+
+0
+
+0
+
+1  0
+
+0  1
+
+1  1
+
+1  1
+
+0  0
+
+1
+
+1
+
+0
+
+1
+
+1
+
+1
+
+1
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+0
+
+1
+
+1
+
+0
+
+1
+
+0
+
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+1
+
+0
+
+0
+
+1
+
+1
+
+0
+
+1
+
+1
+
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+0
+
+1
+
+0
+
+1
+
+1
+
+0
+
+1
+
+0
+
+1
+
+0
+
+1
+
+1
+
+0
+
+0
+
+1
+
+1
+
+0
+
+1
+
+1
+
+0
+
+1
+
+1
+
+1
+
+0
+
+1
+
+1
+
+0
+
+0
+
+0
+
+0
+
+1
+
+1
+
+1
+
+0
+
+1
+
+0
+
+0
+
+1
+
+1
+
+1
+
+0
+
+0
+
+1
+
+0
+
+0
+
+1
+
+1
+
+0
+
+1  1
+
+0
+
+0
+
+0
+
+1
+
+1
+
+1
+
+1
+
+1  1
+
+1
+
+1
+
+0
+
+1
+
+0
+
+1
+
+1
+
+1
+
+1
+
+0
+
+0
+
+1
+
+1
+
+1
+
+1
+
+1  1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+
+6-input
+AND
+
+P
+F
+G
+
+5
+4
+3
+2
+1
+0
+
+GFP 0
+
+A 
+bxb1 0
+B 
+φC31 0
+C 
+0
+Cre
+D
+Flp
+E
+B3
+F
+KD 0
+
+0
+
+0
+
+)
+
+3
+
+0
+1
+×
+
+ 
+,
+.
+
+u
+
+.
+
+a
+(
+ 
+I
+
+F
+M
+
+T
+U
+O
+
+N
+
+I
+
+l
+
+i
+
+-
+e
+g
+n
+s
+ 
+d
+e
+g
+a
+r
+e
+v
+A
+
+ 
+s
+t
+l
+u
+s
+e
+r
+ 
+l
+l
+
+e
+c
+
+l
+
+e
+b
+a
+
+t
+ 
+ 
+
+h
+
+t
+
+u
+r
+T
+
+Figure 1  Orthogonal site-specific tyrosine recombinases and serine integrases enable implementation of multi-input AND gates in mammalian cells.  
+(a) Recombinases can perform simple BUF logic operations, either by tyrosine-recombinase-mediated excision (left) or serine-integrase-mediated inversion  
+(right). (b) Recombinases are tested for their recombination efficiency and orthogonality on all BUF logic reporters. (c) A 6-input AND-gate that 
+produces GFP when all inputs are present. MFI, mean fluorescence intensity from n = 3 transfected cell cultures; a.u., arbitrary units. Error bars, s.e.m.
+
+of cells with recombinases and their reporters (deletion-based BUF 
+gates for tyrosine recombinases and inversion-based for serine inte-
+grases), ten of the enzymes were found to be highly active and suf-
+ficiently orthogonal to each other for our circuit design effort (Fig. 1b,  
+Supplementary Fig. 1a, and Supplementary Table 1). It was found 
+that  recombinase  expressional  level  could  be  tuned  to  minimize 
+cross-talk between non-orthogonal recombinases (Supplementary  
+Fig. 2). We focused our efforts on the use of Cre and Flp recombinases 
+because of their prevalence in mammalian cell culture and animal 
+experimentation.
+
+Through an ad hoc design approach, we created all 16 possible 
+2-input Boolean logic gates by placing Cre and Flp recombination 
+sites (loxP and FRT, respectively) around termination and coding 
+sequences to yield the intended behaviors (Supplementary Fig. 3 and 
+Supplementary Table 2). Due to the orthogonality of recombinases, 
+it is possible to generate multi-input AND gates simply by placing 
+
+more termination sequences in tandem between a promoter and GFP. 
+Indeed, we created a six-input AND gate that expresses GFP upon the 
+excision of four termination sequences by tyrosine recombinases and 
+the inversion of the EF1α promoter and GFP by two serine integrases 
+(Fig. 1c, Supplementary Fig. 1b, and Supplementary Table 3).
+
+A key element that is required to implement more complex func-
+tions  on  a  single  transcriptional  unit  is  the  use  of  heterospecific 
+recombination sites. Heterospecific sites, such as loxP and lox2272, 
+differ from one another by only a few base pairs24, but they retain 
+DNA excision capabilities in the presence of Cre, as long as two of 
+the same sites are present, for example, loxP with loxP. We validated 
+three sets of lox sites (loxP, lox2272, loxN), three sets of FRT (FRT, F3, 
+F14), and Vlox (VloxP, Vlox2272), which demonstrated heterospecifi-
+city using Cre, Flp, and VCre enzymes, respectively (Supplementary 
+Fig. 4 and Supplementary Table 4). This feature allows the excision 
+of  more  than  one  non-connected  region  of  DNA  simultaneously, 
+
+454 
+
+VOLUME 35  NUMBER 5  MAY 2017  nature biotechnology
+
+A r t i c l e s
+
+a
+
+b
+
+Logic gate 
+
+Name
+
+Symbol
+
+Architecture
+
+IN
+B
+A
+Cre
+Flp
+
+Truth table
+OUT
+
+Z00 Z10 Z01 Z11
+
+Recombined architecture
+
+= loxP
+
+= lox2272
+
+= FRT
+
+2-input
+BLADE
+template
+
+A
+
+B
+
+BLADE
+
+Z00
+
+Z10
+
+Z01
+
+Z11
+
+Zero-output
+
+Transcription
+
+terminator
+
+One-output
+
+BFP
+
+GFP
+
+iRFP
+
+mRb
+
+Proteins
+
+gRNA
+
+Regulatory RNAs
+
+Addresses
+
+ZAB
+
+Each address corresponds to 
+
+a state of inputs, A and B,
+
+and contains one output function
+
+Two-output
+
+GFP 2A mCh
+
+BFP
+
+2A iRFP
+
+2A = ribosome skip sequence
+
+0 0 1
+
+1 0 0
+
+0 1 0
+
+1 1 0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+1
+
+Z00
+
+Z10
+
+Z01
+
+Z11
+
+Z11
+
+Z11
+
+Z10
+
+Z01
+
+Z11
+
+Boolean logic
+
+GFP
+
+OFF
+
+GFP
+
+GFP
+
+ON
+
+GFP
+
+Toggling of gene expression through additional recombinases
+
+N-output
+
+GFP 2A
+
+mCh
+
+2A
+
+BFP
+
+Arbitrary number of outputs
+
+Logic gate
+
+Name
+
+Symbol
+
+Architecture
+
+Drug
+
+DOX
+
+(ng/mL)
+
+Truth table
+IN
+OUT
+B
+Flp BFP GFP iRFPmRb
+0 0 0 0 0
+
+A
+Cre
+0
+
+Averaged single-cell results
+
+MFI (a.u., 103)
+
+BFP
+35
+
+0
+
+70
+
+0
+
+GFP
+200 400
+
+iRFP
+
+mRuby
+
+0 112.5 225 0
+
+75 150
+
+2-input
+decoder
+
+A
+
+B
+
+2:4
+
+VP48
+
+rtTA
+
+VP48
+
+rtTA
+
+DOX
+
+pTRE
+
+BFP
+
+GFP
+
+iRFP
+
+mRuby
+
+Jurkat human genome
+
+= loxP
+
+= lox2272
+
+= FRT
+
+0
+
+200
+
+1  0  0 0 0 0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+1
+
+1 0 0 0 0
+
+1 0 0 0 0
+
+0 1 0 0 0
+
+0 0 1 0 0
+
+1 0 0 1 0
+
+1 0 0 0 1
+
+Figure 2  2-input BLADE platform can produce four distinct output functions based on two inputs. (a) 2-input BLADE template on one plasmid with a 
+single transcriptional unit. This template contains four distinct regions of DNA (addresses) downstream of a promoter. Each address corresponds to an 
+output function and is accessed or deleted via site-specific DNA recombination. Each address can be programmed from different configurations ranging 
+from zero-inputs to Boolean functions. The first address (Z00), which is the closest to the promoter, corresponds to a state where no recombinase is 
+expressed (A = 0, B = 0). If the Z00 address contains a protein coding sequence, then that gene will be expressed. Gene expression from the other 
+addresses downstream of Z00 will be blocked by the presence of the Z00 protein coding region. In the presence of recombinase A, which corresponds to 
+state (A = 1, B = 0), addresses Z00 and Z01 will be removed, thus moving address Z10 directly downstream of the promoter and allowing gene expression 
+of address Z10 only to occur. Similarly, when only recombinase B is present (A = 0, B = 1), addresses Z00 and Z10 are excised, allowing Z01 to be moved 
+directly downstream of the promoter. Finally, when both recombinases are expressed (A = 1, B = 1), addresses Z00, Z01, Z10 are all excised, thus placing 
+Z11 downstream of the promoter unobstructed by the other addresses. (b) Integrated 2-input BLADE decoder with tagBFP, EGFP, iRFP720, and mRuby2 
+as addresses Z00, Z10, Z01, and Z11 respectively. Plasmids constitutively expressing Cre and/or Flp are then stably integrated. Three days of doxycycline 
+(DOX) treatment is used to permit the rtTA-VP48 protein to bind to the tetracycline response elements promoter (pTRE) to activate gene expression. 
+Mean fluorescence intensity (MFI) is plotted of either n = 1 or n = 2 independent integrations. a.u., arbitrary units.
+
+nature biotechnology  VOLUME 35  NUMBER 5  MAY 2017 
+
+455
+
+A r t i c l e s
+
+enabling encoding of logic on a single layer (recombinase inputs 
+recombining with a single DNA strand reporter). This is juxtaposed 
+to transcription-factor-based genetic logic, which necessitates cascad-
+ing connections of multiple transcriptional responses; here, extensive 
+fine-tuning is usually required to engineer functional circuits to bal-
+ance input-output responses, which grows substantially as the number 
+of inputs and outputs of the circuits increases.
+
+Single-layer multi-input recombinase-based design system
+Although an ad hoc design approach can be successful in creating 
+some recombinase-based circuits as others have demonstrated8,9,25–27 
+and as we show here, a general strategy for producing any N-input-M-
+output logic behavior has not, to our knowledge, been demonstrated 
+before. BLADE exploits the features of site-specific recombinases to 
+enable N-input-M-output combinatorial computation in mammalian 
+cells, where N and M can be any non-negative integer. Beyond the 
+orthogonality of the recombinases and heterospecific sites, no further 
+characterization of individual components is needed.
+
+Each BLADE circuit is organized as a single transcriptional layer 
+comprising a single promoter upstream of up to 2N regions of DNA 
+sequences (or addresses, Z), which are surrounded by recombination 
+sites. Each BLADE circuit is designed such that when it is presented 
+with recombinase inputs, addresses become transcriptionally active 
+through excision of intervening regions between recombination sites 
+downstream of the promoter. For example, a 2-input (N = 2) BLADE 
+circuit, which responds to inputs A and B, can accommodate up to 22 = 4  
+addresses with possible addresses being Z = ZAB = Z00, Z10, Z01, and 
+Z11, enumerating all combinatorial states of inputs A and B (Fig. 2a).  
+The BLADE design is flexible with regards to the outputs that can 
+be generated. Outputs can range from no transcriptional outputs 
+(transcription terminator) at all, an arbitrary combination of outputs 
+separated by ribosomal skip sequences (2A), Boolean functions like 
+BUF that can toggle transcriptional responses ON or OFF through 
+use of additional site-specific recombinases, or even other BLADE 
+topologies. A BLADE design that utilizes 2N addresses permits crea-
+tion of all possible N-input-M-output combinatorial circuits and thus 
+is necessary for implementing the most complex multi-input-multi-
+output truth tables28.
+
+A 2-input, 4-output circuit
+For  initial  characterization  of  the  2-input  BLADE  system,  single 
+transcriptional  output  functions  were  tested.  We  constructed  a  
+2-input, 4-output decoder circuit, which necessitates four addresses, 
+each of which coincides with a distinct output: blue, green, infrared, 
+and red fluorescent proteins (tagBFP, EGFP, iRFP720, and mRuby2, 
+respectively) using a modular assembly strategy known as ‘unique 
+nucleotide sequence-guided assembly’, based on Gibson isothermal 
+assembly29,30 (Fig. 2b and Supplementary Figs. 5–9). One advantage 
+of the BLADE system is that expression of outputs is driven by a single 
+promoter, thereby permitting additional control through the use of a 
+drug-regulated promoter or encoding of further transcriptional logic. 
+We demonstrated this principle by stable integration of a doxycycline-
+controlled decoder circuit into Jurkat T lymphocytes using piggyBac-
+mediated transposition. Jurkat T cells were chosen because they are an 
+important suspension cell line for understanding T-cell signaling and 
+easy to maintain during long-term passages. Constitutively expressed 
+recombinases were then integrated into the genome. Following stable 
+integration of the recombinases driven by constitutive promoters, 
+doxycycline was used to regulate final output expression in a dose-
+dependent manner (Supplementary Fig. 10). This strategy provides 
+a facile way of scaling the circuit response while maintaining the 
+
+logical  functionality  of  the  circuit.  Furthermore,  we  showed  that 
+BLADE circuit functionality can be maintained for at least 2 weeks 
+under  varying  doxycycline  conditions  (Supplementary  Fig.  11).  
+Moreover, the decoder circuit performed as predicted through tran-
+sient transfection of HEK293FT cells with strong fluorescent pro-
+tein expression for each state of inputs (Supplementary Fig. 12 and  
+Supplementary Table 5). HEK293FT was chosen here (and for subse-
+quent experiments) because they enable high-throughput experimen-
+tation owing to the inexpensive and highly efficient polyethylenimine 
+transfection reagent.
+
+Scaling-up and quantitation of circuit design
+To test the robustness of the BLADE system on a large scale, we pro-
+duced the largest, to the best of our knowledge, collection of function-
+ally unique logic circuits in mammalian cells (a library of 113 circuits 
+with up to two inputs and outputs (Fig. 3, Supplementary Fig. 13, 
+and Supplementary Data 1)). This set contains two 2-input circuits: 
+the half adder (gate 104) and half subtractor (gate 99), which perform 
+2-input arithmetic and are widely used and studied in electronics. 
+Whereas all 113 circuits were qualitatively observed to implement the 
+correct computation, we quantified their functional correctness using 
+a novel vector proximity (VP) metric measuring the misalignment 
+between a circuit’s biological implementation and its ideal implemen-
+tation from its intended truth table (Supplementary Code). Truth 
+tables and obtained experimental results were represented as vectors, 
+‘truth table’ and ‘signal vectors’, respectively, in an eight-dimensional  
+vector space. The angular error between these two vectors (VP angle  
+metric)  was  calculated  with  0°,  meaning  the  data  represent  the 
+intended truth table perfectly, and 90°, meaning the data demonstrate 
+completely incorrect output (inverted response to the intended truth 
+table). The VP angle metric shows that 93.8% (106/113) of the circuits 
+had an angle no more than 15°, and none had an angle of more than 
+25° from their ideal implementation.
+
+We extended the VP measure of correctness to obtain a quantita-
+tive and discrete test of whether an implemented circuit is correct or 
+incorrect. For any implemented circuit we measured its VP angle from 
+all possible truth tables, and sorted the results in ascending order.  
+We defined the rank of the intended truth table in this sorted list as 
+the circuit’s VP global rank. We call a circuit functionally valid under 
+this measure if it has the best (that is, smallest) VP global rank. For 
+our library of 113 circuits, we calculated the VP angle between each 
+signal vector and all 255 (up to 2-input, up to 2-output, excluding 
+the 0-input, 0-output FALSE) truth table vectors. Global rank val-
+ues were determined according to how many truth table vectors had 
+lower VP angles than the intended truth table vector. We found that 
+96.5% (109/113) of the tested circuits gave the lowest angle between 
+their signal vector (global rank = 0/255) and their intended truth 
+table vectors (Supplementary Figs. 14 and Supplementary Table 6).  
+This success rate of 96.5% is the highest reported, to our knowledge, 
+for large-scale circuit construction in mammalian cells. Only four 
+circuits had a global rank of 1, meaning there was only one other truth 
+table that yielded a lower VP angle; no circuits had a rank more than 1.  
+To facilitate data sharing and further analysis by other researchers, we 
+have developed an interactive website (http://datasheets.synbiotools.org) 
+ that contains the data of all of our 113 circuits summarized in a 
+datasheet format31.
+
+Reprogrammable combinatorial logic
+One  important  class  of  circuits  found  in  electronics  is  field- 
+programmable,  read-only  memory  (FPROM).  The  input-output  
+behavior  of  these  circuits  can  be  configured  in  the  field  after  
+
+456 
+
+VOLUME 35  NUMBER 5  MAY 2017  nature biotechnology
+
+a
+
+b
+
+Outputs
+
+Two outputs 
+
+produced 
+
+individually or 
+simultaneously
+
+Logic gate
+
+Architecture
+
+Z00
+mCherry
+
+Z10
+
+Z01
+
+GFP 2A mCherry
+
+GFP 2A mCherry
+
+Z11
+GFP
+
+A r t i c l e s
+
+Addresses
+
+Z00
+
+GFP
+
+mCherry
+
+00
+
+01
+
+10
+
+Z10
+
+GFP
+
+mCherry
+
+00
+
+01
+
+10
+
+Z01
+
+GFP
+
+mCherry
+
+00
+
+01
+
+10
+
+11
+
+GFP
+
+2A
+
+mCherry
+
+11
+
+GFP 2A mCherry
+
+11
+
+GFP 2A mCherry
+
+Z11
+
+GFP
+
+mCherry
+
+GFP 2A mCherry
+
+00
+
+01
+
+10
+
+11
+
+Output
+functions
+Choose
+1 of 4 for
+
+each address
+
+= loxP
+
+= lox2272
+
+= FRT
+
+Truth
+table
+IN  OUT
+
+Averaged single-cell
+
+results
+MFI (a.u., 103)
+
+GFP
+
+ 
+
+10 20 30 40
+
+A
+Cre  
+
+B
+Flp  
+
+mCh   GFP  
+
+0
+
+mCherry
+15
+
+30
+
+ 
+
+0
+
+0 0 1 0
+
+1 0 1 1
+
+0 1 1 1
+1 1 0 1
+
+Circuit
+
+performance
+
+Truth table
+
+vector
+
+<0, 1, 1, 1, 1, 1, 1, 0>
+
+θ
+
+Signal vector
+
+<0.2, 20, 17, 20, 20, 20, 20, 1.5>
+
+8-D vector space
+
+GFP
+mCh
+GFP
+mCh
+GFP
+mCh
+GFP
+mCh
+GFP
+mCh
+GFP
+mCh
+GFP
+mCh
+GFP
+mCh
+
+GFP
+mCh
+GFP
+mCh
+GFP
+mCh
+GFP
+mCh
+GFP
+mCh
+GFP
+mCh
+GFP
+mCh
+GFP
+mCh
+
+` 
+
+Gate
+0
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+31
+
+32
+
+33
+
+34
+
+35
+
+36
+
+37
+
+38
+
+39
+
+40
+
+41
+
+42
+
+43
+
+44
+
+45
+
+46
+
+47
+
+48
+
+49
+
+50
+
+51
+
+52
+
+53
+
+54
+
+55
+
+56
+
+57
+
+δM
+
+δG
+
+h
+
+t
+
+u
+r
+T
+
+l
+
+e
+b
+a
+
+t
+
+d
+e
+g
+a
+r
+e
+v
+A
+
+l
+l
+
+e
+c
+-
+e
+g
+n
+s
+
+i
+
+l
+
+ 
+s
+t
+l
+
+u
+s
+e
+r
+
+1
+
+0
+
+1
+
+0
+
+1
+
+0
+
+1
+Angle θ
+
+0
+
+1
+
+1
+
+0
+
+0
+
+1
+
+1
+
+Gate
+
+58
+
+59
+
+60
+
+61
+
+62
+
+63
+
+64
+
+65
+
+66
+
+67
+
+68
+
+69
+
+70
+
+71
+
+72
+
+73
+
+74
+
+75
+
+76
+
+77
+
+78
+
+79
+
+80
+
+81
+
+82
+
+83
+
+84
+
+85
+
+86
+
+87
+
+88
+
+89
+
+90
+
+91
+
+92
+
+93
+
+94
+
+95
+
+96
+
+97
+
+98
+
+99
+
+100
+
+101
+
+102
+
+103
+
+104
+
+105
+
+106
+
+107
+
+108
+
+109
+
+110
+
+111
+
+112
+
+113
+
+0
+
+0
+
+1
+
+1
+
+0
+
+0
+
+1
+
+1
+
+0
+
+1
+
+0
+
+1
+
+0
+
+1
+
+0
+
+h
+
+t
+
+u
+r
+T
+
+l
+
+e
+b
+a
+
+t
+
+d
+e
+g
+a
+r
+e
+v
+A
+
+l
+l
+
+e
+c
+-
+e
+g
+n
+s
+
+i
+
+l
+
+s
+t
+l
+
+u
+s
+e
+r
+
+1
+Angle θ
+A
+
+B
+Flp
+
+Cre 
+IN
+Closer
+0°
+
+c
+
+r
+e
+
+t
+t
+
+e
+B
+
+s
+s
+e
+n
+
+t
+s
+u
+b
+o
+r
+ 
+l
+
+a
+n
+g
+S
+
+i
+
+e
+s
+r
+o
+W
+
+20
+
+15
+
+10
+
+5
+
+)
+
+3
+0
+1
+
+ 
+,
+.
+
+.
+
+u
+a
+(
+ 
+ 
+ 
+δ
+ 
+
+i
+
+e
+g
+n
+a
+r
+ 
+c
+m
+a
+n
+y
+d
+P
+F
+G
+
+ 
+
+GFP MFI
+(×103) 
+
+0
+
+20
+
+mCherry
+MFI (×103)
+
+0
+
+20
+
+Angle θ
+
+90°
+
+0°
+
+15°
+
+30°
+
+Logic similarity to in
+
+A
+
+n
+gle
+ 
+θ
+
+t
+e
+
+n
+
+d
+
+e
+
+d
+ 
+t
+r
+
+u
+
+t
+
+h
+
+60°
+
+ 
+t
+
+a
+
+b
+
+l
+
+e
+
+75°
+
+F
+u
+
+r
+
+t
+
+h
+e
+r
+
+90°
+
+OUT
+Closer
+
+0°
+
+15°
+
+)
+
+3
+0
+1
+
+ 
+,
+.
+
+.
+
+u
+a
+(
+
+ 
+ 
+δ
+
+r
+e
+
+t
+t
+
+e
+B
+
+s
+s
+e
+n
+
+t
+s
+u
+b
+o
+r
+ 
+l
+
+a
+n
+g
+S
+
+i
+
+e
+s
+r
+o
+W
+
+20
+
+15
+
+10
+
+5
+
+0
+
+30°
+
+Logic similarity to in
+
+A
+
+n
+gle
+ 
+θ
+
+t
+e
+
+n
+
+d
+
+e
+
+d
+ 
+t
+r
+
+u
+
+t
+
+60°
+
+h
+
+ 
+t
+
+a
+
+b
+
+l
+
+e
+
+75°
+
+F
+u
+
+r
+
+t
+
+h
+e
+r
+
+90°
+
+Figure 3  113 distinct gene circuits with up to two inputs and two outputs implemented using the 2-input BLADE template. (a) To generate 2-input, 
+2-ouput circuits, a 2-input BLADE template can be configured with different combinations of output functions: zero-output (transcription termination 
+sequence), one-output (GFP or mCherry) or two-output (GFP-T2A-mCherry). (b) A diverse library of >100 gene circuits, each shown as an individual 
+column with predicted truth table GFP/mCherry ON/OFF behavior (black, no output; green, GFP ON; red, mCherry ON) and corresponding experimental 
+averaged single-cell results obtained from flow cytometry. (c) Angles between each signal vector and corresponding intended truth table vectors are 
+plotted versus worst-case dynamic range values for GFP (δG) and mCherry (δM) signals. MFI, mean fluorescence intensity from n = 3 transfected cell 
+cultures; a.u., arbitrary units. Error bars, s.e.m.
+
+nature biotechnology  VOLUME 35  NUMBER 5  MAY 2017 
+
+457
+
+A r t i c l e s
+
+Name
+
+Boolean
+
+logic
+LUT
+
+Logic gate
+
+Architecture
+
+Z00
+
+GFP
+
+Z10
+
+Z01
+
+GFP
+
+GFP
+
+Z11
+
+GFP
+
+= loxP
+
+= FRT
+
+= B3RT
+
+= vox
+
+= lox2272
+
+= bxb1
+   attB/P
+
+= PhiC31
+   attB/P
+
+Logic gate
+
+Symbol
+
+Truth table
+
+IN
+
+OUT
+
+A
+Cre
+
+B
+Flp
+
+S1
+φC31
+
+S2
+Vika
+
+S3
+B3
+
+S4
+bxb1
+
+Logic
+
+GFP
+
+Averaged single
+
+cell results
+
+Mean FI (a.u., 103)
+
+GFP
+
+0
+
+10 20 30
+
+Truth table
+
+IN
+
+OUT
+
+A
+Cre
+
+B
+Flp
+
+S1
+φC31
+
+S2
+Vika
+
+S3
+B3
+
+S4
+bxb1
+
+Logic
+
+GFP
+
+Averaged single
+
+cell results 
+
+Mean FI (a.u., 103)
+
+GFP
+
+0 10 20 30
+
+A B
+
+1
+
+Boolean
+
+logic
+
+selection
+
+S1
+
+S2
+
+S4S3
+
+0
+
+1
+
+1
+
+1
+
+1
+
+0 0
+
+0
+
+0
+
+0 0
+
+1
+
+1
+
+1
+
+1
+
+0
+
+0
+
+1
+
+0
+
+1
+
+0
+
+0
+
+1
+
+1
+
+1
+
+0
+
+1 0
+
+1
+
+1
+
+0 0
+
+OR
+
+NOR
+
+AND
+
+NAND
+
+A
+
+B
+
+NOT A
+
+NOT B
+
+A
+B
+
+A
+B
+
+A
+B
+
+A
+B
+
+A
+
+B
+
+A
+
+B
+
+0
+0
+0
+1
+1
+0
+1
+1
+0
+0
+0
+1
+1
+0
+1
+1
+0
+0
+0
+1
+1
+0
+1
+1
+0
+0
+0
+1
+1
+0
+1
+1
+0
+0
+0
+1
+1
+0
+1
+1
+0
+0
+1
+0
+0 1 
+1
+1
+0
+0
+1
+0
+1
+0
+1
+1
+0
+0
+0
+1
+1
+0
+1
+1
+
+0
+1
+1
+1
+1
+0
+0
+0
+0
+0
+0
+1
+1
+1
+1
+0
+0
+1
+0
+1
+0
+0
+1
+1
+1
+0
+1
+0
+1
+1
+0
+0
+
+1
+
+0 1
+
+1
+
+1
+
+1 0
+
+1
+
+A IMPLY B
+
+B IMPLY A
+
+A
+B
+
+A
+B
+
+A NIMPLY B
+
+0
+
+1 0
+
+0
+
+A
+B
+
+B NIMPLY A
+
+0
+
+0 1
+
+0
+
+0
+
+1 1
+
+0
+
+1
+
+0 0
+
+1
+
+1
+
+1 1
+
+1
+
+0
+
+0 0
+
+0
+
+A
+B
+
+A
+B
+
+A
+B
+
+1
+
+1
+
+XOR
+
+XNOR
+
+TRUE
+
+FALSE
+
+0 0
+1 0
+0 1
+1 1
+0 0
+1 0
+0 1
+1 1
+0 0
+1 0
+0 1
+1 1
+0 0
+1 0
+0 1
+1 1
+0 0
+1 0
+0 1
+1 1
+0 0
+1 0
+0 1
+1 1
+0 0
+1 0
+0 1
+1 1
+0 0
+1 0
+0 1
+1 1
+
+1
+0
+1
+1
+1
+1
+0
+1
+0
+1
+0
+0
+0
+0
+1
+0
+0
+1
+1
+0
+1
+0
+0
+1
+1
+1
+1
+1
+0
+0
+0
+0
+
+Figure 4  Field-programmable storage and retrieval of logic and memory using a Boolean logic look-up table (LUT). The Boolean logic LUT is a  
+6-input-one-output genetic circuit that receives two data inputs, A and B, and is controlled by four select inputs, S1, S2, S3, and S4, producing an 
+output of GFP. The select inputs are used to change data input-output behavior; each combination configures the circuit to any of the 16 Boolean  
+logic gates. FI, fluorescence intensity from n = 3 independent transfections. Error bars, s.e.m.
+
+manufacturing, allowing users to program the function computed by 
+the circuit at a later time. We built a genetic FPROM circuit for living 
+cells termed a Boolean logic look-up table that is based on placing BUF 
+gates into the four addresses of the 2-input BLADE template (Fig. 4,  
+Supplementary Fig. 15, and Supplementary Table 7). This circuit 
+has two data inputs, A and B, and four select inputs, S1, S2, S3, and S4. 
+Each select input can control which buffer gates are transcriptionally 
+active or not (GFP ON or OFF). Thus, each combination of select 
+inputs configures the circuit to 1 of 16 possible Boolean logic gates 
+with up to two inputs and one output. For instance, an OR function 
+can be achieved using select inputs S2, S3, and S4, keeping address Z00 
+GFP OFF and setting addresses Z10, Z01, and Z11 GFP ON. Thus, this 
+circuit allows one to reconfigure the computation within living cells 
+without requiring additional DNA assembly. This circuit behaves as 
+expected in HEK293FT cells. To illustrate the flexibility of our system 
+in terms of recombinase choices, we created an alternative Boolean 
+logic look-up table (Supplementary Fig. 16).
+
+Arithmetic operations using BLADE
+Extending the BLADE framework further, we developed a 3-input 
+BLADE template for constructing sophisticated arithmetic functions  
+
+in human cells (Fig. 5a, Supplementary Figs. 17, and 18). This tem-
+plate responds to three inputs (Cre, Flp, and VCre) and contains eight 
+addresses for expression of up to eight distinct transcriptional out-
+puts. This design utilizes three different heterospecific sites for Cre 
+and Flp, but just one site for VCre. Three 3-input-2-ouput arithmetic  
+computational  circuits  were  made  and  tested  in  HEK293FT  cells 
+from the 3-input BLADE template (Fig. 5b, Supplementary Fig. 19, 
+and Supplementary Table 8). The full adder and full subtractor can 
+perform either binary addition or subtraction of three 1-bit inputs, 
+respectively. Furthermore, the half adder–subtractor is an arithmetic 
+FPROM circuit that can compute addition or subtraction on two data 
+inputs, A and B, depending on the presence of one select input C. 
+BLADE templates with more than three inputs can be generated by 
+using additional recombinases and heterospecific recombination sites 
+that follow a simple recursive design algorithm where recombinase 
+switches are nested within each other, yielding designs for imple-
+menting any N-input combinatorial logic function (Supplementary  
+Fig.  20).  This  non-intensive  computational  approach  produces 
+designs with the total number of recombination site pairs for N-inputs 
+being 2N − 1, for N ≥ 0; this is consistent with the 2N rows needed to 
+specify the truth table of an N-input function.
+
+458 
+
+VOLUME 35  NUMBER 5  MAY 2017  nature biotechnology
+
+A r t i c l e s
+
+= loxP
+
+= lox2272
+
+= loxN
+
+= F3
+
+= F14
+
+= FRT
+= VloxP
+
+Averaged single-
+
+cell results 
+Mean FI (a.u., 103)
+GFP
+20 40 60
+
+100
+
+0
+
+mCherry
+
+50
+
+a
+
+b
+
+Name
+
+Symbol
+
+3-input
+BLADE
+template
+
+A
+
+B
+
+C
+
+BLADE
+
+Logic gate
+
+Architecture
+
+Z000
+
+Z100
+
+Z010
+
+Z110
+
+Z001
+
+Z011
+
+Z101
+
+Z111
+
+Logic gate
+
+Name
+
+Symbol
+
+Architecture
+
+Full
+adder
+
+Full
+
+subtractor
+
+A
+
+B
+
+A
+
+B
+
+C
+
++
+
+P
+
+C
+
+–
+
+P
+
+A
+
+B
+
+C
+
+Half 
+adder -
+
+subtractor
+
++
+
+–
+
+Q
+
+Q
+
+Q
+
+P
+
+GFP
+
+GFP
+
+mCh
+
+GFP
+
+mCh
+
+mCh
+
+GFP 2A
+
+mCh
+
+GFP
+
+GFP 2A
+
+mCh
+
+GFP 2A
+
+mCh
+
+mCh
+
+GFP 2A
+
+mCh
+
+Addition
+
+GFP
+
+GFP
+
+mCh
+
+GFP 2A
+
+mCh
+
+GFP
+
+Subtraction
+
+Truth table
+
+IN
+B
+Flp
+
+A
+Cre
+
+OUT
+
+C
+
+VCre
+
+DEC
+
+P
+
+Q
+
+mCh
+
+GFP
+
+0
+
+0
+1
+0
+0
+1
+1
+0
+1
+0
+1
+0
+0
+1
+1
+0
+1
+0
+1
+0
+1
+0
+1
+0
+1
+
+0
+0
+1
+0
+1
+0
+1
+1
+0
+0
+1
+0
+1
+0
+1
+1
+0
+0
+1
+1
+0
+0
+1
+1
+
+0
+0
+1
+0
+1
+0
+1
+1
+2
+0
+2
+1
+2
+1
+3
+1
+0
+0
+1
+0
+0 –1
+–1
+1
+0
+0
+0
+1
+1 –2
+–1
+1
+0
+0
+1
+0
+1
+0
+2
+0
+0
+1
+1
+1
+1
+–1
+0
+1
+
+0
+0
+0
+0
+1
+1
+1
+1
+0
+0
+1
+1
+0
+0
+1
+1
+0
+0
+0
+1
+0
+0
+1
+0
+
+0
+1
+1
+1
+0
+0
+0
+1
+0
+1
+1
+1
+0
+0
+0
+1
+0
+1
+1
+0
+0
+1
+1
+0
+
+Figure 5  A 3-input BLADE template can be applied to create 3-input arithmetic computational circuits. (a) The 3-input BLADE template can receive 
+up to three inputs and produce eight distinct output functions. (b) Three 3-input-2-output binary arithmetic computational circuits made using the 
+3-input BLADE template. The full adder can add A + B + C while the full subtractor calculates A − B − C. For addition, input C, output P, and output 
+Q represent Carry In, Carry Out, and Sum, respectively. For subtraction, input C, output P, and output Q signify Borrow In, Borrow Out, and Difference, 
+respectively. The half adder-subtractor performs either binary addition of A + B or binary subtraction of A − B, depending on the presence of select input 
+C. FI, fluorescence intensity from n = 3 transfected cell cultures; a.u. = arbitrary units. Error bars, s.e.m.
+
+Small-molecule inputs for BLADE
+Next, we interfaced the BLADE system with biochemically relevant 
+inputs. To induce Cre recombination, an ERT2-Cre-ERT2 construct 
+was  used  whereby  a  mutated  estrogen  receptor  (ERT2)  secludes 
+Cre recombinase activity from the nucleus unless a small-molecule  
+4-hydroxytamoxifen (4OHT) is added, which permits translocation 
+of the fusion protein to the nucleus. For Flp induction, a split Flp 
+system was developed that induces Flp recombinase activity upon 
+phytohormone  abscisic  acid  (ABA)-induced  heterodimerization  
+(Fig.  6a,  Supplementary  Fig.  21,  and  Supplementary  Table  9). 
+Logical detection of these two small-molecule inputs was successful 
+using the 2-input BLADE decoder with minimal leaky recombinase 
+behavior in HEK293FT cells. Logic induction dynamics were char-
+acterized over the course of 48 h, which revealed early encoding of 
+logic and introduction of leaky recombinase behavior toward the end 
+of the time course (Supplementary Figs. 22, 23, and 24). A BLADE 
+decoder affords the ability to combinatorially select an exponential 
+number of DNA regions (e.g., eight regions via three inputs), which is 
+advantageous for the limited set of eukaryotic inducible systems.
+
+CRISPR–Cas9 combined with BLADE
+To test whether the BLADE system can be used to regulate endogenous 
+mammalian gene expression, we interfaced it with the CRISPR–Cas9 
+system  using  recombinase-based  excision  of  guide  RNA  (gRNA) 
+sequences. We first tested whether recombination sites or cloning scar 
+DNA sequences would affect the activity of a Cas9 transcription activa-
+tor (dCas9-VPR), as these sequences would be directly coded into RNA 
+fused to the gRNA. We found that these sequences (up to 136 bases) 
+added to the 5′ end of the gRNA had no detrimental effect on transcrip-
+tion activation of a mCherry reporter plasmid (Supplementary Fig. 25).  
+Next, the 2-input decoder was rebuilt to use an RNA polymerase III 
+human U6 promoter and guide RNAs (gRNAs) as addresses that target  
+promoters of four human endogenous genes (NGN2 (also known as 
+NEUROG2), MIAT, ACTC1, and TTN). These targets were chosen 
+because of their documented efficient gRNA activity32. This CRISPR-
+based 2-input decoder system was used for the transfection along with 
+a Cas9 transcription activator (dCas9–VPR)32, and recombinase activi-
+ties were induced with 4OHT and ABA (Fig. 6b and Supplementary  
+Tables 10 and 11). At the completion of the transient transfection of 
+
+nature biotechnology  VOLUME 35  NUMBER 5  MAY 2017 
+
+459
+
+A r t i c l e s
+
+HEK293FT cells, mRNA fold-changes of the target endogenous genes were 
+determined using quantitative real-time PCR and corresponded to the  
+2-input decoder truth table logic. Owing to the easy programmability  
+
+of the CRISPR–Cas9 system, this system will be very useful for genome-
+wide transcriptional reprogramming studies, entailing unprecedented 
+control of endogenous human genes and cell states.
+
+a
+
+Input
+
+Small biomolecules
+
+A = 4OHT
+
+Cytoplasm-localized
+
+ERT2-Cre-ERT2
+
+Nuclear-localized
+ERT2-Cre-ERT2
+
+ERT2
+
+Hsp90
+
+Cre
+
+Active Cre
+
+recombination
+
+B = ABA
+
+ABI
+
+PYL
+
+FlpO
+
+aa1-396
+
+Assembled
+
+DiFlpO396-ABA
+
+Active Flp
+
+recombination
+
+FlpO
+
+aa397-423
+
+Logic gate
+
+Name
+
+Symbol
+
+Architecture
+
+Logic gate
+
+Decoder
+
+2:4
+
+Output
+
+Fluorescent proteins
+
+BFP
+
+GFP
+
+iRFP
+
+mRb
+
+Truth table
+
+IN
+
+OUT
+
+Averaged single-cell results
+
+MFI (a.u., 103)
+
+A
+
+B
+
+4OHT
+
+ABA
+
+BFP GFP iRFP mRb
+
+BFP
+5
+
+0
+
+GFP
+
+iRFP
+
+mRuby
+
+10
+
+0
+
+7
+
+14
+
+0 5 10 15
+
+0 7 14 21 28
+
+CAG
+
+BFP
+
+GFP
+
+iRFP
+
+mRuby
+
+= loxP
+
+= lox2272
+
+= FRT
+
+0
+
+1
+
+0
+
+1
+
+0
+
+0
+
+1
+
+1
+
+1
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+1
+
+0
+
+0
+
+0
+
+0
+
+1
+
+Logic gate
+CRISPR decoder
+
+2:4
+
+RNA-programmable
+
+transcription
+
+activator
+
+VPR
+
+dCas9
+
+guide RNAs
+
+Output
+
+Human genomic targets
+
+Chr4
+
+NGN2
+
+Chr22
+
+MIAT
+
+Chr15
+
+ACTC1
+
+Chr2
+
+TTN
+
+2-input
+decoder
+
+A
+
+B
+
+2:4
+
+b
+
+Input
+
+Small biomolecules
+
+A = 4OHT
+
+Cytoplasm-localized
+
+ERT2-Cre-ERT2
+
+ERT2
+
+Hsp90
+
+Cre
+
+Nuclear-localized
+ERT2-Cre-ERT2
+
+Active Cre
+
+recombination
+
+ABI
+
+B = ABA
+
+FlpO
+
+aa1-396
+
+Assembled
+
+DiFlpO396-ABA
+
+PYL
+
+FlpO
+
+aa397-423
+
+Active Flp
+
+recombination
+
+Logic gate
+
+Truth table
+
+Averaged population results
+
+Name
+
+Symbol
+
+Architecture
+
+IN
+
+OUT
+
+Relative fold change in mRNA expression
+
+A 
+4OHT
+
+B 
+ABA
+
+NGN2  MIAT  ACTC1  TTN 
+
+NGN2
+
+MIAT
+
+ACTC1
+
+TTN
+
+0
+
+10
+
+20 0 20 40 60 0 25 50 75100 0
+
+200 400
+
+2-input
+CRISPR
+decoder
+
+A
+
+B
+
+2:4
+
+hU6
+
+RNApIII
+
+CMV
+
+RNApII
+
+gNGN2
+
+gMIAT
+
+gACTC1
+
+gTTN
+
+= loxP
+
+= FRT
+
+dCas9
+
+VPR
+
+= lox2272
+
+0  0  1 
+
+1  0  0 
+
+0  1  0 
+
+1  1  0 
+
+0 
+
+1 
+
+0 
+
+0 
+
+0 
+
+0 
+
+1 
+
+0 
+
+0 
+
+0 
+
+0 
+
+1 
+
+Figure 6  Interfacing BLADE with biologically relevant inputs and outputs. (a) Small molecules, 4-hydroxytamoxifen (4OHT), and abscisic acid (ABA) are 
+used to induce Cre and Flp recombination activities, respectively, on a decoder circuit containing four fluorescent protein outputs. Chemical induction of 
+Cre recombination is achieved through 4OHT-mediated translocation of a Cre protein fused to mutated estrogen nuclear receptors (ERT2) from the cytoplasm 
+to the nucleus. Chemical induction of Flp recombination is achieved through a split Flp recombinase construct fused to ABA-binding domains ABI and PYL. 
+Mean fluorescence intensity (MFI) is plotted from n = 3 transfected cell cultures; error bars indicate the s.e.m. (b) Small molecules, 4OHT and ABA, are 
+used to induce Cre and Flp recombination activities on a decoder circuit interfaced with a dCas9-VPR (VP64, p65, Rta) transcription activator. Four human 
+genomic promoters are targets for activation via association of corresponding guide RNAs (gRNA) with dCas9-VPR. Total RNA was collected, and averaged 
+relative fold-changes in target mRNA expression were obtained through quantitative real-time PCR of n = 3 transfected cell cultures. Error bars, s.e.m.
+
+460 
+
+VOLUME 35  NUMBER 5  MAY 2017  nature biotechnology
+
+DISCUSSION
+The BLADE system can generate multiple, complex genetic circuits. 
+We used BLADE to build >100 functionally distinct circuits, most of 
+which have never, to our knowledge, been documented before in any 
+living organism.
+
+Most of our circuits had the intended logic, as quantified by the VP 
+metrics that we devised to quantitate their performance. BLADE can 
+be used to regulate mRNA and gRNA expression, too. When combined 
+with drug-inducible control of recombinase activity, we were able to 
+conditionally regulate gene expression and cell states. We created a 
+split Flp protein whose activity can be reconstituted with chemically 
+inducible dimerization systems. This split Flp configuration could be 
+valuable to animal geneticists to complement existing Cre systems. 
+Furthermore, we showed that BLADE works in different cell types 
+including embryonic kidney and Jurkat T cells. Key attributes of the 
+BLADE system are summarized in Supplementary Table 12.
+
+Composition  of  simple  gates  into  large  hierarchies  of  modules 
+has been successful in electronic circuit design because components  
+are  physically  separated  from  each  other,  allowing  reuse  of  well- 
+characterized and high-performing parts. This has enabled comput-
+ing circuits with extremely predictable behaviors to be built. However, 
+applying an electrical engineering strategy to synthetic biology has 
+proven difficult owing to an incomplete understanding of how differ-
+ent components behave when connected together in a single cell17,33, 
+even when the components are designed to be ‘plug and play’. As a 
+result, aside from selected examples14,34, only a handful of synthetic 
+multi-input-multi-output circuits have been reported.
+
+Furthermore,  a  multi-layer  circuit  design  requires  orthogonal 
+biological ‘wires’ to link each layer, and these wires have unpredict-
+able properties. In order to solve this problem, much effort has been 
+devoted to parts development35,36 at the expense of circuit design. 
+Detailed characterization of components, together with standards 
+and design automation programs may improve predictability of the 
+interoperability of different parts18,31.
+
+The BLADE system is enabled by the unique chemistry of recombi-
+nases (DNA rearrangement). The same recombinase can activate and 
+inhibit gene expression simultaneously in the same transcription unit 
+with equal efficiency, a feature that is very difficult to accomplish with 
+transcription factors. This feature allowed us to design the BLADE 
+system in a single layer (single transcription unit) to implement any 
+combinatorial Boolean logic, provided that a sufficient number of 
+recombinases and heterospecific sites are available.
+
+We define the number of layers in a computing circuit as the maxi-
+mum number of states along the shortest path in any computation. 
+By ‘single-layer’, we connote the following property unique to BLADE 
+designs. Unlike other circuit architectures, there is no need for a 
+‘molecular wire’ to communicate the results of a sub-computation 
+in one part of the circuit to any other part of the circuit: the inputs 
+themselves communicate information throughout a computation. 
+Our single-layer BLADE system requires only a few proteins to carry 
+out a large set of complex logical operations in mammalian cells. 
+Single-layer circuits do not need the output signal levels of one gate 
+to be tuned, or matched, to the input signal levels of another. One 
+trade-off of a single-layer design is that the performance of a circuit 
+cannot be predicted based on the property of its components.
+
+Some circuits did not pass our stringent VP global rank metric 
+evaluation; however, all circuits yielded results that had close align-
+ment with their intended truth table. A potential source of underper-
+formance could arise from interference of recombinase site sequences 
+on  ribosome  activities  (e.g.,  hair-pinning  hampering  translation 
+initiation or cryptic translation initiation sequences). The RNA Pol 
+
+A r t i c l e s
+
+III/CRISPR-based BLADE system could be an attractive circuit design 
+to explore since gRNA or other regulatory RNA outputs are not sub-
+jected to translation-based failure modes.
+
+Transcription-factor-based  genetic  circuits  have  been  widely 
+adopted in synthetic circuit designs18,37–39 because natural genetic 
+circuits, which often serve as the inspiration for synthetic circuit 
+designs, are mainly implemented using transcription factors. Only 
+a few microbial pathways use recombinases (e.g., fim invertase in 
+Escherichia  coli)40,41.  Unlike  transcription-factor-based  circuits, 
+recombinase-based  circuits  are  single-use  systems,  which  cannot 
+monitor  dynamic  input  signals.  However,  recombinases  are  par-
+ticularly useful for engineering logic behaviors. Furthermore, upon 
+integration into a genome, recombinase-based systems can provide 
+stable memory and have been used in numerous experiments, such 
+as in tissue-specific gene expression experiments in which memory 
+of tissue- or condition-specific inputs that result in sustained gene 
+expression (or knockout) is desirable. In addition, serine integrases 
+have been used to develop temporal logic state machines in bacteria 
+in which the circuits sense and ‘remember’ the order in which signal 
+inputs occur42,43. It is conceivable that those designs could be refac-
+tored to function in mammalian cells. It is also possible to modify 
+the BLADE system to carry out temporal logic computations, thus 
+enabling the use of the more widely adopted tyrosine recombinases 
+in a single-layer circuit topology. The prevalence of recombinases in 
+different systems and organisms shows that single-use systems are 
+often sufficient for biomedical or biotechnological applications23,44.
+Genome mining has been performed to uncover and test a large 
+set of serine integrases45, and many putative recombinases remain to 
+be characterized from structural identification in genome sequence 
+databases. Furthermore, efforts have been made to design and imple-
+ment recombinases that can be made to recombine different DNA 
+sequences through fusion of recombinase catalytic domains to pro-
+grammable DNA-binding proteins, such as zinc finger, transcription 
+activator-like effector (TALE), and Cas9 sequences46–48; generation of 
+chimeric recombinases49; or alteration of specificity through molecu-
+lar evolution experiments50. Therefore, we envision that an unlim-
+ited set of recombinase parts are likely available for incorporation 
+with BLADE to create biocomputation circuits with unprecedented 
+sophistication.
+
+METhODS
+Methods, including statements of data availability and any associated 
+accession codes and references, are available in the online version of 
+the paper.
+
+Note: Any Supplementary Information and Source Data files are available in the 
+online version of the paper. 
+
+ACkNoWLEDgmENTS
+B.H.W. acknowledges funding from the NSF Graduate Research Fellowship 
+Program (DGE-1247312) and an NIH/NIGMS fellowship (T32-GM008764). 
+S.B. was supported in part by the National Science Foundation Expeditions in 
+Computing Award No. 1522074, which is part of the “Living Computing Project” 
+(https://www.programmingbiology.org/). W.W.W. acknowledges funding from 
+the NIH Director’s New Innovator Award (1DP2CA186574), NSF Expedition 
+in Computing (1522074), NSF CAREER (162457), NSF BBSRC (1614642), and 
+Boston University College of Engineering Dean’s Catalyst Award. We thank 
+C. Bashor, D. Chakravarti, N. Patel, and S. Slomovic for suggestions on the 
+manuscript; A. Belkina and T. Haddock for flow cytometry assistance; J. Torella 
+for help with UNS-guided assembly; and M. Park and J. Eyckmans for RT-qPCR 
+assistance. A. Nagy for the kind gift of the Dre construct.
+
+AUTHoR CoNTRIBUTIoNS
+B.H.W. made molecular and cellular reagents, performed experiments, analyzed 
+data and generated all figures. S.B. conceived the vector proximity analyses for 
+
+nature biotechnology  VOLUME 35  NUMBER 5  MAY 2017 
+
+461
+
+A r t i c l e s
+
+circuit performance and developed the datasheets attribution and website. B.H.W. 
+and S.B. developed and performed the vector proximity analyses. L.D.C., N.T.H.P., 
+T.L., and A.E. made molecular and cellular reagents and performed preliminary 
+experiments. B.H.W. and W.W.W. conceived the project. B.H.W., S.B., and W.W.W. 
+wrote the paper. All authors commented on and approved the paper. 
+
+COMPETING FINANCIAL INTERESTS
+The authors declare competing financial interests: details are available in the online 
+version of the paper.
+
+reprints and permissions information is available online at http://www.nature.com/
+reprints/index.html.
+
+Publisher’s note: springer Nature remains neutral with regard to jurisdictional claims 
+in published maps and institutional affiliations.
+
+1.  Khalil, A.S. & Collins, J.J. Synthetic biology: applications come of age. Nat. Rev. 
+
+Genet. 11, 367–379 (2010).
+
+2.  Wei, P. et al. Bacterial virulence proteins as tools to rewire kinase pathways in yeast 
+
+and immune cells. Nature 488, 384–388 (2012).
+
+3.  Roybal, K.T. et al. Precision tumor recognition by T cells with combinatorial antigen-
+
+sensing circuits. Cell 164, 770–779 (2016).
+
+4.  Chakravarti, D. & Wong, W.W. Synthetic biology in cell-based cancer immunotherapy. 
+
+Trends Biotechnol. 33, 449–461 (2015).
+
+5.  Xie,  M.  et  al.  β-cell-mimetic  designer  cells  provide  closed-loop  glycemic  control. 
+
+Science 354, 1296–1301 (2016).
+
+6.  Slomovic, S. & Collins, J.J. DNA sense-and-respond protein modules for mammalian 
+
+transcription functions. Cell 150, 647–658 (2012).
+
+23. Nagy, A. Cre recombinase: the universal reagent for genome tailoring. Genesis 26, 
+
+99–109 (2000).
+
+24. Lee,  G.  &  Saito,  I.  Role  of  nucleotide  sequences  of  loxP  spacer  region  in  Cre-
+
+mediated recombination. Gene 216, 55–65 (1998).
+
+25. Siuti, P., Yazbek, J. & Lu, T.K. Synthetic circuits integrating logic and memory in 
+
+living cells. Nat. Biotechnol. 31, 448–452 (2013).
+
+26. Bonnet, J., Yin, P., Ortiz, M.E., Subsoontorn, P. & Endy, D. Amplifying genetic logic 
+
+gates. Science 340, 599–603 (2013).
+
+27. Schönhuber,  N.  et  al.  A  next-generation  dual-recombinase  system  for  time-  
+and  host-specific  targeting  of  pancreatic  cancer.  Nat.  Med.  20,  1340–1347 
+(2014).
+
+28. Shannon, C.E. The synthesis of two-terminal switching circuits. Bell Syst. Tech. J. 
+
+28, 59–98 (1949).
+
+29. Torella,  J.P.  et  al.  Rapid  construction  of 
+
+insulated  genetic  circuits  via  
+synthetic sequence-guided isothermal assembly. Nucleic Acids Res. 42, 681–689 
+(2014).
+
+30. Torella, J.P. et al. Unique nucleotide sequence-guided assembly of repetitive DNA 
+
+parts for synthetic biology applications. Nat. Protoc. 9, 2075–2089 (2014).
+
+31. Canton,  B.,  Labno,  A.  &  Endy,  D.  Refinement  and  standardization  of  synthetic 
+
+biological parts and devices. Nat. Biotechnol. 26, 787–793 (2008).
+
+32. Chavez,  A.  et  al.  Highly  efficient  Cas9-mediated  transcriptional  programming.  
+
+Nat. Methods 12, 326–328 (2015).
+
+33. Jayanthi, S., Nilgiriwala, K.S. & Del Vecchio, D. Retroactivity controls the temporal 
+
+dynamics of gene transcription. ACS Synth. Biol. 2, 431–441 (2013).
+
+34. Ausländer,  S.,  Ausländer,  D.,  Müller,  M.,  Wieland,  M.  &  Fussenegger,  M. 
+Programmable  single-cell  mammalian  biocomputers.  Nature  487,  123–127 
+(2012).
+
+35. Khalil,  A.S.  et  al.  A  synthetic  biology  framework  for  programming  eukaryotic 
+
+36. Green, A.A., Silver, P.A., Collins, J.J. & Yin, P. Toehold switches: de-novo-designed 
+
+regulators of gene expression. Cell 159, 925–939 (2014).
+
+37. Gardner, T.S., Cantor, C.R. & Collins, J.J. Construction of a genetic toggle switch 
+
+in Escherichia coli. Nature 403, 339–342 (2000).
+
+38. Stricker, J. et al. A fast, robust and tunable synthetic gene oscillator. Nature 456, 
+
+516–519 (2008).
+
+39. Elowitz,  M.B.  &  Leibler,  S.  A  synthetic  oscillatory  network  of  transcriptional 
+
+regulators. Nature 403, 335–338 (2000).
+
+40. Johnson, R.C. in Mobile DNA II (eds. Craig, N., Craigie, R., Gellert, M. & Lambowitz, A.)  
+
+230–271 (American Society of Microbiology, 2002).
+
+41. Blomfield,  I.C.  The  regulation  of  pap  and  type  1  fimbriation  in  Escherichia  coli. 
+
+Adv. Microb. Physiol. 45, 1–49 (2001).
+
+42. Roquet,  N.,  Soleimany,  A.P.,  Ferris,  A.C.,  Aaronson,  S.  &  Lu,  T.K.  Synthetic 
+recombinase-based state machines in living cells. Science 353, aad8559 (2016).
+43. Hsiao, V., Hori, Y., Rothemund, P.W. & Murray, R.M. A population-based temporal 
+logic  gate  for  timing  and  recording  chemical  events.  Mol.  Syst.  Biol.  12,  869 
+(2016).
+
+44. Branda, C.S. & Dymecki, S.M. Talking about a revolution: The impact of site-specific 
+
+recombinases on genetic analyses in mice. Dev. Cell 6, 7–28 (2004).
+
+45. Yang, L. et al. Permanent genetic memory with >1-byte capacity. Nat. Methods 11, 
+
+1261–1266 (2014).
+
+46. Mercer, A.C., Gaj, T., Fuller, R.P. & Barbas, C.F. III. Chimeric TALE recombinases 
+with  programmable  DNA  sequence  specificity.  Nucleic  Acids  Res.  40,  
+11163–11172 (2012).
+
+47. Sirk,  S.J.,  Gaj,  T.,  Jonsson,  A.,  Mercer,  A.C.  &  Barbas,  C.F.  III.  Expanding  the 
+zinc-finger  recombinase  repertoire:  directed  evolution  and  mutational  analysis  of 
+serine  recombinase  specificity  determinants.  Nucleic  Acids  Res.  42,  4755–4766 
+(2014).
+
+48. Chaikind, B., Bessen, J.L., Thompson, D.B., Hu, J.H. & Liu, D.R. A programmable 
+Cas9-serine  recombinase  fusion  protein  that  operates  on  DNA  sequences  in 
+mammalian cells. Nucleic Acids Res. 44, 9758–9770 (2016).
+
+49. Shaikh, A.C. & Sadowski, P.D. Chimeras of the Flp and Cre recombinases: tests of 
+
+the mode of cleavage by Flp and Cre. J. Mol. Biol. 302, 27–48 (2000).
+
+50. Karpinski,  J.  et  al.  Directed  evolution  of  a  recombinase  that  excises  the  provirus 
+of most HIV-1 primary isolates with high specificity. Nat. Biotechnol. 34, 401–409 
+(2016).
+
+cells. Nat. Methods 12, 1085–1090 (2015).
+
+7.  Courbet, A., Endy, D., Renard, E., Molina, F. & Bonnet, J. Detection of pathological 
+biomarkers  in  human  clinical  samples  via  amplifying  genetic  switches  and  logic 
+gates. Sci. Transl. Med. 7, 289ra83 (2015).
+
+8.  Fenno, L.E. et al. Targeting cells with single vectors using multiple-feature Boolean 
+
+logic. Nat. Methods 11, 763–772 (2014).
+
+9.  Madisen, L. et al. Transgenic mice for intersectional targeting of neural sensors and 
+
+effectors with high specificity and performance. Neuron 85, 942–958 (2015).
+
+10. Ro,  D.K.  et  al.  Production  of  the  antimalarial  drug  precursor  artemisinic  acid  in 
+
+engineered yeast. Nature 440, 940–943 (2006).
+
+11. Bogorad,  I.W.,  Lin,  T.S.  &  Liao,  J.C.  Synthetic  non-oxidative  glycolysis  enables 
+
+complete carbon conservation. Nature 502, 693–697 (2013).
+
+12. Gaber,  R.  et  al.  Designable  DNA-binding  domains  enable  construction  of  logic 
+
+circuits in mammalian cells. Nat. Chem. Biol. 10, 203–208 (2014).
+
+13. Xie,  Z.,  Wroblewska,  L.,  Prochazka,  L.,  Weiss,  R.  &  Benenson,  Y.  Multi-input  
+RNAi-based  logic  circuit  for  identification  of  specific  cancer  cells.  Science  333, 
+1307–1311 (2011).
+
+14. Guinn, M. & Bleris, L. Biological 2-input decoder circuit in human cells. ACS Synth. 
+
+Biol. 3, 627–633 (2014).
+
+15. Weber, W. et al. A synthetic time-delay circuit in mammalian cells and mice. Proc. 
+
+Natl. Acad. Sci. USA 104, 2643–2648 (2007).
+
+16. Regot,  S.  et  al.  Distributed  biological  computation  with  multicellular  engineered 
+
+networks. Nature 469, 207–211 (2011).
+
+17. Brophy,  J.A.  &  Voigt,  C.A.  Principles  of  genetic  circuit  design.  Nat.  Methods  11, 
+
+508–520 (2014).
+
+18. Nielsen,  A.A.  et  al.  Genetic  circuit  design  automation.  Science  352,  aac7341 
+
+(2016).
+
+19. Appleton, E., Tao, J., Haddock, T. & Densmore, D. Interactive assembly algorithms 
+
+for molecular cloning. Nat. Methods 11, 657–662 (2014).
+
+20. Rodrigo,  G.  &  Jaramillo,  A.  AutoBioCAD:  full  biodesign  automation  of  genetic 
+
+circuits. ACS Synth. Biol. 2, 230–236 (2013).
+
+21. Huynh,  L.,  Kececioglu,  J.,  Köppe,  M.  &  Tagkopoulos,  I.  Automatic  design  of 
+synthetic  gene  circuits  through  mixed  integer  non-linear  programming.  PLoS  One 
+7, e35529 (2012).
+
+22. Stanton, B.C. et al. Genomic mining of prokaryotic repressors for orthogonal logic 
+
+gates. Nat. Chem. Biol. 10, 99–105 (2014).
+
+462 
+
+VOLUME 35  NUMBER 5  MAY 2017  nature biotechnology
+
+ONLINE METhODS
+DNA assembly. All constructs were transformed and maintained in Top10 
+Escherichia coli competent cells (Life Technologies) at 37 °C or 30 °C before 
+miniprep (Epoch Life Sciences) or midiprep (Macherey Nagel). All plasmids 
+were created using standard molecular biology practices of ligation, digestion 
+and transformation, in addition to Gibson isothermal assembly and Unique 
+Nucleotide Sequence (UNS) Guided assembly (a modular extension of Gibson 
+assembly), where  DNA  fragments that  are  to  be  connected  to each  other  
+are flanked by short homology sequences and are then fused together by a 
+one-pot  isothermal  digestion,  polymerization,  and  ligation  reaction.  This 
+latter strategy permits a modular, easy, efficient, and fast framework for con-
+struction of DNA. In UNS-guided assembly, the homology sequences have 
+been standardized (e.g., U1, U2, U3…UX) and have been computationally 
+optimized for proper assembly (reduction of hairpins, sequence homology, 
+and GC tracts) and ease of use (no start codons or useful restriction sites). 
+Genetic cassettes that are to be connected are cloned into part vectors, which 
+contain the UNSes that surround the insert. Part vectors are then sequenced-
+verified using Sanger sequencing (Quintara Biosciences). Restriction digests 
+and gel purifications are then performed to isolate the cassettes flanked with 
+the  UNSes.  Finally,  these  products  are  joined  to  a  linearized  destination  
+vector  via  Gibson  isothermal  assembly.  For  the  113  circuits  displayed  in  
+Figure 3, analytical PCRs were performed to verify inserts were assembled  
+correctly through amplifications across the UNS sequences. Construction 
+details are elaborated in Supplementary Figs. 5,7 and 18.
+
+Maintenance and transient DNA transfection of HEK293FT cells. DNA 
+was transfected into the human embryonic kidney cell line (HEK293FT) 
+using a polyethylenimine (PEI) protocol. Cells were plated onto 48- (250 µL) 
+or 96-well (100 µL) plates the day before transfection (200,000 cells/mL), 
+such  that  the  cells  were  50–70%  confluent  the  day  of  transfection.  Cells 
+were kept in a humidified incubator at 37 °C and 5% CO2 and maintained 
+in DMEM medium (Corning) with 10% heat-inactivated fetal bovine serum 
+(Life Technologies), 50 UI/mL penicillin, 50 µg/mL streptomycin (Corning), 
+2 mM glutamine (Corning) and 1 mM sodium pyruvate (Lonza). PEI stocks 
+were made from linear polyethylenimine (Polysciences 23966-2) and were 
+dissolved at a concentration of 0.323 g/L in deionized water with the assist-
+ance of concentrated hydrochloric acid and sodium hydroxide and then steri-
+lized through filtration (0.22 µm). PEI stocks were stored at −80 °C until use 
+and warmed to room temperature before usage. For 48-well plate transfec-
+tions, DNA (1,000 ng, 50 ng/µL) was dissolved and brought up to a volume 
+of 50 µL using 0.15 M sodium chloride (NaCl, Fisher Scientific). DNA-NaCl 
+solutions were then mixed with 50 µL of a PEI-NaCl mixture (8 µL PEI: 
+42 µL NaCl). These solutions were then incubated at room temperature for  
+10 min, and 25 µL was carefully dropped into individual wells of HEK293FT 
+cells (250 ng DNA/well). Similarly, for 96-well-plate transfections, DNA (500 ng,  
+50 ng/µL) was dissolved and brought up to a volume of 25 µL using 0.15 M 
+sodium chloride (NaCl). DNA-NaCl solutions were then mixed with 25 µL 
+of a PEI-NaCl (4 µL PEI: 21 µL NaCl) mixture. These solutions were then 
+incubated at room temperature for 10 min, and 10 µL was carefully dropped 
+into individual wells of HEK293FT cells (100 ng DNA/well). Electronic space-
+adjustable multichannel pipettors (Integra Biosciences) were used throughout 
+the process for rapid aspiration and dispensing of molecular and cellular rea-
+gents. A Countess II image-based cell counter (Life Technologies) was used 
+for measuring human cell population densities.
+
+Small-molecule chemical induction. 1,000× stock small-molecule abscisic 
+acid (100 mM, Sigma Aldrich), doxycycline (200 µg/mL, Fisher Scientific), and 
+4-hydroxytamoxifen (1 mM, Sigma Aldrich) were dissolved in 100% ethanol 
+and stored at recommended temperatures. For transient transfection induction 
+experiments, 2 h after transfection, small molecules were mixed with mamma-
+lian cell medium such that the concentrations were 25×; then, proper volumes 
+were dispensed into wells such that the final concentration was 1×.
+
+Maintenance  and  generation  of  stable  Jurkat  T  lymphocytes  through 
+electroporation,  piggyBac-mediated  integration,  eukaryotic  selection, 
+and doxycycline induction. Wild-type Jurkat T-lymphocyte cells were kept 
+
+in a humidified incubator at 37 °C and 5% CO2 and maintained in RPMI 
+medium (Corning) with 5% heat-inactivated fetal bovine serum (HI-FBS, Life 
+Technologies), 50 UI/mL penicillin, 50 µg/mL streptomycin (Corning), and  
+2 mM glutamine (Corning). Prior to electroporation, cells were changed with 
+medium containing 10% HI-FBS and without antibiotics. On days of transfec-
+tion, cells were checked to be within 5–8 × 105 cells/mL and 2 × 107 cells were 
+spun down at 300g and resuspended in 300 µL medium per transfection. Cell 
+solutions were mixed with 20 µg transposon vector and 4 µg of transposase 
+(pCAG-SuperPBase, pBW900). After 15 min of room temperature incubation, 
+DNA/cell mixtures were transferred to a 4-mm electroporation cuvette and 
+electroporated in a Harvard Apparatus BTX instrument using a single pulse 
+300 V square wave for 10 msec. Cells were then transferred to 10% HI-FBS 
+medium without antibiotics and placed into the incubator. One to two days 
+later, cells were spun down and resuspended in medium with 5% HI-FBS with 
+antibiotic and antieukaryotic chemicals. Puromycin (Thermo Scientific) was 
+used at a final concentration of 2 µg/mL and zeocin (Invivogen) at 400 µg/mL. 
+Antieukaryotic selections were performed for at least 10 d before removing 
+antieukaryotic compounds.
+
+For  the  experiment  in  Figure  2b,  the  decoder  recombinase  reporter 
+(pBW2293) was first integrated and selected with zeocin; then, recombinase 
+expression vectors (hPGK-iCre, hPGK-FlpO, hPGK-FlpO-2A-iCre) were inte-
+grated and selected for with puromycin in duplicate (n = 2). After final stable 
+line generation, 300,000 Jurkat cells of each line were spun down and resus-
+pended in doxycycline or ethanol-containing medium. Cells were maintained 
+in respective media for a given amount of time (14 d in ethanol and then with 
+or without doxycycline for 3 d in Figure 2b, square points in Supplementary 
+Fig. 11) and then run for cytometric readings.
+
+Flow cytometry. Two days after transfection and after trypsinization (0.05% 
+Trypsin/0.53 mM EDTA, Corning) and resuspension, all HEK293FT cell popu-
+lations were analyzed using a Becton Dickinson (BD) LSRFortessa SORP flow 
+cytometer with high-throughput sampler, except for data in Figure 5, which 
+were recorded on a BD LSRII. Time-course data were obtained through trypsini-
+zation and fixation of cells at particular time points (BD Cytofix) and kept at  
+4 °C until analyzed through flow cytometry. The LSRFortessa was equipped f 
+or  detection  of  EGFP  (488  nm  laser,  530/30  emission  filter,  505  longpass 
+dichroic mirror), tagBFP (405 nm laser, 450/50 emission filter), mCherry or 
+mRuby2 (561 nm, 610/20 emission filter, 595 longpass dichroic mirror), iRFP-
+720 (637 nm laser, 730/45 emission filter, 685 longpass dichroic mirror), and 
+LSS-mOrange (405 nm, 610/20 emission filter, 535 longpass dichroic mirror). 
+The LSRII was similarly equipped for detection of EGFP, tagBFP, mCherry and 
+mRuby2, but with additional channels for iRFP-720 (633 nm laser, 720/40 emis-
+sion filter, 710 longpass dichroic mirror) and LSS-mOrange (405 nm, 590/35 
+emission filter, 505 longpass dichroic mirror). All Jurkat T-lymphocyte experi-
+ments were run using a Life Technologies Attune Nxt 4-laser acoustic focusing 
+flow cytometer. The Attune Nxt was equipped for detection of EGFP (488 nm 
+laser, 510/10 emission filter), tagBFP (405 nm laser, 440/50 emission filter), 
+mRuby2 (561 nm, 585/16 emission filter), iRFP-720 (638 nm laser, 720/30 
+emission filter) and LSS-mOrange (405 nm, 603/48 emission filter).
+
+A gate was applied on forward scatter (FSC-A) and side scatter (SSC-A) to 
+remove debris from cell populations in FlowJo (Tree Star) (Supplementary  
+Fig.  26).  pCAG-tagBFP  or  pCAG-LSS-mOrange  plasmids  were  used  as 
+HEK293FT transient transfection markers and were gated for by applying a 
+gate on the top 0–0.1% wild-type cells in those channels. Figure plots represent 
+at least 5,000 events in the transfected cell subset. Compensation was applied 
+for four and five-color experiments (Supplementary Figs. 27,28, and 29).  
+No gates other than a viable cell FSC/SSC were applied for Jurkat T-lymphocyte 
+stable line experiments. To demonstrate the digital ON/OFF behavior of the 
+genetic circuits, main text plots have additionally been expressed as a percent-
+age of cells in an ON state through application of gates in fluorescent protein 
+channels. Gates were chosen per experiment in an arbitrarily defined manner, 
+but applied uniformly for all samples in each experiment (Supplementary 
+Figs. 1,6,13,15,19, and 21).
+
+Quantitative  real-time  PCR  analysis.  RNA  was  extracted 
+from  
+HEK293FT cells using the Qiagen RNeasy Plus Mini kit. 500 ng of RNA was 
+
+doi:10.1038/nbt.3805
+
+nature biotechnology
+
+reverse-transcribed into cDNA using qScript cDNA SuperMix 20 µL reac-
+tion kit (Quanta BioSciences). cDNA samples were diluted to 100 µL using 
+diethyl pyrocarbonate (DEPC)-treated water. Next, 5 µL of diluted cDNA 
+was  amplified  using  primers  (Supplementary  Table  11)  through  the  use 
+of the LightCycler 480 SYBR Green I Master polymerase kit (Roche) and a 
+LightCycler 480 Instrument II (Roche). Relative fold-changes were determined 
+using the ∆∆Ct method.
+
+Vector proximity computational analysis. Each desired 2-input 2-output 
+Boolean  function  corresponded  to  a  truth  table  with  four  rows  and  two  
+output  columns.  The  two  output  columns  in  each  desired  Boolean  func-
+tion f were mapped to an 8-dimensional binary vector t, which we call the  
+truth table vector. The fluorescent reporter signals measured from each of  
+the two outputs, for each of the four input conditions from every genetic  
+circuit implementation, were also mapped to an 8-dimensional real vector 
+s, which we call the signal vector. An ‘ideal implementation’ of t is a circuit  
+whose signal vector satisfies the equation s = c · t, for some positive real 
+number c. We quantified the correctness of a genetic circuit implementing 
+Boolean function f by computing the angle θ between the vectors t and s using 
+the formula 
+
+q =
+
+
+−cos 1 x
+
+y
+
+
+
+
+,
+
+where 
+
+x
+
+=
+
+8
+=Σ 1
+t
+i
+
+i
+
+⋅
+
+ˆ , y
+s
+i
+
+=
+
+Σ
+
+8
+i
+
+=
+
+2
+i
+
+t
+1
+
+⋅
+
+Σ
+
+8
+i
+
+=
+
+2ˆ ,
+s
+i
+1
+
+and ti and si are the i-th components of the vectors t and s. In computing θ, we 
+capped the signal values si to a maximum of 2 × 104 a.u., denoted by ˆsi in the 
+formulae above. The angular difference ranges from 0° (best) to 90° (worst). We 
+quantified the strength of the signal vector by computing its dynamic range (δ) 
+of a genetic circuit implementation as d =
+. We 
+computed the dynamic range separately for the two outputs of each circuit and 
+omitted the computation for circuits where the magnitude differences were not 
+defined. Consequently, we had to omit two circuits (always ON GFP/always OFF 
+mCherry, and always ON GFP and mCherry) from the δ computation and 16 
+GFP or mCherry outputs of circuits (but not both) from the δ computation.
+
+s
+( ) max
+i
+
+min
+
+i ti
+{ :
+
+i ti
+{ :
+
+=
+
+s
+( )
+i
+
+}
+0
+
+=
+
+}
+1
+
+−
+
+Statistical methods. All transient gene expression experiments involved trans-
+fection of DNA into n = 3 separate cell cultures. Fluorescence intensities for 
+each cell culture population was averaged and the s.e.m. was taken. Stable 
+integrations were performed once or in duplicate as indicated.
+
+Data availability. Data are available from the corresponding authors upon 
+reasonable  request.  Plasmids  and  construction  resources  are  available  at 
+https://www.addgene.org/browse/article/25012/.
+
+nature biotechnology
+
+doi:10.1038/nbt.3805
+

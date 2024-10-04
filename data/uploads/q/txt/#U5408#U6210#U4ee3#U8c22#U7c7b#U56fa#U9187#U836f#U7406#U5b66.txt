@@ -1,0 +1,1834 @@
+Pharmacology of anabolic steroids
+
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2439524/
+
+Br J Pharmacol. 2008 June; 154(3): 502–521.
+
+Published online 2008 May 26. doi:  10.1038/bjp.2008.165
+
+Pharmacology of anabolic steroids
+
+A T Kicman
+
+1,*
+
+Author information ► Article notes ► Copyright and License information ►
+
+This article has been cited by other articles in PMC.
+
+Abstract
+
+PMCID: PMC2439524
+
+Go to:
+
+Athletes and bodybuilders have recognized for several decades that the use of anabolic steroids can promote muscle growth and strength but it
+is only relatively recently that these agents are being revisited for clinical purposes. Anabolic steroids are being considered for the treatment of
+cachexia associated with chronic disease states, and to address loss of muscle mass in the elderly, but nevertheless their efficacy still needs to
+be demonstrated in terms of improved physical function and quality of life. In sport, these agents are performance enhancers, this being
+particularly apparent in women, although there is a high risk of virilization despite the favourable myotrophic–androgenic dissociation that
+many xenobiotic steroids confer. Modulation of androgen receptor expression appears to be key to partial dissociation, with consideration of
+both intracellular steroid metabolism and the topology of the bound androgen receptor interacting with co-activators. An anticatabolic effect,
+by interfering with glucocorticoid receptor expression, remains an attractive hypothesis. Behavioural changes by non-genomic and genomic
+pathways probably help motivate training. Anabolic steroids continue to be the most common adverse finding in sport and, although
+apparently rare, designer steroids have been synthesized in an attempt to circumvent the dope test. Doping with anabolic steroids can result in
+damage to health, as recorded meticulously in the former German Democratic Republic. Even so, it is important not to exaggerate the medical
+risks associated with their administration for sporting or bodybuilding purposes but to emphasize to users that an attitude of personal
+invulnerability to their adverse effects is certainly misguided.
+
+Keywords: anabolic steroids, clinical, designer, health, mechanism, performance, receptor, SARMs, sport
+
+Introduction
+
+Androgens
+
+Go to:
+
+Androgens exert their effects in many parts of the body, including reproductive tissues, muscle, bone, hair follicles in the skin, the liver and
+kidneys, and the haematopoietic, immune and central nervous systems (Mooradian et al., 1987). The androgenic effects of these hormones can
+be generally considered as those associated with masculanization and the anabolic effects as those associated with protein building in skeletal
+muscle and bone.
+
+In the male foetus, androgens stimulate the development of the Wolffian ducts (epididymis, vas deferens, the seminal vesicles and ejaculatory
+duct) and the male external genitalia (penis, urethra and scrotum) (Wilson et al., 1981). During puberty, the androgenic effects resulting from
+increased testicular steroidogenesis are manifested by growth of the testes, external genitalia and the male accessory reproductive glands
+(prostate, seminal vesicles and bulbourethral), and secretory activity begins. Further, the secondary sexual characteristics manifested during
+puberty can be divided into those that are a result of androgenic and anabolic effects. The androgenic effects are the enlargement of the larynx
+causing a deepening of the voice, the growth of terminal hair (in the pubic, axillary and facial regions; in other regions such growth depends
+on a number of factors), an increase in sebaceous gland activity (can lead to acne), and CNS effects (libido and increased aggression). Anabolic
+effects are the growth of skeletal muscle and bone, the stimulation of linear growth eventually ceasing due to the closure of the epiphysis. In
+men, androgens are essential for sustaining reproductive function, and they play an important role in maintaining skeletal muscle and bone,
+cognitive function and a sense of well-being.
+
+The most important androgen secreted is testosterone; in the eugonadal man, the Leydig cells in the testes produce ∼95% of the testosterone
+in the body. The ovaries and the adrenal glands (in both sexes) produce very little testosterone but secrete weaker androgens; in particular,
+dehydroepiandrosterone (DHEA; and its sulpho-conjugate) and androstenedione are of physiological importance in the women, not least
+because they can undergo peripheral conversion to more potent androgens, for example to testosterone and 5α-dihydrotestosterone (DHT).
+Another weaker endogenous androgen, androstenediol, also binds to oestrogen receptors.
+
+The effects of androgens are modulated at cellular level by the steroid-converting enzymes within the particular target tissue (Figure 1). In
+reproductive target tissues, testosterone can be considered to be a prohormone, being readily converted by 5α-reductase to the more potent
+androgen DHT. In other tissues, such as adipose tissue and parts of the brain, testosterone is converted by aromatase to the oestrogen,
+oestradiol. In bone, the mechanism of action of the anabolism of androgens has not been entirely elucidated but both a direct effect of
+testosterone and a mediated effect by aromatization to oestradiol are important (Orwoll, 1996; Zitzmann and Nieschlag, 2004). In the human
+skeletal muscle (collected less than 12 h post-mortem), 5α-reductase activity (either type 1 or 2) is not detectable (Thigpen et al., 1993), so
+testosterone itself is chiefly binding to the androgen receptor (as supported also by a number of animal studies, mainly in the rat). Aromatase
+expression and activity is significant in human skeletal muscle (Larionov et al., 2003) but whether the conversion of androgens to oestrogens
+within this tissue is physiologically important for mediating some of the myotrophic effect of androgens is yet to be determined.
+
+Figure 1
+Testosterone can bind directly with the androgen receptor (AR). In target tissues where intracellular
+enzymes are present, the action of testosterone is mediated by metabolism. Testosterone is
+irreversibly converted by the enzyme 5α-reductase ...
+
+Modulation of the effects of androgens may also occur at the molecular level due to differences in the distribution of androgen receptor
+coregulators in various tissues, these coregulators being proteins that affect the transcriptional activity of the androgen receptor (Heinlein and
+Chang, 2002b; Wolf and Obendorf, 2004). This is a developing field and the comparative importance of many of these coregulators is yet to be
+established for any particular cell type, let alone their relative in vivo importance in examining tissue differences in androgen action. It is
+envisaged that genetic manipulation of the mouse will assist in elucidating their physiological relevance.
+
+With structural modifications to testosterone, the anabolic effects of androgens can be enhanced but, even so, these cannot be divorced entirely
+from their androgenic effects. Hence, a more accurate term for anabolic steroids is anabolic–androgenic steroids, but, for simplicity, the shorter
+term is used within this paper. The disassociation of anabolic from androgenic effects can be at cellular level, depending on the intracellular
+metabolism of the anabolic steroid in different tissues, with the activity of 5α-reductase being particularly important (see the section
+‘Intracellular metabolism and the myotrophic–androgenic index'). An appealing hypothesis is that anabolic–androgenic dissociation can also
+
+1 van 17
+
+26-9-2012 13:43
+
+Pharmacology of anabolic steroids
+
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2439524/
+
+occur as a result of anabolic steroids inducing specific conformational changes of the androgen receptor complex, which then affects
+subsequent interaction with various coregulators in different tissues (see the section ‘Androgen receptor expression and the importance
+of coregulators'). There is little data, as yet, to support such a hypothesis, but it is known that the androgen co-activator FHL2 is
+expressed predominantly in the heart (Muller et al., 2000; Wolf and Obendorf, 2004), and it is possible that a number of other androgen
+receptor coregulators could be tissue specific. How an anabolic steroid may affect androgen receptor conformation and interaction with
+particular coregulators is of obvious interest, as such knowledge may eventually offer an additional mechanism for anabolic–androgenic
+dissociation.
+
+The development of nonsteroidal selective androgen receptor modulators (SARMs) may offer better dissociation of biological effects than
+anabolic steroids and possibly even permit the therapeutic targeting of specific tissues and organs. Potential therapeutic modalities could
+then be specific agonists for restoration of fat-free muscle mass and strength in those with chronic illnesses such as HIV and specific
+antagonists for the treatment of prostate cancer in men or hirsutism in women (Wolf and Obendorf, 2004; Bhasin et al., 2006). In
+anticipation of the potential of such agonists for performance enhancement in sport, SARMs have been added to the World Anti-Doping
+Agency's (WADA's) 2008 list of prohibited substances in sport, despite none yet being available on the market.
+
+Control of anabolic steroids
+
+Anabolic steroids are controlled substances in several countries, including Australia, Argentina, Brazil, Canada, the United Kingdom and
+the United States. Even so, there is a readily available supply of steroids worldwide for non-medicinal purposes, because, in most
+countries, anabolic steroids can be sold legally without a prescription (Hermansson, 2002; Cramer, 2005). Thus, many foreign
+distributors do not violate the laws of their own country when they sell these substances to customers overseas via the Internet and by
+e-mail orders. The majority of the hormone products in the European market come from countries within the European Union and
+Russia, but also sometimes from Thailand, Turkey, Egypt, India and Pakistan (Hermansson, 2002). In the United States, significant
+quantities of anabolic steroids come from Mexico, as well as other countries such as Russia, Romania and Greece (Cramer, 2005).
+
+In the United Kingdom, anabolic steroids are controlled under Schedule IV Part 2 of the Misuse of Drugs Act; the Act includes most of the
+anabolic steroids, together with clenbuterol (adrenoreceptor stimulant) and human growth hormone. There is no restriction on the
+possession of these substances when they are part of a medicinal product and are for self-administration. However, prosecutions of intent
+to supply have been made of individuals found in possession of large quantities of these substances without a prescription for them. A
+Home Office licence is required for importation and exportation of anabolic steroids, except in cases of small quantities for legitimate
+purposes.
+
+As to doping control in human sport, the International Olympic Committee (IOC) Medical Commission introduced anabolic steroids as a
+banned class in 1974 (Kicman and Gower, 2003b). The name of this banned class was amended to anabolic agents in the 1990s to
+incorporate out-of-competition testing for clenbuterol and other β -agonists, which are also considered to have anabolic activity. In 1999,
+WADA was set up as a foundation under the initiative of the IOC with the support and participation of intergovernmental organizations,
+governments, public authorities, and other public and private bodies fighting against doping in human sport. Under WADA, the rules
+and technical documents concerning anabolic steroids (and other drugs) are constantly evolving and for up to date information the
+reader is strongly advised to access the WADA web site (http://www.wada-ama.org/en/).
+
+2
+
+Misuse of anabolic steroids in sport and society
+
+The use of anabolic steroids for cosmetic benefits among both adults and adolescents in society may be incorrectly regarded as a
+comparatively harmless pharmacological manipulation that can aid the development of bulging muscles and a well-toned figure. Surveys
+of anabolic steroid abuse by gymnasia users found that, overall, around 5% were using such drugs (Korkia and Stimson, 1993), whereas
+among people attending gyms equipped for competitive bodybuilding, the proportion of current or previous users was around 25–50%
+(Lenehan et al., 1996; Korkia and Stimson, 1997). Nevertheless, it is difficult to estimate the true number of anabolic steroid users in the
+whole of the United Kingdom but these drugs are used on a nationwide basis, as discussed in depth by the report from the British
+Medical Association (BMA, 2002). Similar surveys indicate a high prevalence of use in the United States (Yesalis et al., 1993, 1997;
+Yesalis and Bahrke, 2000).
+
+For drug control in sport, anabolic steroids are regarded (correctly) as performance enhancers, as well as harmful to health. Of the 198
+143 urine samples analysed in 2006 by 34 WADA-accredited laboratories, 4332 (2%) were found to contain a prohibited substance
+(‘A-sample'), of which 1966 (45% of all the adverse findings) were positive for anabolic steroids. Comparison of the adverse findings for
+worldwide testing for over a decade show that there has been little change year after year, the most common steroids being testosterone,
+nandrolone, stanozolol and methandienone. Testosterone has an unfavourable anabolic–androgenic dissociation compared with other
+anabolic steroids, but it is more difficult to prove its administration, as it is also produced endogenously. Some consider that the WADA
+statistics do not reflect the real extent of doping with anabolic steroids, particularly within top-level athletics but few would dispute that
+the urge to succeed and the rewards of success, both financial and otherwise, have provided powerful incentives to some competitors to
+look for every possible means of improving their performance, despite the risk of denunciation and penalties.
+
+Chemical structures and activity
+
+Common anabolic steroids
+
+Go to:
+
+Some of the structural modifications that have been introduced into the testosterone in an attempt to maximize the anabolic effect and
+minimize the androgenic are shown in Figure 2, and examples of anabolic steroids are given in Figure 3. Many of these steroids have
+been withdrawn as licensed products in numerous countries worldwide but they continue to be available as pharmaceutical preparations
+in others, for example, methandienone, methyltestosterone, oxandrolone and stanozolol. The only preparations currently available as
+licensed products for human use within the United Kingdom are testosterone and its esters, nandrolone (as the decanoate ester),
+mesterolone and oxymetholone (named patient basis only). Boldenone and trenbolone are restricted to veterinary purposes only in some
+countries, but, nonetheless, sports competitors and bodybuilders have been known to administer these anabolic steroids.
+
+Figure 2
+Structural modifications to the A- and B-rings of testosterone that increase anabolic activity;
+substitution at C-17 confers oral or depot activity (i.m.). Figure from Kicman and Gower
+(2003b), a commissioned article by the Analytical Investigations Standing ...
+
+Figure 3
+Structures of anabolic–androgenic steroids with corresponding diagnostic metabolites and
+examples of registered trade names. Superscripts (
+preparations:  undecylenoate;  acetate;  propionate; ...
+
+) refer to 17β-hydroxyl-esterified
+
+1–6
+
+1
+
+2
+
+3
+
+Oral activity can be conferred by substitution of the 17α-H on the steroid nucleus with a methyl or ethyl group to make the 17α-alkylated
+anabolic steroids. Alkyl substitution prevents deactivation of the steroid by first-pass metabolism by sterically hindering oxidation of the
+
+2 van 17
+
+26-9-2012 13:43
+
+Pharmacology of anabolic steroids
+
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2439524/
+
+17β-hydroxyl group. A methyl group attached to C-1 can also confer oral activity, as in methenolone or mesterolone, but these two
+anabolic steroids are considered to be relatively weak in pharmacological activity.
+
+Parenteral preparations do not require a 17α-alkyl group but usually the 17β-hydroxyl group is esterified with an acid moiety (van
+der Vies, 1993) to prevent rapid absorption from the oily vehicle, usually arachis oil plus a small amount of benzyl alcohol. Once in
+the circulation, hydrolysis rapidly occurs by the action of blood esterases to yield the active compound. The esters include
+cyclohexylpropionate, decanoate, laurate and phenylpropionate for nandrolone; acetate, cypionate, decanoate, enanthate,
+isocaproate, phenylpropionate, propionate and undecanoate for testosterone, undecylenate for boldenone and acetate for
+trenbolone. The mechanism of action of the nandrolone esters and other anabolic steroids, and the effect of drug delivery systems
+on their biological activity have been studied by van der Vies (1993). The duration of action of the esters depends upon the rate of
+absorption from the site of administration. This is dependent on the chain length of the acid moiety and also the formulation, being
+related to the partition coefficient of the derivatives between the oil used in the formulation and plasma. In general, the longer the
+chain length, the more slowly the preparation is released into circulation, thus prolonging the duration of action. Furthermore,
+testosterone undecanoate is also orally active, the 11 carbon chain ester making the molecule so lipophilic that its route of
+absorption is partially shifted from the hepatic portal vein to the lymph system, thus bypassing first-pass metabolism to some
+extent, it being released into the circulation via the thoracic duct (Coert et al., 1975; Horst et al., 1976).
+
+Non-pharmaceutical water-based testosterone suspensions for injection are advertised on bodybuilding web sites and cheats in
+sport may find these attractive as, in theory, these should be relatively short acting. Non-pharmaceutical-based preparations,
+whether oil or water based, may be a particular hazard to health as the contents may not have been prepared under sterile
+conditions.
+
+Transdermal formulations are invariably testosterone based, legitimately designed for replacement therapy, and include the ‘patch'
+and hydroalcoholic gels, to be applied on a daily basis. Other short-acting testosterone preparations include those that are designed
+to be administered by the sublingual or buccal route. Such short-acting formulations are of particular concern in sport, as the
+exogenous source of testosterone is rapidly eliminated following cessation of treatment. Increased out-of-competition testing helps
+to combat the cheat who is using short-acting preparations and ceasing administration prior to competition in anticipation of
+testing. It is of interest that an illicit preparation called ‘The Cream' was designed for transdermal application (see the section
+‘Designer steroids').
+
+Steroid dietary supplements
+
+A current cause for concern is the recent manufacture of analogues of established anabolic steroids to tap into the bodybuilding
+market. To avoid the statutory controls of countries regarding the manufacture and supply of drugs, these compounds are often
+widely marketed as nutritional/dietary supplements, examples being DHEA, androstenedione, androstenediol, and their 19-nor
+equivalents (these steroids are prohormones), and analogues of testosterone and stanozolol called 1-testosterone and prostanozolol,
+respectively (Figure 4). It is a consequence of their widespread availability that a minority of athletes will also use these steroids in
+an attempt to improve sporting performance, and because they are structurally related to mainstream anabolic steroids, sports
+antidoping laboratories are made to incorporate such compounds into their drug screens under the WADA rules. These steroids are
+supplied for oral administration, and are therefore subject to first-pass metabolism, a very important factor as to the extent the
+steroid is deactivated or converted to a more active form. Some of the putative metabolites of dietary supplements have been
+identified by mass spectrometry, but not by other analytical techniques such as nuclear magnetic resonance spectroscopy to confirm
+configuration of the structure; the interested reader is referred to the extensive review by Van Eenoo and Delbeke (2006).
+
+Figure 4
+The ‘supplements' (I) dehydroepiandrosterone (DHEA), (II) and (III) androstenedione (∆4
+and 5, versions respectively), (IV) and (V) androstenediol (∆4 and 5 versions, respectively),
+(VI) 19-norandrostenedione (only ∆4 version ...
+
+With respect to prohormone supplements of testosterone, as recently reviewed by Brown et al. (2006), these are modelled on
+steroids that are endogenously produced, that is, androstenedione, androstenediol and DHEA. However, supplements of the weaker
+androgens DHEA or androstenedione may be of little or no benefit to healthy young men who wish to improve their strength and
+sporting performance if, as would be expected, any anabolic effect is primarily mitigated through peripheral conversion to
+testosterone. Ingestion of DHEA can result in an increase in circulating DHEA and androstenedione, but it is not resolved as to
+whether there is an increase in plasma testosterone, see for example Brown et al. (1999). This is not surprising because in the adult
+men the overall peripheral contribution of these precursor steroids to circulating testosterone is small. Any contribution from
+exogenous DHEA or androstenedione will be largely moderated by the large amount of testosterone contributed by the testis. In
+women, an increase in performance may be possible following ingestion of these supplements, as circulating testosterone would be
+expected to increase. The plasma concentration of endogenous testosterone is approximately 1/10th that found in men and the
+relative proportion arising from peripheral conversion of weaker androgens is much greater. Even though only 12–14% of
+androstenedione is converted peripherally to testosterone (Horton and Tait, 1966; Bardin and Lipsett, 1967), this amount accounts
+for about half the circulating testosterone in the women. As the peripheral contribution to blood testosterone is far greater in the
+young adult women than the men, ingestion of modest amounts of androstenedione, DHEA or androstenediol (the natural steroid
+or the ∆  analogue) is likely to significantly raise circulating testosterone. There are modest-to-large increases in circulating
+testosterone following androstenedione administration to women (Leder et al., 2002; Kicman et al., 2003a; Bassindale et al., 2004;
+Brown et al., 2004). Women who chronically administer large doses of weaker androgens that can be converted to more potent
+steroids would be expected to suffer from virilizing effects. In 2004, the FDA (Food and Drug Administration), as part of its public
+health mission, sent warning letters to 23 companies in the United States requesting them to cease distributing androstenedione as
+dietary supplements (FDA, 2004).
+
+4
+
+Designer steroids
+
+Designer anabolic steroids are considered as ones that are manufactured specifically to circumvent doping tests in human sport,
+and, therefore, for obvious reasons, they are supplied in a clandestine fashion. There are few examples to draw on. Classified
+documents (Franke and Berendonk, 1997) saved after the collapse of the German Democratic Republic revealed that, since 1983, a
+pharmaceutical company had produced preparations of epitestosterone propionate exclusively for the governmental doping
+programme. Epitestosterone, an epimer of testosterone, is a steroid with no anabolic activity but its administration with
+testosterone simultaneously or sequentially enables an athlete to manipulate the test for testosterone administration if the test is
+based solely on determination of the urinary testosterone/epitestosterone (T/E) ratio. Recently, a company in California called
+BALCO (Bay Area Laboratory Co-operative; Burlingame, CA, USA) attracted much media attention due to the high profile of the
+
+3 van 17
+
+26-9-2012 13:43
+
+Pharmacology of anabolic steroids
+
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2439524/
+
+athletes involved, not least because of the supply of a transdermal preparation coded as ‘The Cream' containing testosterone
+and epitestosterone, as well as a sublingual preparation of a new anabolic steroid coded as ‘The Clear', which was identified
+from the contents of a spent syringe as tetrahydrogestrinone (THG) by the WADA-accredited laboratory within the University
+of California, Los Angeles (UCLA) (Catlin et al., 2004).
+
+Tetrahydrogestrinone can be easily manufactured by the catalytic hydrogenation of the ethynyl group of the progestogen
+gestrinone (Figure 5). This relatively simple synthetic step hides the thinking that probably lay behind the design of THG.
+Given the close homology of their receptors, there is an overlap between the activity of progestogens and androgens, especially
+those xenobiotic steroids that lack the C-19 methyl group, but which activity predominates depends on whether the alkyl
+substituent at carbon-17 is ethynyl or ethyl. Substitution of the 17α-H with an ethynyl group on nandrolone, a 19-nor anabolic
+steroid with some progestational activity, will result in a potent orally active progestogen, this being called norethisterone
+(norethindrone), a steroid that is still used in some contraceptives today. The synthetic route is described in a seminal paper
+by Djerassi et al. (1954). However, substitution with an ethyl group on nandrolone rather than ethynyl group results in
+another anabolic steroid known as norethandrolone, which also has oral activity. Gestrinone, is a pharmaceutically available
+progestogen that lacks the C-19 angular methyl group but has a 17α-ethynyl group, and it follows that reduction of this
+ethynyl group to the tetrahydro product should make THG a ‘potent' androgen. This is indeed the case, as subsequently THG
+was found to be a highly potent androgen (and progestogen) in an in vitro bioassay system expressing human steroid
+receptors (Death et al., 2004), and it promotes muscle accretion in orchidectomized male rats (Jasuja et al., 2005). Despite
+the presence of the 17α-alkyl function, which should make the steroid resistant to first-pass metabolism, it is of interest that
+the instructions from BALCO Laboratories were to place a few drops of the liquid preparation under the tongue, that is, a
+sublingual route of administration. THG was invisible on the routine gas chromatography–mass spectrometry screen
+employed by the WADA-accredited laboratories and necessitated the development of a liquid chromatography–mass
+spectrometry/mass spectrometry (LC–MS/MS) screen for its detection; for a current and detailed review on the analysis of
+anabolic steroids see Kicman et al. (2008).
+
+Figure 5
+Catalytic hydrogenation of gestrinone to form tetrahydrogestrinone (THG). An
+example of a catalyst is palladium on carbon (Pd/C), as described in a procedure
+employed by Catlin et al. (2004).
+
+Underground chemists appear also to be accessing information concerning other steroids that were synthesized several
+decades ago by pharmaceutical companies but were never marketed. Such steroids that have been detected until recently are
+norbolethone (Catlin et al., 2002), which was reputed to have been the active ingredient of ‘The Clear' before being replaced
+by THG, and madol (Sekera et al., 2005), which is also referred to as desoxymethyltestosterone (by the WADA-accredited
+laboratory in Montreal, who identified this steroid around the same time as the accredited laboratory at UCLA). Although the
+extent of this activity appears to be limited, as screening procedures rely on targeting selecting ions for monitoring by mass
+spectrometry, unknown steroids may escape detection. To demonstrate how this problem may be addressed, Thevis et al.
+(2005) developed an LC–MS/MS screening method based on common fragmentation pathways and Nielen et al. (2006) used
+a combination of androgen bioassay detection and electrospray quadrupole time-of-flight mass spectometric identification.
+
+Mechanisms of action
+
+Go to:
+
+Anabolic steroids are thought to exert their actions by several different mechanisms. These mechanisms include modulating
+androgen receptor expression as a consequence of (i) intracellular metabolism and by (ii) directly affecting the topology of the
+androgen receptor and thus subsequent interaction with co-activators and transcriptional activity. Other mechanisms include
+(iii) an anticatabolic effect by interfering with glucocorticoid receptor expression; and (iv) by non-genomic, as well as by
+genomic pathways, in the CNS resulting in behavioural changes. These mechanisms are discussed herein.
+
+As an adjunct, much of the physiological importance of non-genomic actions of androgens is still to be elucidated, not least
+with respect to androgen-induced cell-cycle progression. The induction of second messenger signal transduction cascades by
+steroids commonly occurs within seconds to a few minutes, in contrast to genomic activity of the classic steroid receptors that
+takes 30–60 min. Regarding androgens, several non-genomic mechanisms appear to be involved, including mediation by the
+membrane-bound sex hormone-binding globulin receptor and also a putative G-protein-coupled receptor that androgens
+directly bind with, as well as through stimulation of nonreceptor tyrosine kinase c-SRC. The complexity of these mechanisms
+is described in detail elsewhere (Cato et al., 2002; Heinlein and Chang, 2002a; Losel et al., 2003). Ultimately, gene
+transcription may be modulated by these ‘non-genomic' pathways but a well-recognized exception is the rapid elevation of
+calcium ion influx by a pathway that is confined to the cytoplasm. It is not currently known whether non-genomic actions of
+androgens at physiological concentrations are important in skeletal muscle growth, let alone what the non-genomic effects
+may be evoked by the administration of anabolic steroids. For the sake of brevity, this review will only very briefly touch again
+on non-genomic pathways under ‘Behavioural Effects' (see the section ‘Behavioural mechanisms').
+
+Intracellular metabolism and the myotrophic–androgenic index
+
+The structural changes to testosterone by medicinal chemists were designed to enhance the protein anabolic effect relative to
+the androgenic effect. Unfortunately, the anabolic effects could not be divorced entirely from the androgenic effects, although
+some synthetic steroids present a remarkable dissociation, at least based on the myotrophic–androgenic index. It may be
+argued that by today's standards this in vivo approach, which was developed over 50 years ago, is unsophisticated given the
+huge developments in molecular biology since that time. Despite the criticism that this approach has attracted, it is of note
+that anabolic steroids with high myotrophic activity and favourable index values, for example, nandrolone (esterified),
+oxymetholone, methandienone and stanozolol are still available as medicines in many countries. These steroids remain
+desirable as a doping agent to enhance sporting performance (as evident by the statistics collated by WADA) and for
+bodybuilding purposes. For this reason, it is logical to summarize this approach, based on growth of a particular skeletal
+muscle called the levator ani relative to that of androgenic target tissue, usually the prostate gland, and attempt to explain the
+underlying mechanism of dissociation of the growth of the two tissues (compared with controls).
+
+Eisenberg and Gordan (1950) proposed the use of the rat levator ani muscle as a bioassay of protein anabolic activity; the
+anatomical drawings from the dissection of the male rat, displaying the location of this muscle, the prostate and seminal
+vesicles are displayed in this paper. The rat levator ani muscle is part of the perineal complex of striated muscles that envelope
+the rectum. This muscle was chosen because previous workers had reported that testosterone propionate stimulated the
+growth of the perineal complex in infantile rats, and, additionally, this complex was easily separated from other tissues.
+Eisenberg et al. demonstrated that the levator ani muscle in castrated, immature rats responded well to the administration of
+various steroids such as testosterone propionate, 17α-methyltestosterone and pituitary growth hormone (extracted from the
+anterior lobes of ox pituitaries). In contrast, there was a much smaller unparalleled increase in the weight of the seminal
+vesicles.
+
+4 van 17
+
+26-9-2012 13:43
+
+Pharmacology of anabolic steroids
+
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2439524/
+
+The foundation of the commonly used procedure of the myotrophic–androgenic index was based on a modification of the
+Eisenberg and Gordan method by Hershberger et al. (1953). Hershberger and co-workers preferred the use of the ventral
+part of the prostate rather than the seminal vesicles as a measure of tissue androgenic response in immature
+gonadectomized rats. They proposed a measure of hormonal myotrophic-to-androgenic activity using the following ratio:
+
+Index ratio=(experimental levator ani weight−control levator ani weight)/(experimental ventral prostate weight−control
+ventral prostate weight) =increase in levator ani weight/increase in ventral prostate weight
+
+Many investigators employed the approach proposed by Hershberger et al. (1953), but some made their own
+modifications to it, and others still used the seminal vesicles as a bioassay of androgenicity.
+
+Like the index value, the myotrophic or androgenic effects were themselves expressed as ratios to other reference
+steroids, for example, 17α-methyl testosterone or testosterone for oral routes and testosterone propionate for parenteral
+routes. A comprehensive comparison of the anabolic and androgenic activities of many anabolic steroids and their
+dissociation index is given elsewhere (Potts et al., 1976) but some examples are displayed in Table 1.
+
+Table 1
+Comparison of myotrophic and androgenic activities of anabolic steroids
+—examples were drawn from a much more comprehensive table (with referenced
+papers) presented by Potts et al. (1976)
+
+Kruskemper (1968) discusses the many failings of the procedures used for determining the myotrophic–androgenic
+index, for example, the seminal vesicles react more slowly to certain androgens, so that with short test administration,
+distortions can arise in favour of the myotrophic effect. The harshest criticism of this index was given by Nimni and
+Geiger (1957), Scow and Hagan (1957) and Hayes (1965). Testosterone administration for 56 days to young
+gonadectomized rats (castrated at 20–23 days of age) had no effect on the growth of the thigh muscle compared with
+controls, yet there was considerable growth in the perineal musculature (Scow, 1952; Scow and Hagan, 1957).
+Testosterone propionate or norethandrolone (17α-ethyl-19-nortestosterone; also an anabolic steroid) administration
+promoted the growth of the levator ani muscle even in young normal or castrated rats on a protein-free diet, that is, a
+local anabolic effect proceeding at the expense of catabolic processes in other organs. Hayes (1965) stated that the rat
+levator ani muscle is not homologous to this muscle in other species, that is, it is not a typical sphincter muscle and does
+not lift the anus in rodents but is part of the male reproductive system. Thus, Hayes renamed the levator ani muscle,
+calling it the dorsal bulbocavernosus. All three groups of workers showed that the levator ani muscle reflects a general
+genitomyotrophic response rather than an overall response to androgens. Later, Hervey (1982) claimed that the male
+rat's characteristics are determined shortly after birth (due to a brief secretion of testosterone), and, thereafter, any
+increase in body mass is not affected by androgens.
+
+Contrary to the opinions described above, there is nonetheless biochemical evidence that suggests that the
+genitomyotrophic response of the levator ani muscle may serve as an indicator of the general myotrophic responses in
+the developing rat for the following reasons. The same classic androgen receptor can be characterized in the prostate, the
+bulbocavernosus/levator ani muscle and typical skeletal muscles of the rat (Krieg and Voigt, 1977). Nandrolone
+(19-nortestosterone) and 5α-DHT have a higher binding affinity than testosterone with the receptor. The prostate has 7
+times the concentration of androgen receptors than the bulbocavernosus/levator ani muscles which in turn has 10 times
+more than other skeletal muscle. In vitro studies by Gloyna and Wilson (1969) and Massa and Martini (1974) have
+shown that 5α-reductase activity is very high in rat sexual tissue such as the prostate and seminal vesicles but negligible,
+if at all, in skeletal muscle such as the levator ani and thigh muscle. Intracellular DHT is, therefore, low in skeletal
+muscle, and it is worth emphasizing that its presence is further diminished because of the high activity of the enzyme
+3α-hydroxysteroid-dehydrogenase in this tissue (and cardiac tissue as well), the enzyme that converts DHT irreversibly
+to 3α-androstanediol (Massa and Martini, 1974; Smith et al., 1980). The very low activity of 5α-reductase in skeletal
+(and cardiac) muscle was subsequently confirmed by other investigators (Krieg et al., 1976; Bartsch et al., 1980), and
+although the enzymatic activity within the levator ani appears to be significantly higher, it still represents only 5% of
+that within the prostate. The rat levator ani may be a somewhat atypical striated muscle because of its greater
+concentration of androgen receptors, but, due to its very low 5α-reductase activity, it can also be argued that it is not a
+typical part of target tissues associated with the reproductive system. Celotti and Cesi (1992), in their review of possible
+mechanisms of action of anabolic steroids, discuss that the peculiar androgen sensitivity of this muscle is intermediate
+between that present in the skeletal muscles and that of the prostate. The myotrophic effect of anabolic steroids may be
+reflected by the amplified response of the levator ani muscle due to its higher concentration of androgen receptors, an
+effect that is not apparently sufficient in other (typical) rat skeletal muscles to be observed using differences in weight
+(compared with controls) as the measurand.
+
+A possible basis for increasing the myotrophic-to-androgenic ratio may be by exploiting the fundamental difference
+between the 5α-reductase concentrations in skeletal muscle and androgenic tissue. One way of increasing the anabolic–
+androgenic dissociation is to administer a steroid that has a greater binding affinity for the androgen receptor but upon
+reduction to a 5α-metabolite has a lesser affinity. Among the anabolic steroids, 19-nortestosterone (nandrolone) was one
+of the first synthesized, the most used and probably the best studied. Although DHT has a greater binding affinity for the
+androgen receptor than its parent steroid testosterone, by contrast the 5α-reduced form of 19-nortestosterone,
+5α-dihydro-19-nortestosterone, has a lesser binding affinity than its parent steroid 19-nortestosterone (Toth and Zakar,
+1982). Hence, in androgenic tissue, testosterone is converted to a more potent metabolite, whereas 19-nortestosterone is
+converted to a less potent one. As 5α-reduction occurs readily in androgenic tissue but is negligible in skeletal muscle,
+this explains why 19-nortestosterone has a greater myotrophic-to-androgenic ratio when compared with testosterone (
+Figure 6). If the model is correct, such a diminishment in androgenic activity should not be confined to the accessory
+reproductive tissues in the human such as the prostate, but also in non-genital target tissues where clear roles for the
+metabolism to DHT have been defined such as the male patterns of facial and body hair growth, thus allowing more
+muscle per whisker. Moreover, even where testosterone rather than DHT appears to stimulate other secondary sexual
+characteristics, such as voice deepening, with the discovery of two isozymes of 5α-reductase (for review see Russell and
+Wilson, 1994), it cannot be ruled out that some of these actions attributed to testosterone need to be re-evaluated, the
+results of which may have relevance to the applicability of anabolic steroids with a high myotrophic–androgenic index.
+Much of the knowledge of the separate roles of testosterone and DHT came from 5α-reductase deficiency syndrome, but
+these effects are all ascribed to mutations in the type 2 isoenzyme (Randall, 1994) and the biological role of the
+5α-reductase type 1 is harder to ascertain as there is no recognized type 1 deficiency. For example, type 2 5α-reductase
+appears not to be necessary for the sebaceous gland response to androgens and the development of acne, but it is now
+known that the principal isoenzyme in this gland is the type 1 form (Thiboutot et al., 1995; Sato et al., 1998). As an
+adjunct, dutasteride (Avodart; manufactured by GlaxoSmithKline), which inhibits both type 1 and type 2 5α-reductases
+
+5 van 17
+
+26-9-2012 13:43
+
+Pharmacology of anabolic steroids
+
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2439524/
+
+and is used in the treatment of benign prostatic hyperplasia (Clark et al., 2004) and male pattern hair loss (Olsen
+et al., 2006), appears not to be helpful in the treatment for acne vulgaris (Leyden et al., 2004). This suggests that
+further work at the molecular level is required to better understand the action of androgens on sebaceous gland
+function.
+
+Figure 6
+In androgenic tissues, nandrolone (19-nortestosterone) is readily converted
+by the enzyme 5α-reductase into 5α-dihydro-19-nortestosterone, i.e., the
+double bond between C4 and C5 is reduced. This metabolite binds with
+weaker affinity to ...
+
+This mechanism of myotrophic–androgenic dissociation does not explain why other anabolic steroids that do not
+undergo 5α-reduction, for example, those with an extra double bond in the A-ring, such as
+chlorodehydromethyltestosterone and methandienone (Schanzer, 1996), have a favourable mytotrophic–
+androgenic index. Even so, it is possible that that myotrophic–androgenic dissociation may occur, simply because
+the effect of the particular steroid cannot be amplified by 5α-reduction in androgenic target tissues, in common
+with the hypothesis proposed for the differential action of a steroidal SARM (see the section ‘Selective androgen
+receptor modulators' for an explanation of the term) called MENT (7α-methyl-19-nortestosterone; trestolone)
+(Agarwal and Monder, 1988; Kumar et al., 1992), as reviewed by Sundaram and Kumar (2000).
+
+Recently, as part of investigations to assess whether the designer steroid THG had anabolic and androgenic
+properties (see also next section), three papers report the effects of its administration on the growth of the levator
+ani, prostate and seminal vesicles compared with control steroids (Jasuja et al., 2005; Labrie et al., 2005; Friedel
+et al., 2006a). Notwithstanding the possible differences in pharmacokinetics and bioavailability between THG and
+the control steroids administered, there appeared to be little myotrophic–androgenic dissociation, but,
+nonetheless, the bioassays clearly demonstrated that THG had anabolic and androgenic activity in vivo, and,
+therefore, belonged within the banned doping class of anabolic agents in sport, as defined by WADA.
+
+As a final and very important point, it is of note that complete dissociation has not been achieved with any
+anabolic steroid synthesized, and, therefore, the chronic administration of these drugs, even those with a very high
+myotrophic–androgenic index value, such as found with nandrolone (19-nortestosterone), will result in hirsutism
+and, eventually, virilization of women and children.
+
+Androgen receptor expression and the importance of coregulators
+
+The androgen receptor belongs to the family of nuclear receptor superfamily (Mangelsdorf et al., 1995), these
+intracellular receptors eliciting so-called ‘classical' or genomic, actions by interacting with DNA and modulating
+transcription. A DNA-binding domain, a ligand-binding domain and at least two transcriptional activation
+domains, characterize these receptors. Apart from binding with the steroid, the ligand-binding domain also
+functions in dimer formation and mediates transcriptional activation. The DNA-binding domain targets the
+receptor to specific DNA sequences known as steroid (or hormone) response elements. On the receptor, the
+DNA-binding domain consists of two subdomains called ‘zinc-fingers'; each subdomain contains four cysteine
+residues that coordinate with a zinc atom, thus, stabilizing the ‘finger' structure. The zinc-fingers are inserted
+between specific grooves of the DNA helix, thus, allowing maintenance of DNA-binding activity.
+
+A general model of steroid receptor action is displayed in Figure 7. In the absence of hormone, it is by and large
+accepted that steroid receptors exist as an inactive oligomeric complex, being sequestered by the heat-shock
+protein (Hsp), Hsp90, which acts as a molecular chaperone. Hsps are so-called because they were discovered to
+accumulate under stress conditions including within heat-traumatized cells, but many are present and functionally
+important under normal conditions; they are named according to their molecular weight in kilodaltons. Another
+chaperone called p23 stabilizes the aporeceptor complex by blocking Hsp90 in the ATP-bound substrate
+conformation. Co-chaperones utilizing tetratricopeptide repeat motifs are necessary for docking of the Hsp90. As
+an adjunct, other chaperones, called Hsp40 and Hsp70 and an organizing protein called Hop (heat-shock
+organizing protein) are important in the assembly of the steroid receptor–Hsp90 complex. Picard (2006) gives a
+clear overview of molecular chaperones and cofactors that are relevant to steroid receptor action. Phosphorylation
+of the receptors is also important in regulation of receptor function (Weigel and Moore, 2007).
+
+Figure 7
+In the absence of hormone, the steroid receptor exists as an inactive
+oligomeric complex with the molecular chaperone heat-shock protein, Hsp90,
+and p23, and co-chaperones utilizing tetratricopeptide repeat (TPR) motifs.
+After hormone binding, the receptor–Hsp90 ...
+
+The steroid receptor–Hsp90 complex appears to be necessary for the receptor to stabilize in a conformation for
+binding to the ligand with high affinity and also to maintain its solubility in the cell. It is generally accepted that,
+although the receptor is held in this complex, it is inactive as a transcription factor, that is, the Hsp90 complex acts
+as a repressor of transcriptional activity by preventing one or several of the following: nuclear localization,
+dimerization, DNA binding and interaction with transcriptional co-activators.
+
+Steroids are relatively small molecules, for example, testosterone has a molecular weight of 288, and they can
+passively diffuse into cells. In target tissues, that is, the cells that contain steroid receptors, the hormone binds to
+the receptor ligand-binding domain, causing dissociation of the receptor–Hsp90 complex, the resultant
+conformational (allosteric) change making the receptor active. In the case of the androgen (and glucocorticoid)
+receptor, the chaperone complex resides in the cytoplasm, and following dissociation from the chaperone the
+activated receptor is translocated into the nucleus. Activated receptors interact as homodimers with the steroid
+response element on the chromatin, the effect of two receptors binding being cooperative (greater affinity and
+stability). This attachment to the DNA, in turn, triggers the formation of a transcription complex, a cluster of
+coregulators (also called comodulators) that fit around the receptors like ‘pieces in a jigsaw puzzle'. Coregulators
+can be either positive or negative regulatory proteins, referred to as co-activators or corepressors, respectively
+(Perissi and Rosenfeld, 2005). Co-activator and corepressor complexes are required for nuclear receptor-mediated
+transcriptional regulation, generally liganded receptors recruiting co-activators resulting in gene activation,
+transcription of the gene, translation and a resultant alteration in cell function, growth or differentiation.
+
+The function of the transcriptional activation domains on the receptor is to mediate the binding of the receptor to
+
+6 van 17
+
+26-9-2012 13:43
+
+Pharmacology of anabolic steroids
+
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2439524/
+
+the comodulators. The receptor has an N-terminal activation function-1 (AF-1) and a second activation
+function-2 (AF-2) in the C-terminal ligand-binding domain. The mechanisms of AF-1 and AF-2 gene
+activation, with emphasis on AF-1 and AF-2 conformation and co-activator binding, have been reviewed by
+Warnmark et al. (2003). The mechanism of AF-1 gene activation is not well understood due to the lack of
+conformational information but, by contrast, many crystal structures of the ligand-binding domain of
+different nuclear receptors have been achieved, allowing a fuller understanding of AF-2-mediated
+transcriptional activation. AF-2 is dependent on ligand binding to the receptor for its activity, which causes
+the folding of a C-terminal helix (helix-12), acting as a lid over the ligand pocket upon ligand binding. This
+folding creates the activation surface/AF-2 domain, allowing the docking of AF-2 co-activators and the
+formation of a charge clamp that stabilizes co-activator interaction, these co-activators having the leucine-
+X-X-leucine-leucine (LXXLL) motif necessary for such interaction (X is any amino acid).
+
+The molecular biology of the androgen receptor has been reviewed by Klocker et al. (2004). In contrast to
+other steroid receptors, most of its transcriptional activity is mediated through the N-terminal AF-1 domain,
+there being a reduced capacity of AF-2 in the androgen receptor to recruit LXXLL-containing co-activators.
+Instead, it has been suggested that the AF-2 of the androgen receptor acts primarily as an interaction
+platform for the recruitment of co-activators to the N-terminal region, this regulation of gene expression
+through the intradomain interaction and communication being unique to this receptor.
+
+To date, several families of co-activator proteins have been identified but only two direct inhibitors of
+androgen receptor function have been identified in vivo, SHP and DAX-1, these being atypical orphan
+receptors that lack DNA-binding domains. Using X-ray crystallography, the interaction between peptide
+segments of SHP containing LXXLL-like motifs and the ligand-binding domain on the androgen receptor
+was investigated, and it was found that the LKKIL motif formed a complex, binding with a hydrophobic
+groove on the androgen receptor (Jouravel et al., 2007). It was suggested that this transcriptional activity of
+androgen receptors might be inhibited by SHP competing for binding to androgen receptor co-activators. The
+binding motif to the androgen receptor by DAX-1 is still to be elucidated. Another corepressor, FoxG1,
+appears to be a likely candidate for interaction with the androgen receptor in vivo but studies are necessary to
+prove whether this is the case (Obendorf et al., 2007).
+
+Anabolic steroids bind to the androgen receptor with different affinities. Saartok et al. (1984) compared the
+relative binding affinity of the anabolic steroids ethylestrenol, fluoxymesterone, mesterolone, methandienone,
+methenolone, 17α-methyltestosterone, nandrolone and oxymetholone to that of tritiated methyltrienolone
+(17β-hydroxy-17α-methyl-4,9,11-estratrien-3-one; a steroid resembling trenbolone but with a 17α-alkyl
+substituent) to androgen receptors in cytosol isolated from skeletal muscle and the prostate gland of the rat
+and skeletal muscle of the rabbit. The order of relative binding affinities in comparison with
+methyltrienolone, which had the strongest affinity, was
+nandrolone>methenolone>testosterone>mesterolone; a group which had relatively high and generally
+similar affinity for the androgen receptor in all three tissues. These investigators did not rank
+17α-methyltestosterone, but it had a relative binding affinity of 0.1, which made it an efficient competitor.
+The relative binding with fluoxymesterone, methandienone and stanozolol was much weaker and that with
+oxymetholone and ethylestrenol was too low to be determined. There is a large discrepancy as to what is
+known about the in vivo activities of these steroids compared with their in vitro activity, even taking into
+account possible differences in the bioavailability and clearance of these steroids (not least determined by the
+affinity to sex hormone-binding globulin in the blood circulation). For example, oxymetholone and stanozolol
+have low relative binding affinity compared with 17α-methyltestosterone in the in vitro study, but,
+conversely, these steroids have a relatively high myotrophic activity compared with the same steroid when
+administered to the castrated rat (see Table 1). Furthermore, Feldkoren and Andersson (2005) found that
+stanozolol and methandienone have significantly lower binding affinities compared with testosterone but all
+three steroids were potent activators in a cell-based androgen receptor-dependent transactivation assay.
+Clearly, the degree of physical binding to the androgen receptor, as measured by ligand-binding assays, does
+not fully explain the biological activity of anabolic steroids. Distinct target gene expression profiles due to
+androgen receptor activation by structurally different androgens has also been reported (Holterhus et al.,
+2002), the study including three anabolic steroids nandrolone, oxandrolone and stanozolol, together with
+what the investigators term three ‘virilizing androgens' (testosterone, DHT and methyltrienolone) and two
+testosterone precursors (DHEA and androstenedione). The model used was three structurally different
+androgen promoter constructs in co-transfected Chinese hamster ovary cells. All the steroids proved to be
+potent activators of the androgen receptor, but the anabolic steroids and the testosterone precursors showed
+characteristic promoter activation profiles distinct from the virilizing androgens. The assumption is that the
+specific ligand-induced conformation determines how the hormone receptor complex can specifically interact
+with coregulators and neighbouring transcription factors and also that the transactivation capability depends
+on the structure of the response element. Even though many co-activators have been identified as enhancing
+the ligand-induced transcriptional activity of the androgen receptor, their relative importance with respect to
+particular cell types and tissues is unclear (Heinlein and Chang, 2002b). The emerging knowledge
+concerning androgen receptor interaction with its coregulators in different tissues clearly has relevance to
+understanding how anabolic steroids exert their actions and will give further insight into how favourable
+anabolic–androgenic dissociation may be achieved.
+
+Most recently, in vitro bioassays have been employed to determine that the designer anabolic steroid THG is
+indeed a potent androgen. Death et al. (2004) demonstrated that THG was about one order of magnitude
+more potent than nandrolone, testosterone and trenbolone in yeast cells expressing human androgen
+receptors. Friedel et al. (2006b) also used a reporter gene assay based in a yeast strain containing transfected
+androgen receptor constructs and found that THG was about 10 times lower than the EC  of the reference
+substance DHT. (Jasuja et al. (2005) found that THG upregulated androgen receptor expression in
+mesenchymal multipotent cells by measuring the translocation of the receptor to the nucleus using
+immunohistochemical and analyses, but this was not significantly different from DHT. The authors make the
+important point that it is not known whether yeast-based systems express the repertoire of coregulators that
+is present in mammalian androgen-responsive tissues. Labrie et al. (2005) studied the genomic signature of
+THG and compared it with the effects of DHT on gene expression in mouse tissues by extracting RNA,
+converting it to cDNA and then transcribing it in vitro to produce biotinylated cRNA for analysis. These
+investigators found that THG and DHT modulated in a similar fashion 671 genes in the mouse levator ani
+muscle, 95 genes in the gastrocnemius muscle and 939 genes in the prostate.
+
+50
+
+7 van 17
+
+26-9-2012 13:43
+
+Pharmacology of anabolic steroids
+
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2439524/
+
+The use of in vitro assays based on androgen receptor expression, as described above, can help to assess
+whether future designer steroids have anabolic–androgenic activity, and can help to minimize in vivo
+experiments. These approaches can provide useful evidence to government agencies involved in the
+regulation of drugs to protect public health. Moreover, the employment of such assays should be of
+particular benefit to sporting authorities to help stifle legal challenges based on the premise that new
+designer steroids have unproven anabolic activity and thus should not be subject to doping control and
+the penalties associated with their administration.
+
+Anticatabolic activity
+
+It is accepted that the administration of anabolic steroids to healthy women and children has an
+anabolic effect, and that with the virilizing effects, there is a gain in muscle mass and strength.
+However, for many years, it was difficult to prove conclusively that the administration of these steroids
+had a myotrophic effect in healthy young sportsmen, as discussed by Ryan (1976) (see the section
+‘Anabolic steroids as performance enhancers in sport'). Around that period, an interesting but
+speculative biochemical explanation for this difference in response between the sexes was that due to
+the exposure to testosterone during puberty in men, there is a downregulation of receptors (decrease in
+responsiveness of receptors often followed by decrease in numbers) in the skeletal muscle and that the
+androgen receptor population is then saturated with testosterone in the adult, so that no further
+response can be induced by pharmacological doses of androgens (Wilson, 1988). It was therefore
+reasoned that any possible myotrophic effect from administration of anabolic steroids to eugonadal men
+could be via an anticatabolic mechanism rather than a direct anabolic effect. However, the proposed
+downregulation of androgen receptors in skeletal muscle because of increased androgen exposure was
+based on a few animal studies at that time (Dahlberg et al., 1981; Rance and Max, 1984) and conflicting
+evidence was presented by Michel and Baulieu (1980) and more recently by others, for example,
+Antonio et al. (1999). Indeed, Antonio et al. speculate that upregulation may occur with the
+administration of pharmacological amounts of androgens, converting muscles that normally have a
+minor, or no response, to muscles with enhanced androgen responsiveness. Androgen receptor
+regulation in different groups of skeletal muscle in response to physiological and supraphysiological
+exposure to testosterone is intricate, let alone what may occur following administration of xenobiotic
+anabolic steroids, and the interested reader is referred to the detailed review by Dr F Kadi in the same
+issue of this journal.
+
+Indirect evidence of an antiglucocorticoid effect comes from a case report concerning partial androgen
+insensitivity syndrome (Tincello et al., 1997). A patient with a single amino-acid mutation in the
+androgen receptor DNA-binding domain (Arg-608 to Lys), which explained his lack of overall response
+to high-dose androgen treatment at different times in his life, nonetheless, could be induced into a
+positive nitrogen balance with testosterone administration. An appealing explanation for this finding is
+that anabolic steroids act as glucocorticoid receptor antagonists. Most binding studies, however,
+indicate that anabolic steroids have very low binding affinity for the glucocorticoid receptor (Hickson et
+al., 1990), a notable exception being THG, which binds with high affinity (Friedel et al., 2006b). An
+alternative hypothesis, therefore, is that anabolic steroids may interfere with glucocorticoid receptor
+expression at the gene level.
+
+Over the years, it has become apparent that the endocrinology of skeletal muscle is highly complex, and
+there is a delicate balance between synthesis and breakdown during growth, health, disease and ageing,
+as considered by Sheffield-Moore and Urban (2004). It is this complexity that makes it challenging to
+resolve the significance of anabolic steroids as anticatabolic (and anabolic) agents across the spectrum,
+from the healthy athlete who desires faster recovery from arduous training schedules where cortisol may
+be somewhat raised (Hervey, 1982) to the patient with severe physical trauma, such as from a burn
+injury, where there is extreme hypercortisolaemia and hypoandrogenaemia (Sheffield-Moore and
+Urban, 2004).
+
+Behavioural mechanisms
+
+The behavioural effects of androgens/anabolic steroids in men and women, including those concerning
+sexual behaviour, cognitive abilities, aggression and mood, have been reviewed by Lukas (1996),
+Christiansen (2001, 2004) and Kuhn (2002) and are also discussed in the National Institute on Drug
+Abuse (NIDA) Research Monographs (Katz and Pope, 1990; Svare, 1990; Yesalis et al., 1990).
+Androgens are critical to the human male sexual behaviour and they can also enhance female sexual
+desire and arousal. Testosterone appears to play an important role in cognitive functioning, such as
+attention and alertness, memory and spatial skills, although based on the conclusions of a limited
+number of studies. With respect to mood, there are significantly positive correlations of endogenous
+androgen concentrations with a sense of well-being and joyfulness, and negative correlations with
+depression and anxiety. Major mood syndromes can arise with anabolic steroid use, including mania or
+hypomania (mania of a mild type) during exposure and depressive symptoms during steroid withdrawal
+(Pope and Katz, 1994). Anabolic steroid administration is also associated with increased aggression,
+especially in high-dose users, but this is not a foregone certainty given that the interaction between
+androgens and behaviour in men and women is complex. It is an entirely reasonable hypothesis that
+the athlete may learn to recognize and harness the increase in aggression that can arise with steroid use
+to help drive their training and increase their competitiveness (Brooks, 1978). Furthermore, male
+athletes who administer anabolic steroids and then withdraw just before competition in anticipation of
+a drug test may then experience (in the author's opinion) a lack of motivation and possibly depression,
+because they will be in a state of androgen deficiency, taking time for testicular steroidogenesis to
+recover. In an effort to avoid this problem, it is possible that some athletes may switch to using fairly
+small doses of short half-life formulations of testosterone for replacement purposes in the hope that, at
+the time of collection of their sample for drug testing, the urinary testosterone/epitestosterone ratio will
+be below the WADA reporting threshold of 4.
+
+Clark and Henderson (2003) have summarized the literature with respect to the effects of anabolic
+steroids on the neural circuits that underlie behavioural effects; their review focusing on animal models
+and steroid exposure that mimic human abuse regimes. Androgen receptors mediate the effects of
+anabolic steroids in the mammalian brain; the expression of progestogen and oestrogen receptors may
+also be affected. Non-genomic pathways are important too, the best-characterized example being the
+
+8 van 17
+
+26-9-2012 13:43
+
+Pharmacology of anabolic steroids
+
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2439524/
+
+A
+
+allosteric modulation of GABA  receptor function by anabolic steroids, possibly through a putative
+binding site for anabolic steroids residing within the transmembrain domain of the receptor.
+Induction of aggression by anabolic steroids appears to overlap with neural circuits underlying the
+regulation of aggression by endogenous androgens, these being systems utilizing GABA, serotonin
+and arginine vasopressin.
+
+Selective androgen receptor modulators
+
+Go to:
+
+Many anabolic steroids were synthesized and their biological activity characterized (myotrophic–
+androgenic index, metabolic studies in animal and man) over 40 years ago, at a time when
+molecular endocrinology was in its infancy. With the knowledge gained in the 1980s and 1990s as
+to how selective oestrogen receptor modulators, such as tamoxifen and raloxifene, may work at
+molecular level (Jordan, 1998), perhaps it is not surprising that there is currently an interest in
+the possibility of modulating the androgen receptor in a similar manner. The development of
+SARMs, including their ligand interactions with the androgen receptor, is reviewed by Bhasin et
+al. (2006). Tissue selectivity may be achieved by synthesizing ligands that modulate the
+expression of the androgen receptor by inducing specific conformational changes that affect its
+interaction with coregulators. Androgens, steroidal or nonsteroidal, that offer tissue selectivity
+based on a divergence in intracellular metabolism are also included under the term SARM, such as
+the steroid MENT, which cannot undergo 5α-reduction (Kumar et al., 1992) but is almost certainly
+aromatized to an active oestrogen (Lamorte et al., 1994; de Gooyer et al., 2003). Indeed, the role of
+5α-reductase appears to play a critical part in determining the tissue-specific expression of SARMs
+(Gao and Dalton, 2007a). Notwithstanding, the clinical applications of steroidal androgens are
+generally limited by poor tissue selectivity, pharmacokinetics and toxicity, and it is hoped that the
+amenability to structural modifications of nonsteroidal ligands will overcome these limitations.
+The current nonsteroidal SARM pharmacophores are analogues of aryl propionamide, bicyclic
+hydantoin, quinoline and tetrahydroquinoline (Gao and Dalton, 2007b) (Table 2).
+
+Table 2
+Non-steroidal AR agonists (Gao and Dalton, 2007a, 2007b)
+
+Clinically, SARMs may offer unique therapeutic potential to androgen therapy (Negro-Vilar, 1999;
+Roy et al., 2001; Wolf and Obendorf, 2004) and ultimately those that maintain the anabolic
+actions of androgens without causing virilization would greatly expand the therapeutic options for
+women (Gao and Dalton, 2007b). Negro-Vilar (1999) gives a wish list of the desired profile of
+activity of SARMs, these being tailored to a number of male and female applications. Generally, all
+include an anabolic effect in muscle and bone, but the androgenic effects are modified to varying
+degrees from stimulatory, to weak or neutral, depending on the disease state. For example, for the
+treatment of hypogonadism in elderly men, it is important to minimize induction of growth of the
+prostate gland to avoid increasing the risk of developing benign prostatic hypertrophy or cancer of
+the prostate, and, thus, an SARM could be administered with weaker to no activity in this gland.
+SARMs also could be useful, but not merely confined to, the treatment of osteopaenia, osteoporosis
+and sarcopaenia in elderly men and postmenopausal women (assuming sufficient anabolic–
+androgenic dissociation can be achieved for the latter), glucocorticoid-induced osteoporis, HIV
+wasting, cancer cachexia and different types of muscular dystrophies.
+
+Clinical applications
+
+Go to:
+
+The clinical applications of anabolic steroids has been reviewed recently by Basaria et al. (2001)
+and Shahidi (2001). Historically, the usefulness of anabolic steroids in reversing the catabolic
+state of patients had not proved convincing and, by the end of the 1980s, many anabolic steroids
+had been withdrawn as licensed products and those remaining were limited for the purpose of
+hormone replacement therapy and the treatment of specific diseases (see next paragraph). A
+detailed analysis of the plethora of clinical reports, including uncontrolled trials and case studies,
+together with consideration of the risks versus benefits of various anabolic steroids for protein-
+building purposes is beyond this review. What is especially of note, however, is that lately the
+potential of anabolic steroids as therapeutic agents to increase weight, lean body mass and
+strength is being currently revisited. Anabolic steroids, such as testosterone esters, and the
+17α-alkylated steroids oxymetholone and oxandrolone, may play a significant role in the treatment
+of cachexia associated with AIDS, severe burns and renal failure, where nutrition and standard
+care have been ineffective, as reviewed by Basaria et al. (2001). Further, nandrolone decanoate has
+been demonstrated to be effective in countering sarcopaenia in patients receiving dialysis
+(Johansen et al., 1999, 2006) and trestolone (MENT) could be a promising new androgen therapy
+for sarcopaenia (loss of muscle and strength in senescence). In the older woman, oxandrolone
+administration stimulates muscle protein anabolism (Sheffield-Moore et al., 2006), but the role of
+anabolic steroid therapy in women with wasting syndromes very much needs to be evaluated
+(Basaria et al., 2001). Notwithstanding the above, a number of regulatory and conceptual issues
+are hindering progress in deciding which clinical conditions may benefit from intervention with
+anabolic steroids (Bhasin et al., 2006), not least what outcomes should constitute evidence of
+efficacy in clinical trials. For example, although, theoretically, an increase in lean body mass and
+weight in HIV-infected individuals suffering from weight loss should lead to improved physical
+functioning and quality of life, and ultimately to increased survival, this has not been
+demonstrated (Johns et al., 2005). Carefully designed randomized trials may eventually give the
+definitive answers as to the clinical usefulness of therapy with anabolic steroids, and whether
+xenobiotic anabolic steroids offer any advantage over supraphysiological doses of testosterone to
+men. In designing trials involving women, to help reduce unwanted androgenic effects, the
+administration of a xenobiotic steroid with a favourable myotrophic–androgenic index should be
+considered. In the interim, at the very least it seems sensible to consider hormone replacement
+therapy to men in a catabolic state where there is a significant decrease in circulating testosterone
+associated with the chronic disease, for example, those with severe burn injuries or HIV-associated
+wasting.
+
+9 van 17
+
+26-9-2012 13:43
+
+Pharmacology of anabolic steroids
+
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2439524/
+
+For hormone replacement therapy, testosterone preparations are used in male hypogonadism
+and male hormonal contraception (where progestogens are administered to inhibit
+gonadotropin secretion). Mesterolone is also available for the treatment of male
+hypogonadism but it is seldom used, if at all. Oxymetholone and stanozolol, which induce
+the production of a C-1 esterase inhibitor, were used in the prevention and control of attacks
+of hereditary angio-oedema (except in pregnant women and prepubertal patients due to the
+risk of virilization) but the latter steroid has been recently withdrawn in the United
+Kingdom. Anabolic steroids also stimulate erythrocyte synthesis, which can be useful in the
+treatment of hypoplastic anaemias but their use in wealthy countries is likely to be limited
+with the relative recent availability of recombinant human erythropoietin and its analogues.
+In postmenopausal women, the treatment of osteoporosis with anabolic steroids, such as
+nandrolone decanoate, is not advocated given the success of oestrogen replacement and,
+more recently, with the introduction of the biphosphonates.
+
+Anabolic steroids as performance enhancers in sport
+
+Go to:
+
+The action of anabolic steroid in increasing skeletal muscle mass and strength in women is
+not questioned. Male and female athletes from the German Democratic Republic (GDR),
+from about 1972 onwards did exceptionally well in international events, being consistently in
+the top ranking of medal winners. Sporting performance among their female athletes,
+particularly in strength-dependent events, was spectacular. Following the reunification of
+Germany in 1990, ground-breaking documental research was made by the former athlete,
+Mrs Brigitte Berendonk, and her husband Professor Werner Franke, who had succeeded in
+acquiring a number of highly classified scientific reports that had not been destroyed. These
+documents deal with the systematic state-sponsored programme of doping of athletes and
+included scientific reports, doctoral theses and a hand-written protocol book giving the times
+and dosage of administration of anabolic steroids to athletes. Several thousand athletes were
+treated with anabolic steroids every year, including adolescents of each sex. Particular
+emphasis was placed on the administration of anabolic steroids to women and adolescent
+girls, despite the virilizing effects, because of the rapid gains in sporting performance. It is
+important to note that the GDR scientists established (to themselves) that ‘androgenic
+initiation' has permanent effects in girls and women, where increases in strength and
+performance do not return to pretreatment values after the drug is withdrawn. The current
+emphasis on out-of-competition drug testing is, therefore, of vital importance to help prevent
+doping during training followed by a period of drug elimination and then competition.
+
+With respect to men, a most comprehensive review in 1976 of previous results concluded that
+there was little evidence for supraphysiological doses of testosterone or synthetic anabolic
+steroids having any appreciable effect on muscle size or strength in healthy men (Ryan,
+1976). Even so, many of the studies reviewed had a lack of adequate control and
+standardization. Despite the debate in the scientific community as to the effectiveness of
+anabolic steroids as performance enhancers in men, male athletes and bodybuilders
+continued to use them, knowing from their own experimentation that they were effective.
+Conclusions from more recent reviews suggested that the administration of anabolic steroids
+could consistently result in significant increases in strength if male athletes satisfied certain
+criteria including the timing of doses and dietary factors (Wright, 1980; Haupt and Rovere,
+1984; Alen and Hakkinen, 1987; Strauss and Yesalis, 1991). Then in 1996, Bhasin et al.
+(1996) in a very carefully designed study, proved beyond doubt that treatment with
+testosterone in supraphysiological doses (600 mg i.m. of testosterone enanthate for 10
+weeks) increases muscle size and strength, and that with exercise these effects are
+augmented.
+
+Subsequent work showed that increases in fat-free mass, muscle size, strength and power are
+highly dose-dependent and correlated with serum testosterone concentrations (Bhasin et al.,
+2001; Woodhouse et al., 2003) (Note: Strength is the maximum amount of force that can be
+exerted, for example, the heaviest weight that can be pushed away on a leg press, as opposed
+to power, which is the product of force and velocity, usually measured in watts, for example,
+the amount of weight that can be pressed away at speed, often repeatedly. Several track and
+field events demand explosive power, which depends on athletes first developing a solid
+strength base). The implications of these subsequent findings need to be emphasized to
+those concerned with antidoping in sport, in that an approximate doubling of the serum total
+and free concentrations of testosterone from the baseline values in eugonadal men over a
+20-week period caused significant increases in strength and power (see the results reported
+by Bhasin et al. (2001), regarding the weekly regimen of 300 mg testosterone enanthate).
+Although the serum testosterone was measured 7 days after previous injection, which reflect
+the lowest values after administration, such androgen exposure is relatively small in the
+context of the regimens often written about in connection with bodybuilding. Even with
+respect to athletes, this dose is small compared with the amounts that some athletes may
+have been administering around 30 years ago, as Wright (1980) comments during that
+period that ‘it is not uncommon for the dose level in national calibre athletes to exceed 1
+mg/kg of body weight per day with a rather large number of individuals using two to four
+times that quantity.' Over a decade later, it is worth noting that Rogol and Yesalis (1992)
+remark that ‘Endurance and sprint athletes use doses closer to those used medically for
+replacement levels', and the connotation is, therefore, that such athletes by that time
+recognized that modest drug-induced gains in strength and power may be all that is required
+to secure an advantage in these type of sports events. The use of smaller doses of anabolic
+steroids, particularly those formulated for daily administration (such as transdermal
+applications of testosterone as opposed to i.m. administered testosterone enanthate) would
+allow rapid elimination of a steroid in anticipation of a drug test. Out-of-competition testing
+should counter this strategy. Regardless of the above, it should be stressed that due to
+anabolic steroid administration being covert in athletics for obvious reasons, very little recent
+information has come to light regarding the doses of anabolic steroids used by elite athletes
+
+10 van 17
+
+26-9-2012 13:43
+
+Pharmacology of anabolic steroids
+
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2439524/
+
+who choose to cheat.
+
+Adverse effects
+
+Go to:
+
+The undesirable effects arising from anabolic steroid administration (Table 3) have
+been extensively reviewed (Haupt and Rovere, 1984; Di Pasquale, 1990; Graham and
+Kennedy, 1990; Landry and Primos, 1990; Shahidi, 2001; Kicman and Gower, 2003b;
+James and Kicman, 2004). Typically, anabolic steroids are taken in cycles of about
+6–12 weeks (the ‘on period') followed by a variable period off the drugs, from 4 weeks to
+several months (the ‘off period') in an attempt to reduce the likelihood of undesirable
+effects but some bodybuilders will take them almost continuously.
+
+Table 3
+Adverse effects from anabolic steroid administration
+
+For clinical purposes, the administration of these drugs can be of therapeutic benefit
+and reasonably safe, with the physician making objective decisions based on the
+benefit/risk ratio in relation to a patient's condition. By contrast, for the purposes of
+enhancing performance in sport or for cosmetic purposes, usually because it is a
+clandestine activity, the athletes and bodybuilders are making subjective decisions
+regarding the effect these steroids are having on their health. Many probably have an
+attitude of personal invulnerability because they regard themselves as smart steroid
+users (Perry et al., 1990), their knowledge being based on reconnaissance of the
+considerable amount of popular literature (also in electronic form) written by steroid
+‘gurus', consultation of colleagues who are steroid users in the gym and their own
+personal experiences from experimentation. Furthermore, it may be perceived that
+athletes who fail a test show no obvious signs of ill-health, such as blatant
+gynaecomastia, severe steroid acne or hirsutism, and this may imply to others that the
+adverse effects of anabolic steroid use are exaggerated. These athletes could be
+exercising moderation in the doses they were administering, which should help to keep
+adverse effects to a minimum (Millar, 1994). Of note, however, is that many of the
+adverse effects can be difficult to recognize without a thorough medical examination
+(and patient–doctor confidentiality would have to be maintained) and other damaging
+effects are insidious where the athletes themselves will be unaware, such as the
+potential harmful changes to the cardiovascular system. Even so, it is important not to
+overstate the medical risks associated with anabolic steroid use (Hoffman and
+Ratamess, 2006) but to emphasize that the hazards to health are dependent on the sex,
+the dose, the duration of administration, whether hepatoxic 17α-alkylated steroids are
+being administered and the susceptibility of the individuals themselves to androgen
+exposure (likely to be dependent on genetic factors, age and lifestyle). The axiom,
+particularly among bodybuilders who can use excessively large amounts of steroids,
+that the ‘more you take, the more you grow' should be accompanied with ‘the more you
+may damage your health'. It is difficult to gauge the prevalence of severe adverse effects
+of what is an underground activity, and, moreover, it would be unethical to mimic the
+large dose regimens in controlled studies over prolonged periods of time to evaluate the
+risks to health. Notwithstanding, from the records of the doping programme in the
+former German Democratic Republic, nowhere did the GDR doctors record a damaging
+effect that was not described in the ‘western' literature. These effects included the
+irreversible effects of virilization (masculanizing effects) in women and female
+adolescents, and life-threatening liver damage associated with 17α-alkylated steroids
+(oral-turinabol was commonly administered), which sadly led to the death of the
+hammer thrower, Mr Detlef Gertsenberg, following postoperative complications.
+
+Abbreviations
+
+Go to:
+
+activation function
+
+Bay Area Laboratory Co-operative
+dehydroepiandrosterone
+
+5α-dihydrotestosterone
+Food and Drug Administration
+heat-shock protein
+
+AF
+BALCO
+DHEA
+DHT
+FDA
+Hsp
+LC–MS/MS
+MENT
+SARM
+THG
+UCLA, University of California
+WADA
+
+tetrahydrogestrinone
+
+liquid chromatography–mass spectrometry/mass spectrometry
+
+7α-methyl-19-nortestosterone
+selective androgen receptor modulator
+
+World Anti-Doping Agency
+
+Los Angeles
+
+Notes
+
+Conflict of interest
+
+The author states no conflict of interest.
+
+References
+
+Go to:
+
+Go to:
+
+Agarwal AK, Monder C. In vitro metabolism of 7-alpha-methyl-19-nortestosterone
+
+by rat-liver, prostate, and epididymis. Endocrinology. 1988;123:2187–2193.
+[PubMed]
+
+Alen M, Hakkinen K. Androgenic steroid effects on serum hormones and on
+
+maximal force development in strength athletes. J Sports Med Phys Fitness.
+1987;27:38–46. [PubMed]
+
+Antonio J, Wilson JD, George FW. Effects of castration and androgen treatment on
+
+11 van 17
+
+26-9-2012 13:43
+
+Pharmacology of anabolic steroids
+
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2439524/
+
+androgen-receptor levels in rat skeletal muscles. J Appl Physiol.
+1999;87:2016–2019. [PubMed]
+
+Bardin CW, Lipsett MB. Testosterone and androstenedione blood production
+
+rates in normal women and women with idiopathic hirsutism or polycystic
+ovaries. J Clin Invest. 1967;46:891–902. [PMC free article] [PubMed]
+
+Bartsch W, Krieg M, Voigt KD. Quantification of endogenous testosterone,
+
+5-alpha-dihydrotestosterone and 5-alpha-androstane-3-alpha, 17-beta-diol
+in subcellular fractions of the prostate, bulbocavernosus/levator ani muscle,
+skeletal muscle and heart muscle of the rat. J Steroid Biochem.
+1980;13:259–264. [PubMed]
+
+Basaria S, Wahlstrom JT, Dobs AS. Anabolic–androgenic steroid therapy in
+
+the treatment of chronic diseases. J Clin Endocrinol Metab.
+2001;86:5108–5117. [PubMed]
+
+Bassindale T, Cowan DA, Dale S, Hutt AJ, Leeds AR, Wheeler MJ, et al. Effects
+
+of oral administration of androstenedione on plasma androgens in young
+women using hormonal contraception. J Clin Endocrinol Metab.
+2004;89:6030–6038. [PubMed]
+
+Bhasin S, Calof OM, Storer TW, Lee ML, Mazer NA, Jasuja R, et al. Drug
+
+insight: testosterone and selective androgen receptor modulators as
+anabolic therapies for chronic illness and aging. Nat Clin Pract Endocrinol
+Metab. 2006;2:146–159. [PMC free article] [PubMed]
+
+Bhasin S, Storer TW, Berman N, Callegari C, Clevenger B, Phillips J, et al. The
+
+effects of supraphysiologic doses of testosterone on muscle size and
+strength in normal men. N Engl J Med. 1996;335:1–7. [PubMed]
+
+Bhasin S, Woodhouse L, Casaburi R, Singh AB, Bhasin D, Berman N, et al.
+Testosterone dose–response relationships in healthy young men. Am J
+Physiol Endocrinol Metab. 2001;281:E1172–E1181. [PubMed]
+
+BMA Anabolic androgenic steroid use in British gymnasiums Drugs in Sport
+
+(Report by the Board of Science and Education of the British Medical
+Association) 2002. BMJ Books: London; 56–75.75In: Conway L, Morgan D
+(eds).
+
+Brooks RV. Some aspects of the action of anabolic steroids on athletes Physical
+
+Activity and Human Well-being 1978. Symposia Specialists Inc.: Quebec;
+219–229.229In: Landry F, Oraban WAR (eds).
+
+Brown GA, Dewey JC, Brunkhorst JA, Vukovich MD, King DS. Changes in
+
+serum testosterone and estradiol concentrations following acute
+androstenedione ingestion in young women. Horm Metab Res.
+2004;36:62–66. [PubMed]
+
+Brown GA, Vukovich M, King DS. Testosterone prohormone supplements. Med
+
+Sci Sports Exerc. 2006;38:1451–1461. [PubMed]
+
+Brown GA, Vukovich MD, Sharp RL, Reifenrath TA, Parsons KA, King DS.
+
+Effect of oral DHEA on serum testosterone and adaptations to resistance
+training in young men. J Appl Physiol. 1999;87:2274–2283. [PubMed]
+
+Catlin DH, Ahrens BD, Kucherova Y. Detection of norbolethone, an anabolic
+
+steroid never marketed, in athletes' urine. Rapid Commun Mass Spectrom.
+2002;16:1273–1275. [PubMed]
+
+Catlin DH, Sekera MH, Ahrens BD, Starcevic B, Chang YC, Hatton CK.
+
+Tetrahydrogestrinone: discovery, synthesis, and detection in urine. Rapid
+Commun Mass Spectrom. 2004;18:1245–1249. [PubMed]
+
+Cato AC, Nestl A, Mink S. Rapid actions of steroid receptors in cellular
+
+signaling pathways. Sci STKE. 2002;2002:RE9. [PubMed]
+
+Celotti F, Cesi PN. Anabolic steroids—a review of their effects on the muscles,
+
+of their possible mechanisms of action and of their use in athletics. J
+Steroid Biochem Mol Biol. 1992;43:469–477. [PubMed]
+
+Christiansen K. Behavioural effects of androgen in men and women. J
+
+Endocrinol. 2001;170:39–48. [PubMed]
+
+Christiansen K. Behaviour correlates of testosterone 2004. Cambridge
+
+University Press: UK; 233–254.254In: Nieschlag E, Behre HM (eds).
+
+Clark AS, Henderson LP. Behavioral and physiological responses to anabolic–
+androgenic steroids. Neurosci Biobehav Rev. 2003;27:413–436. [PubMed]
+
+Clark RV, Hermann DJ, Cunningham GR, Wilson TH, Morrill BB, Hobbs S.
+Marked suppression of dihydrotestosterone in men with benign prostatic
+hyperplasia by dutasteride, a dual 5 alpha-reductase inhibitor. J Clin
+Endocrinol Metab. 2004;89:2179–2184. [PubMed]
+
+Coert A, Geelen J, de Visser J, van der Vies J. The pharmacology and
+metabolism of testosterone undecanoate (TU), a new orally active
+androgen. Acta Endocrinol (Copenh) 1975;79:789–800. [PubMed]
+
+Cramer RJ. Anabolic steroids are easily purchased without a prescription and
+present significant challenges to law enforcement officials 2005. Available
+atdated 3 November 2005.
+
+Dahlberg E, Snochowski M, Gustafsson JA. Regulation of the androgen and
+
+glucocorticoid receptors in rat and mouse skeletal muscle cytosol.
+Endocrinology. 1981;108:1431–1440. [PubMed]
+
+de Gooyer ME, Oppers-Tiemissen HM, Leysen D, Verheul HAM, Kloosterboer
+
+HJ. Tibolone is not converted by human aromatase to 7 alpha-methyl-17
+alpha-ethynylestradiol (7 alpha-MEE): analyses with sensitive bioassays
+for estrogens and androgens and with LC–MSMS. Steroids.
+2003;68:235–243. [PubMed]
+
+Death AK, McGrath KCY, Kazlauskas R, Handelsman DJ.
+
+Tetrahydrogestrinone is a potent androgen and progestin. J Clin
+Endocrinol Metab. 2004;89:2498–2500. [PubMed]
+
+12 van 17
+
+26-9-2012 13:43
+
+Pharmacology of anabolic steroids
+
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2439524/
+
+Di Pasquale MG. Anabolic Steroid Side Effects—Facts, Fiction and
+
+Treatment. MGD Press: Ontario; 1990.
+
+Djerassi C, Miramontes L, Rosenkranz G, Sondheimer F. Steroids .54.
+
+Synthesis of 19-nor-17-alpha-ethynyltestosterone and 19-nor-
+17-alpha-methyltestosterone. J Am Chem Soc. 1954;76:4092–4094.
+
+Eisenberg E, Gordan GS. The levator ani muscle of the rat as an index of
+
+myotrophic activity of steroidal hormones. J Pharmacol Exp Ther.
+1950;99:38–44. [PubMed]
+
+FDA Health Effects of Androstenedione 2004. Food and Drug
+
+Administration: Rockville, MD; White Paper. 11 March 2004.
+
+Feldkoren BI, Andersson S. Anabolic–androgenic steroid interaction with
+
+rat androgen receptor in vivo and in vitro: a comparative study. J
+Steroid Biochem Mol Biol. 2005;94:481–487. [PubMed]
+
+Franke WW, Berendonk B. Hormonal doping and androgenization of
+
+athletes: a secret program of the German Democratic Republic
+Government. Clin Chem. 1997;43:1262–1279. [PubMed]
+
+Friedel A, Geyer H, Kamber M, Laudenbach-Leschowsky U, Schanzer W,
+
+Thevis M, et al. 17 beta-Hydroxy-5alpha-androst-1-en-3-one
+(1-testosterone) is a potent androgen with anabolic properties.
+Toxicol Lett. 2006a;165:149–155. [PubMed]
+
+Friedel A, Geyer H, Kamber M, Laudenbach-Leschowsky U, Schanzer W,
+
+Thevis M, et al. Tetrahydrogestrinone is a potent but unselective
+binding steroid and affects glucocorticoid signalling in the liver.
+Toxicol Lett. 2006b;164:16–23. [PubMed]
+
+Gao W, Dalton JT. Ockham's razor and selective androgen receptor
+
+modulators (SARMs): are we overlooking the role of 5alpha-reductase.
+Mol Interv. 2007a;7:10–13. [PMC free article] [PubMed]
+
+Gao WQ, Dalton JT. Expanding the therapeutic use of androgens via
+
+selective androgen receptor modulators (SARMs) Drug Discov Today.
+2007b;12:241–248. [PMC free article] [PubMed]
+
+Gloyna RE, Wilson JD. A comparative study of conversion of testosterone
+to 17beta-hydroxy-5alpha-androstan-3-one (dihydrotestosterone) by
+prostate and epididymis. J Clin Endocrinol Metab. 1969;29:970–977.
+[PubMed]
+
+Graham S, Kennedy M. Recent developments in the toxicology of
+
+anabolic steroids. Drug Saf. 1990;5:458–476. [PubMed]
+
+Haupt HA, Rovere GD. Anabolic steroids: a review of the literature. Am J
+
+Sports Med. 1984;12:469–484. [PubMed]
+
+Hayes KJ. So-called levator ani of rat. Acta Endocrinologica.
+
+1965;48:337–347. [PubMed]
+
+Heinlein CA, Chang C. The roles of androgen receptors and androgen-
+binding proteins in nongenomic androgen actions. Mol Endocrinol.
+2002a;16:2181–2187. [PubMed]
+
+Heinlein CA, Chang CS. Androgen receptor (AR) coregulators: an
+
+overview. Endocrine Rev. 2002b;23:175–200. [PubMed]
+
+Hermansson G. Doping trade: business for the big ones 2002. In: Play
+
+the Game, search for author underaccessed on January 2008.
+
+Hershberger LG, Shipley EG, Meyer RK. Myotrophic activity of
+
+19-nortestosterone and other steroids determined by modified levator
+ani muscle method. Proc Soc Exp Biol Med. 1953;83:175–180.
+[PubMed]
+
+Hervey GR. What are the effects of anabolic steroids Science and
+
+Sporting Performance 1982. Clarendon Press: Oxford; 120–136.136In:
+Davies B, Thomas G (eds).
+
+Hickson RC, Czerwinski SM, Falduto MT, Young AP. Glucocorticoid
+
+antagonism by exercise and androgenic-anabolic steroids. Med Sci
+Sports Exerc. 1990;22:331–340. [PubMed]
+
+Hoffman JR, Ratamess NA. Medical issues associated with anabolic
+
+steroid use: Are they exaggerated. J Sports Sci Med. 2006;5:182–193.
+
+Holterhus PM, Piefke S, Hiort O. Anabolic steroids, testosterone-
+
+precursors and virilizing androgens induce distinct activation profiles
+of androgen responsive promoter constructs. J Steroid Biochem Mol
+Biol. 2002;82:269–275. [PubMed]
+
+Horst HJ, Holtje WJ, Dennis M, Coert A, Geelen J, Voigt KD. Lymphatic
+
+absorption and metabolism of orally administered testosterone
+undecanoate in man. Klin Wochenschr. 1976;54:875–879. [PubMed]
+
+Horton R, Tait JF. Androstenedione production and interconversion
+
+rates measured in peripheral blood and studies on the possible site of
+its conversion to testosterone. J Clin Invest. 1966;45:301–313.
+[PMC free article] [PubMed]
+
+James VHT, Kicman AT. Medical aspects of drug use in the gym. Drug
+
+Ther Bull. 2004;42:1–5. [PubMed]
+
+Jasuja R, Catlin DH, Miller A, Chang YC, Herbst KL, Starcevic B, et al.
+
+Tetrahydrogestrinone is an androgenic steroid that stimulates
+androgen receptor-mediated, myogenic differentiation in C3H10T1/2
+multipotent mesenchymal cells and promotes muscle accretion in
+orchidectomized male rats. Endocrinology. 2005;146:4472–4478.
+[PubMed]
+
+Johansen KL, Mulligan K, Schambelan M. Anabolic effects of nandrolone
+
+decanoate in patients receiving dialysis—a randomized controlled
+trial. JAMA. 1999;281:1275–1281. [PubMed]
+
+13 van 17
+
+26-9-2012 13:43
+
+Pharmacology of anabolic steroids
+
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2439524/
+
+Johansen KL, Painter PL, Sakkas GK, Gordon P, Doyle J, Shubert
+
+T. Effects of resistance exercise training and nandrolone
+decanoate on body composition and muscle function among
+patients who receive hemodialysis: a randomized, controlled
+trial. J Am Soc Nephrol. 2006;17:2307–2314. [PubMed]
+
+Johns K, Beddall MJ, Corrin RC. Anabolic steroids for the
+
+treatment of weight loss in HIV-infected individuals. Cochrane
+Database Syst Rev. 2005. p. CD005483.
+
+Jordan VC. Designer estrogens. Sci Am. 1998;279:60–67. [PubMed]
+Jouravel N, Sablin E, Arnold LA, Guy RK, Fletterick RJ. Interaction
+between the androgen receptor and a segment of its corepressor
+SHP. Acta Crystallogr D Biol Crystallogr. 2007;63:1198–1200.
+[PubMed]
+
+Katz DL, Pope HG., Jr Anabolic–androgenic steroid-induced
+
+mental status changes. NIDA Res Monogr. 1990;102:215–223.
+[PubMed]
+
+Kicman AT, Bassindale T, Cowan DA, Dale S, Hutt AJ, Leeds AR.
+Effect of androstenedione ingestion on plasma testosterone in
+young women; a dietary supplement with potential health risks.
+Clin Chem. 2003a;49:167–169. [PubMed]
+
+Kicman AT, Gower DB. Anabolic steroids in sport: biochemical,
+
+clinical and analytical perspectives. Ann Clin Biochem.
+2003b;40:321–356. [PubMed]
+
+Kicman AT, Houghton E, Gower DB. Anabolic steroids:
+
+metabolism, doping and detection in human and equestrian
+sports Steroid Analysis 2008. Springer: Dordrecht; In: Makin
+HLJ, Gower DB (eds).2nd edn.
+
+Klocker H, Gromoll J, Cato ACB. The androgen receptor: molecular
+
+biology Testosterone 2004. Cambridge University Press:
+Cambridge, UK; In: Nieschlag E, Behre HM (eds).3rd edn.
+
+Klotz F, Petersson A, Isacson D, Thiblin I. Violent crime and
+
+substance abuse: a medico-legal comparison between deceased
+users of anabolic androgenic steroids and abusers of illicit drugs.
+Forensic Sci Int. 2007;173:57–63. [PubMed]
+
+Korkia P, Stimson GV. Anabolic Steroid Use in Great Britain: An
+
+Exploratory Investigation 1993. The Centre for Research on
+Drugs and Health Behaviour: London; (ed)
+
+Korkia P, Stimson GV. Indications of prevalence, practice and
+
+effects of anabolic steroid use in Great Britain. Int J Sports Med.
+1997;18:557–562. [PubMed]
+
+Krieg M, Dennis M, Voigt KD. Comparison between binding of
+
+19-nortestosterone, 5-alpha-dihydrotestosterone and
+testosterone in rat prostate and bulbocavernosus/levator ani
+muscle. J Endocrinol. 1976;70:379–387. [PubMed]
+
+Krieg M, Voigt KD. Biochemical substrate of androgenic actions at a
+
+cellular level in prostate, bulbocavernosus/levator ani and in
+skeletal muscle. Acta Endocrinologica. 1977;85:43–87.
+
+Kruskemper HL. Anabolic Steroids. Academic Press: New York;
+
+1968.
+
+Kuhn CM. Anabolic steroids. Recent Prog Horm Res.
+
+2002;57:411–434. [PubMed]
+
+Kumar N, Didolkar AK, Monder C, Bardin CW, Sundaram K. The
+biological-activity of 7-alpha-methyl-19-nortestosterone is not
+amplified in male reproductive-tract as is that of testosterone.
+Endocrinology. 1992;130:3677–3683. [PubMed]
+
+Labrie F, Luu-The V, Calvo E, Martel C, Cloutier J, Gauthier S, et
+
+al. Tetrahydrogestrinone induces a genomic signature typical of
+a potent anabolic steroid. J Endocrinol. 2005;184:427–433.
+[PubMed]
+
+Lamorte A, Kumar N, Bardin CW, Sundaram K. Aromatization of
+
+7-alpha-methyl-19-nortestosterone by human placental
+microsomes in-vitro. J Steroid Biochem Mol Biol.
+1994;48:297–304. [PubMed]
+
+Landry GL, Primos WA., Jr Anabolic steroid abuse. Adv Pediatr.
+
+1990;37:185–205. [PubMed]
+
+Larionov AA, Vasyliev DA, Mason JI, Howie AF, Berstein LM,
+
+Miller WR. Aromatase in skeletal muscle. J Steroid Biochem Mol
+Biol. 2003;84:485–492. [PubMed]
+
+Leder BZ, Leblanc KM, Longcope C, Lee H, Catlin DH, Finkelstein
+
+JS. Effects of oral androstenedione administration on serum
+testosterone and estradiol levels in postmenopausal women. J
+Clin Endocrinol Metab. 2002;87:5449–5454. [PubMed]
+
+Lenehan P, Bellis M, McVeigh J. A study of anabolic steroid use in
+
+the North West of England. J Perform Enhancing Drugs.
+1996;1:57–71.
+
+Leyden J, Bergfeld W, Drake L, Dunlap F, Goldman MP, Gottlieb
+
+AB, et al. A systemic type I 5 alpha-reductase inhibitor is
+ineffective in the treatment of acne vulgaris. J Am Acad
+Dermatol. 2004;50:443–447. [PubMed]
+
+Losel RM, Falkenstein E, Feuring M, Schultz A, Tillmann HC,
+
+Rossol-Haseroth K, et al. Nongenomic steroid action:
+
+14 van 17
+
+26-9-2012 13:43
+
+Pharmacology of anabolic steroids
+
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2439524/
+
+controversies, questions, and answers. Physiol Rev.
+2003;83:965–1016. [PubMed]
+
+Lukas SE. CNS effects and abuse liability of anabolic–
+androgenic steroids. Annu Rev Pharmacol Toxicol.
+1996;36:333–357. [PubMed]
+
+Mangelsdorf DJ, Thummel C, Beato M, Herrlich P, Schutz G,
+
+Umesono K, et al. The nuclear receptor superfamily: the
+second decade. Cell. 1995;83:835–839. [PubMed]
+
+Massa R, Martini L. Testosterone-metabolism—necessary step
+
+for activity. J Steroid Biochem Mol Biol. 1974;5:941–947.
+
+Michel G, Baulieu EE. Androgen receptor in rat skeletal
+
+muscle—characterization and physiological variations.
+Endocrinology. 1980;107:2088–2098. [PubMed]
+
+Millar AP. Licit steroid use—hope for the future. Br J Sports
+
+Med. 1994;28:79–83. [PMC free article] [PubMed]
+
+Mooradian AD, Morley JE, Korenman SG. Biological actions
+
+of androgens. Endocr Rev. 1987;8:1–28. [PubMed]
+
+Muller JM, Isele U, Metzger E, Rempel A, Moser M, Pscherer
+
+A, et al. FHL2, a novel tissue-specific coactivator of the
+androgen receptor. EMBO J. 2000;19:359–369.
+[PMC free article] [PubMed]
+
+Negro-Vilar A. Selective androgen receptor modulators
+
+(SARMs): a novel approach to androgen therapy for the
+new millennium. J Clin Endocrinol Metab.
+1999;84:3459–3462. [PubMed]
+
+Nielen MWF, Bovee TFH, van Engelen MC, Rutgers P,
+
+Hamers ARM, van Rhijn IHA, et al. Urine testing for
+designer steroids by liquid chromatography with androgen
+bioassay detection and electrospray quadrupole time-of-
+flight mass spectrometry identification. Anal Chem.
+2006;78:424–431. [PubMed]
+
+Nimni ME, Geiger E. Non-suitability of levator ani method as
+
+an index of anabolic effect of steroid. Proc Soc Exp Biol
+Med. 1957;94:606–610. [PubMed]
+
+Obendorf M, Meyer R, Henning K, Mitev YA, Schroder J,
+
+Patchev VK, et al. FoxG1, a member of the forkhead family,
+is a corepressor of the androgen receptor. J Steroid
+Biochem Mol Biol. 2007;104:195–207. [PubMed]
+
+Olsen EA, Hordinsky M, Whiting D, Stough D, Hobbs S, Ellis
+
+ML, et al. The importance of dual 5 alpha-reductase
+inhibition in the treatment of male pattern hair loss:
+results of a randomized placebo-controlled study of
+dutasteride versus finasteride. J Am Acad Dermatol.
+2006;55:1014–1023. [PubMed]
+
+Orwoll ES. Androgens as anabolic agents for bone. Trends
+
+Endocrinol Metab. 1996;7:77–84. [PubMed]
+
+Perissi V, Rosenfeld MG. Controlling nuclear receptors: the
+
+circular logic of cofactor cycles. Nat Rev Mol Cell Biol.
+2005;6:542–554. [PubMed]
+
+Perry PJ, Andersen KH, Yates WR. Illicit anabolic steroid use
+
+in athletes. A case series analysis. Am J Sports Med.
+1990;18:422–428. [PubMed]
+
+Picard D. Chaperoning steroid hormone action. Trends
+
+Endocrinol Metab. 2006;17:229–235. [PubMed]
+
+Pope HG, Jr, Katz DL. Psychiatric and medical effects of
+
+anabolic–androgenic steroid use. A controlled study of 160
+athletes. Arch Gen Psychiatry. 1994;51:375–382.
+[PubMed]
+
+Potts GO, Arnold A, Beyler AL. Dissociation of the androgenic
+
+and other hormonal activities from the protein anabolic
+effects of steroids Handbook of Experimental
+Pharmacology 1976. 43Springer-Verlag: Berlin;
+361–401.401In: Kochakian CD (ed).
+
+Rance NE, Max SR. Modulation of the cytosolic androgen
+
+receptor in striated-muscle by sex steroids. Endocrinology.
+1984;115:862–866. [PubMed]
+
+Randall VA. Role of 5 alpha-reductase in health and disease.
+
+Baillieres Clin Endocrinol Metab. 1994;8:405–431.
+[PubMed]
+
+Rogol AD, Yesalis CE., III Clinical review 31: anabolic–
+
+androgenic steroids and athletes: what are the issues. J
+Clin Endocrinol Metab. 1992;74:465–469. [PubMed]
+
+Roy AK, Tyagi RK, Song CS, Lavrovsky Y, Ahn SC, Oh TS, et
+al. Androgen receptor: structural domains and functional
+dynamics after ligand-receptor interaction. Ann NY Acad
+Sci. 2001;949:44–57.
+
+Russell DW, Wilson JD. Steroid 5-alpha-reductase—2 genes 2
+
+enzymes. Annu Rev Biochem. 1994;63:25–61. [PubMed]
+
+Ryan AJ. Athletics (see also Addendum, page 723) Anabolic–
+
+Androgenic Steroids 1976. 43Springer-Verlag: Berlin;
+515–534.534In: Kochakian CD (ed).
+
+15 van 17
+
+26-9-2012 13:43
+
+Pharmacology of anabolic steroids
+
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2439524/
+
+Saartok T, Dahlberg E, Gustafsson JA. Relative binding-
+affinity of anabolic–androgenic steroids—comparison
+of the binding to the androgen receptors in skeletal
+muscle and in prostate, as well as to sex hormone-
+binding globulin. Endocrinology.
+1984;114:2100–2106. [PubMed]
+
+Sato T, Sonoda T, Itami S, Takayasu S. Predominance of
+type I 5 alpha-reductase in apocrine sweat glands of
+patients with excessive or abnormal odour derived
+from apocrine sweat (osmidrosis) Br J Dermatol.
+1998;139:806–810. [PubMed]
+
+Schanzer W. Metabolism of anabolic androgenic steroids
+
+(see comments) Clin Chem. 1996;42:1001–1020.
+[PubMed]
+
+Scow RO. Effect of testosterone on muscle and other
+
+tissues and on carcass composition in
+hypophysectomized, thyroidectomized, and
+gonadectomized male rats. Endocrinology.
+1952;51:42–51. [PubMed]
+
+Scow RO, Hagan SN. Effect of testosterone propionate
+on myosin, collagen and other protein fractions in
+striated muscle of gonadectomized rats.
+Endocrinology. 1957;60:273–278. [PubMed]
+Sekera MH, Ahrens BD, Chang YC, Starcevic B,
+
+Georgakopoulos C, Catlin DH. Another designer
+steroid: discovery, synthesis, and detection of ‘madol'
+in urine. Rapid Commun Mass Spectrom.
+2005;19:781–784. [PubMed]
+
+Shahidi NT. A review of the chemistry, biological action,
+
+and clinical applications of anabolic–androgenic
+steroids. Clin Ther. 2001;23:1355–1390. [PubMed]
+
+Sheffield-Moore M, Paddon-Jones D, Casperson SL,
+
+Gilkison C, Volpi E, Wolf SE, et al. Androgen therapy
+induces muscle protein anabolism in older women. J
+Clin Endocrinol Metab. 2006;91:3844–3849.
+[PubMed]
+
+Sheffield-Moore M, Urban RJ. An overview of the
+
+endocrinology of skeletal muscle. Trends Endocrinol
+Metab. 2004;15:110–115. [PubMed]
+
+Smith K, Krieg M, Schwien S. In vitro metabolism of 5
+alpha-dihydrotestosterone to 5 alpha-androstane-3
+alpha, 17 beta-diol in rat heart, diaphragm, skeletal
+muscle and bulbocavernosus/levator ani: enzyme
+characterization and quantification. J Steroid
+Biochem. 1980;13:917–924. [PubMed]
+
+Strauss RH, Yesalis CE. Anabolic steroids in the athlete.
+
+Annu Rev Med. 1991;42:449–457. [PubMed]
+
+Sundaram K, Kumar N. 7 alpha-Methyl-
+
+19-nortestosterone (MENT): the optimal androgen
+for male contraception and replacement therapy. Int
+J Androl. 2000;23:13–15.
+
+Svare BB. Anabolic steroids and behavior: a preclinical
+
+research prospectus. NIDA Res Monogr.
+1990;102:224–241. [PubMed]
+
+Thevis M, Geyer H, Mareck U, Schanzer W. Screening for
+unknown synthetic steroids in human urine by liquid
+chromatography–tandem mass spectrometry. J Mass
+Spectrom. 2005;40:955–962. [PubMed]
+
+Thiboutot D, Harris G, Iles V, Cimis G, Gilliland K,
+
+Hagari S. Activity of the type-1 5-alpha-reductase
+exhibits regional differences in isolated sebaceous
+glands and whole skin. J Invest Dermatol.
+1995;105:209–214. [PubMed]
+
+Thigpen AE, Silver RI, Guileyardo JM, Casey ML,
+
+McConnell JD, Russell DW. Tissue distribution and
+ontogeny of steroid 5-alpha-reductase isozyme
+expression. J Clin Invest. 1993;92:903–910.
+[PMC free article] [PubMed]
+
+Tincello DG, Saunders PTK, Hodgins MB, Simpson NB,
+
+Edwards CRW, Hargreaves TB, et al. Correlation of
+clinical, endocrine and molecular abnormalities with
+in vivo responses to high-dose testosterone in
+patients with partial androgen insensitivity
+syndrome. Clin Endocrinol (Oxf) 1997;46:497–506.
+[PubMed]
+
+Toth M, Zakar T. Relative binding affinities of
+
+testosterone, 19-nortestosterone and their 5-alpha-
+reduced derivatives to the androgen receptor and to
+other androgen-binding proteins—a suggested role of
+5- alpha-reductive steroid-metabolism in the
+dissociation of myotropic and androgenic activities of
+
+16 van 17
+
+26-9-2012 13:43
+
+Pharmacology of anabolic steroids
+
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2439524/
+
+19-nortestosterone. J Steroid Biochem Mol Biol.
+1982;17:653–660.
+
+van der Vies J. Pharmacokinetics of anabolic
+
+steroids. Wien Med Wochenschr.
+1993;143:366–368. [PubMed]
+
+Van Eenoo P, Delbeke FT. Metabolism and
+excretion of anabolic steroids in doping
+control—new steroids and new insights. J
+Steroid Biochem Mol Biol. 2006;101:161–178.
+[PubMed]
+
+Warnmark A, Treuter E, Wright APH, Gustafsson
+
+JA. Activation functions 1 and 2 of nuclear
+receptors: molecular strategies for
+transcriptional activation. Mol Endocrinol.
+2003;17:1901–1909. [PubMed]
+
+Weigel NL, Moore NL. Steroid receptor
+
+phosphorylation: a key modulator of multiple
+receptor functions. Mol Endocrinol.
+2007;21:2311–2319. [PubMed]
+
+Wilson JD. Androgen abuse by athletes. Endocr
+
+Rev. 1988;9:181–199. [PubMed]
+
+Wilson JD, Griffin JE, George FW, Leshin M. The
+
+role of gonadal steroids in sexual
+differentiation. Recent Prog Horm Res.
+1981;37:1–39.
+
+Wolf SS, Obendorf M. Selective androgen receptor
+
+modulators Testosterone 2004. Cambridge
+University Press: UK; 623–640.640In:
+Nieschlag E, Behre HM (eds).3rd edn.
+
+Woodhouse LJ, Reisz-Porszasz S, Javanbakht M,
+
+Storer TW, Lee M, Zerounian H, et al.
+Development of models to predict anabolic
+response to testosterone administration in
+healthy young men. Am J Physiol Endocrinol
+Metab. 2003;284:E1009–E1017. [PubMed]
+
+Wright JE. Anabolic steroids and athletics. Exerc
+
+Sport Sci Rev. 1980;8:149–202. [PubMed]
+
+Yesalis CE, Bahrke MS. Doping among adolescent
+
+athletes. Baillieres Best Pract Res Clin
+Endocrinol Metab. 2000;14:25–35. [PubMed]
+
+Yesalis CE, Barsukiewicz CK, Kopstein AN, Bahrke
+MS. Trends in anabolic–androgenic steroid use
+among adolescents. Arch Pediatr Adolesc Med.
+1997;151:1197–1206. [PubMed]
+
+Yesalis CE, Kennedy NJ, Kopstein AN, Bahrke MS.
+Anabolic–androgenic steroid use in the United
+States. JAMA. 1993;270:1217–1221. [PubMed]
+Yesalis CE, Vicary JR, Buckley WE, Streit AL, Katz
+
+DL, Wright JE. Indications of psychological
+dependence among anabolic–androgenic
+steroid abusers. NIDA Res Monogr.
+1990;102:196–214. [PubMed]
+
+Zitzmann M, Nieschlag E. Androgens and bone
+metabolism Testosterone 2004. Cambridge
+University Press: UK; 233–254.254In:
+Nieschlag E, Behre HM (eds).3rd edn.
+
+Articles from British Journal of Pharmacology are provided here
+
+courtesy of The British Pharmacological Society
+
+17 van 17
+
+26-9-2012 13:43
+

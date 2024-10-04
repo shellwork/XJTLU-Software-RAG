@@ -1,0 +1,127 @@
+[
+    {
+        "instruction": "What was the first step of the experimental process?",
+        "input": "The isolation of the reporter gene, trehalase (TreA) from E.coli BL21 genomic DNA.",
+        "output": "The first step of the experimental process was the isolation of the reporter gene, trehalase (TreA), from E. coli BL21 genomic DNA. This gene was chosen to be cloned into the pET-15b vector due to its reliability for recombinant protein expression in E. coli."
+    },
+    {
+        "instruction": "Why was pET-15b vector chosen for cloning TreA?",
+        "input": "pET systems are reliable for recombinant protein expression in E. coli.",
+        "output": "The pET-15b vector was chosen because pET systems are known for their reliability in expressing recombinant proteins in E. coli, making it an ideal choice for the expression of TreA."
+    },
+    {
+        "instruction": "What was necessary after cloning TreA successfully?",
+        "input": "PCR amplification of the two split fragments (TreA-a & TreA-b).",
+        "output": "After successfully cloning TreA, the next step was to use the whole gene to PCR amplify the two split fragments, TreA-a and TreA-b, which were essential for further experiments involving the toehold switch."
+    },
+    {
+        "instruction": "What was the purpose of purifying the 6xHIS-tagged protein?",
+        "input": "To gain insight on the trehalase assay and optimize its conditions.",
+        "output": "The purification of the 6xHIS-tagged protein was necessary to gain insight into the trehalase assay and to optimize the conditions for the assay. This involved using nickel columns under native and denaturing conditions, with guanidine as the denaturing agent."
+    },
+    {
+        "instruction": "How was the enzymatic activity of the purified protein evaluated?",
+        "input": "Using a glucose detection assay.",
+        "output": "The enzymatic activity of the purified protein was evaluated using a glucose detection assay. This involved assessing the hydrolysis of trehalose to glucose, which was detected by two different methods: DNS and Benedict’s test, to determine the sensitivity and reliability of the results."
+    },
+    {
+        "instruction": "Why did the team fix the trehalase assay pH at 5.9?",
+        "input": "The catalytic activity of trehalase is optimized at a slightly acidic pH.",
+        "output": "The team fixed the trehalase assay pH at 5.9 because the catalytic activity of trehalase is optimized at a slightly acidic pH, and initial assays at pH 7.5 showed no enzymatic activity. Adjusting the pH to 5.9 ensured optimal conditions for the enzyme's activity."
+    },
+    {
+        "instruction": "Which glucose detection method gave better results?",
+        "input": "The DNS method.",
+        "output": "The DNS method gave better results in detecting glucose, as evidenced by the obvious darkening in the color of the protein samples' reactions, compared to the Benedict’s test."
+    },
+    {
+        "instruction": "What was the cloning vector chosen for the toehold switches?",
+        "input": "pGEM-3zf+.",
+        "output": "The cloning vector chosen for the toehold switches was pGEM-3zf+, primarily because it contains a T7 promoter, which facilitates the in-vitro transcription of the parts."
+    },
+    {
+        "instruction": "What was the purpose of using DpnI after vector linearization?",
+        "input": "To destroy the plasmid template before setting up the NEBuilder HiFi DNA assembly reaction.",
+        "output": "The purpose of using DpnI after vector linearization was to destroy the plasmid template before setting up the NEBuilder HiFi DNA assembly reaction, ensuring that only the linearized vector is used in the subsequent assembly process."
+    },
+    {
+        "instruction": "What were the trigger primers like?",
+        "input": "30 nt long, with vector overlaps of 25-30 nt on both ends.",
+        "output": "The trigger primers were 30 nucleotides long and had vector overlaps of 25-30 nucleotides on both ends, which simplified the preparation for the assembly process by requiring only the linearization of the vector."
+    },
+    {
+        "instruction": "What method was used to estimate the time needed for diagnosis by expressing TreA?",
+        "input": "The team used a cell-free system to express TreA.",
+        "output": "To estimate the time needed for diagnosis by expressing TreA, the team utilized a cell-free system. They set up a PURExpress® reaction with 1 μg of TreA expression plasmid and conducted coupled transcription / translation for 3.5 hours to ensure sufficient TreA protein production. This approach allowed them to determine the time required for producing enough TreA for detection."
+    },
+    {
+        "instruction": "How did the team confirm the functionality of the TreA produced in their cell-free system?",
+        "input": "They tested the transcription/translation reaction for the presence of functional TreA by incubating it with trehalose and DNS reagent.",
+        "output": "The team confirmed the functionality of the TreA produced in their cell-free system by testing a small quantity of the transcription/translation reaction. They incubated it with trehalose and then added DNS reagent. Color formation indicated that the pH of the reaction was suitable for the TreA to work, confirming its functionality."
+    },
+    {
+        "instruction": "What was the minimum time determined for sufficient TreA production to achieve a visible color change in the DNS assay?",
+        "input": "The minimum time needed for sufficient TreA production was determined to be around 1 hour.",
+        "output": "The minimum time demanded for sufficient TreA production in order to reach the DNS glucose threshold and observe a visible color change in the DNS assay was found to be approximately 1 hour of TreA expression."
+    },
+    {
+        "instruction": "Why is the commercial glucose meter considered to have lower sensitivity compared to the DNS assay?",
+        "input": "The commercial glucose meter is designed for quantifying glucose in human blood samples, where the levels are significantly higher.",
+        "output": "The commercial glucose meter is considered to have lower sensitivity because it is specifically designed for the quantification of glucose in human blood samples, where the glucose levels are significantly higher compared to the threshold of the DNS assay. This means that the meter is less sensitive for detecting the lower concentrations of glucose typically found in the DNS assay."
+    },
+    {
+        "instruction": "What was the result of using the commercial glucose meter to quantify TreA activity?",
+        "input": "The results confirmed that the commercial glucose meter is a suitable signal indicator for the proposed diagnostic methodology.",
+        "output": "The results confirmed that the commercial glucose meter is a suitable signal indicator for the proposed diagnostic methodology. The tests showed that the meter could indeed quantify the TreA activity, validating the methodology."
+    },
+    {
+        "instruction": "What restriction enzymes were chosen for part construction, and why?",
+        "input": "XbaI and SpeI restriction enzymes were chosen because they were included in the prefix and suffix of the pSB1C3 vector.",
+        "output": "For part construction, the team chose XbaI and SpeI restriction enzymes. These enzymes were selected because they were already included in the prefix and suffix of the pSB1C3 vector, allowing for direct cloning of all parts into this vector."
+    },
+    {
+        "instruction": "What was the purpose of using Calf Intestine Alkaline Phosphatase (CIAP) during the part construction process?",
+        "input": "CIAP was used to prevent vector religation since XbaI and SpeI create compatible overhangs.",
+        "output": "Calf Intestine Alkaline Phosphatase (CIAP) was used during the part construction process to prevent vector religation. Since XbaI and SpeI create compatible overhangs, CIAP was necessary to ensure that the vector did not re-ligate itself after digestion."
+    },
+    {
+        "instruction": "What issue did the team encounter while attempting to clone parts into the pSB1C3 vector?",
+        "input": "After several unsuccessful transformations, they obtained red colonies but one day after the part submission deadline.",
+        "output": "Despite their efforts, the team encountered issues with cloning parts into the pSB1C3 vector. They had several unsuccessful transformations and only obtained red colonies one day after the part submission deadline, which meant they were unable to send their part in the pSB1C3 vector."
+    },
+    {
+        "instruction": "What protocol was used for the preparation of competent cells?",
+        "input": "The protocol involved growing cells, chilling them, spinning them down, and resuspending them in cold 0.1 M CaCl2.",
+        "output": "The protocol for preparing competent cells involved picking a single colony from a fresh LB-plate and growing it overnight at 37°C. Then, 5 ml of these overnight cells were transferred into 100 ml of LB in a 500 ml flask and grown with shaking at 37°C until the OD600 reached 0.4-0.6. The cells were then chilled on ice for 5 minutes, spun down, and resuspended in cold 0.1 M CaCl2. This process was repeated, and finally, glycerol was added before freezing the cells at -80°C."
+    },
+    {
+        "instruction": "Describe the transformation process outlined in the protocols.",
+        "input": "The transformation process involved taking competent cells, adding DNA, heat shocking, and then spreading the cells on a plate.",
+        "output": "The transformation process described in the protocols involved taking competent cells out of the freezer and placing them on ice for 30 minutes to 1 hour. Aliquots of the cells were mixed with ligation/DNA, left on ice for 40 minutes, and then heat shocked at 42°C for 90 seconds. After cooling the cells on ice, LB medium prewarmed to 37°C was added, and the cells were grown gently while shaking for 1 hour at 37°C. After incubation, 100 μl of the culture was spread on an LB+antibiotic agar plate, and the remaining transformation mixture was centrifuged, the supernatant discarded, and the pellet resuspended in 100 μl of LB before being spread on the plate. The plates were then dried and incubated at 37°C in an inverted position."
+    },
+    {
+        "instruction": "What steps are involved in running an electrophoresis according to the document?",
+        "input": "The document outlines the process of setting up and running an electrophoresis.",
+        "output": "To run an electrophoresis, first connect the electrodes and then start the electrophoresis. After the process is complete, turn off the power supply and disconnect the electrodes. Finally, assess the DNA bands by staining them with Coomassie blue and then destaining the gel."
+    },
+    {
+        "instruction": "How were enzymatic digests prepared and executed?",
+        "input": "The document provides details on how enzymatic digests were set up and conducted.",
+        "output": "Enzymatic digests were prepared using 50 μl reaction volumes, which included 5 units of the required enzyme, an appropriate volume of DNA, 1x digestion buffer, and water for injection (WFI) to adjust the total volume. These mixes were then incubated in a thermocycler at 37 degrees Celsius for either 3 hours or overnight, based on the specific requirements of the digest."
+    },
+    {
+        "instruction": "What is the procedure for heat inactivation of enzymes after a digest?",
+        "input": "The document explains how to heat-inactivate enzymes post-digestion.",
+        "output": "After the enzymatic digestions, heat inactivation of the enzymes was performed by heating the samples at either 65 or 80 degrees Celsius for 20 minutes, depending on the specific enzyme used in the digest."
+    },
+    {
+        "instruction": "According to the document, how were ligation reactions performed?",
+        "input": "The document gives instructions on performing ligation reactions.",
+        "output": "Ligation reactions were carried out following the T4 DNA Ligase NEB protocol, using different ratios of vector to insert. The exact ratios and conditions were determined by adhering to the manufacturer’s instructions provided with the T4 DNA Ligase."
+    },
+    {
+        "instruction": "Where can additional information about the procedures described in the document be obtained?",
+        "input": "The document provides contact information for further inquiries.",
+        "output": "For more information or clarification regarding the procedures described in the document, you can contact the team at igemathens2018@gmail.com."
+    }
+]

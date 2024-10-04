@@ -1,0 +1,52 @@
+[
+    {
+        "instruction": "What were the two main focuses of the Baltimore BioCrew's project?",
+        "input": "The project had two main sections: Clot Makers and Clot Breakers.",
+        "output": "The Baltimore BioCrew's project was divided into two primary areas of focus: the Clot Makers aimed to accelerate wound coagulation using an enzyme found in the venom of Russel's Viper and Desert Horned Viper. On the other hand, the Clot Breakers worked on utilizing a shortened version of tPA, known as Reteplase, to dissolve abnormal clots that might occur in blood vessels, which can lead to strokes and heart diseases."
+    },
+    {
+        "instruction": "What is the purpose of adding agarose to the gel tray during gel electrophoresis?",
+        "input": "Agarose is added to the gel tray to form a solid matrix for separating DNA fragments.",
+        "output": "Agarose is mixed with 1xTAE buffer and poured into the gel tray with a well comb in place to create a solid matrix. This matrix allows for the separation of DNA fragments based on size as an electric current is applied, enabling researchers to analyze the samples effectively."
+    },
+    {
+        "instruction": "How is the gel prepared for gel electrophoresis?",
+        "input": "The gel is prepared by mixing agarose with 1xTAE buffer, microwaving it until dissolved, and then pouring it into the gel tray with a well comb.",
+        "output": "To prepare the gel for electrophoresis, agarose is measured and mixed with 1xTAE buffer in a microwavable flask. The mixture is microwaved until the agarose dissolves completely, with occasional swirling to prevent overheating. Once cooled to a comfortable temperature, the agarose solution is poured slowly into the gel tray with a well comb in place to create wells. The gel is left to solidify for 20-30 minutes before use."
+    },
+    {
+        "instruction": "What is the correct voltage range for running a gel during electrophoresis?",
+        "input": "The gel is run at 80-150 V until the dye line is approximately 75-80% of the way down the gel.",
+        "output": "During electrophoresis, the gel is typically run at a voltage range of 80-150 V. The process continues until the dye line reaches about 75-80% of the way down the gel, which usually takes around an hour. It's important to note that black represents the negative electrode and red represents the positive electrode, and the gel should always be run towards the positive (red) side."
+    },
+    {
+        "instruction": "What are the components of the restriction digest master mix?",
+        "input": "The master mix includes H2O, 10x NEB2, EcoR1, Pst1, Dpn1, and BSA.",
+        "output": "The restriction digest master mix consists of 76 uL of water (H2O), 20 uL of 10x NEB2 buffer, 1 uL each of the restriction enzymes EcoR1, Pst1, and Dpn1, and 1 uL of Bovine Serum Albumin (BSA). These components are mixed together and then combined with the sample DNA to perform the restriction digest."
+    },
+    {
+        "instruction": "Describe the ligation process for combining plasmid and insert.",
+        "input": "The ligation process involves mixing plasmid, insert, T4 Ligase buffer, T4 Ligase, and water.",
+        "output": "To ligate the plasmid and insert, a ligation mix is prepared consisting of 2 uL of plasmid, 3.5 uL of insert, 1 uL of T4 Ligase buffer, 0.5 uL of T4 Ligase, and 4.5 uL of water. These components are mixed together, allowing the T4 Ligase to catalyze the formation of covalent bonds between the compatible ends of the plasmid and the insert, resulting in a recombinant DNA molecule."
+    },
+    {
+        "instruction": "What changes were made to the transformation protocol?",
+        "input": "Step 13 was omitted, and only one petri dish was used instead of two.",
+        "output": "In the transformation protocol, step 13 was omitted, and the team used only one petri dish instead of two, deviating from the standard iGEM Parts Registry Transformation Protocol."
+    },
+    {
+        "instruction": "What is the purpose of colony PCR?",
+        "input": "Colony PCR is used to confirm the presence of the inserted gene in bacterial colonies.",
+        "output": "Colony PCR is performed to verify whether the bacterial colonies contain the desired inserted gene. By amplifying a specific region of DNA from individual colonies, researchers can determine if the colony has successfully incorporated the gene of interest, ensuring the genetic modification was successful."
+    },
+    {
+        "instruction": "What is the purpose of the Ni-NTA spin column purification?",
+        "input": "Ni-NTA spin column purification is used to isolate 6xHis-tagged proteins from E. coli lysates.",
+        "output": "The Ni-NTA (Nickel-Nitrilotriacetic acid) spin column purification method is used to purify 6xHis-tagged proteins from E. coli lysates. This technique takes advantage of the high-affinity interaction between the histidine tag on the protein of interest and the nickel resin in the column, allowing for the selective isolation of the tagged protein from other cellular components."
+    },
+    {
+        "instruction": "What is the final step in protein gel electrophoresis?",
+        "input": "The final step involves staining the gel with Simplyblue dye.",
+        "output": "After running the protein gel electrophoresis, the final step is to stain the gel with Simplyblue dye. This staining process allows for the visualization of the proteins separated on the gel, making it easier to analyze the results and identify the presence and size of the proteins of interest."
+    }
+]

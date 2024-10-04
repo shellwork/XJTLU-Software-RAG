@@ -58,7 +58,7 @@ def kb_chat(api=None):
     init_widgets()
 
     with st.sidebar:
-        st.title("RAG 对话系统")
+        st.title("RAG 对话（尚未开发，请勿使用）")
 
         tabs = st.tabs(["RAG 配置", "会话设置"])
 
