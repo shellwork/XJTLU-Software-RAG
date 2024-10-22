@@ -6,3 +6,4 @@ __pycache__
 tmp
 .pytest_cache
 backup
+node_modules
