@@ -37,61 +37,61 @@ def knowledge_base_page():
                                                                           "selected_kb_name"] in kb_names else 0
     )
 
-    with st.sidebar:
-        st.sidebar.header("Embedding Model Settings")
-
-        try:
-            settings_response = requests.get(f"http://localhost:8000/api/get_vector_model?kb_name={selected_kb}")
-            if settings_response.status_code == 200:
-                current_settings = settings_response.json()
-            else:
-                st.sidebar.error("无法获取当前向量模型设置")
-                current_settings = {"use_local": False, "provider": "openai", "embed_model": "Default"}
-        except Exception as e:
-            st.sidebar.error(f"获取当前设置时出错: {e}")
-            current_settings = {"use_local": False, "provider": "openai", "embed_model": "Default"}
-
-        use_local_model = st.checkbox("Enable Local Model", help="Use local model for inference when enabled",
-                                      key="use_local_model")
-
-        if use_local_model:
-            available_eb_models = get_local_models().get("local_eb_models")
-            eb_model_type = "Local Embedding Model"
-        else:
-            providers = ["openai", "qwen"]
-            providers = st.selectbox("Seclect model providers", providers, key="providers")
-            available_eb_models = get_api_models(providers).get("local_eb_models")
-            eb_model_type = "API Embedding Model"
-        embed_model = st.selectbox(f"Select {eb_model_type}", available_eb_models, key="selected_eb_model")
-        # 自动提交设置
-        submit = st.sidebar.button("Save embedding model settings")
-
-        if submit:
-            payload = {
-                "kb_name": selected_kb,
-                "use_local": use_local_model,
-                "provider": providers,
-                "embed_model": embed_model
-            }
-            try:
-                response = requests.post(
-                    "http://localhost:8000/api/update_vector_model",
-                    json=payload
-                )
-                if response.status_code == 200 and response.json().get("status") == "success":
-                    st.sidebar.success("Vector model settings updated successfully")
-                    st.rerun()
-                else:
-                    error_message = response.json().get("message", "Unknown error")
-                    st.sidebar.error(f"Update failed: {error_message}")
-            except Exception as e:
-                st.sidebar.error(f"Request failed: {e}")
-
-        # Display the current global vector model settings
-        st.sidebar.markdown("### Current Vector Model Settings")
-        st.sidebar.write(f"**Model Type:** {'Local Model' if current_settings['use_local'] else 'API Model'}")
-        st.sidebar.write(f"**Provider:** {current_settings['provider']}")
-        st.sidebar.write(f"**Model:** {current_settings['embed_model']}")
+    # with st.sidebar:
+    #     st.sidebar.header("Embedding Model Settings")
+    #
+    #     try:
+    #         settings_response = requests.get(f"http://localhost:8000/api/get_vector_model?kb_name={selected_kb}")
+    #         if settings_response.status_code == 200:
+    #             current_settings = settings_response.json()
+    #         else:
+    #             st.sidebar.error("无法获取当前向量模型设置")
+    #             current_settings = {"use_local": False, "provider": "openai", "embed_model": "Default"}
+    #     except Exception as e:
+    #         st.sidebar.error(f"获取当前设置时出错: {e}")
+    #         current_settings = {"use_local": False, "provider": "openai", "embed_model": "Default"}
+    #
+    #     use_local_model = st.checkbox("Enable Local Model", help="Use local model for inference when enabled",
+    #                                   key="use_local_model")
+    #
+    #     if use_local_model:
+    #         available_eb_models = get_local_models().get("local_eb_models")
+    #         eb_model_type = "Local Embedding Model"
+    #     else:
+    #         providers = ["openai", "qwen"]
+    #         providers = st.selectbox("Seclect model providers", providers, key="providers")
+    #         available_eb_models = get_api_models(providers).get("local_eb_models")
+    #         eb_model_type = "API Embedding Model"
+    #     embed_model = st.selectbox(f"Select {eb_model_type}", available_eb_models, key="selected_eb_model")
+    #     # 自动提交设置
+    #     submit = st.sidebar.button("Save embedding model settings")
+    #
+    #     if submit:
+    #         payload = {
+    #             "kb_name": selected_kb,
+    #             "use_local": use_local_model,
+    #             "provider": providers,
+    #             "embed_model": embed_model
+    #         }
+    #         try:
+    #             response = requests.post(
+    #                 "http://localhost:8000/api/update_vector_model",
+    #                 json=payload
+    #             )
+    #             if response.status_code == 200 and response.json().get("status") == "success":
+    #                 st.sidebar.success("Vector model settings updated successfully")
+    #                 st.rerun()
+    #             else:
+    #                 error_message = response.json().get("message", "Unknown error")
+    #                 st.sidebar.error(f"Update failed: {error_message}")
+    #         except Exception as e:
+    #             st.sidebar.error(f"Request failed: {e}")
+    #
+    #     # Display the current global vector model settings
+    #     st.sidebar.markdown("### Current Vector Model Settings")
+    #     st.sidebar.write(f"**Model Type:** {'Local Model' if current_settings['use_local'] else 'API Model'}")
+    #     st.sidebar.write(f"**Provider:** {current_settings['provider']}")
+    #     st.sidebar.write(f"**Model:** {current_settings['embed_model']}")
 
 
 
@@ -102,25 +102,28 @@ def knowledge_base_page():
 
     # If "Create New Knowledge Base" is selected, display the creation form
     if selected_kb == "Create New Knowledge Base":
+        local = st.checkbox("Use local embedding model", help="Use local model for inference when enabled")
+        if local:
+            provider = "local"
+            # available_eb_models = get_local_models().get("local_eb_models")
+            available_eb_models = "all-MiniLM-L6-v2"
+            eb_model_type = "Local Embedding Model"
+        else:
+            provider = ["openai", "qwen"]
+            provider = st.selectbox("Seclect model provider", provider, key="provider")
+
+            available_eb_models = get_api_models(provider).get("local_eb_models")
+            available_eb_models.append("all-MiniLM-L6-v2")
+            eb_model_type = "API Embedding Model"
+
+        # Embedding Model selection dropdown
+        embed_model = st.selectbox(f"Select {eb_model_type}", available_eb_models, key="selected_eb_models")
         with st.form("Create New Knowledge Base"):
             kb_name = st.text_input("New Knowledge Base Name", placeholder="Enter the new knowledge base name")
             kb_info = st.text_input("Knowledge Base Description", placeholder="Enter the knowledge base description")
 
-            vs_type = st.selectbox("Vector Store Type", ["chroma", "Type 2"], index=0)
-            local = st.checkbox("Use local embedding model", help="Use local model for inference when enabled")
-            provider = st.selectbox("Embeddings Model Provider", ["openai", "qwen"], index=0)
-            if provider == "openai":
-                embed_model = st.selectbox("Embeddings Model", ["Default"], index=0)
-            elif provider == "qwen":
-                embed_model = st.selectbox("Embeddings Model", [
-                    "text-embedding-v1",
-                    # "text-embedding-async-v1",
-                    "text-embedding-v2",
-                    # "text-embedding-async-v2",
-                    # "text-embedding-v3"
-                ], index=0)
-            else:
-                st.error("Please choose provider first")
+            vs_type = st.selectbox("Vector Store Type", ["chroma"], index=0)
+
             submit_create_kb = st.form_submit_button("Create Knowledge Base")
             if submit_create_kb:
                 if not kb_name:
@@ -254,9 +257,11 @@ def knowledge_base_page():
             else:
                 st.error("Failed to update vector store, please try again later.")
 
-        if st.button("Delete Entire Knowledge Base"):
-            if st.checkbox("Confirm deletion of the entire knowledge base?"):
-                st.write(selected_kb)  # Print the currently selected knowledge base for debugging
+        # st.error("There is no second confirmation for deleting knowledge base!")
+        delete_status = st.button("Delete Entire Knowledge Base")
+        confirm = st.checkbox("Confirm deletion of the entire knowledge base?")
+        if delete_status:
+            if confirm:
                 delete_kb_response = requests.post(
                     "http://localhost:8000/delete_kb",
                     data={"kb_name": selected_kb}

@@ -45,8 +45,10 @@
     "kb_name": "1",
     "kb_info": "1",
     "vs_type": "chroma",
-    "embed_model": "openai",
+    "embed_model": "text-embedding-v1",
     "chunk_size": 300,
     "chunk_overlap": 100,
-    "zh_title_enhance": false
+    "zh_title_enhance": false,
+    "use_local": false,
+    "provider": "qwen"
 }

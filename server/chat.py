@@ -9,11 +9,13 @@ sys.path.append(str(folder))
 from config import RAG_PROMPT_TEMPLATE, CHROMA_PATH
 
 
-def generate_response(prompt, eb_models, provider, tools=None, model="gpt-3.5-turbo", use_self_model=False, use_local_model=False):
+def generate_response(prompt, eb_models, provider, tools=None, model="gpt-3.5-turbo", use_self_model=False,
+                      use_local_model=False):
     """
     根据用户的输入和配置，生成对话响应。
 
     Args:
+        provider: 指定特定的模型提供商
         eb_models: 要使用的embedding模型名称
         prompt (str): 用户的问题。
         tools (list): 选择的工具 (可选)。

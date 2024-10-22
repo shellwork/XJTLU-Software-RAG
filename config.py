@@ -17,7 +17,7 @@ project_name = """
 ------------------------------------------------                                  
 """
 welcome = "Welcome to use ChatParts software developed by XJTLU-Software!"
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 # 使用 BASE_DIR 构建绝对路径
 DATA_PATH = str(BASE_DIR / "data" / "uploads")
@@ -34,7 +34,7 @@ DEFAULT_METADATA = {
     "batches": []  # 用于记录批次处理信息
 }
 PORT = 6006
-LOCAL_MODEL_DIR = "D:/PythonProject/XJTLU-Software-RAG/server/model" # 最好用绝对路径
+LOCAL_MODEL_DIR = "D:\Source Code\PythonProject\XJTLU-Software-RAG\server\model" # 最好用绝对路径
 PROMPT_TEMPLATE = """
 Answer the question based only on the following context:
 

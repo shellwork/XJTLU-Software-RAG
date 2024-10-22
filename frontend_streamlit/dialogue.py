@@ -27,9 +27,9 @@ def get_local_models():
     else:
         local_models = []
 
-    local_eb_models_dir = os.path.join(LOCAL_MODEL_DIR, "/embedding")  # Assuming the local model storage path
+    local_eb_models_dir = os.path.join(LOCAL_MODEL_DIR, "embedding")  # Assuming the local model storage path
     if os.path.exists(local_eb_models_dir):
-        local_eb_models = [f.name for f in os.scandir(local_models_dir) if f.is_dir()]
+        local_eb_models = [f.name for f in os.scandir(local_eb_models_dir) if f.is_dir()]
     else:
         local_eb_models = []
 
@@ -197,10 +197,12 @@ def dialogue_page():
             st.selectbox(f"Select {model_type}", available_models, key="selected_model")
 
             if use_local_model:
-                available_eb_models = get_local_models().get("local_eb_models")
+                # available_eb_models = get_local_models().get("local_eb_models")
+                available_eb_models = "all-MiniLM-L6-v2"
                 eb_model_type = "Local Embedding Model"
             else:
                 available_eb_models = get_api_models(provider).get("local_eb_models")
+                available_eb_models.append("all-MiniLM-L6-v2")
                 eb_model_type = "API Embedding Model"
 
             # Embedding Model selection dropdown

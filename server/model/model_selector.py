@@ -6,8 +6,14 @@ import ollama
 import logging
 import dashscope
 from http import HTTPStatus
-from typing import Callable, List
+from typing import Callable, List, Dict
 from langchain.embeddings.base import Embeddings
+import sys
+from pathlib import Path
+
+folder = Path(__file__).resolve().parents[2]
+sys.path.append(str(folder))
+from config import LOCAL_MODEL_DIR
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -17,7 +23,6 @@ logging.basicConfig(
     ]
 )
 
-
 # 自定义qwen类
 import logging
 from typing import List
@@ -25,6 +30,7 @@ from langchain.embeddings.base import Embeddings
 from http import HTTPStatus
 import dashscope
 import numpy as np
+
 
 class QwenEmbeddings(Embeddings):
     def __init__(self, model_version: str = "text-embedding-async-v2"):
@@ -131,7 +137,6 @@ class QwenEmbeddings(Embeddings):
             return [[] for _ in texts]
 
 
-
 def load_api():
     load_dotenv()
 
@@ -176,7 +181,7 @@ def get_model(model_name: str = "gpt-3.5-turbo", provider: str = "openai", local
                 model_name=model_name,
                 temperature=kwargs.get("temperature", 0.7),
                 max_tokens=kwargs.get("max_tokens", 2048),
-                top_p=kwargs.get("top_p", 1.0),
+                top_p=kwargs.get("top_p", 0.9),
                 frequency_penalty=kwargs.get("frequency_penalty", 0.0),
                 presence_penalty=kwargs.get("presence_penalty", 0.0),
                 openai_api_key=os.environ.get('OPENAI_API_KEY'),
@@ -189,7 +194,7 @@ def get_model(model_name: str = "gpt-3.5-turbo", provider: str = "openai", local
                 model_name=model_name,
                 temperature=kwargs.get("temperature", 0.7),
                 max_tokens=kwargs.get("max_tokens", 2048),
-                top_p=kwargs.get("top_p", 1.0),
+                top_p=kwargs.get("top_p", 0.9),
                 frequency_penalty=kwargs.get("frequency_penalty", 0.0),
                 presence_penalty=kwargs.get("presence_penalty", 0.0),
                 openai_api_key=os.environ.get('DASHSCOPE_API_KEY'),  # 使用 Dashscope API Key
@@ -263,7 +268,42 @@ def get_local_model(model_name: str):
         raise ValueError(f"不支持的本地模型: {model_name}. 可用模型: {available_models}")
 
 
-def get_embedding_function(embed_model: str = "", provider: str = "openai", local: bool = False) -> Callable[[List[str]], List[List[float]]]:
+class LocalEmbeddings(Embeddings):
+    def __init__(self, model_path: str = "all-MiniLM-L6-v2"):
+        from sentence_transformers import SentenceTransformer
+        model_full_path = os.path.join(LOCAL_MODEL_DIR, "embedding", model_path)
+        try:
+            if os.path.exists(model_full_path):
+                logging.info(f"加载本地嵌入模型: {model_full_path}")
+                self.model = SentenceTransformer(model_full_path)
+            else:
+                logging.info(f"加载预训练嵌入模型: {model_path}")
+                self.model = SentenceTransformer(model_path)
+            logging.debug(f"Loaded local embedding model: {model_full_path}")
+        except Exception as e:
+            logging.error(f"加载嵌入模型 {model_full_path} 时出错: {e}", exc_info=True)
+            raise e
+
+    def embed_query(self, text: str) -> List[float]:
+        try:
+            embedding = self.model.encode([text], convert_to_numpy=True).tolist()[0]
+            logging.debug(f"Generated embedding for query: {text}")
+            return embedding
+        except Exception as e:
+            logging.error(f"生成查询嵌入时出错: {e}", exc_info=True)
+            return []
+
+    def embed_documents(self, texts: List[str]) -> List[List[float]]:
+        try:
+            embeddings = self.model.encode(texts, convert_to_numpy=True).tolist()
+            logging.debug(f"Generated embeddings for {len(texts)} texts.")
+            return embeddings
+        except Exception as e:
+            logging.error(f"生成嵌入时出错: {e}", exc_info=True)
+            return [[] for _ in texts]
+
+
+def get_embedding_function(embed_model: str = "", provider: str = "openai", local: bool = False) -> LocalEmbeddings:
     """
     根据传入的嵌入模型名称选择对应的嵌入模型。
 
@@ -278,8 +318,8 @@ def get_embedding_function(embed_model: str = "", provider: str = "openai", loca
     load_api()
     if local:
         logging.debug("Using local embedding function.")
-        return get_local_embedding_function(embed_model)
-
+        embedding_function = get_local_embedding_function(embed_model)
+        return embedding_function  # 确保返回的是 embed_query 方法
     else:
         if provider == "openai":
             logging.debug("Using OpenAI embeddings.")
@@ -293,48 +333,8 @@ def get_embedding_function(embed_model: str = "", provider: str = "openai", loca
             raise ValueError(f"Unsupported embedding model: {embed_model}")
 
 
-
-
-def get_local_embedding_function(model_path: str = "all-MiniLM-L6-v2") -> Callable[[List[str]], List[List[float]]]:
+def get_local_embedding_function(model_path: str = "all-MiniLM-L6-v2") -> LocalEmbeddings:
     """
     本地嵌入模型的实现，使用 SentenceTransformer 生成文本嵌入。
-
-    Args:
-        model_path (str): 使用的 SentenceTransformer 模型名称或本地路径。
-
-    Returns:
-        Callable[[List[str]], List[List[float]]]: 一个生成嵌入的函数。
     """
-    from sentence_transformers import SentenceTransformer
-    try:
-        # 检查是否为本地路径
-        if os.path.exists(model_path):
-            logging.info(f"加载本地嵌入模型: {model_path}")
-            model = SentenceTransformer(model_path)
-        else:
-            logging.info(f"加载预训练嵌入模型: {model_path}")
-            model = SentenceTransformer(model_path)
-        logging.debug(f"Loaded local embedding model: {model_path}")
-    except Exception as e:
-        logging.error(f"加载嵌入模型 {model_path} 时出错: {e}", exc_info=True)
-        raise e
-
-    def embed(texts: List[str]) -> List[List[float]]:
-        """
-        生成给定文本列表的嵌入。
-
-        Args:
-            texts (List[str]): 文本列表。
-
-        Returns:
-            List[List[float]]: 嵌入向量列表。
-        """
-        try:
-            embeddings = model.encode(texts, convert_to_numpy=True).tolist()
-            logging.debug(f"Generated embeddings for {len(texts)} texts.")
-            return embeddings
-        except Exception as e:
-            logging.error(f"生成嵌入时出错: {e}", exc_info=True)
-            return [None for _ in texts]
-
-    return embed
+    return LocalEmbeddings(model_path)
